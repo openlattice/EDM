@@ -9,7 +9,7 @@
 -   title: De-escalation Techniques (Other)
     type: bhr.deescalationTechniquesOther
     description: ''
-    schemas: [v0.v0]
+    schemas: []
     datatype: String
     pii_field: false
     multi_valued: true
