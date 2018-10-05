@@ -1,0 +1,2039 @@
+-   basetype: null
+    key: [medical.InitialAssessmentID, provider.NationalProviderIdentification, health.biopsychosocialid,
+        detox.ScreeningID]
+    properties: [medical.InitialAssessmentID, provider.NationalProviderIdentification,
+        health.biopsychosocialid, detox.ScreeningID, date.CompletedDateTime, general.stringid]
+    property_tags: {}
+    schemas: []
+    type: general.AssessedBy
+-   basetype: null
+    key: [provider.NationalProviderIdentification, medical.TreatmentOrderID]
+    properties: [provider.NationalProviderIdentification, medical.TreatmentOrderID]
+    property_tags: {}
+    schemas: []
+    type: medical.Ordered
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    type: general.assignto
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id, general.datetime]
+    property_tags: {}
+    schemas: []
+    type: ol.has
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    type: general.ScreenedBy
+-   basetype: null
+    key: [provider.NationalProviderIdentification, nc.SubjectIdentification]
+    properties: [provider.NationalProviderIdentification, nc.SubjectIdentification]
+    property_tags: {}
+    schemas: []
+    type: general.ReferredBy_deprecated
+-   basetype: null
+    key: [provider.NationalProviderIdentification]
+    properties: [health.hospitalname, provider.name, general.Title, provider.NationalProviderIdentification]
+    property_tags: {}
+    schemas: []
+    type: health.provider
+-   basetype: null
+    key: [nc.SubjectIdentification, substance.SequenceID]
+    properties: [nc.SubjectIdentification, substance.SequenceID, general.stringid]
+    property_tags: {}
+    schemas: []
+    type: general.Used
+-   basetype: null
+    key: [medication.id, nc.SubjectIdentification, date.completeddatetime]
+    properties: [medication.Dosage, medication.Regimen, medical.medicationtakenasprescribed,
+        substance.UsageDuration, substance.frequency, medication.id, nc.SubjectIdentification,
+        date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: medical.taking
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.stringid, nc.SubjectIdentification]
+    property_tags: {}
+    schemas: []
+    type: ol.usedby
+-   basetype: null
+    key: [date.completeddatetime]
+    properties: [contact.Active, date.completeddatetime, contact.cellphone]
+    property_tags: {}
+    schemas: []
+    type: geo.contactedat_deprecated
+-   basetype: null
+    key: [publicsafety.unitid]
+    properties: [publicsafety.unitname, publicsafety.agencyname, publicsafety.agencyid,
+        publicsafety.unitid]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: publicsafety.unit
+-   basetype: null
+    key: [date.completeddatetime, contact.phonenumber]
+    properties: [date.completeddatetime, contact.phonenumber]
+    property_tags: {}
+    schemas: []
+    type: general.called
+-   basetype: null
+    key: [j.CaseNumberText]
+    properties: [criminaljustice.jailid, j.CaseNumberText, date.booking, j.OffenseViolatedStatute,
+        justice.Bail, justice.CaseStatus, person.ageatevent, justice.ReferralAgency,
+        justice.ReferralDate, justice.ReferralType, criminaljustice.releasetype, publicsafety.ReleaseDate,
+        justice.ReleaseComments, housing.dischargereason, justice.sbi, criminaljustice.timeserveddays,
+        j.ArrestAgency, place.CommittingAuthority, person.releaseofficer]
+    property_tags: {}
+    schemas: []
+    type: justice.booking
+-   basetype: null
+    key: [general.stringid]
+    properties: [mock.drugpresent, mock.symptoms, mock.temp, visit.reason, vitals.BloodPressure,
+        medical.provider_lastname, medical.provider_firstname, housing.followupdate,
+        date.dr_appt_datetime, housing.notes, health.admissiondate, date.admission,
+        general.datetime, medical.servicesetting, general.stringid]
+    property_tags: {}
+    schemas: []
+    type: patient.visit
+-   basetype: null
+    key: [ol.id]
+    properties: [criminaljustice.casenumber, ol.datetime_reported, ol.id, criminaljustice.reportnumber,
+        ol.gangactivity, ol.domesticviolenceflag, ol.datetimestart, ol.datetimeend,
+        ol.juveniles, ol.status]
+    property_tags: {}
+    schemas: []
+    type: ol.incident
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.stringid, nc.SubjectIdentification, ol.datetimestart]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: general.participatedin
+-   basetype: null
+    key: [general.datetime]
+    properties: [general.datetime]
+    property_tags: {}
+    schemas: []
+    type: general.editedby
+-   basetype: null
+    key: [general.id]
+    properties: [vehicle.model, ol.version, general.id, ol.operatingsystem]
+    property_tags: {}
+    schemas: [cafe.chronicle]
+    type: o.device
+-   basetype: null
+    key: [medical.nursepsychiatricassessmentid]
+    properties: [medical.depressioncomments, medical.anxietycomments, medical.RecentOrImpendingMajorLoss,
+        medical.homicidalideationcomments, medical.psychiatricdiagnosismedications,
+        medical.moodswingscomments, medical.nursepsychiatricassessmentid, medical.homicidalideation,
+        medical.moodswings, medical.ViolentBehaviorWhenIntoxicated, medical.depression,
+        medical.paranoiacomments, medical.anxiety, medical.suicidalideationcomments,
+        medical.TroubleRemembering, medical.paranoia, medical.psychiatrichospitalizationtreatment,
+        medical.suicidalideation, medical.VisitReason]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: medical.nursepsychiatricassessment
+-   basetype: null
+    key: [contact.id]
+    properties: [contact.Email, contact.phonenumber, contact.uniqueID, contact.id,
+        contact.emergencynumber, contact.emergencyname, general.entryupdated, housing.notes,
+        contact.cellphone, ol.preferredmethod]
+    property_tags: {}
+    schemas: []
+    type: geo.contactinformation
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.searchedby
+-   basetype: null
+    key: [general.id]
+    properties: [ol.name, ol.description, general.result, ol.qualifier, ol.value,
+        ol.units, ol.maximumvalue, ol.minimumvalue, ol.category, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.medicaltestresult
+-   basetype: null
+    key: [general.id]
+    properties: [ol.name, general.id, ol.value]
+    property_tags: {}
+    schemas: []
+    type: ol.medicaltest
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.arrestdatetime, ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.arrestedby
+-   basetype: null
+    key: [general.StringID]
+    properties: [general.StringID]
+    property_tags: {}
+    schemas: []
+    type: justice.TransportedBy
+-   basetype: null
+    key: [nc.SubjectIdentification, detox.ScreeningID]
+    properties: [nc.SubjectIdentification, detox.ScreeningID, general.stringid]
+    property_tags: {}
+    schemas: []
+    type: general.Screened
+-   basetype: null
+    key: [general.id]
+    properties: [general.datetime, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.exhibits
+-   basetype: null
+    key: [general.id]
+    properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
+        ol.medicalconditionhistorynotes, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.gastrointestinalbleeding
+-   basetype: null
+    key: [general.id]
+    properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
+        ol.medicalconditionhistorynotes, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.chestpain
+-   basetype: null
+    key: [ol.id]
+    properties: [criminaljustice.cautioninformation, criminaljustice.treatasadult,
+        ol.sexoffender, ol.id, ol.photographs, ol.fingerprints, medical.suicidalideation,
+        ol.probationnumber]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.persondetailscriminaljustice
+-   basetype: null
+    key: [musculoskeletal.id]
+    properties: [musculoskeletal.backproblemsdescription, musculoskeletal.backproblems,
+        musculoskeletal.fractureinjury, musculoskeletal.id, musculoskeletal.fractureinjurydescription,
+        musculoskeletal.currentlimitations]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: medical.musculoskeletalassessment
+-   basetype: null
+    key: [nutritional.id]
+    properties: [medical.prioreatinghabit, medical.foodallergyspecialdiet, nutritional.id,
+        medical.weightgainlosspastmonth, event.comments]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: medical.nutritionalassessment
+-   basetype: null
+    key: [detox.ScreeningID]
+    properties: [screening.LastSeizureDate, screening.MHComments, neurological.historyofseizures,
+        screening.AbdominalPain, screening.MedicalConditionMonitoring, screening.IssuePreventDetox,
+        screening.noadmitreason, screening.BeenToClinicBefore, detox.ScreeningID,
+        date.CompletedDateTime, screening.HomelessIndicator, event.comments, screening.HomelessInState,
+        screening.Fever, screening.ReadWriteHelp, screening.Pregnant, respiratory.shortnessofbreath,
+        cardiovascular.chestpain, gastrointestinal.bleeding, screening.admitapprovalindicator,
+        medical.suicidalideation, screening.AcuteIntoxicationWithdrawalRisk, neurological.DeliriumTremens,
+        screening.MalignantHyperthermia]
+    property_tags: {}
+    schemas: []
+    type: medical.DetoxScreening
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    type: general.ReviewedBy
+-   basetype: null
+    key: [general.StringID]
+    properties: [general.StringID]
+    property_tags: {}
+    schemas: []
+    type: justice.ReleasedBy
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    type: medical.reported_deprecated
+-   basetype: null
+    key: [j.ArrestSequenceID, nc.SubjectIdentification]
+    properties: [j.ArrestCategory, j.ArrestSequenceID, nc.SubjectIdentification]
+    property_tags: {}
+    schemas: []
+    type: lawenforcement.arrestedin
+-   basetype: null
+    key: [j.ArrestAgency]
+    properties: [j.ArrestAgency]
+    property_tags: {}
+    schemas: []
+    type: justice.agency
+-   basetype: null
+    key: [medication.id, nc.SubjectIdentification]
+    properties: [medication.id, nc.SubjectIdentification, general.stringid]
+    property_tags: {}
+    schemas: []
+    type: general.Taking_deprecated
+-   basetype: null
+    key: [location.address, nc.SubjectIdentification]
+    properties: [location.address, nc.SubjectIdentification]
+    property_tags: {}
+    schemas: []
+    type: location.MailsAt
+-   basetype: null
+    key: [general.id]
+    properties: [ol.surname, ol.givenname, ol.middlename, ol.birthdate, ol.ssn, ol.birthplace,
+        ol.suffix, bhr.race, ol.ethnicity, ol.sex, general.id, ol.idtype, ol.idnumber,
+        ol.idjurisdiction]
+    property_tags: {}
+    schemas: []
+    type: ol.person
+-   basetype: null
+    key: [OPENLATTICE_AUDIT.TYPE]
+    properties: [OPENLATTICE_AUDIT.TYPE, OPENLATTICE_AUDIT.DETAILS]
+    property_tags: {}
+    schemas: []
+    type: OPENLATTICE_AUDIT.AUDIT
+-   basetype: null
+    key: [skin.id]
+    properties: [skin.id, skin.trackmarks, skin.trackmarksdescription, skin.headpediculi,
+        skin.headpediculidescription, skin.bedbugbitesorscabies, skin.bedbugorscabiesdescription,
+        skin.diabeticfootchecks, skin.diabeticfootchecksdescription, skin.otherrashdermatitis,
+        skin.otherrashdermatitisdescription, event.comments]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: medical.skinassessment
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    type: location.livesat
+-   basetype: null
+    key: [general.id]
+    properties: [general.datetime, general.id]
+    property_tags: {}
+    schemas: []
+    type: justice.fta
+-   basetype: null
+    key: [general.id]
+    properties: [general.datetime, general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: ol.locatedat
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    type: justice.interactedwith -d
+-   basetype: null
+    key: [publicsafety.cfsid]
+    properties: [publicsafety.dispatchtype, publicsafety.dispatchpersontype, publicsafety.dispatchtypepriority,
+        publicsafety.cfsid, publicsafety.dispatchtripnumber]
+    property_tags: {}
+    schemas: []
+    type: general.DispatchType
+-   basetype: null
+    key: [justice.xref]
+    properties: [publicsafety.officerID, nc.SubjectIdentification, nc.PersonSurName,
+        j.EnforcementOfficialUnit, j.EnforcementOfficialCategoryText, nc.SystemUserName,
+        publicsafety.officerbadgeid, justice.xref, place.EmployedByAgency, nc.PersonGivenName]
+    property_tags: {}
+    schemas: []
+    type: j.EnforcementOfficial
+-   basetype: null
+    key: [medical.InitialAssessmentID, health.biopsychosocialid, nc.SubjectIdentification]
+    properties: [medical.InitialAssessmentID, health.biopsychosocialid, nc.SubjectIdentification,
+        general.stringid]
+    property_tags: {}
+    schemas: []
+    type: medical.assessedwith_deprecated
+-   basetype: null
+    key: [genitourinary.id]
+    properties: [genitourinary.id, genitourinary.painordifficultyurinating, event.comments,
+        genitourinary.other]
+    property_tags: {}
+    schemas: []
+    type: medical.genitourinaryassessment
+-   basetype: null
+    key: [medical.DiagnosisID]
+    properties: [diagnosis.Code, medical.DiagnosisID, date.CompletedDateTime, event.comments,
+        diagnosis.Description]
+    property_tags: {}
+    schemas: []
+    type: medical.Diagnosis
+-   basetype: null
+    key: [psa.GeneratedDate]
+    properties: [psa.GeneratedDate]
+    property_tags: {}
+    schemas: []
+    type: general.calculatedfor
+-   basetype: null
+    key: [general.StringID]
+    properties: [general.StringID]
+    property_tags: {}
+    schemas: []
+    type: justice.SearchedBy
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    type: justice.detailsof
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    type: justice.resultsin
+-   basetype: null
+    key: [medical.InitialAssessmentID, provider.NationalProviderIdentification, nc.SubjectIdentification,
+        detox.ScreeningID]
+    properties: [medical.InitialAssessmentID, provider.NationalProviderIdentification,
+        nc.SubjectIdentification, detox.ScreeningID]
+    property_tags: {}
+    schemas: []
+    type: medical.ReviewedBy
+-   basetype: null
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: health.reported
+-   basetype: null
+    key: [withdrawal.id]
+    properties: [withdrawal.id, substance.periodsofsobriety, substance.sobrietysupport,
+        substance.sobrietyaftercareplan, substance.familyhistoryabuse, substance.familyabuseperson,
+        substance.familyhistorymentalillness, substance.familymentalillnessperson]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: medical.withdrawalassessment
+-   basetype: null
+    key: [substance.consequenceid]
+    properties: [substance.consequenceid, substance.blackouts, substance.tremorsshakes,
+        substance.nauseavomiting, substance.sleepdisorder, substance.seizures, substance.deliriumtremens,
+        substance.morninguse, substance.hangover, substance.craving, substance.hallucinations,
+        substance.memoryproblems, substance.jobloss, substance.arrests, substance.oui,
+        substance.relationshipproblems, substance.consequenceother, substance.consequenceothernotes]
+    property_tags: {}
+    schemas: []
+    type: health.consequencesofsubstanceuse
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    type: geo.zonedwithin
+-   basetype: null
+    key: [j.ChargeSequenceID]
+    properties: [j.ChargeSequenceID, j.OffenseQualifierText, publicsafety.OffenseReleaseDate,
+        publicsafety.OffenseEndDate, publicsafety.include, publicsafety.OffenseStartDate,
+        j.OffenseViolatedStatute, criminaljustice.bailbondamount, j.ChargeNCICText,
+        justice.ReportedDate, j.ChargeNarrative, justice.EventType, j.CourtEventCase,
+        publicsafety.BondMet, j.ArrestCharge, publicsafety.ChargeAgency, justice.CaseStatus,
+        publicsafety.AlternateStartDate]
+    property_tags: {}
+    schemas: []
+    type: justice.ChargeDetails
+-   basetype: null
+    key: [j.ArrestSequenceID]
+    properties: [justice.OffenderAlcohol, location.address, j.ArrestLocation, j.ArrestCategory,
+        j.EnforcementOfficialBadgeIdentification, j.ArrestSequenceID, j.OffenseQualifierText,
+        justice.disposition, j.OffenseViolatedStatute, publicsafety.weaponspresent,
+        justice.cadnumber, publicsafety.OffenseDate, publicsafety.ArrestDate, publicsafety.ReleaseDate,
+        justice.EventType, j.CaseNumberText, criminaljustice.nibrs, criminaljustice.victimalcohol]
+    property_tags: {}
+    schemas: []
+    type: lawenforcement.arrest
+-   basetype: null
+    key: [contact.id]
+    properties: [contact.id, contact.cellphone]
+    property_tags: {}
+    schemas: []
+    type: geo.contactinfogiven
+-   basetype: null
+    key: [clinical.assessmentid]
+    properties: [clinical.assessmentid, clinical.assessment, medical.axisI, medical.axisII,
+        medical.axisIII, medical.axisIV, health.assessmentdefermentreason]
+    property_tags: {}
+    schemas: []
+    type: health.clinicalassessment
+-   basetype: null
+    key: [personnel.employerid, personnel.employername]
+    properties: [location.address, location.state, personnel.employername, personnel.employerid,
+        housing.notes, location.city, location.zip, housing.updatedat, contact.WorkPhone]
+    property_tags: {}
+    schemas: []
+    type: personnel.employer
+-   basetype: null
+    key: [general.stringid]
+    properties: [ol.type, general.stringid, location.name, ol.buildinglocation]
+    property_tags: {}
+    schemas: []
+    type: ol.facility
+-   basetype: null
+    key: [substance.TreatmentHistoryID]
+    properties: [substance.TreatmentHistoryID, substance.PreviousLengthOfSobriety,
+        substance.PreviousNotHelpfulTreatment, substance.PreviousLengthOfStay, date.CompletedDateTime,
+        substance.PreviousTreatingFacility, event.comments, substance.PreviousLevelOfCare,
+        substance.PreviousHelpfulTreatment, substance.IneffectiveTreatment]
+    property_tags: {}
+    schemas: []
+    type: health.substancetreatmenthistory
+-   basetype: null
+    key: [place.SequenceID]
+    properties: [place.SequenceID, general.fullname, contact.phonenumber, place.uniqueID]
+    property_tags: {}
+    schemas: []
+    type: general.place
+-   basetype: null
+    key: [publicsafety.personnelid]
+    properties: [housing.title, personnel.agency, publicsafety.personnelstatus, general.entryupdated,
+        publicsafety.personnelid, person.picture]
+    property_tags: {}
+    schemas: []
+    type: housing.personnel
+-   basetype: null
+    key: [general.id]
+    properties: [general.datetime, general.status, visit.reason, ol.admissionhistory,
+        general.id, screening.noadmitreason, screening.admitapprovalindicator, ol.noadmitreasonother,
+        ol.behavioralissue, ol.datetimelastreported]
+    property_tags: {}
+    schemas: []
+    type: ol.admission
+-   basetype: null
+    key: [respiratory.id]
+    properties: [respiratory.id, respiratory.historyoftuberculosis, medical.agefirstused,
+        respiratory.testedfortuberculosis, respiratory.cxrtbtreatment, medical.smokecigarettes,
+        medical.cigarettesperday, respiratory.problemsbreathing, respiratory.shortnessofbreath,
+        respiratory.cough, respiratory.productivecough, respiratory.coughcomment,
+        event.comments]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: medical.respiratoryassessment
+-   basetype: null
+    key: [general.stringid]
+    properties: [date.completeddatetime, contact.Active, contact.cellphone, general.stringid]
+    property_tags: {}
+    schemas: []
+    type: geo.contactedat
+-   basetype: null
+    key: [general.id]
+    properties: [general.id]
+    property_tags: {}
+    schemas: []
+    type: general.participatedin_v1
+-   basetype: null
+    key: [justice.xref]
+    properties: [publicsafety.Balance, publicsafety.CurrencyAmount, publicsafety.TotalTime,
+        publicsafety.ChangeAmount, criminaljustice.releasetofacility, publicsafety.ArrestID,
+        criminaljustice.committedtoauthority, criminaljustice.bailingperson, publicsafety.include,
+        criminaljustice.cautioninformation, publicsafety.TimeFrame, publicsafety.ChecksAmount,
+        justice.xref, criminaljustice.treatasadult, j.Remark, criminaljustice.releasenotes,
+        criminaljustice.heldat, publicsafety.JuvHoldAuth, j.BookingTelephoneCall]
+    property_tags: {}
+    schemas: []
+    type: justice.JailRecord
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.stringid, housing.hiredate]
+    property_tags: {}
+    schemas: []
+    type: economy.worksas
+-   basetype: null
+    key: [general.id]
+    properties: [housing.hiredate, general.id]
+    property_tags: {}
+    schemas: []
+    type: housing.worksas
+-   basetype: null
+    key: [cardiovascular.id]
+    properties: [cardiovascular.hypertension, cardiovascular.id, cardiovascular.myocardialinfarction,
+        cardiovascular.palpitations, cardiovascular.swellingofextremities, event.comments,
+        cardiovascular.heartdisease, cardiovascular.chestpain, cardiovascular.heartdiseasetext,
+        cardiovascular.hypertensiontext, cardiovascular.chestpaintext, cardiovascular.swellingofextremitiestext,
+        cardiovascular.palpitationstext, cardiovascular.myocardialinfarctiontext]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: medical.cardiovascularassessment
+-   basetype: null
+    key: [medical.TreatmentOrderID]
+    properties: [medical.TreatmentOrderID, medical.TreatmentLength, medical.TreatmentOrderDescription,
+        event.comments, date.CompletedDateTime]
+    property_tags: {}
+    schemas: []
+    type: medical.TreatmentOrder
+-   basetype: null
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime, general.stringid, general.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: health.assessedwith
+-   basetype: null
+    key: [household.id]
+    properties: [demographics.hhsize, demographics.hhtype, household.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: demographics.household
+-   basetype: null
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: general.oversaw
+-   basetype: null
+    key: [publicsafety.dispatchzoneid]
+    properties: [publicsafety.medicalzone, publicsafety.dispatchzonename, dispatch.zoneid_deprecated,
+        publicsafety.firedistrictname, publicsafety.dispatchsubzone, publicsafety.dispatchzoneid,
+        publicsafety.firedistrictcode]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: publicsafety.dispatchzone
+-   basetype: null
+    key: [location.address, general.stringid]
+    properties: [location.address, general.stringid]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: general.occurredat
+-   basetype: null
+    key: [date.completeddatetime]
+    properties: [housing.referralcontactname, housing.referraltype, housing.referralorganization,
+        housing.referralreason, housing.referralcontactinfo, housing.referraldate,
+        housing.notes, date.completeddatetime, housing.contactdetails, housing.referralrelationship]
+    property_tags: {}
+    schemas: []
+    type: housing.referral
+-   basetype: null
+    key: [general.stringid]
+    properties: [housing.program, housing.programtype, housing.projecttype, date.admission,
+        person.gender, person.ageatevent, housing.residentid, housing.admittedadults,
+        housing.admittedchildren, housing.chronicallyhomeless, ol.datetime_release,
+        housing.lengthofstay, housing.dischargereason, housing.timelessthan90days,
+        housing.timeintransitionalorpermanentlessthan7nights, housing.notes, household.id,
+        general.stringid, ol.datetimestart]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: housing.stay
+-   basetype: null
+    key: [nc.SubjectIdentification, j.CaseNumberText]
+    properties: [nc.SubjectIdentification, j.CaseNumberText]
+    property_tags: {}
+    schemas: []
+    type: justice.booked
+-   basetype: null
+    key: [criminaljustice.jailid]
+    properties: [criminaljustice.jailid, publicsafety.ActualNumber, j.ArrestSequenceID,
+        publicsafety.CustodyID, scr.DetentionReleaseReasonCategoryCodeType, j.BookingRelease,
+        publicsafety.ArrestDate, justice.xref, j.ArrestAgency, ol.date_projectedrelease,
+        ol.datetime_release, publicsafety.datebooked, ol.durationdays]
+    property_tags: {}
+    schemas: []
+    type: justice.JailBooking
+-   basetype: null
+    key: [publicsafety.dispatchid]
+    properties: [publicsafety.dispatchid, publicsafety.cfsid, publicsafety.dispatchnumber,
+        date.received, publicsafety.dispatchpriority, date.dayofweek, time.alerted,
+        time.enroute, time.arrived, time.completed, publicsafety.dispatchtype, publicsafety.dispatchtypeclass,
+        publicsafety.dispatchtypeid, publicsafety.dispatchtripnumber, publicsafety.dispatchtypepriority,
+        publicsafety.dispatchhowreported, publicsafety.cfscasenumber, publicsafety.cfscaseid,
+        criminaljustice.disposition, criminaljustice.disposition2, publicsafety.cfsoperator,
+        publicsafety.cad_masterbusinessnumber, publicsafety.dispatch911callnumber,
+        publicsafety.agencyname, publicsafety.agencyid, publicsafety.assignedofficer,
+        publicsafety.assignedofficerid, criminaljustice.ncic, publicsafety.dispatchemd,
+        publicsafety.dispatchemdlevel, publicsafety.dispatchemdtype, publicsafety.dispatchfirelevel,
+        publicsafety.dispatchfireflag, publicsafety.dispatchemsflag, publicsafety.dispatchlea,
+        event.comments, datetime.alerted, datetime.received, datetime.enroute, datetime.arrived,
+        date.completeddatetime]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: publicsafety.callforservice
+-   basetype: null
+    key: [health.hospitalname, location.address]
+    properties: [health.hospitalname, location.address]
+    property_tags: {}
+    schemas: []
+    type: publicsafety.transportedtohospital
+-   basetype: null
+    key: [housing.assessmentid]
+    properties: [economy.employmentstatus, substance.type, person.pregnancy, housing.employment,
+        housing.matprovider, housing.mat, person.maritalstatus, person.veteranstatus,
+        person.gender, person.sexualorientation, housing.nextsteps, housing.recoverysupports,
+        housing.screen, housing.residencetype, economy.spousalsupport, economy.spousalsupportamount,
+        housing.updatedat, housing.datehomelessbegan, housing.homelesscause, housing.chronicallyhomeless,
+        housing.monthshomelessorinshelterinpast3yrs, economy.childsupport, economy.anyincomesources,
+        economy.childsupportamount, health.chroniccondition, health.chronicdisability,
+        health.developmentaldisability, health.fleeingdomesticviolence, health.domesticviolenceoccurrence,
+        economy.earnedincome, economy.earnedincomeamount, economy.earnedincometimeunit,
+        economy.publicassistance, economy.anyincome, economy.publicassistanceamount,
+        economy.anyincomeamount, economy.anyincometimeunit, economy.noncashbenefits,
+        economy.noncashbenefittypes, demographics.hhtype, demographics.hhsize, housing.indivorfamilytype,
+        health.hivpositive, housing.previousresidencelengthofstay, health.mentalissue,
+        housing.numberunstableepisodes, housing.nightbeforeinstreetorshelter, housing.permanentmoveindate,
+        health.physicaldisability, health.physicaldisabilitydescription, health.insurancecoverage,
+        form.relationtoprimaryclient, economy.otherincome, housing.assessmentid, health.insurancetype]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: housing.assessment
+-   basetype: null
+    key: [medical.InitialAssessmentID]
+    properties: [medical.RecentOrImpendingMajorLoss, medical.InitialAssessmentID,
+        medical.psychiatricdiagnosismedications, medical.homicidalideation, medical.moodswings,
+        medical.ViolentBehaviorWhenIntoxicated, medical.seriousdepression, medical.anxiety,
+        medical.TroubleRemembering, event.comments, medical.paranoia, medical.suicidalideation,
+        medical.VisitReason, medical.psychiatrichospitalizationtreatment]
+    property_tags: {}
+    schemas: []
+    type: medical.assessment
+-   basetype: null
+    key: [health.biopsychosocialid]
+    properties: [health.admissiondate, health.admissionage, substance.patternsofuse,
+        substance.quitnicotine, health.strengthsofpatient, health.otherstrengthsofpatient,
+        health.reasonstocontinuesse, health.reasonstoreduceuse, health.importanceofreduceuse,
+        health.confidenceofsubstancereduction, health.stressorcontributetorelapse,
+        health.otherstressorcontributetorelapse, health.addictionfamilyhistory, health.pastorpresentlegalissues,
+        person.militaryhistory, health.militarybenefits, person.highesteducation,
+        person.educationgoals, health.supportperson, substance.sobrietysupport, health.biopsychosocialid]
+    property_tags: {}
+    schemas: []
+    type: health.biopsychosocial
+-   basetype: null
+    key: [biomedical.id]
+    properties: [medical.surgicalhistory, medical.beingseenatotherclinics, vitals.BloodPressure,
+        medical.otherclinicsdiagnosis, medical.hardofhearingear, medical.currentdentalproblem,
+        medical.hardofhearing, nc.PersonWeightMeasure, provider.name, medical.HearingAid,
+        medical.wearglasses, vitals.Temperature, vitals.Respiration, biomedical.id,
+        medical.primarydoctoratotherclinic, vitals.Pulse, nc.PersonHeightMeasure,
+        medical.lastdentalvisit, medical.otherclinicsdates]
+    property_tags: {}
+    schemas: []
+    type: medical.biomedicalassessment
+-   basetype: null
+    key: [general.result, general.confidence]
+    properties: [general.result, general.confidence]
+    property_tags: {}
+    schemas: []
+    type: publicsafety.checkin
+-   basetype: null
+    key: [general.id]
+    properties: [general.pin, general.id, media.audio]
+    property_tags: {}
+    schemas: []
+    type: general.speakerverificationprofile
+-   basetype: null
+    key: [general.stringid, date.completeddatetime, nc.SubjectIdentification]
+    properties: [general.fullname, ol.version, sharing.name, general.stringid, date.completeddatetime,
+        nc.SubjectIdentification]
+    property_tags: {}
+    schemas: []
+    type: ol.enrolled
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.stringid, criminaljustice.localstatute, criminaljustice.ncic,
+        criminaljustice.nibrs, event.comments, date.booking, general.datetime, person.ageatevent,
+        j.intoxicationlevel, publicsafety.portablebreathtest]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: criminaljustice.bookedin
+-   basetype: null
+    key: [general.id]
+    properties: [ol.priority, ol.type, general.datetime, ol.postponementreason, general.status,
+        general.notes, general.id, visit.reason]
+    property_tags: {}
+    schemas: []
+    type: ol.appointment
+-   basetype: null
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: general.registeredfor
+-   basetype: null
+    key: [general.stringid]
+    properties: [date.CompletedDateTime, general.stringid]
+    property_tags: {}
+    schemas: []
+    type: general.InsuredBy
+-   basetype: null
+    key: [provider.NationalProviderIdentification, location.address, place.SequenceID,
+        insurance.SequenceID, substance.TreatmentHistoryID, nc.SubjectIdentification,
+        medical.allergyid, contact.id]
+    properties: [provider.NationalProviderIdentification, location.address, place.SequenceID,
+        insurance.SequenceID, substance.TreatmentHistoryID, nc.SubjectIdentification,
+        medical.allergyid, general.stringid, contact.id]
+    property_tags: {}
+    schemas: []
+    type: general.Has
+-   basetype: null
+    key: [medical.HistoryID]
+    properties: [screening.LastSeizureDate, screening.MHComments, medical.agefirstused,
+        neurological.historyofseizures, screening.AbdominalPain, screening.IssuePreventDetox,
+        medical.cigarettesperday, date.CompletedDateTime, event.comments, screening.Fever,
+        screening.ReadWriteHelp, screening.Pregnant, screening.MalignantHyperthermia,
+        respiratory.shortnessofbreath, medical.SmokeCigarettes_deprecated, cardiovascular.chestpain,
+        medical.HistoryID, gastrointestinal.bleeding, medical.suicidalideation, neurological.DeliriumTremens]
+    property_tags: {}
+    schemas: []
+    type: medical.History
+-   basetype: null
+    key: [endocrine.id]
+    properties: [endocrine.id, endocrine.diabeticmgmtcomments, endocrine.otherdiabeticmedication,
+        endocrine.diabetic, event.comments, endocrine.insulindependent, endocrine.haspersonalinsulin]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: medical.endocrineassessment
+-   basetype: null
+    key: [ol.datelogged, general.stringid]
+    properties: [nc.SystemUserName, ol.altitude, ol.datelogged, general.stringid,
+        location.latitude, location.longitude]
+    property_tags: {}
+    schemas: []
+    type: ol.recordedby
+-   basetype: null
+    key: [reproductive.id]
+    properties: [reproductive.id, reproductive.hivtest, reproductive.sexuallyactive,
+        reproductive.stdhistory, reproductive.stdcomments, reproductive.hepatitisctest,
+        reproductive.gravidapregnancy, reproductive.paritypregnancy, event.comments,
+        reproductive.lastmenstrualperiod, reproductive.hivtestdate, reproductive.hepatitisctestdate]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: medical.reproductiveassessment
+-   basetype: null
+    key: [general.stringid]
+    properties: [health.hospitalname, general.stringid, location.address]
+    property_tags: {}
+    schemas: []
+    type: health.hospitals
+-   basetype: null
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: health.insuredby
+-   basetype: null
+    key: [datetime.received]
+    properties: [datetime.received]
+    property_tags: {}
+    schemas: []
+    type: criminaljustice.initiated
+-   basetype: null
+    key: [provider.NationalProviderIdentification, place.SequenceID, nc.SubjectIdentification]
+    properties: [provider.NationalProviderIdentification, place.SequenceID, nc.SubjectIdentification]
+    property_tags: {}
+    schemas: []
+    type: general.employedby
+-   basetype: null
+    key: [neurological.id]
+    properties: [neurological.id, neurological.historyoffalls, neurological.historyoffallsnotes,
+        neurological.historyofheadinjuries, neurological.historyofheadinjuriesnotes,
+        neurological.sleeppattern, neurological.coordination, neurological.mentalstatus,
+        neurological.mentalstatusdescription, neurological.extremitiesnumbnesstingling,
+        neurological.baselineorwithdrawalsymptom, neurological.historyofneuropathy,
+        neurological.historyofneuropathynotes, neurological.historyofheadaches, neurological.historyofheadachesnotes,
+        neurological.historyofdizziness, neurological.historyofdizzinessnotes, neurological.historyofseizures,
+        neurological.seizurewithdrawalordisorder, event.comments]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: medical.neurologicalassessment
+-   basetype: null
+    key: [medical.allergyreactiontype, medical.allergyreactionseverity, general.fullname]
+    properties: [medical.allergyreactiontype, medical.allergyreactionseverity, general.fullname]
+    property_tags: {}
+    schemas: []
+    type: health.allergy
+-   basetype: null
+    key: [date.completeddatetime]
+    properties: [health.referraltype, health.referralsource, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: health.referral
+-   basetype: null
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: health.referredby
+-   basetype: null
+    key: [general.id]
+    properties: [publicsafety.recommendation, general.id]
+    property_tags: {}
+    schemas: []
+    type: publicsafety.releaserecommendation
+-   basetype: null
+    key: [criminaljustice.cfsoriginid]
+    properties: [person.juvenile, publicsafety.officerbadgeid, contact.phonenumber,
+        person.ageatevent, criminaljustice.cfsoriginid, publicsafety.dispatchpersontype,
+        cfsorigin.source, event.comments]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: criminaljustice.cfsorigin
+-   basetype: null
+    key: [nc.SubjectIdentification]
+    properties: [nc.SubjectIdentification, nc.SSN]
+    property_tags: {}
+    schemas: []
+    type: person.becomes
+-   basetype: null
+    key: [general.id]
+    properties: [general.fullname, general.id, ol.version, ol.groupid, ol.description,
+        staff.email]
+    property_tags: {}
+    schemas: [cafe.chronicle]
+    type: o.study
+-   basetype: null
+    key: [publicsafety.personnelid]
+    properties: [publicsafety.personnelid, publicsafety.personneltitle, publicsafety.officerid,
+        publicsafety.employeeid, publicsafety.officerbadgeid, publicsafety.agencyname,
+        publicsafety.agencyid, publicsafety.personnelstatus, vehicle.licensenumber,
+        person.stateidstate, nc.PersonHairColorText, nc.PersonEyeColorText, nc.PersonHeightMeasure,
+        nc.PersonWeightMeasure]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: publicsafety.personnel
+-   basetype: null
+    key: [general.stringid]
+    properties: [nc.SubjectIdentification, general.stringid, event.ChargeLevel, event.ChargeLevelState,
+        ol.numberofcounts, publicsafety.agencyname]
+    property_tags: {}
+    schemas: []
+    type: justice.chargedwith
+-   basetype: null
+    key: [general.id]
+    properties: [housing.referralorganization, ol.type, visit.reason, housing.contactdetails,
+        ol.referrername, ol.organizationname, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.referral
+-   basetype: null
+    key: [general.id]
+    properties: [general.datetime, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.patient
+-   basetype: null
+    key: [provider.NationalProviderIdentification]
+    properties: [provider.NationalProviderIdentification, provider.LicenseNumber,
+        general.Title, general.LastName]
+    property_tags: {}
+    schemas: []
+    type: medical.provider
+-   basetype: null
+    key: [emotionalbehavioral.id]
+    properties: [emotionalbehavioral.id, medical.seriousdepression, medical.selfharmingthoughts,
+        medical.racingthoughts, medical.attemptedsuicide, medical.familyfriendsdistrusts,
+        medical.psychologicalemotionalprescription, medical.hallucinations, medical.totalpsychologicalsymptoms,
+        medical.preoccupiedwithalcoholdrugs, medical.problemsfromsubstance, medical.excesssubstanceuse,
+        medical.increasedtolerance, medical.needsubstancetoalterfeeling, medical.unsuccessfulsobriety,
+        medical.totalalcoholanddrugsymptoms, medical.emotionalorphysicalabuse, medical.repeatednightmareanxiety,
+        medical.totalcountpertainingtrauma, medical.mentaltreatment, provider.name,
+        health.staff, contact.phonenumber, event.comments, health.totalacokquestions]
+    property_tags: {}
+    schemas: []
+    type: medical.emotionalbehavioralassessment
+-   basetype: null
+    key: [medication.id, medical.InitialAssessmentID, endocrine.id, gastrointestinal.id,
+        health.biopsychosocialid, emotionalbehavioral.id, substance.TreatmentHistoryID,
+        genitourinary.id, respiratory.id, cardiovascular.id, neurological.id, nutritional.id,
+        detox.ScreeningID, withdrawal.id, musculoskeletal.id, substance.SequenceID,
+        biomedical.id, reproductive.id]
+    properties: [medication.id, medical.InitialAssessmentID, endocrine.id, gastrointestinal.id,
+        health.biopsychosocialid, emotionalbehavioral.id, substance.TreatmentHistoryID,
+        genitourinary.id, respiratory.id, cardiovascular.id, neurological.id, nutritional.id,
+        detox.ScreeningID, withdrawal.id, musculoskeletal.id, substance.SequenceID,
+        biomedical.id, reproductive.id, general.stringid]
+    property_tags: {}
+    schemas: []
+    type: general.Includes_deprecated
+-   basetype: null
+    key: [contact.id]
+    properties: [housing.contactdetails, contact.Email, contact.phonenumber, housing.contactdate,
+        contact.emergencyname, contact.emergencynumber, housing.notes, contact.cellphone,
+        contact.Active, contact.uniqueID, contact.id]
+    property_tags: {}
+    schemas: []
+    type: housing.contactinformation
+-   basetype: null
+    key: [publicsafety.dispatchid]
+    properties: [publicsafety.dispatchid]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: publicsafety.involvedin
+-   basetype: null
+    key: [general.id]
+    properties: [general.id, household.id, date.admission, person.ageatevent, housing.residentid,
+        housing.admittedadults, housing.admittedchildren, housing.projecttype, housing.program,
+        housing.programtype, housing.lengthofstay, housing.dischargereason, housing.timelessthan90days,
+        housing.timeintransitionalorpermanentlessthan7nights, housing.notes, housing.chronicallyhomeless,
+        ol.datetime_release]
+    property_tags: {}
+    schemas: []
+    type: housing.stay_deprecated
+-   basetype: null
+    key: [general.id]
+    properties: [location.longitude, date.expiration, event.witnessid, guardian.signaturedatetime,
+        location.state, general.id, nc.PersonGivenName, staff.email, general.ssnlast4,
+        staff.title, general.formname, sharing.relationship, sharing.phone, sharing.programstoexclude,
+        guardian.firstname, staff.lastname, sharing.fax, general.signaturedatetime,
+        nc.PersonBirthDate, guardian.email, witness.firstname, guardian.lastname,
+        staff.signaturedatetime, witness.signature, date.completeddatetime, location.Street,
+        sharing.name, guardian.signature, nc.SubjectIdentification, staff.signature,
+        location.latitude, staff.firstname, general.signature, witness.lastname, nc.PersonSurName,
+        location.city, location.zip, witness.signaturedatetime, witness.email, person.picture,
+        contact.Email]
+    property_tags: {}
+    schemas: []
+    type: general.consentform
+-   basetype: null
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: general.consentedto
+-   basetype: null
+    key: [datetime.received]
+    properties: [datetime.received]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: general.callreceivedby
+-   basetype: null
+    key: [vehicle.id]
+    properties: [vehicle.licensenumber, vehicle.color, vehicle.licenseplatetype, vehicle.vin,
+        vehicle.make, vehicle.licenseyear, vehicle.model, vehicle.licensestate, vehicle.style,
+        vehicle.id, vehicle.year, publicsafety.dispatchtransfervehicle, vehicle.secondarycolor]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: general.vehicle
+-   basetype: null
+    key: [general.stringid]
+    properties: [demographics.hhsize, demographics.hhtype, general.stringid]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: demographics.haskinties
+-   basetype: null
+    key: [general.id]
+    properties: [general.color, criminaljustice.releasetype, justice.conditionslevel,
+        justice.condition1, justice.condition2, justice.condition3, general.id, ol.outcome,
+        ol.othertext]
+    property_tags: {}
+    schemas: []
+    type: justice.dmf
+-   basetype: null
+    key: [housing.preassessmentid]
+    properties: [housing.nextsteps, housing.status, housing.referraloutcome, housing.appropriateness,
+        housing.actionitems, housing.preassessmentid, housing.appropriate, housing.notes,
+        housing.followupdate, housing.updatedat, housing.employment, housing.contactdetails]
+    property_tags: {}
+    schemas: []
+    type: housing.preassessment
+-   basetype: null
+    key: [location.address, nc.SubjectIdentification, place.uniqueID]
+    properties: [location.address, nc.SubjectIdentification, general.stringid, place.uniqueID]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: geo.locatedat
+-   basetype: null
+    key: [general.id, date.completeddatetime]
+    properties: [general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: o.is
+-   basetype: null
+    key: [location.Address]
+    properties: [geo.facility_name, geo.facility_type, location.address, location.street,
+        location.apartment, location.city, location.state, location.zip, location.intersection,
+        location.name, location.latitude, location.longitude, housing.notes, general.entryupdated,
+        housing.updatedat, location.Address]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: geo.address
+-   basetype: null
+    key: [substance.SequenceID]
+    properties: [date.CompletedDateTime, substance.type, medical.agefirstused, substance.frequency,
+        substance.Route, general.fullname, event.comments, substance.LastUsed, substance.SequenceID,
+        substance.UsageDuration, substance.usageamount]
+    property_tags: {}
+    schemas: []
+    type: medical.Substance
+-   basetype: null
+    key: [general.StringID]
+    properties: [general.StringID, ol.arrestdatetime, publicsafety.ArrestID]
+    property_tags: {}
+    schemas: []
+    type: justice.ArrestedBy
+-   basetype: null
+    key: [bhr.dateReported, bhr.complaintNumber]
+    properties: [bhr.dateReported, bhr.complaintNumber, bhr.incident, bhr.officerName,
+        bhr.officerSeqID, bhr.emotionalState, health.staff, bhr.followupreason, event.comments,
+        nc.SubjectIdentification]
+    property_tags: {}
+    schemas: []
+    type: bhr.followup
+-   basetype: null
+    key: [justice.severity, publicsafety.ReasonHeld, publicsafety.OffenseDate, publicsafety.OffenseViolatedLocalStatute,
+        publicsafety.OffenseViolatedStateStatute, j.ArrestWarrant]
+    properties: [justice.severity, justice.offensereportid, publicsafety.ReasonHeld,
+        publicsafety.OffenseDate, publicsafety.OffenseViolatedLocalStatute, publicsafety.OffenseViolatedStateStatute,
+        criminaljustice.nibrs, j.ArrestWarrant, j.ArrestCharge, general.id, general.StringID]
+    property_tags: {}
+    schemas: []
+    type: justice.Offense
+-   basetype: null
+    key: [general.id]
+    properties: [general.id]
+    property_tags: {}
+    schemas: []
+    type: justice.sentencedwith
+-   basetype: null
+    key: [general.stringid, nc.SubjectIdentification]
+    properties: [general.stringid, nc.SubjectIdentification, ol.datetimestart]
+    property_tags: {}
+    schemas: []
+    type: ol.workson
+-   basetype: null
+    key: [criminaljustice.personid]
+    properties: [nc.complexion, j.SentenceRegisterSexOffenderIndicator, publicsafety.mugshot,
+        person.stateidnumber, criminaljustice.personid, nc.PersonWeightMeasure, criminaljustice.cautioninformation,
+        person.stateidstate, criminaljustice.persontype, nc.PersonHeightMeasure, nc.PersonEyeColorText,
+        nc.PersonHairColorText, medical.wearglasses, person.maritalstatus, im.PersonNickName,
+        vehicle.licensenumber]
+    property_tags: {}
+    schemas: []
+    type: criminaljustice.person
+-   basetype: null
+    key: [general.stringid]
+    properties: [vehicle.model, ol.version, general.stringid]
+    property_tags: {}
+    schemas: []
+    type: ol.device
+-   basetype: null
+    key: [general.StringID]
+    properties: [general.StringID, event.ServeConcurrentOffense, date.SentenceStartDate,
+        event.ServeConsecutiveWithOffenseID]
+    property_tags: {}
+    schemas: []
+    type: general.SentencingRecords
+-   basetype: null
+    key: [medication.id]
+    properties: [medication.id, medication.Regimen, medication.Dosage, medical.medicationtakenasprescribed,
+        general.fullname, date.CompletedDateTime, event.comments, medication.Type,
+        general.notes]
+    property_tags: {}
+    schemas: []
+    type: medical.Medication
+-   basetype: null
+    key: [general.id]
+    properties: [general.datetime, general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: ol.reported
+-   basetype: null
+    key: [general.id]
+    properties: [justice.bondamount, justice.suretyamount, justice.bonddescription,
+        general.notes, general.id, ol.startdate, ol.enddate]
+    property_tags: {}
+    schemas: []
+    type: justice.bond
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.contactedat
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.stringid, ol.convictionresults]
+    property_tags: {}
+    schemas: []
+    type: justice.leadsto
+-   basetype: null
+    key: [general.id]
+    properties: [justice.incarcerationstartdate, justice.incarcerationyears, justice.incarcerationsuspendedyears,
+        justice.incarcerationmonths, justice.incarcerationsuspendedmonths, justice.incarcerationdays,
+        justice.incarcerationsuspendeddays, justice.concurrentconsecutive, general.id,
+        justice.licenseworkpermit, justice.licensetype, justice.licenserevoked, justice.licensesuspended,
+        justice.licensesuspendeddays, justice.licensesuspendedmonths, justice.licensesuspendedyears,
+        justice.communityservice, justice.licensepossessedbycourt, justice.licensecomment,
+        justice.sentenceconditions, justice.licenseeffectivedate, justice.incarcerationlocation]
+    property_tags: {}
+    schemas: []
+    type: j.sentence
+-   basetype: null
+    key: [justice.ArrestTrackingNumber]
+    properties: [justice.ChargeStatus, justice.severity, justice.ArrestTrackingNumber,
+        justice.ReferralDate, justice.plea, justice.disposition, publicsafety.ArrestDate,
+        justice.EventType, justice.SentencingConditionsMet, event.OffenseLocalDescription,
+        event.OffenseLocalCodeSection, j.OffenseQualifierText, event.ChargeLevel,
+        event.ChargeLevelState, justice.pleadate, justice.dispositiondate, event.comments,
+        ol.numberofcounts]
+    property_tags: {}
+    schemas: []
+    type: justice.charge
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.fullname, ol.version, general.stringid, contact.Email, diagnosis.Description,
+        sharing.name, location.latitude, location.longitude]
+    property_tags: {}
+    schemas: []
+    type: ol.study
+-   basetype: null
+    key: [psa.PriorMisdemeanorConviction, psa.PriorViolentConviction, psa.PriorConviction,
+        psa.PriorFailureToAppearWithinTwoYears, psa.CurrentViolentOffense, psa.PriorFailureToAppearOlderThanTwoYears,
+        psa.CurrentViolentOffenseAnd20OrYounger, psa.PendingCharge, psa.PriorSentenceToIncarceration,
+        psa.PriorFelonyConviction, psa.AgeAtCurrentArrest]
+    properties: [psa.PriorMisdemeanorConviction, psa.PriorViolentConviction, psa.PriorConviction,
+        psa.PriorFailureToAppearWithinTwoYears, psa.CurrentViolentOffense, psa.PriorFailureToAppearOlderThanTwoYears,
+        psa.CurrentViolentOffenseAnd20OrYounger, psa.PendingCharge, psa.PriorSentenceToIncarceration,
+        psa.PriorFelonyConviction, psa.AgeAtCurrentArrest, general.id, psa.PriorMisdemeanorConvictionNotes,
+        psa.PriorViolentConvictionNotes, psa.PriorFailureToAppearWithinTwoYearsNotes,
+        psa.CurrentViolentOffenseNotes, psa.PriorFailureToAppearOlderThanTwoYearsNotes,
+        psa.PendingChargeNotes, psa.PriorSentenceToIncarcerationNotes, psa.PriorFelonyConvictionNotes,
+        psa.AgeAtCurrentArrestNotes]
+    property_tags: {}
+    schemas: []
+    type: justice.psaRiskFactors
+-   basetype: null
+    key: [publicsafety.GoodTimeDays, publicsafety.TimeServedMinutes, publicsafety.GoodTimeMinutes,
+        publicsafety.NoCounts, publicsafety.ConsecWith, publicsafety.GoodTimePCT,
+        publicsafety.Concurrent, publicsafety.GoodTimeHours, j.RegisteredOffenderEntryDate,
+        publicsafety.SentenceTermDays, j.SentenceModificationProbationIndicator, criminaljustice.timeserveddays,
+        publicsafety.SentenceTermHours, publicsafety.TimeServedHours, j.SentenceRegisterSexOffenderIndicator]
+    properties: [publicsafety.GoodTimeDays, ol.convictionresults, publicsafety.TimeServedMinutes,
+        publicsafety.GoodTimeMinutes, publicsafety.NoCounts, publicsafety.ConsecWith,
+        publicsafety.GoodTimePCT, publicsafety.Concurrent, publicsafety.GoodTimeHours,
+        j.RegisteredOffenderEntryDate, publicsafety.SentenceTermDays, j.SentenceModificationProbationIndicator,
+        event.SentenceTermYears, criminaljustice.timeserveddays, publicsafety.SentenceTermHours,
+        publicsafety.TimeServedHours, j.SentenceRegisterSexOffenderIndicator, ol.date_projectedrelease,
+        person.ageatevent, person.releaseofficer, publicsafety.AlternateStartDate]
+    property_tags: {}
+    schemas: []
+    type: justice.Sentence
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.stringid, vehicle.licensenumber, person.stateidstate]
+    property_tags: {}
+    schemas: []
+    type: ol.associatedwith
+-   basetype: null
+    key: [criminaljustice.offenseid]
+    properties: [criminaljustice.offenseid, criminaljustice.localstatute, criminaljustice.nibrs,
+        criminaljustice.ncic, offense.reporteddate, incident.startdatetime, incident.enddatetime,
+        event.comments, ol.numberofcounts, publicsafety.drugspresent, event.OffenseLocalDescription,
+        j.ArrestCharge, general.StringID, ol.statestatute]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: criminaljustice.offense
+-   basetype: null
+    key: [general.id]
+    properties: [ol.durationinterval, ol.datetimestart, general.id, ol.recordtype,
+        ol.datelogged, ol.datetimeend, general.fullname, ol.timezone]
+    property_tags: {}
+    schemas: [cafe.chronicle]
+    type: ol.application
+-   basetype: null
+    key: [publicsafety.NumberOfCharges, publicsafety.MostSeriousChargeStatuteNumber,
+        publicsafety.MostSeriousStatuteDescription, publicsafety.CaseDispositionDate,
+        publicsafety.MostSeriousChargeDegree, publicsafety.ReleasedPendingCaseDisposition,
+        publicsafety.ArrestDate, publicsafety.DispositionType, publicsafety.ReleaseDate,
+        publicsafety.datebooked]
+    properties: [publicsafety.NumberOfCharges, publicsafety.MostSeriousChargeStatuteNumber,
+        publicsafety.MostSeriousStatuteDescription, publicsafety.CaseDispositionDate,
+        publicsafety.MostSeriousChargeDegree, publicsafety.ReleasedPendingCaseDisposition,
+        publicsafety.ArrestDate, publicsafety.DispositionType, publicsafety.ReleaseDate,
+        publicsafety.datebooked, j.CaseNumberText, publicsafety.FileDate, general.entryupdated,
+        ol.arrestdatetime, criminaljustice.arrestagency]
+    property_tags: {}
+    schemas: []
+    type: publicsafety.pretrialstatuscaseprocessings
+-   basetype: null
+    key: [general.id]
+    properties: [general.datetime, general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: ol.provided
+-   basetype: null
+    key: [general.id]
+    properties: [general.datetime, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.employedby
+-   basetype: null
+    key: [general.stringid]
+    properties: [general.fullname, ol.recordtype, general.stringid, ol.altitude, location.latitude,
+        location.longitude, ol.datelogged, general.Duration, ol.datetimestart, general.EndTime,
+        ol.timezone]
+    property_tags: {}
+    schemas: []
+    type: ol.applicationdata
+-   basetype: null
+    key: [general.id]
+    properties: [general.datetime, general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: ol.using
+-   basetype: null
+    key: [general.id]
+    properties: [ol.contactmethod, ol.contactdatetime, general.notes, general.id,
+        ol.outcome, ol.othertext]
+    property_tags: {}
+    schemas: []
+    type: ol.contactactivity
+-   basetype: null
+    key: [general.id]
+    properties: [general.status, ol.statusdetails, ol.effectivedate, ol.expirationdate,
+        ol.duration, general.notes, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.securityaccess
+-   basetype: null
+    key: [general.id]
+    properties: [ol.issuespreventingdetox, ol.issuespreventingdetoxnotes, general.medicallegalissuescomments,
+        health.otherstressorcontributetorelapse, ol.acuteintoxicationwithdrawalrisk,
+        ol.medicalconditionmonitoring, ol.medicalconditionmonitoringnotes, general.id,
+        ol.mentalhealthnotes, ol.nohealthproblems, ol.medicalconditionpresent, ol.medicalconditionpresentnotes,
+        ol.psychdiagnosisindicator, general.notes]
+    property_tags: {}
+    schemas: []
+    type: ol.detoxcautions
+-   basetype: null
+    key: [general.id]
+    properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
+        ol.medicalconditionhistorynotes, general.id, ol.reactionseverity, ol.reactiontype,
+        ol.name, ol.activelydenies]
+    property_tags: {}
+    schemas: []
+    type: ol.allergy
+-   basetype: null
+    key: [general.id]
+    properties: [date.completeddatetime, general.id, general.datetime]
+    property_tags: {}
+    schemas: []
+    type: ol.scheduled
+-   basetype: null
+    key: [general.id]
+    properties: [economy.publicassistance, general.id, economy.noncashbenefits, economy.childsupportamount,
+        economy.anyincomesources, economy.spousalsupport, economy.otherincome, economy.noncashbenefittypes,
+        economy.earnedincomeamount, economy.anyincomeamount, economy.earnedincometimeunit,
+        economy.childsupport, economy.publicassistanceamount, economy.anyincometimeunit,
+        economy.anyincome, economy.earnedincome, economy.spousalsupportamount]
+    property_tags: {}
+    schemas: []
+    type: ol.income
+-   basetype: null
+    key: [general.id, date.completeddatetime]
+    properties: [general.datetime, general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: ol.getsmailat
+-   basetype: null
+    key: [j.CaseNumberText]
+    properties: [justice.dacasenumber, justice.courtcasenumber, justice.ArrestTrackingNumber,
+        justice.ReferralDate, justice.ReferralType, justice.AgencyCaseNumber, justice.courtcasetype,
+        justice.ReferralAgency, j.CaseNumberText, justice.CaseStatus, event.comments,
+        ol.update, general.date, date.timeOfDay, general.datetime, justice.courtroom]
+    property_tags: {}
+    schemas: []
+    type: justice.case
+-   basetype: null
+    key: [general.stringid]
+    properties: [nc.SSN, publicsafety.personnelstatus, ol.datetimestart, general.stringid,
+        incident.enddatetime, ol.id]
+    property_tags: {}
+    schemas: []
+    type: ol.is
+-   basetype: null
+    key: [general.id]
+    properties: [ol.contactmethod, staff.email, contact.phonenumber, general.notes,
+        contact.cellphone, ol.preferredmethod, ol.availability, general.id, ol.id,
+        contact.id]
+    property_tags: {}
+    schemas: []
+    type: ol.contactinformation
+-   basetype: null
+    key: [general.id]
+    properties: [ol.nosmoking, general.id, ol.bringmedications, ol.bringinsurance,
+        ol.noweapons, ol.bringid, ol.bringclothing, ol.copayrequiredindicator, ol.loststolenproperty]
+    property_tags: {}
+    schemas: []
+    type: ol.facilityreminders
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.subjectof
+-   basetype: null
+    key: [general.id]
+    properties: [location.address, location.street, location.addressline2, location.intersection,
+        location.city, location.state, location.zip, location.latitude, location.longitude,
+        ol.altitude, general.notes, general.id, location.apartment, ol.noaddress,
+        location.name, ol.id, ol.type]
+    property_tags: {}
+    schemas: []
+    type: ol.location
+-   basetype: null
+    key: [general.id]
+    properties: [ol.type, general.id, ol.description]
+    property_tags: {}
+    schemas: []
+    type: ol.consent
+-   basetype: null
+    key: [arrestedin.id, nc.SubjectIdentification]
+    properties: [arrestedin.id, event.comments, nc.SubjectIdentification, ol.arrestcategory,
+        criminaljustice.nibrs, criminaljustice.localstatute, criminaljustice.ncic,
+        criminaljustice.casenumber, criminaljustice.personid, criminaljustice.bookingnumber,
+        publicsafety.weaponspresent, ol.arrestdate, location.address, criminaljustice.warranttype,
+        criminaljustice.arrestagency, ol.arrestdatetime, person.ageatevent, j.ArrestCharge,
+        ol.mapreference, ol.numberofcounts, ol.personpoliceminutes]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: criminaljustice.arrestedin
+-   basetype: null
+    key: [general.id]
+    properties: [ol.remindertext, ol.confirmationindicator, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.reminder
+-   basetype: null
+    key: [general.id]
+    properties: [ol.scale1to10, ol.directedagainst, ol.directedagainstother, ol.historyofviolence,
+        ol.historicaldirectedagainst, ol.historicaldirectedagainstother, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.violentbehavior
+-   basetype: null
+    key: [location.address, nc.SubjectIdentification]
+    properties: [location.address, nc.SubjectIdentification]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: geo.getsmailat
+-   basetype: null
+    key: [general.id]
+    properties: [general.datetime, general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: ol.contactedvia
+-   basetype: null
+    key: [general.id]
+    properties: [ol.recentoverdoseindicator, general.datetime, ol.activelydenies,
+        general.id, ol.substancename, general.notes, ol.narcanadministered]
+    property_tags: {}
+    schemas: []
+    type: ol.overdosehistory
+-   basetype: null
+    key: [general.id]
+    properties: [general.status, staff.title, person.picture, publicsafety.employeeid,
+        general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.employee
+-   basetype: null
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime, nc.PersonGivenName, nc.PersonSurName, person.title,
+        general.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: health.assessedby -d
+-   basetype: null
+    key: [general.id]
+    properties: [ol.type, general.status, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.residence
+-   basetype: null
+    key: [general.id]
+    properties: [general.datetime, general.id, general.formname, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: ol.collectedby
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id, criminaljustice.disposition]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.disposition
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.name, ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.relative
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id, ol.reasoncode, ol.juvenileholdauth, criminaljustice.releasenotes,
+        ol.notes, ol.reasonheld, incident.startdatetime, ol.alternatestartdate, general.status,
+        publicsafety.ssaconviction, publicsafety.SSA, criminaljustice.releasetype,
+        ol.projectedreleasedatetime, ol.releasedatetime]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.jailstay
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.oflength
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.bondset
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.chargedby
+-   basetype: null
+    key: [general.id]
+    properties: [general.datetime, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.deletedby
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.clearedby
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.chargedwith
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id, ol.consecutive, ol.concurrent, ol.probation, ol.sentencehours,
+        ol.sentencedays, ol.convictionresults, ol.sentenceyears]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.sentence
+-   basetype: null
+    key: [ol.id]
+    properties: [person.ageatevent, ol.id, j.intoxicationlevel, publicsafety.portablebreathtest,
+        ol.notes]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.booking
+-   basetype: null
+    key: [general.ArrestSequenceID]
+    properties: [person.TransportingOfficer, ol.arrestcategory, place.TransportingAgency,
+        general.ArrestSequenceID, criminaljustice.arrestagency, event.Disposition,
+        criminaljustice.warranttype, place.Location, person.ArrestingOfficer, place.StreetAddress,
+        event.ArrestWarrantNumber, person.SearchOfficer]
+    property_tags: {}
+    schemas: []
+    type: general.Arrest
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: []
+    type: ol.relatedto
+-   basetype: null
+    key: [general.id]
+    properties: [ol.name, ol.activelydenies, general.id, ol.takenasprescribed, ol.regimen,
+        ol.dosage, general.notes, ol.expirationdate, ol.verificationsource]
+    property_tags: {}
+    schemas: []
+    type: ol.medication
+-   basetype: null
+    key: [general.id]
+    properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
+        ol.medicalconditionhistorynotes, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.malignanthyperthermia
+-   basetype: null
+    key: [general.id]
+    properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
+        ol.medicalconditionhistorynotes, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.shortnessofbreath
+-   basetype: null
+    key: [general.id]
+    properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.fever
+-   basetype: null
+    key: [general.id]
+    properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
+        ol.medicalconditionhistorynotes, ol.lastseizuredate, ol.seizurehistorytext,
+        general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.seizures
+-   basetype: null
+    key: [general.id]
+    properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
+        ol.medicalconditionhistorynotes, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.suicidalideation
+-   basetype: null
+    key: [general.id]
+    properties: [location.address, ol.buildinglocation, ol.name, ol.type, general.id,
+        general.notes, ol.roomnumber]
+    property_tags: {}
+    schemas: []
+    type: o.facility
+-   basetype: null
+    key: [general.id]
+    properties: [ol.pregnancyindicator, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
+        ol.medicalconditionhistorynotes, ol.medicalconditionpresent, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.pregnancy
+-   basetype: null
+    key: [general.id]
+    properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
+        ol.medicalconditionhistorynotes, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.deleriumtremens
+-   basetype: null
+    key: [general.id]
+    properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
+        ol.medicalconditionhistorynotes, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.abdominalpain
+-   basetype: null
+    key: [insurance.SequenceID]
+    properties: [insurance.SequenceID, general.fullname, insurance.Status, insurance.PrescriptionGroup,
+        insurance.PlanType, insurance.Type, insurance.GroupNumber, insurance.PrescriptionPCN,
+        insurance.MemberIdentification, insurance.PrescriptionBIN, general.notes]
+    property_tags: {}
+    schemas: []
+    type: medical.Insurance
+-   basetype: null
+    key: [general.id, date.completeddatetime]
+    properties: [general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: ol.assessedby
+-   basetype: null
+    key: [general.datetime, general.id]
+    properties: [general.datetime, general.id, ol.contactdatetime, ol.contactmethod,
+        ol.outcome, general.notes]
+    property_tags: {}
+    schemas: []
+    type: ol.interactedwith
+-   basetype: null
+    key: [general.id]
+    properties: [ol.organizationname, ol.name, ol.type, ol.groupnumber, ol.plantype,
+        general.status, ol.prescriptionpcn, ol.prescriptionbin, ol.prescriptiongroup,
+        ol.memberidnumber, general.id, ol.notes, general.notes]
+    property_tags: {}
+    schemas: []
+    type: ol.insurance
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.sentencedwith
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.releasedby
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id, ol.goodtimedays, ol.goodtimeminutes, ol.timeservedhours, ol.projectedreleasedatetime,
+        ol.goodtimehours, ol.timeservedminutes, criminaljustice.timeserveddays, ol.goodtimePCT,
+        ol.datetime_release]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.jailstaylength
+-   basetype: null
+    key: [general.id]
+    properties: [general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: ol.livesat
+-   basetype: null
+    key: [psa.ftaScale, psa.nvcaFlag, psa.ncaScale]
+    properties: [psa.ftaScale, psa.nvcaFlag, psa.ncaScale, economy.anyincomesources,
+        general.id, general.status, justice.failurereason, general.statusnotes]
+    property_tags: {}
+    schemas: []
+    type: justice.psa
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.contactinfogiven
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id, ol.status, person.title, publicsafety.employeeid]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: o.employee
+-   basetype: null
+    key: [general.id]
+    properties: [ol.organizationname, ol.abbreviation, ol.activity, general.id, ol.branch,
+        ol.id, ol.name]
+    property_tags: {}
+    schemas: []
+    type: ol.organization
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id, person.age, ol.role, general.stringid, ol.personpoliceminutes,
+        ol.personfireminutes, ol.personemsminutes, ol.organizationtime]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.appearsin
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.receivedby
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.name, ol.id]
+    property_tags: {}
+    schemas: []
+    type: ol.fireunit
+-   basetype: null
+    key: [general.id]
+    properties: [ol.duration, general.id, substance.frequency, ol.preferredname, ol.type,
+        ol.ivadministration, medical.agefirstused, substance.usageamount, ol.datelastreported,
+        ol.subtype, general.notes, ol.substancename, ol.name, ol.dailyusemeasure,
+        ol.substanceuseindicator, substance.patternsofuse, ol.routeofadministration,
+        ol.datetimelastreported]
+    property_tags: {}
+    schemas: []
+    type: ol.substance
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id, criminaljustice.bailbondamount]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.bond
+-   basetype: null
+    key: [general.id]
+    properties: [ol.type, ol.startdate, ol.enddate, general.frequency, ol.plantype,
+        ol.othertext, general.fullname, criminaljustice.persontype, general.id]
+    property_tags: {}
+    schemas: []
+    type: justice.releasecondition
+-   basetype: null
+    key: [general.id]
+    properties: [ol.code, ol.name, ol.type, general.id, ol.subzone, ol.id]
+    property_tags: {}
+    schemas: []
+    type: ol.zone
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.worksat
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.postedby
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id, ol.name]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.unit
+-   basetype: null
+    key: [ol.id]
+    properties: [vehicle.make, vehicle.licensenumber, vehicle.model, ol.id, ol.dispatchtransfer,
+        vehicle.color, vehicle.licenseyear, vehicle.licenseplatetype, vehicle.vin,
+        vehicle.licensestate, vehicle.year, vehicle.style]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.vehicle
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.assignedto
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.name, ol.id]
+    property_tags: {}
+    schemas: []
+    type: ol.emsunit
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.kinto
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: []
+    type: ol.hasentity
+-   basetype: null
+    key: [nc.SubjectIdentification]
+    properties: [nc.PersonGivenName, nc.PersonMiddleName, nc.PersonSurName, nc.SSN,
+        nc.PersonBirthDate, nc.PersonSuffix, im.PersonNickName, nc.PersonRace, nc.PersonEthnicity,
+        nc.PersonSex, person.stateidnumber, publicsafety.mugshot, person.maritalstatus,
+        person.stateidstate, nc.PersonHairColorText, nc.PersonWeightMeasure, nc.PersonEyeColorText,
+        justice.xref, nc.PersonBirthPlace, j.SentenceRegisterSexOffenderIndicator,
+        nc.PersonHeightMeasure, criminaljustice.persontype, person.picture, nc.complexion,
+        housing.updatedat, nc.SubjectIdentification, housing.notes, ol.idtype, bhr.gender,
+        ol.idjurisdiction, ol.idnumber, ol.numsourcesfoundin, ol.datasource]
+    property_tags: {}
+    schemas: []
+    type: general.person
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.transportedby
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.type, ol.id, ol.accessible, ol.armed, ol.conditionindicator]
+    property_tags: {}
+    schemas: []
+    type: ol.weapon
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id, ol.personpoliceminutes, ol.personfireminutes, ol.personemsminutes,
+        ol.organizationtime, person.age, general.stringid, ol.role, ol.datetimestart,
+        ol.datetimeend, ol.roledescription]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.involvedin
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id, ol.type, ol.notes]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.committedby
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id, criminaljustice.localstatute, ol.notes, general.date, ol.statestatute,
+        criminaljustice.ncic, criminaljustice.nibrs, ol.statepenalchapter, ol.statepenalsection,
+        ol.level, ol.description, ol.sexcrime, ol.juveniles, ol.protectivecustody,
+        ol.attemptedcompleted, ol.domesticviolenceflag, ol.number]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.offense
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.resultsin
+-   basetype: null
+    key: [general.id]
+    properties: [general.datetime, ol.role, general.id, general.signature]
+    property_tags: {}
+    schemas: []
+    type: ol.signedby
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.arrestdatetime, ol.category, criminaljustice.warranttype, publicsafety.weaponspresent,
+        ol.id, ol.warrantnumber, ol.datetime_reported]
+    property_tags: {}
+    schemas: []
+    type: ol.arrest
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.typeclass, datetime.alerted, ol.type, ol.priority, ol.id, datetime.arrived,
+        criminaljustice.ncic, date.completeddatetime, ol.receiveddatetime, ol.notes,
+        ol.durationinterval, ol.level, ol.howreported, datetime.enroute, criminaljustice.casenumber,
+        ol.caseid, publicsafety.dispatch911callnumber, ol.stringnumber, ol.masterbusinessnumber,
+        ol.policeminutes, ol.emsminutes, ol.firedeptminutes, ol.numberofpolice, ol.numberofpolicenoduration,
+        ol.numberoffireunits, ol.numberoffireunitsnoduration, ol.numberofemsunits,
+        ol.numberofemsunitsnoduration, ol.numberofpeople, ol.numberofpoliceunits,
+        ol.numberofpoliceunitsnoduration, ol.policeunitminutes]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.dispatch
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.name, ol.id, ol.type, ol.numberpeopleelsewhere, ol.numberarresteeselsewehere,
+        ol.numberinmateselsewhere]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.agency
+-   basetype: null
+    key: [criminaljustice.jailrecordid]
+    properties: [criminaljustice.jailrecordid, criminaljustice.inmateid, criminaljustice.jailid,
+        criminaljustice.heldat, criminaljustice.commitnumber, criminaljustice.committingauthority,
+        criminaljustice.committedtoauthority, criminaljustice.arrestagency, criminaljustice.treatasadult,
+        criminaljustice.cautioninformation, date.commit, criminaljustice.bailbondamount,
+        criminaljustice.bailingperson, ol.date_projectedrelease, ol.datetime_release,
+        criminaljustice.releasetype, criminaljustice.timeserveddays, criminaljustice.releasetofacility,
+        criminaljustice.releasenotes, criminaljustice.casenumber, justice.xref, person.maritalstatus,
+        ol.timeservedhours, ol.timeservedminutes, ol.datetimestart, publicsafety.AlternateStartDate,
+        publicsafety.ReasonHeld, publicsafety.GoodTimeDays, publicsafety.GoodTimeHours,
+        publicsafety.GoodTimeMinutes, publicsafety.GoodTimePCT, ol.reasoncode, publicsafety.SSA,
+        publicsafety.ssastatus, publicsafety.ssaconviction, place.OriginatingAgencyIdentifier,
+        event.comments, general.status, publicsafety.JuvHoldAuth]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: criminaljustice.jailrecord
+-   basetype: null
+    key: [general.id]
+    properties: [general.datetime, general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.updatedby
+-   basetype: null
+    key: [bhr.complaintNumber, nc.SubjectIdentification]
+    properties: [bhr.dispatchReason, bhr.complaintNumber, bhr.companionOffenseReport,
+        bhr.incident, bhr.locationOfIncident, bhr.unit, bhr.postOfOccurrence, bhr.cadNumber,
+        bhr.onView, bhr.timeOccurred, bhr.dateOccurred, bhr.timeReported, bhr.dateReported,
+        bhr.name, bhr.address, bhr.phone, bhr.militaryStatus, bhr.gender, bhr.race,
+        bhr.age, bhr.dob, bhr.homeless, bhr.homelessLocation, bhr.drugsAlcohol, bhr.drugType,
+        bhr.prescribedMedication, bhr.takingMedication, bhr.prevPsychAdmission, bhr.selfDiagnosis,
+        bhr.selfDiagnosisOther, bhr.armedWithWeapon, bhr.armedWeaponType, bhr.accessToWeapons,
+        bhr.accessibleWeaponType, bhr.observedBehaviors, bhr.observedBehaviorsOther,
+        bhr.emotionalState, bhr.emotionalStateOther, bhr.photosTakenOf, bhr.injuries,
+        bhr.injuriesOther, bhr.suicidal, bhr.suicidalActions, bhr.suicideAttemptMethod,
+        bhr.suicideAttemptMethodOther, bhr.complainantName, bhr.complainantAddress,
+        bhr.complainantConsumerRelationship, bhr.complainantPhone, bhr.disposition,
+        bhr.provider, bhr.hospitalTransport, bhr.hospital, bhr.deescalationTechniques,
+        bhr.deescalationTechniquesOther, bhr.specializedResourcesCalled, bhr.incidentNarrative,
+        bhr.officerName, bhr.officerSeqID, bhr.officerInjuries, bhr.officerCertification,
+        bhr.supervisor, bhr.supervisorID, nc.SubjectIdentification, ol.historyofviolence,
+        ol.historyofviolencetext, ol.scale1to10, ol.historicaldirectedagainstother,
+        ol.directedagainstother, ol.directedagainst, ol.historicaldirectedagainst,
+        ol.deescalationscale, ol.useofforce, ol.useofforcenotes, ol.referralprovidedindicator,
+        housing.referraldestination, ol.stabilizedindicator, health.hospitalname,
+        ol.hospitaltransportindicator, ol.voluntaryactionindicator, place.TransportingAgency,
+        bhr.datetimeReported, bhr.datetimeOccurred]
+    property_tags: {}
+    schemas: []
+    type: bhr.report
+-   basetype: null
+    key: [general.id]
+    properties: [justice.extradited, justice.extraditednotes, justice.dmfstep2, justice.dmfstep2notes,
+        justice.dmfstep4, justice.dmfstep4notes, justice.dmfsecondaryreleasecharges,
+        justice.dmfsecondaryreleasechargesnotes, general.context, general.id, justice.dmfsecondaryholdcharges,
+        justice.dmfsecondaryholdchargesnotes]
+    property_tags: {}
+    schemas: []
+    type: dmf.riskfactors
+-   basetype: null
+    key: [general.id]
+    properties: [person.maritalstatus, person.gender, person.sexualorientation, ol.illiterate,
+        nc.complexion, person.veteranstatus, person.picture, person.juvenile, general.id,
+        ol.stateresident, person.ageatevent, ol.id, nc.PersonWeightMeasure, nc.PersonHeightMeasure,
+        nc.PersonHairColorText, nc.PersonEyeColorText, ol.height, ol.weight, ol.eyecolor,
+        ol.haircolor, ol.numsourcesfoundin, person.highesteducation, ol.literacynotes,
+        ol.numberofchildren, ol.title, ol.bodydescription, ol.language, ol.ears, ol.face,
+        ol.nose, ol.facialhair, ol.glasses, ol.handedness, ol.nationality]
+    property_tags: {}
+    schemas: []
+    type: ol.persondetails
+-   basetype: null
+    key: [general.id]
+    properties: [general.status, location.state, general.notes, housing.chronicallyhomeless,
+        general.id, ol.startdate, ol.enddate, housing.monthshomelessorinshelterinpast3yrs,
+        ol.cause, location.address, ol.conditionindicator, ol.historicalconditionindicator]
+    property_tags: {}
+    schemas: []
+    type: ol.homeless
+-   basetype: null
+    key: [ol.id]
+    properties: [location.state, ol.type, ol.id, ol.stringnumber, ol.notes]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.identification
+-   basetype: null
+    key: [criminaljustice.incidentid]
+    properties: [criminaljustice.incidentid, publicsafety.cadnumber, criminaljustice.reportnumber,
+        incident.reporteddatetime, incident.startdatetime, incident.enddatetime, criminaljustice.incidentflag,
+        location.address, criminaljustice.localstatute, criminaljustice.ncic, criminaljustice.nibrs,
+        publicsafety.officerbadgeid, criminaljustice.suspectalcohol, criminaljustice.victimalcohol,
+        criminaljustice.casestatus, criminaljustice.beatsector, incident.narrative,
+        publicsafety.drugspresent, publicsafety.weaponspresent, ol.recordtype, ol.gangactivity,
+        ol.domesticviolenceflag, ol.datetime_reported, ol.juvenilegang, ol.datetimestart,
+        ol.alcoholincrime, ol.computerincrime, ol.durationhours]
+    property_tags:
+        91106b89-5842-48e4-a21f-ef923557c1b8: [timeline]
+    schemas: [v2.v2]
+    type: criminaljustice.incident
+-   basetype: null
+    key: [medical.DiagnosisID, nc.SubjectIdentification]
+    properties: [nc.SubjectIdentification, medical.DiagnosisID, ol.mapreference]
+    property_tags: {}
+    schemas: []
+    type: general.DiagnosedWith
+-   basetype: null
+    key: [general.stringid]
+    properties: [nc.SubjectIdentification, general.stringid, general.datetime, person.juvenile,
+        person.age, publicsafety.dispatchpersontype, publicsafety.dispatchpersontypedescription,
+        event.comments, time.alerted, time.arrived, time.completed, time.enroute,
+        location.address, datetime.alerted, datetime.arrived, date.completeddatetime,
+        datetime.enroute, ol.personpoliceminutes]
+    property_tags: {}
+    schemas: []
+    type: general.appearsin
+-   basetype: null
+    key: [ol.id]
+    properties: [ol.id, ol.level, ol.levelstate, ol.name, ol.numberofcounts, ol.sexcrime,
+        ol.juveniles, ol.protectivecustody, ol.attemptedcompleted]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: ol.charge
+-   basetype: null
+    key: [gastrointestinal.id]
+    properties: [gastrointestinal.ulcers, gastrointestinal.liverdisease, gastrointestinal.constipation,
+        gastrointestinal.normalbowelpattern, gastrointestinal.id, gastrointestinal.hepatitis,
+        gastrointestinal.nauseavomiting, gastrointestinal.pancreatitis, gastrointestinal.diarrhea,
+        event.comments, gastrointestinal.lastbowelmovement, gastrointestinal.bleeding,
+        gastrointestinal.hepatitistext, gastrointestinal.liverdiseasetext, gastrointestinal.pancreatitistext,
+        gastrointestinal.bleedingtext, gastrointestinal.constipationtext, gastrointestinal.diarrheatext,
+        gastrointestinal.nauseavomitingtext, gastrointestinal.ulcerstext]
+    property_tags: {}
+    schemas: [v2.v2]
+    type: medical.gastrointestinalassessment
+-   basetype: null
+    key: [general.id]
+    properties: [ol.specificgravityvalue, ol.nitritesvalue, general.id, ol.hemoglobinflag,
+        general.datetime, ol.glucoseflag, ol.phflag, ol.specificgravityflag, ol.nitritesflag,
+        ol.bilirubinflag, ol.phvalue, ol.ketonesflag, ol.proteinflag, ol.leukocyteflag,
+        ol.urobilinogenflag]
+    property_tags: {}
+    schemas: []
+    type: ol.urinalysis
+-   basetype: null
+    key: [general.id]
+    properties: [general.id, date.completeddatetime, ol.datetimeadministered]
+    property_tags: {}
+    schemas: []
+    type: ol.screenedwith
+-   basetype: null
+    key: [general.id]
+    properties: [general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    type: ol.includes
+-   basetype: null
+    key: [general.id]
+    properties: [ol.systolicbloodpressure, ol.diastolicbloodpressure, ol.pulserate,
+        ol.pulseratecategory, ol.bloodpressurecategory, ol.temperature, ol.respirationrate,
+        general.id]
+    property_tags: {}
+    schemas: []
+    type: ol.vitalsigns
+-   basetype: null
+    key: [general.id]
+    properties: [criminaljustice.releasetype, ol.outcome, ol.othertext, general.id]
+    property_tags: {}
+    schemas: []
+    type: justice.psaoutcome

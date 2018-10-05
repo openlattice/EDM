@@ -1,0 +1,1089 @@
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [medical.DiagnosisID, nc.SubjectIdentification]
+    properties: [nc.SubjectIdentification, medical.DiagnosisID, ol.mapreference]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: general.DiagnosedWith
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.stringid]
+    properties: [date.CompletedDateTime, general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: general.InsuredBy
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [nc.SubjectIdentification, substance.SequenceID]
+    properties: [nc.SubjectIdentification, substance.SequenceID, general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: general.Used
+-   basetype: null
+    bidirectional: false
+    dst: [medical.DetoxScreening, medical.assessment, health.biopsychosocial]
+    key: [medical.InitialAssessmentID, provider.NationalProviderIdentification, health.biopsychosocialid,
+        detox.ScreeningID]
+    properties: [medical.InitialAssessmentID, provider.NationalProviderIdentification,
+        health.biopsychosocialid, detox.ScreeningID, date.CompletedDateTime, general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [medical.DetoxScreening, medical.assessment, health.biopsychosocial]
+    type: general.AssessedBy
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [nc.SubjectIdentification, j.CaseNumberText]
+    properties: [nc.SubjectIdentification, j.CaseNumberText]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: justice.booked
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: medical.reported_deprecated
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [medication.id, nc.SubjectIdentification]
+    properties: [medication.id, nc.SubjectIdentification, general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: general.Taking_deprecated
+-   basetype: null
+    bidirectional: false
+    dst: [medical.provider]
+    key: [provider.NationalProviderIdentification, medical.TreatmentOrderID]
+    properties: [provider.NationalProviderIdentification, medical.TreatmentOrderID]
+    property_tags: {}
+    schemas: []
+    src: [medical.provider]
+    type: medical.Ordered
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [provider.NationalProviderIdentification, nc.SubjectIdentification]
+    properties: [provider.NationalProviderIdentification, nc.SubjectIdentification]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: general.ReferredBy_deprecated
+-   basetype: null
+    bidirectional: false
+    dst: [justice.case]
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [justice.case]
+    type: general.assignto
+-   basetype: null
+    bidirectional: false
+    dst: [general.place, general.person, medical.provider]
+    key: [provider.NationalProviderIdentification, location.address, place.SequenceID,
+        insurance.SequenceID, substance.TreatmentHistoryID, nc.SubjectIdentification,
+        medical.allergyid, contact.id]
+    properties: [provider.NationalProviderIdentification, location.address, place.SequenceID,
+        insurance.SequenceID, substance.TreatmentHistoryID, nc.SubjectIdentification,
+        medical.allergyid, general.stringid, contact.id]
+    property_tags: {}
+    schemas: []
+    src: [general.place, general.person, medical.provider]
+    type: general.Has
+-   basetype: null
+    bidirectional: false
+    dst: [general.person, medical.DetoxScreening]
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [general.person, medical.DetoxScreening]
+    type: general.ReviewedBy
+-   basetype: null
+    bidirectional: false
+    dst: [general.speakerverificationprofile, justice.bond, justice.fta]
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [general.speakerverificationprofile, justice.bond, justice.fta]
+    type: general.registeredfor
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.id]
+    properties: [general.id]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: general.participatedin_v1
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [medication.id, nc.SubjectIdentification, date.completeddatetime]
+    properties: [medication.Dosage, medication.Regimen, medical.medicationtakenasprescribed,
+        substance.UsageDuration, substance.frequency, medication.id, nc.SubjectIdentification,
+        date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: medical.taking
+-   basetype: null
+    bidirectional: false
+    dst: [bhr.report]
+    key: [health.hospitalname, location.address]
+    properties: [health.hospitalname, location.address]
+    property_tags: {}
+    schemas: []
+    src: [bhr.report]
+    type: publicsafety.transportedtohospital
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [arrestedin.id, nc.SubjectIdentification]
+    properties: [arrestedin.id, event.comments, nc.SubjectIdentification, ol.arrestcategory,
+        criminaljustice.nibrs, criminaljustice.localstatute, criminaljustice.ncic,
+        criminaljustice.casenumber, criminaljustice.personid, criminaljustice.bookingnumber,
+        publicsafety.weaponspresent, ol.arrestdate, location.address, criminaljustice.warranttype,
+        criminaljustice.arrestagency, ol.arrestdatetime, person.ageatevent, j.ArrestCharge,
+        ol.mapreference, ol.numberofcounts, ol.personpoliceminutes]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
+    type: criminaljustice.arrestedin
+-   basetype: null
+    bidirectional: false
+    dst: [publicsafety.callforservice]
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [publicsafety.callforservice]
+    type: geo.zonedwithin
+-   basetype: null
+    bidirectional: false
+    dst: [geo.contactinformation]
+    key: [contact.id]
+    properties: [contact.id, contact.cellphone]
+    property_tags: {}
+    schemas: []
+    src: [geo.contactinformation]
+    type: geo.contactinfogiven
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.id]
+    properties: [housing.hiredate, general.id]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: housing.worksas
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.stringid]
+    properties: [general.stringid, criminaljustice.localstatute, criminaljustice.ncic,
+        criminaljustice.nibrs, event.comments, date.booking, general.datetime, person.ageatevent,
+        j.intoxicationlevel, publicsafety.portablebreathtest]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
+    type: criminaljustice.bookedin
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.stringid]
+    properties: [general.stringid, housing.hiredate]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: economy.worksas
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.id]
+    properties: [general.datetime, general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: ol.using
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: general.oversaw
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [j.ArrestSequenceID, nc.SubjectIdentification]
+    properties: [j.ArrestCategory, j.ArrestSequenceID, nc.SubjectIdentification]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: lawenforcement.arrestedin
+-   basetype: null
+    bidirectional: false
+    dst: [justice.charge, general.person]
+    key: [general.stringid]
+    properties: [nc.SubjectIdentification, general.stringid, event.ChargeLevel, event.ChargeLevelState,
+        ol.numberofcounts, publicsafety.agencyname]
+    property_tags: {}
+    schemas: []
+    src: [justice.charge, general.person]
+    type: justice.chargedwith
+-   basetype: null
+    bidirectional: false
+    dst: [ol.applicationdata]
+    key: [ol.datelogged, general.stringid]
+    properties: [nc.SystemUserName, ol.altitude, ol.datelogged, general.stringid,
+        location.latitude, location.longitude]
+    property_tags: {}
+    schemas: []
+    src: [ol.applicationdata]
+    type: ol.recordedby
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.stringid, date.completeddatetime, nc.SubjectIdentification]
+    properties: [general.fullname, ol.version, sharing.name, general.stringid, date.completeddatetime,
+        nc.SubjectIdentification]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: ol.enrolled
+-   basetype: null
+    bidirectional: false
+    dst: [ol.device]
+    key: [general.stringid]
+    properties: [general.stringid, nc.SubjectIdentification]
+    property_tags: {}
+    schemas: []
+    src: [ol.device]
+    type: ol.usedby
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [location.address, nc.SubjectIdentification]
+    properties: [location.address, nc.SubjectIdentification]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: location.MailsAt
+-   basetype: null
+    bidirectional: false
+    dst: [justice.charge, justice.ChargeDetails, lawenforcement.arrest, publicsafety.callforservice,
+        criminaljustice.incident, justice.case, criminaljustice.jailrecord]
+    key: [location.address, general.stringid]
+    properties: [location.address, general.stringid]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [justice.charge, justice.ChargeDetails, lawenforcement.arrest, publicsafety.callforservice,
+        criminaljustice.incident, justice.case, criminaljustice.jailrecord]
+    type: general.occurredat
+-   basetype: null
+    bidirectional: false
+    dst: [justice.Offense]
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [justice.Offense]
+    type: justice.resultsin
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [location.address, nc.SubjectIdentification]
+    properties: [location.address, nc.SubjectIdentification]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
+    type: geo.getsmailat
+-   basetype: null
+    bidirectional: false
+    dst: [general.place, general.person]
+    key: [location.address, nc.SubjectIdentification, place.uniqueID]
+    properties: [location.address, nc.SubjectIdentification, general.stringid, place.uniqueID]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.place, general.person]
+    type: geo.locatedat
+-   basetype: null
+    bidirectional: false
+    dst: [medical.DetoxScreening]
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [medical.DetoxScreening]
+    type: general.ScreenedBy
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [nc.SubjectIdentification, detox.ScreeningID]
+    properties: [nc.SubjectIdentification, detox.ScreeningID, general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: general.Screened
+-   basetype: null
+    bidirectional: false
+    dst: [general.person, medical.DetoxScreening, medical.assessment]
+    key: [medical.InitialAssessmentID, provider.NationalProviderIdentification, nc.SubjectIdentification,
+        detox.ScreeningID]
+    properties: [medical.InitialAssessmentID, provider.NationalProviderIdentification,
+        nc.SubjectIdentification, detox.ScreeningID]
+    property_tags: {}
+    schemas: []
+    src: [general.person, medical.DetoxScreening, medical.assessment]
+    type: medical.ReviewedBy
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [medical.InitialAssessmentID, health.biopsychosocialid, nc.SubjectIdentification]
+    properties: [medical.InitialAssessmentID, health.biopsychosocialid, nc.SubjectIdentification,
+        general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: medical.assessedwith_deprecated
+-   basetype: null
+    bidirectional: false
+    dst: [justice.JailRecord]
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [justice.JailRecord]
+    type: justice.detailsof
+-   basetype: null
+    bidirectional: false
+    dst: [criminaljustice.cfsorigin]
+    key: [datetime.received]
+    properties: [datetime.received]
+    property_tags: {}
+    schemas: []
+    src: [criminaljustice.cfsorigin]
+    type: criminaljustice.initiated
+-   basetype: null
+    bidirectional: false
+    dst: [general.person, publicsafety.callforservice]
+    key: [date.completeddatetime]
+    properties: [contact.Active, date.completeddatetime, contact.cellphone]
+    property_tags: {}
+    schemas: []
+    src: [general.person, publicsafety.callforservice]
+    type: geo.contactedat_deprecated
+-   basetype: null
+    bidirectional: false
+    dst: [publicsafety.callforservice]
+    key: [datetime.received]
+    properties: [datetime.received]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [publicsafety.callforservice]
+    type: general.callreceivedby
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.StringID]
+    properties: [general.StringID]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: justice.TransportedBy
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.StringID]
+    properties: [general.StringID]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: justice.SearchedBy
+-   basetype: null
+    bidirectional: false
+    dst: [general.person, ol.person]
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [general.person, ol.person]
+    type: health.insuredby
+-   basetype: null
+    bidirectional: false
+    dst: [general.person, ol.person]
+    key: [general.id]
+    properties: [general.datetime, general.id]
+    property_tags: {}
+    schemas: []
+    src: [general.person, ol.person]
+    type: ol.employedby
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: justice.interactedwith -d
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: location.livesat
+-   basetype: null
+    bidirectional: false
+    dst: [ol.person, general.person]
+    key: [general.id]
+    properties: [general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [ol.person, general.person]
+    type: ol.livesat
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [provider.NationalProviderIdentification, place.SequenceID, nc.SubjectIdentification]
+    properties: [provider.NationalProviderIdentification, place.SequenceID, nc.SubjectIdentification]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: general.employedby
+-   basetype: null
+    bidirectional: false
+    dst: [ol.person, general.person]
+    key: [general.id, date.completeddatetime]
+    properties: [general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [ol.person, general.person]
+    type: o.is
+-   basetype: null
+    bidirectional: false
+    dst: [general.person, ol.person]
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [general.person, ol.person]
+    type: health.referredby
+-   basetype: null
+    bidirectional: false
+    dst: [general.person, ol.person]
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime, nc.PersonGivenName, nc.PersonSurName, person.title,
+        general.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person, ol.person]
+    type: health.assessedby -d
+-   basetype: null
+    bidirectional: false
+    dst: [general.vehicle]
+    key: [publicsafety.dispatchid]
+    properties: [publicsafety.dispatchid]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.vehicle]
+    type: publicsafety.involvedin
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.stringid]
+    properties: [demographics.hhsize, demographics.hhtype, general.stringid]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
+    type: demographics.haskinties
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [nc.SubjectIdentification]
+    properties: [nc.SubjectIdentification, nc.SSN]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: person.becomes
+-   basetype: null
+    bidirectional: false
+    dst: [medical.DetoxScreening, medical.assessment, health.biopsychosocial, housing.assessment]
+    key: [medication.id, medical.InitialAssessmentID, endocrine.id, gastrointestinal.id,
+        health.biopsychosocialid, emotionalbehavioral.id, substance.TreatmentHistoryID,
+        genitourinary.id, respiratory.id, cardiovascular.id, neurological.id, nutritional.id,
+        detox.ScreeningID, withdrawal.id, musculoskeletal.id, substance.SequenceID,
+        biomedical.id, reproductive.id]
+    properties: [medication.id, medical.InitialAssessmentID, endocrine.id, gastrointestinal.id,
+        health.biopsychosocialid, emotionalbehavioral.id, substance.TreatmentHistoryID,
+        genitourinary.id, respiratory.id, cardiovascular.id, neurological.id, nutritional.id,
+        detox.ScreeningID, withdrawal.id, musculoskeletal.id, substance.SequenceID,
+        biomedical.id, reproductive.id, general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [medical.DetoxScreening, medical.assessment, health.biopsychosocial, housing.assessment]
+    type: general.Includes_deprecated
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: general.consentedto
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [date.completeddatetime, contact.phonenumber]
+    properties: [date.completeddatetime, contact.phonenumber]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: general.called
+-   basetype: null
+    bidirectional: false
+    dst: [justice.charge, justice.ChargeDetails, criminaljustice.offense]
+    key: [general.stringid]
+    properties: [general.stringid, ol.convictionresults]
+    property_tags: {}
+    schemas: []
+    src: [justice.charge, justice.ChargeDetails, criminaljustice.offense]
+    type: justice.leadsto
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.id]
+    properties: [general.id]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: justice.sentencedwith
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.stringid, nc.SubjectIdentification]
+    properties: [general.stringid, nc.SubjectIdentification, ol.datetimestart]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: ol.workson
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.stringid]
+    properties: [general.stringid, nc.SubjectIdentification, ol.datetimestart]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
+    type: general.participatedin
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.stringid]
+    properties: [general.stringid, vehicle.licensenumber, person.stateidstate]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: ol.associatedwith
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.StringID]
+    properties: [general.StringID, ol.arrestdatetime, publicsafety.ArrestID]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: justice.ArrestedBy
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.StringID]
+    properties: [general.StringID]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: justice.ReleasedBy
+-   basetype: null
+    bidirectional: false
+    dst: [justice.psaRiskFactors, justice.psa, publicsafety.releaserecommendation,
+        dmf.riskfactors, justice.dmf]
+    key: [psa.GeneratedDate]
+    properties: [psa.GeneratedDate]
+    property_tags: {}
+    schemas: []
+    src: [justice.psaRiskFactors, justice.psa, publicsafety.releaserecommendation,
+        dmf.riskfactors, justice.dmf]
+    type: general.calculatedfor
+-   basetype: null
+    bidirectional: false
+    dst: [justice.psa, justice.psaRiskFactors, dmf.riskfactors, justice.dmf]
+    key: [general.datetime]
+    properties: [general.datetime]
+    property_tags: {}
+    schemas: []
+    src: [justice.psa, justice.psaRiskFactors, dmf.riskfactors, justice.dmf]
+    type: general.editedby
+-   basetype: null
+    bidirectional: false
+    dst: [general.person, ol.person]
+    key: [general.id]
+    properties: [general.datetime, general.id]
+    property_tags: {}
+    schemas: []
+    src: [general.person, ol.person]
+    type: ol.exhibits
+-   basetype: null
+    bidirectional: false
+    dst: [general.person, justice.charge, justice.ChargeDetails, publicsafety.personnel,
+        geo.address, justice.case, justice.psa]
+    key: [general.stringid]
+    properties: [nc.SubjectIdentification, general.stringid, general.datetime, person.juvenile,
+        person.age, publicsafety.dispatchpersontype, publicsafety.dispatchpersontypedescription,
+        event.comments, time.alerted, time.arrived, time.completed, time.enroute,
+        location.address, datetime.alerted, datetime.arrived, date.completeddatetime,
+        datetime.enroute, ol.personpoliceminutes]
+    property_tags: {}
+    schemas: []
+    src: [general.person, justice.charge, justice.ChargeDetails, publicsafety.personnel,
+        geo.address, justice.case, justice.psa]
+    type: general.appearsin
+-   basetype: null
+    bidirectional: false
+    dst: [general.person, publicsafety.callforservice, ol.person]
+    key: [general.stringid]
+    properties: [date.completeddatetime, contact.Active, contact.cellphone, general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [general.person, publicsafety.callforservice, ol.person]
+    type: geo.contactedat
+-   basetype: null
+    bidirectional: true
+    dst: [ol.person, ol.employee]
+    key: [general.datetime, general.id]
+    properties: [general.datetime, general.id, ol.contactdatetime, ol.contactmethod,
+        ol.outcome, general.notes]
+    property_tags: {}
+    schemas: []
+    src: [ol.person, ol.employee]
+    type: ol.interactedwith
+-   basetype: null
+    bidirectional: false
+    dst: [ol.person, general.person]
+    key: [general.id]
+    properties: [general.datetime, general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [ol.person, general.person]
+    type: ol.contactedvia
+-   basetype: null
+    bidirectional: false
+    dst: [ol.person, ol.employee, ol.patient, general.person]
+    key: [general.id, date.completeddatetime]
+    properties: [general.datetime, general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [ol.person, ol.employee, ol.patient, general.person]
+    type: ol.getsmailat
+-   basetype: null
+    bidirectional: false
+    dst: [ol.person, general.person]
+    key: [general.id]
+    properties: [date.completeddatetime, general.id, general.datetime]
+    property_tags: {}
+    schemas: []
+    src: [ol.person, general.person]
+    type: ol.scheduled
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime, general.stringid, general.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
+    type: health.assessedwith
+-   basetype: null
+    bidirectional: false
+    dst: [ol.employee, ol.person, general.person]
+    key: [general.id, date.completeddatetime]
+    properties: [general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [ol.employee, ol.person, general.person]
+    type: ol.assessedby
+-   basetype: null
+    bidirectional: false
+    dst: [general.person, ol.person]
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person, ol.person]
+    type: health.reported
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.stringid]
+    properties: [nc.SSN, publicsafety.personnelstatus, ol.datetimestart, general.stringid,
+        incident.enddatetime, ol.id]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: ol.is
+-   basetype: null
+    bidirectional: false
+    dst: [ol.person, ol.employee, general.person]
+    key: [general.id]
+    properties: [general.datetime, general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [ol.person, ol.employee, general.person]
+    type: ol.provided
+-   basetype: null
+    bidirectional: false
+    dst: [ol.person, ol.organization, general.person, ol.sentence, ol.jailstay, ol.dispatch,
+        ol.incident]
+    key: [general.id]
+    properties: [general.datetime, general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [ol.person, ol.organization, general.person, ol.sentence, ol.jailstay, ol.dispatch,
+        ol.incident]
+    type: ol.locatedat
+-   basetype: null
+    bidirectional: false
+    dst: [ol.person, general.person]
+    key: [general.id]
+    properties: [general.datetime, general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [ol.person, general.person]
+    type: ol.reported
+-   basetype: null
+    bidirectional: false
+    dst: [ol.sentence, ol.offense, ol.jailstay, ol.booking]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [ol.sentence, ol.offense, ol.jailstay, ol.booking]
+    type: ol.resultsin
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
+    type: ol.subjectof
+-   basetype: null
+    bidirectional: false
+    dst: [o.employee]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [o.employee]
+    type: ol.worksat
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
+    type: ol.sentencedwith
+-   basetype: null
+    bidirectional: false
+    dst: [ol.jailstay]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [ol.jailstay]
+    type: ol.oflength
+-   basetype: null
+    bidirectional: false
+    dst: [ol.jailstay]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [ol.jailstay]
+    type: ol.bondset
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
+    type: ol.kinto
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [ol.id]
+    properties: [ol.id, ol.type, ol.notes]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
+    type: ol.committedby
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
+    type: ol.chargedby
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
+    type: ol.searchedby
+-   basetype: null
+    bidirectional: false
+    dst: [ol.bond]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [ol.bond]
+    type: ol.postedby
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [ol.id]
+    properties: [ol.arrestdatetime, ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
+    type: ol.arrestedby
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
+    type: ol.releasedby
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
+    type: ol.transportedby
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
+    type: ol.chargedwith
+-   basetype: null
+    bidirectional: false
+    dst: [ol.allergy, ol.malignanthyperthermia, ol.abdominalpain, ol.admission, ol.appointment,
+        ol.chestpain, ol.contactactivity, ol.contactinformation, ol.detoxcautions,
+        ol.deleriumtremens, ol.fever, ol.gastrointestinalbleeding, ol.homeless, ol.insurance,
+        ol.location, ol.medication, ol.organization, ol.overdosehistory, ol.pregnancy,
+        ol.referral, ol.seizures, ol.shortnessofbreath, ol.substance, ol.suicidalideation,
+        ol.persondetails, general.person, ol.employee, ol.facilityreminders]
+    key: [general.id]
+    properties: [general.datetime, general.id]
+    property_tags: {}
+    schemas: []
+    src: [ol.allergy, ol.malignanthyperthermia, ol.abdominalpain, ol.admission, ol.appointment,
+        ol.chestpain, ol.contactactivity, ol.contactinformation, ol.detoxcautions,
+        ol.deleriumtremens, ol.fever, ol.gastrointestinalbleeding, ol.homeless, ol.insurance,
+        ol.location, ol.medication, ol.organization, ol.overdosehistory, ol.pregnancy,
+        ol.referral, ol.seizures, ol.shortnessofbreath, ol.substance, ol.suicidalideation,
+        ol.persondetails, general.person, ol.employee, ol.facilityreminders]
+    type: ol.updatedby
+-   basetype: null
+    bidirectional: false
+    dst: [ol.dispatch]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [ol.dispatch]
+    type: ol.assignedto
+-   basetype: null
+    bidirectional: false
+    dst: [ol.dispatch]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [ol.dispatch]
+    type: ol.clearedby
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [general.id]
+    properties: [general.id, date.completeddatetime, ol.datetimeadministered]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: ol.screenedwith
+-   basetype: null
+    bidirectional: false
+    dst: [general.person, ol.employee, ol.allergy, ol.fever, ol.facilityreminders,
+        ol.residence, ol.detoxcautions, ol.appointment, ol.pregnancy, ol.seizures,
+        ol.referral, ol.admission, ol.insurance, ol.malignanthyperthermia, ol.suicidalideation,
+        ol.persondetails, ol.chestpain, ol.contactinformation, ol.medication, ol.abdominalpain,
+        ol.homeless, ol.substance, ol.shortnessofbreath, ol.overdosehistory, ol.organization,
+        ol.location, ol.medicaltestresult]
+    key: [general.id]
+    properties: [general.datetime, general.id, general.formname, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [general.person, ol.employee, ol.allergy, ol.fever, ol.facilityreminders,
+        ol.residence, ol.detoxcautions, ol.appointment, ol.pregnancy, ol.seizures,
+        ol.referral, ol.admission, ol.insurance, ol.malignanthyperthermia, ol.suicidalideation,
+        ol.persondetails, ol.chestpain, ol.contactinformation, ol.medication, ol.abdominalpain,
+        ol.homeless, ol.substance, ol.shortnessofbreath, ol.overdosehistory, ol.organization,
+        ol.location, ol.medicaltestresult]
+    type: ol.collectedby
+-   basetype: null
+    bidirectional: true
+    dst: [ol.arrest, ol.offense]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: []
+    src: [ol.arrest, ol.offense]
+    type: ol.relatedto
+-   basetype: null
+    bidirectional: false
+    dst: [ol.employee, ol.unit, ol.identification, general.person, ol.organization,
+        ol.location, o.employee]
+    key: [ol.id]
+    properties: [ol.id, person.age, ol.role, general.stringid, ol.personpoliceminutes,
+        ol.personfireminutes, ol.personemsminutes, ol.organizationtime]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [ol.employee, ol.unit, ol.identification, general.person, ol.organization,
+        ol.location, o.employee]
+    type: ol.appearsin
+-   basetype: null
+    bidirectional: false
+    dst: [ol.consent]
+    key: [general.id]
+    properties: [general.datetime, ol.role, general.id, general.signature]
+    property_tags: {}
+    schemas: []
+    src: [ol.consent]
+    type: ol.signedby
+-   basetype: null
+    bidirectional: false
+    dst: [ol.employee, general.person, o.employee]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [ol.employee, general.person, o.employee]
+    type: ol.contactedat
+-   basetype: null
+    bidirectional: false
+    dst: [ol.contactinformation]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [ol.contactinformation]
+    type: ol.contactinfogiven
+-   basetype: null
+    bidirectional: false
+    dst: [ol.agency, o.employee, ol.vehicle, ol.booking, general.person, ol.emsunit,
+        ol.unit, ol.fireunit, ol.organization, ol.location, ol.weapon]
+    key: [ol.id]
+    properties: [ol.id, ol.personpoliceminutes, ol.personfireminutes, ol.personemsminutes,
+        ol.organizationtime, person.age, general.stringid, ol.role, ol.datetimestart,
+        ol.datetimeend, ol.roledescription]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [ol.agency, o.employee, ol.vehicle, ol.booking, general.person, ol.emsunit,
+        ol.unit, ol.fireunit, ol.organization, ol.location, ol.weapon]
+    type: ol.involvedin
+-   basetype: null
+    bidirectional: false
+    dst: [ol.allergy, ol.abdominalpain, ol.malignanthyperthermia, ol.admission, ol.appointment,
+        ol.chestpain, ol.contactactivity, ol.contactinformation, ol.detoxcautions,
+        ol.deleriumtremens, ol.fever, ol.gastrointestinalbleeding, ol.homeless, ol.insurance,
+        ol.location, ol.medication, ol.organization, ol.overdosehistory, ol.pregnancy,
+        ol.referral, ol.seizures, ol.shortnessofbreath, ol.employee, ol.substance,
+        ol.suicidalideation, ol.persondetails, general.person, ol.facilityreminders]
+    key: [general.id]
+    properties: [general.datetime, general.id]
+    property_tags: {}
+    schemas: []
+    src: [ol.allergy, ol.abdominalpain, ol.malignanthyperthermia, ol.admission, ol.appointment,
+        ol.chestpain, ol.contactactivity, ol.contactinformation, ol.detoxcautions,
+        ol.deleriumtremens, ol.fever, ol.gastrointestinalbleeding, ol.homeless, ol.insurance,
+        ol.location, ol.medication, ol.organization, ol.overdosehistory, ol.pregnancy,
+        ol.referral, ol.seizures, ol.shortnessofbreath, ol.employee, ol.substance,
+        ol.suicidalideation, ol.persondetails, general.person, ol.facilityreminders]
+    type: ol.deletedby
+-   basetype: null
+    bidirectional: false
+    dst: [ol.dispatch]
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [ol.dispatch]
+    type: ol.receivedby
+-   basetype: null
+    bidirectional: false
+    dst: [general.person]
+    key: [ol.id]
+    properties: [ol.id, general.datetime]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    type: ol.has
+-   basetype: null
+    bidirectional: false
+    dst: [ol.medicaltest]
+    key: [general.id]
+    properties: [general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [ol.medicaltest]
+    type: ol.includes
