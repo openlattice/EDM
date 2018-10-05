@@ -20,3 +20,7 @@ Idea:
 4. submit a pull request on github:
     - go on github to the repo, and select the branch of changes
     - click new pull request and fill out all the things
+
+#### Notes:
+- do not touch the ID: this is crucial to separate changes from create/delete
+- when making a new component: do not include ID-field or leave ID field blank
