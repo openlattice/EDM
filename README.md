@@ -18,5 +18,5 @@ Idea:
         git push origin name_of_proposed_change
 
 4. submit a pull request on github:
-  - go on github to the repo, and select the branch of changes
-  - click new pull request and fill out all the things
+    - go on github to the repo, and select the branch of changes
+    - click new pull request and fill out all the things
