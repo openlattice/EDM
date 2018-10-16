@@ -34,6 +34,11 @@ if len(ers) > 0:
     print(yaml.dump(ers,default_flow_style=False, default_style=''))
     raise ValueError("Certain requested changes are not possible.")
 
+noschema = [x for x in changereport if x['part'] != 'schemas']
+if len(ers) > 0:
+    print(yaml.dump(ers,default_flow_style=False, default_style=''))
+    raise ValueError("Right now we can *only* change schema's.")
+
 if len(ers) == 0 and len(changereport)>0:
     print("Yay ! These changes can be made.")
 

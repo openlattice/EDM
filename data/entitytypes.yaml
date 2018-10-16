@@ -650,17 +650,6 @@ health.biopsychosocial:
     schemas: []
     title: Biopsychosocial assessment
     type: health.biopsychosocial
-health.clinicalassessment:
-    description: Clinical Assessment and Diagnosis, including DSM axes and aftercare
-        recommendations.
-    id: 00a44d15-3d6d-4695-84cc-c16da39666a8
-    key: [clinical.assessmentid]
-    properties: [clinical.assessmentid, clinical.assessment, medical.axisI, medical.axisII,
-        medical.axisIII, medical.axisIV, health.assessmentdefermentreason]
-    property_tags: {}
-    schemas: []
-    title: Clinical Assessment and Diagnosis
-    type: health.clinicalassessment
 health.consequencesofsubstanceuse:
     description: Both physical and biopsychosocial potential consequences of substance
         use.
@@ -693,15 +682,6 @@ health.insuredby:
     schemas: []
     title: Insured By
     type: health.insuredby
-health.provider:
-    description: A person or an organization providing health services.
-    id: 7ecfd9f8-8bae-4244-a190-93cb383398fe
-    key: [provider.NationalProviderIdentification]
-    properties: [health.hospitalname, provider.name, general.Title, provider.NationalProviderIdentification]
-    property_tags: {}
-    schemas: []
-    title: Healthcare Provider
-    type: health.provider
 health.referral:
     description: Information on healthcare referrals
     id: 23f20ed7-e7b6-487d-8876-cbb552c2f62d
@@ -2251,7 +2231,7 @@ ol.medicaltest:
     description: Information on a medical test or screening.
     id: 6ddd6161-c23c-4d25-9bef-ee283270d443
     key: [general.id]
-    properties: [ol.name, general.id, ol.value, ol.datetimeadministered]
+    properties: [ol.name, general.id, ol.value, ol.datetimeadministered, ol.confirmationindicator]
     property_tags: {}
     schemas: []
     title: Medical Test
@@ -2263,7 +2243,8 @@ ol.medicaltestresult:
     id: fbadb396-0497-413c-83ee-89e7370d7e4d
     key: [general.id]
     properties: [ol.name, ol.description, general.result, ol.qualifier, ol.value,
-        ol.units, ol.maximumvalue, ol.minimumvalue, ol.category, general.id, ol.notes]
+        ol.units, ol.maximumvalue, ol.minimumvalue, ol.category, general.id, ol.notes,
+        general.datetime]
     property_tags: {}
     schemas: []
     title: Medical Test Results

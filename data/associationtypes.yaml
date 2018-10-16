@@ -1041,14 +1041,14 @@ ol.livesat:
 ol.locatedat:
     description: The location of an event, organization, or person
     dst: [ol.person, ol.organization, general.person, ol.sentence, ol.jailstay, ol.dispatch,
-        ol.incident, ol.policecad]
+        ol.incident, ol.policecad, ol.offense]
     id: ecc09e28-0761-4ed0-9d9e-b1c1f883aed6
     key: [general.id]
     properties: [general.datetime, general.id, date.completeddatetime]
     property_tags: {}
     schemas: []
     src: [ol.person, ol.organization, general.person, ol.sentence, ol.jailstay, ol.dispatch,
-        ol.incident, ol.policecad]
+        ol.incident, ol.policecad, ol.offense]
     title: Located At
     type: ol.locatedat
 ol.oflength:
