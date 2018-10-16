@@ -148,7 +148,7 @@ def check_changes(edm_repo,edm_prod,changes,api_instance):
                     if len(removes) > 0:
                         ## TODO: verify property usage
                         change['code'] = 'error'
-                        change['reason'] = 'not allowed to remove properties %s from entity type %s.'%(", ".join(removes), old['type'])
+                        change['reason'] = 'not allowed to remove src/dst %s from entity type %s.'%(", ".join(removes), old['type'])
                     else:
                         change['code'] = 'ok'
                 else:
