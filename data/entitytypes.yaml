@@ -1,40 +1,35 @@
 OPENLATTICE_AUDIT.AUDIT:
-    title: OpenLattice Audit
-    type: OPENLATTICE_AUDIT.AUDIT
     description: The OpenLattice Audit Entity Type.
-    schemas: []
+    id: 1eb4605a-b46a-4360-8c86-e1dbdca50b9f
     key: [OPENLATTICE_AUDIT.TYPE]
     properties: [OPENLATTICE_AUDIT.TYPE, OPENLATTICE_AUDIT.DETAILS]
     property_tags: {}
-    basetype: null
-    id: 1eb4605a-b46a-4360-8c86-e1dbdca50b9f
+    schemas: []
+    title: OpenLattice Audit
+    type: OPENLATTICE_AUDIT.AUDIT
 bhr.followup:
-    title: Behavioral Health Report (BHR) Follow-up
-    type: bhr.followup
     description: Follow-up report to a behavioral health report. Based on Baltimore's
         paper form.
-    schemas: []
+    id: c2bd25ed-cdec-41be-bf5d-a700902f84db
     key: [bhr.dateReported, bhr.complaintNumber]
     properties: [bhr.dateReported, bhr.complaintNumber, bhr.incident, bhr.officerName,
         bhr.officerSeqID, bhr.emotionalState, health.staff, bhr.followupreason, event.comments,
         nc.SubjectIdentification]
     property_tags: {}
-    basetype: null
-    id: c2bd25ed-cdec-41be-bf5d-a700902f84db
-bhr.report:
-    title: Behavioral Health Report (BHR)
-    type: bhr.report
-    description: Behavioral Health Report
     schemas: []
+    title: Behavioral Health Report (BHR) Follow-up
+    type: bhr.followup
+bhr.report:
+    description: Behavioral Health Report
+    id: 69bd68de-7baa-4a9c-bd50-ed3d1e4047ae
     key: [bhr.complaintNumber, nc.SubjectIdentification]
     properties: [bhr.dispatchReason, bhr.complaintNumber, bhr.companionOffenseReport,
         bhr.incident, bhr.locationOfIncident, bhr.unit, bhr.postOfOccurrence, bhr.cadNumber,
-        bhr.onView, bhr.timeOccurred, bhr.dateOccurred, bhr.timeReported, bhr.dateReported,
-        bhr.name, bhr.address, bhr.phone, bhr.militaryStatus, bhr.gender, bhr.race,
-        bhr.age, bhr.dob, bhr.homeless, bhr.homelessLocation, bhr.drugsAlcohol, bhr.drugType,
-        bhr.prescribedMedication, bhr.takingMedication, bhr.prevPsychAdmission, bhr.selfDiagnosis,
-        bhr.selfDiagnosisOther, bhr.armedWithWeapon, bhr.armedWeaponType, bhr.accessToWeapons,
-        bhr.accessibleWeaponType, bhr.observedBehaviors, bhr.observedBehaviorsOther,
+        bhr.onView, bhr.name, bhr.address, bhr.phone, bhr.militaryStatus, bhr.gender,
+        bhr.race, bhr.age, bhr.dob, bhr.homeless, bhr.homelessLocation, bhr.drugsAlcohol,
+        bhr.drugType, bhr.prescribedMedication, bhr.takingMedication, bhr.prevPsychAdmission,
+        bhr.selfDiagnosis, bhr.selfDiagnosisOther, bhr.armedWithWeapon, bhr.armedWeaponType,
+        bhr.accessToWeapons, bhr.accessibleWeaponType, bhr.observedBehaviors, bhr.observedBehaviorsOther,
         bhr.emotionalState, bhr.emotionalStateOther, bhr.photosTakenOf, bhr.injuries,
         bhr.injuriesOther, bhr.suicidal, bhr.suicidalActions, bhr.suicideAttemptMethod,
         bhr.suicideAttemptMethodOther, bhr.complainantName, bhr.complainantAddress,
@@ -50,13 +45,12 @@ bhr.report:
         ol.hospitaltransportindicator, ol.voluntaryactionindicator, place.TransportingAgency,
         bhr.datetimeReported, bhr.datetimeOccurred]
     property_tags: {}
-    basetype: null
-    id: 69bd68de-7baa-4a9c-bd50-ed3d1e4047ae
+    schemas: []
+    title: Behavioral Health Report (BHR)
+    type: bhr.report
 criminaljustice.arrestedin:
-    title: Arrested In
-    type: criminaljustice.arrestedin
     description: An arrest (associated with an incident, case, or booking)
-    schemas: [v2.v2]
+    id: 44740981-b05c-43a1-91a7-e62e4737fe52
     key: [arrestedin.id, nc.SubjectIdentification]
     properties: [arrestedin.id, event.comments, nc.SubjectIdentification, ol.arrestcategory,
         criminaljustice.nibrs, criminaljustice.localstatute, criminaljustice.ncic,
@@ -65,37 +59,34 @@ criminaljustice.arrestedin:
         criminaljustice.arrestagency, ol.arrestdatetime, person.ageatevent, j.ArrestCharge,
         ol.mapreference, ol.numberofcounts, ol.personpoliceminutes]
     property_tags: {}
-    basetype: null
-    id: 44740981-b05c-43a1-91a7-e62e4737fe52
-criminaljustice.bookedin:
-    title: Booking (assn.)
-    type: criminaljustice.bookedin
-    description: A booking (associated with an incident, case, or jail stay).
     schemas: [v2.v2]
+    title: Arrested In
+    type: criminaljustice.arrestedin
+criminaljustice.bookedin:
+    description: A booking (associated with an incident, case, or jail stay).
+    id: afe9d19d-99c5-481c-867d-42f01ce8143b
     key: [general.stringid]
     properties: [general.stringid, criminaljustice.localstatute, criminaljustice.ncic,
         criminaljustice.nibrs, event.comments, date.booking, general.datetime, person.ageatevent,
         j.intoxicationlevel, publicsafety.portablebreathtest]
     property_tags: {}
-    basetype: null
-    id: afe9d19d-99c5-481c-867d-42f01ce8143b
-criminaljustice.cfsorigin:
-    title: Call for service (CFS) Origin/Initiation
-    type: criminaljustice.cfsorigin
-    description: Details on how a Call for Service is initiated or originated.
     schemas: [v2.v2]
+    title: Booking (assn.)
+    type: criminaljustice.bookedin
+criminaljustice.cfsorigin:
+    description: Details on how a Call for Service is initiated or originated.
+    id: 461c2d06-d7d6-4b5d-aa9e-3d0a4f9a6b6d
     key: [criminaljustice.cfsoriginid]
     properties: [person.juvenile, publicsafety.officerbadgeid, contact.phonenumber,
         person.ageatevent, criminaljustice.cfsoriginid, publicsafety.dispatchpersontype,
         cfsorigin.source, event.comments]
     property_tags: {}
-    basetype: null
-    id: 461c2d06-d7d6-4b5d-aa9e-3d0a4f9a6b6d
-criminaljustice.incident:
-    title: Incident (-d)
-    type: criminaljustice.incident
-    description: A police incident
     schemas: [v2.v2]
+    title: Call for service (CFS) Origin/Initiation
+    type: criminaljustice.cfsorigin
+criminaljustice.incident:
+    description: A police incident
+    id: 4c21bcc3-0d4c-40ba-95cd-275a763f94ef
     key: [criminaljustice.incidentid]
     properties: [criminaljustice.incidentid, publicsafety.cadnumber, criminaljustice.reportnumber,
         incident.reporteddatetime, incident.startdatetime, incident.enddatetime, criminaljustice.incidentflag,
@@ -106,24 +97,22 @@ criminaljustice.incident:
         ol.domesticviolenceflag, ol.datetime_reported, ol.juvenilegang, ol.datetimestart,
         ol.alcoholincrime, ol.computerincrime, ol.durationhours]
     property_tags:
-        91106b89-5842-48e4-a21f-ef923557c1b8: [timeline]
-    basetype: null
-    id: 4c21bcc3-0d4c-40ba-95cd-275a763f94ef
+        incident.reporteddatetime: [timeline]
+    schemas: [v2.v2]
+    title: Incident (-d)
+    type: criminaljustice.incident
 criminaljustice.initiated:
-    title: Initiated (cj)
-    type: criminaljustice.initiated
     description: Association between a call for service (CFS) and a CFS origin.
-    schemas: []
+    id: 3cc9e141-df51-4d12-aebf-716ebc613b65
     key: [datetime.received]
     properties: [datetime.received]
     property_tags: {}
-    basetype: null
-    id: 3cc9e141-df51-4d12-aebf-716ebc613b65
+    schemas: []
+    title: Initiated (cj)
+    type: criminaljustice.initiated
 criminaljustice.jailrecord:
-    title: Jail stay/record_deprecated
-    type: criminaljustice.jailrecord
     description: A jail stay/record.
-    schemas: [v2.v2]
+    id: e13743e7-babd-49a0-93e5-f93c8b7502cc
     key: [criminaljustice.jailrecordid]
     properties: [criminaljustice.jailrecordid, criminaljustice.inmateid, criminaljustice.jailid,
         criminaljustice.heldat, criminaljustice.commitnumber, criminaljustice.committingauthority,
@@ -138,27 +127,25 @@ criminaljustice.jailrecord:
         publicsafety.ssastatus, publicsafety.ssaconviction, place.OriginatingAgencyIdentifier,
         event.comments, general.status, publicsafety.JuvHoldAuth]
     property_tags: {}
-    basetype: null
-    id: e13743e7-babd-49a0-93e5-f93c8b7502cc
-criminaljustice.offense:
-    title: Offense (-d)
-    type: criminaljustice.offense
-    description: A criminal justice offense
     schemas: [v2.v2]
+    title: Jail stay/record_deprecated
+    type: criminaljustice.jailrecord
+criminaljustice.offense:
+    description: A criminal justice offense
+    id: c1d76f87-b32b-4b7f-b24f-5c4b1f30aa78
     key: [criminaljustice.offenseid]
     properties: [criminaljustice.offenseid, criminaljustice.localstatute, criminaljustice.nibrs,
         criminaljustice.ncic, offense.reporteddate, incident.startdatetime, incident.enddatetime,
         event.comments, ol.numberofcounts, publicsafety.drugspresent, event.OffenseLocalDescription,
         j.ArrestCharge, general.StringID, ol.statestatute]
     property_tags: {}
-    basetype: null
-    id: c1d76f87-b32b-4b7f-b24f-5c4b1f30aa78
+    schemas: [v2.v2]
+    title: Offense (-d)
+    type: criminaljustice.offense
 criminaljustice.person:
-    title: Justice-Involved Personal Information
-    type: criminaljustice.person
     description: Further details relating to someone involved in criminal justice
         proceedings.
-    schemas: []
+    id: 31814e3c-ef0b-437f-8b53-79ad5486c189
     key: [criminaljustice.personid]
     properties: [nc.complexion, j.SentenceRegisterSexOffenderIndicator, publicsafety.mugshot,
         person.stateidnumber, criminaljustice.personid, nc.PersonWeightMeasure, criminaljustice.cautioninformation,
@@ -166,104 +153,95 @@ criminaljustice.person:
         nc.PersonHairColorText, medical.wearglasses, person.maritalstatus, im.PersonNickName,
         vehicle.licensenumber]
     property_tags: {}
-    basetype: null
-    id: 31814e3c-ef0b-437f-8b53-79ad5486c189
+    schemas: []
+    title: Justice-Involved Personal Information
+    type: criminaljustice.person
 demographics.haskinties:
-    title: Has kin ties to
-    type: demographics.haskinties
     description: Association linking an individual to a household.
-    schemas: [v2.v2]
+    id: 014aa343-58e4-4b7b-93e2-ae4c9035f6a0
     key: [general.stringid]
     properties: [demographics.hhsize, demographics.hhtype, general.stringid]
     property_tags: {}
-    basetype: null
-    id: 014aa343-58e4-4b7b-93e2-ae4c9035f6a0
-demographics.household:
-    title: Household
-    type: demographics.household
-    description: A household.
     schemas: [v2.v2]
+    title: Has kin ties to
+    type: demographics.haskinties
+demographics.household:
+    description: A household.
+    id: ee29fb9e-dad9-4b9a-a93a-e30d0c488266
     key: [household.id]
     properties: [demographics.hhsize, demographics.hhtype, household.id]
     property_tags: {}
-    basetype: null
-    id: ee29fb9e-dad9-4b9a-a93a-e30d0c488266
+    schemas: [v2.v2]
+    title: Household
+    type: demographics.household
 dmf.riskfactors:
-    title: DMF Risk Factors
-    type: dmf.riskfactors
     description: Risk factors considered in calculating a DMF
-    schemas: []
+    id: 35ba83eb-678e-422e-b4ca-2c51e28e713d
     key: [general.id]
     properties: [justice.extradited, justice.extraditednotes, justice.dmfstep2, justice.dmfstep2notes,
         justice.dmfstep4, justice.dmfstep4notes, justice.dmfsecondaryreleasecharges,
         justice.dmfsecondaryreleasechargesnotes, general.context, general.id, justice.dmfsecondaryholdcharges,
         justice.dmfsecondaryholdchargesnotes]
     property_tags: {}
-    basetype: null
-    id: 35ba83eb-678e-422e-b4ca-2c51e28e713d
+    schemas: []
+    title: DMF Risk Factors
+    type: dmf.riskfactors
 economy.worksas:
-    title: Works as (person to employment)
-    type: economy.worksas
     description: Association between person and personnel/employee entity, noting
         when the person first started working with the agency or organization.
-    schemas: []
+    id: 713885e6-566c-478c-a1c3-bc8a6d5e149e
     key: [general.stringid]
     properties: [general.stringid, housing.hiredate]
     property_tags: {}
-    basetype: null
-    id: 713885e6-566c-478c-a1c3-bc8a6d5e149e
-general.Arrest:
-    title: Arrest_deprecated
-    type: general.Arrest
-    description: Arrest
     schemas: []
+    title: Works as (person to employment)
+    type: economy.worksas
+general.Arrest:
+    description: Arrest
+    id: 2cdef3ca-d9c9-4ddd-9e9d-a2c539b9d074
     key: [general.ArrestSequenceID]
     properties: [person.TransportingOfficer, ol.arrestcategory, place.TransportingAgency,
         general.ArrestSequenceID, criminaljustice.arrestagency, event.Disposition,
         criminaljustice.warranttype, place.Location, person.ArrestingOfficer, place.StreetAddress,
         event.ArrestWarrantNumber, person.SearchOfficer]
     property_tags: {}
-    basetype: null
-    id: 2cdef3ca-d9c9-4ddd-9e9d-a2c539b9d074
-general.AssessedBy:
-    title: Assessed By (old)
-    type: general.AssessedBy
-    description: Assessed By
     schemas: []
+    title: Arrest_deprecated
+    type: general.Arrest
+general.AssessedBy:
+    description: Assessed By
+    id: 60555acd-8e50-41f9-ac95-630e8ea3ff8b
     key: [medical.InitialAssessmentID, provider.NationalProviderIdentification, health.biopsychosocialid,
         detox.ScreeningID]
     properties: [medical.InitialAssessmentID, provider.NationalProviderIdentification,
         health.biopsychosocialid, detox.ScreeningID, date.CompletedDateTime, general.stringid]
     property_tags: {}
-    basetype: null
-    id: 60555acd-8e50-41f9-ac95-630e8ea3ff8b
+    schemas: []
+    title: Assessed By (old)
+    type: general.AssessedBy
 general.DiagnosedWith:
-    title: DiagnosedWith
-    type: general.DiagnosedWith
     description: An association between a diagnosis and patient. NOTE this will eventually
         be renamed "general.assessedwith"
-    schemas: []
+    id: 09e3ab1f-fa13-4371-93d7-e7adf61c7876
     key: [medical.DiagnosisID, nc.SubjectIdentification]
     properties: [nc.SubjectIdentification, medical.DiagnosisID, ol.mapreference]
     property_tags: {}
-    basetype: null
-    id: 09e3ab1f-fa13-4371-93d7-e7adf61c7876
-general.DispatchType:
-    title: Dispatch Type
-    type: general.DispatchType
-    description: Dispatch Type
     schemas: []
+    title: DiagnosedWith
+    type: general.DiagnosedWith
+general.DispatchType:
+    description: Dispatch Type
+    id: 705c33d4-5426-4fd2-977d-4ce5a047326c
     key: [publicsafety.cfsid]
     properties: [publicsafety.dispatchtype, publicsafety.dispatchpersontype, publicsafety.dispatchtypepriority,
         publicsafety.cfsid, publicsafety.dispatchtripnumber]
     property_tags: {}
-    basetype: null
-    id: 705c33d4-5426-4fd2-977d-4ce5a047326c
-general.Has:
-    title: Has (deprecated)
-    type: general.Has
-    description: Links together 2 entities
     schemas: []
+    title: Dispatch Type
+    type: general.DispatchType
+general.Has:
+    description: Links together 2 entities
+    id: 28941f24-f621-4e25-b373-40a50703d71b
     key: [provider.NationalProviderIdentification, location.address, place.SequenceID,
         insurance.SequenceID, substance.TreatmentHistoryID, nc.SubjectIdentification,
         medical.allergyid, contact.id]
@@ -271,13 +249,12 @@ general.Has:
         insurance.SequenceID, substance.TreatmentHistoryID, nc.SubjectIdentification,
         medical.allergyid, general.stringid, contact.id]
     property_tags: {}
-    basetype: null
-    id: 28941f24-f621-4e25-b373-40a50703d71b
-general.Includes_deprecated:
-    title: Includes_deprecated
-    type: general.Includes_deprecated
-    description: An association where an entity includes another entity
     schemas: []
+    title: Has (deprecated)
+    type: general.Has
+general.Includes_deprecated:
+    description: An association where an entity includes another entity
+    id: 639269b8-95c2-420d-85e0-21121e51c85d
     key: [medication.id, medical.InitialAssessmentID, endocrine.id, gastrointestinal.id,
         health.biopsychosocialid, emotionalbehavioral.id, substance.TreatmentHistoryID,
         genitourinary.id, respiratory.id, cardiovascular.id, neurological.id, nutritional.id,
@@ -289,94 +266,85 @@ general.Includes_deprecated:
         detox.ScreeningID, withdrawal.id, musculoskeletal.id, substance.SequenceID,
         biomedical.id, reproductive.id, general.stringid]
     property_tags: {}
-    basetype: null
-    id: 639269b8-95c2-420d-85e0-21121e51c85d
-general.InsuredBy:
-    title: Insured By (deprecated)
-    type: general.InsuredBy
-    description: Insured By
     schemas: []
+    title: Includes_deprecated
+    type: general.Includes_deprecated
+general.InsuredBy:
+    description: Insured By
+    id: 184f05d9-8fd3-45c8-94e0-d959b0262f12
     key: [general.stringid]
     properties: [date.CompletedDateTime, general.stringid]
     property_tags: {}
-    basetype: null
-    id: 184f05d9-8fd3-45c8-94e0-d959b0262f12
-general.ReferredBy_deprecated:
-    title: ReferredBy_deprecated
-    type: general.ReferredBy_deprecated
-    description: An association linking patients and referral information.
     schemas: []
+    title: Insured By (deprecated)
+    type: general.InsuredBy
+general.ReferredBy_deprecated:
+    description: An association linking patients and referral information.
+    id: 21aa7d22-17a6-4380-99cb-bbecb08bd196
     key: [provider.NationalProviderIdentification, nc.SubjectIdentification]
     properties: [provider.NationalProviderIdentification, nc.SubjectIdentification]
     property_tags: {}
-    basetype: null
-    id: 21aa7d22-17a6-4380-99cb-bbecb08bd196
-general.ReviewedBy:
-    title: Reviewed By
-    type: general.ReviewedBy
-    description: An association between a provider
     schemas: []
+    title: ReferredBy_deprecated
+    type: general.ReferredBy_deprecated
+general.ReviewedBy:
+    description: An association between a provider
+    id: 4dc7e153-a383-4059-99d0-4d0a6caeb5f8
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: 4dc7e153-a383-4059-99d0-4d0a6caeb5f8
-general.Screened:
-    title: Screened
-    type: general.Screened
-    description: An association describe that location at which an entity mails
     schemas: []
+    title: Reviewed By
+    type: general.ReviewedBy
+general.Screened:
+    description: An association describe that location at which an entity mails
+    id: 31ac0fbf-ae3b-446f-a624-fdad9c9bf71a
     key: [nc.SubjectIdentification, detox.ScreeningID]
     properties: [nc.SubjectIdentification, detox.ScreeningID, general.stringid]
     property_tags: {}
-    basetype: null
-    id: 31ac0fbf-ae3b-446f-a624-fdad9c9bf71a
-general.ScreenedBy:
-    title: Screened By
-    type: general.ScreenedBy
-    description: Screened By
     schemas: []
+    title: Screened
+    type: general.Screened
+general.ScreenedBy:
+    description: Screened By
+    id: 59268706-36ea-4ad1-99e2-7ad36dbf0345
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: 59268706-36ea-4ad1-99e2-7ad36dbf0345
-general.SentencingRecords:
-    title: Sentencing Records
-    type: general.SentencingRecords
-    description: Sentencing Records
     schemas: []
+    title: Screened By
+    type: general.ScreenedBy
+general.SentencingRecords:
+    description: Sentencing Records
+    id: 54d0679d-2aea-4bda-932c-33936d0a8493
     key: [general.StringID]
     properties: [general.StringID, event.ServeConcurrentOffense, date.SentenceStartDate,
         event.ServeConsecutiveWithOffenseID]
     property_tags: {}
-    basetype: null
-    id: 54d0679d-2aea-4bda-932c-33936d0a8493
-general.Taking_deprecated:
-    title: Taking_deprecated
-    type: general.Taking_deprecated
-    description: An association describe that location at which an entity mails
     schemas: []
+    title: Sentencing Records
+    type: general.SentencingRecords
+general.Taking_deprecated:
+    description: An association describe that location at which an entity mails
+    id: eb528589-882c-462a-b057-45f58d7565fc
     key: [medication.id, nc.SubjectIdentification]
     properties: [medication.id, nc.SubjectIdentification, general.stringid]
     property_tags: {}
-    basetype: null
-    id: eb528589-882c-462a-b057-45f58d7565fc
-general.Used:
-    title: Used_deprecated
-    type: general.Used
-    description: An association describe that location at which an entity mails
     schemas: []
+    title: Taking_deprecated
+    type: general.Taking_deprecated
+general.Used:
+    description: An association describe that location at which an entity mails
+    id: c5825d85-c832-4363-8259-9bad7135db34
     key: [nc.SubjectIdentification, substance.SequenceID]
     properties: [nc.SubjectIdentification, substance.SequenceID, general.stringid]
     property_tags: {}
-    basetype: null
-    id: c5825d85-c832-4363-8259-9bad7135db34
-general.appearsin:
-    title: Appears In
-    type: general.appearsin
-    description: An association wherein one entity appears in another entity or event.
     schemas: []
+    title: Used_deprecated
+    type: general.Used
+general.appearsin:
+    description: An association wherein one entity appears in another entity or event.
+    id: c2845f96-e252-491c-b49c-da0810d3deaa
     key: [general.stringid]
     properties: [nc.SubjectIdentification, general.stringid, general.datetime, person.juvenile,
         person.age, publicsafety.dispatchpersontype, publicsafety.dispatchpersontypedescription,
@@ -384,64 +352,58 @@ general.appearsin:
         location.address, datetime.alerted, datetime.arrived, date.completeddatetime,
         datetime.enroute, ol.personpoliceminutes]
     property_tags: {}
-    basetype: null
-    id: c2845f96-e252-491c-b49c-da0810d3deaa
-general.assignto:
-    title: Assign To
-    type: general.assignto
-    description: An association which describes that one entity was assigned to another
     schemas: []
+    title: Appears In
+    type: general.appearsin
+general.assignto:
+    description: An association which describes that one entity was assigned to another
+    id: 629691c7-7385-4f10-87d2-3d0cc1068350
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: 629691c7-7385-4f10-87d2-3d0cc1068350
+    schemas: []
+    title: Assign To
+    type: general.assignto
 general.calculatedfor:
-    title: Calculated For
-    type: general.calculatedfor
     description: An association which describes that one entity was calculated for
         another
-    schemas: []
+    id: 7a4d2b22-7f39-4a54-986a-54abcb86f374
     key: [psa.GeneratedDate]
     properties: [psa.GeneratedDate]
     property_tags: {}
-    basetype: null
-    id: 7a4d2b22-7f39-4a54-986a-54abcb86f374
-general.called:
-    title: Called
-    type: general.called
-    description: Association in which one entity called another.
     schemas: []
+    title: Calculated For
+    type: general.calculatedfor
+general.called:
+    description: Association in which one entity called another.
+    id: 78b5c431-8533-4dde-931f-50489496989f
     key: [date.completeddatetime, contact.phonenumber]
     properties: [date.completeddatetime, contact.phonenumber]
     property_tags: {}
-    basetype: null
-    id: 78b5c431-8533-4dde-931f-50489496989f
+    schemas: []
+    title: Called
+    type: general.called
 general.callreceivedby:
-    title: Call Received By (CFS to operator)
-    type: general.callreceivedby
     description: '"Received by" association connecting a call for service to an operator'
-    schemas: [v2.v2]
+    id: 96b06ed5-98b0-42d0-964e-824953bc904f
     key: [datetime.received]
     properties: [datetime.received]
     property_tags: {}
-    basetype: null
-    id: 96b06ed5-98b0-42d0-964e-824953bc904f
+    schemas: [v2.v2]
+    title: Call Received By (CFS to operator)
+    type: general.callreceivedby
 general.consentedto:
-    title: Consented To
-    type: general.consentedto
     description: Consented to
-    schemas: []
+    id: 49ab0eb9-1129-4ea9-a987-868d5ad7255a
     key: [date.completeddatetime]
     properties: [date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 49ab0eb9-1129-4ea9-a987-868d5ad7255a
-general.consentform:
-    title: Consent Form
-    type: general.consentform
-    description: A form which grants consent and collects digital signatures.
     schemas: []
+    title: Consented To
+    type: general.consentedto
+general.consentform:
+    description: A form which grants consent and collects digital signatures.
+    id: aedf54dc-ba03-47b2-a010-91b17dee362a
     key: [general.id]
     properties: [location.longitude, date.expiration, event.witnessid, guardian.signaturedatetime,
         location.state, general.id, nc.PersonGivenName, staff.email, general.ssnlast4,
@@ -454,73 +416,66 @@ general.consentform:
         location.city, location.zip, witness.signaturedatetime, witness.email, person.picture,
         contact.Email]
     property_tags: {}
-    basetype: null
-    id: aedf54dc-ba03-47b2-a010-91b17dee362a
-general.editedby:
-    title: Edited By
-    type: general.editedby
-    description: Association describing that one entity was edited by another.
     schemas: []
+    title: Consent Form
+    type: general.consentform
+general.editedby:
+    description: Association describing that one entity was edited by another.
+    id: 1c9601f9-7b37-44ae-a7a1-5b546952a08a
     key: [general.datetime]
     properties: [general.datetime]
     property_tags: {}
-    basetype: null
-    id: 1c9601f9-7b37-44ae-a7a1-5b546952a08a
-general.employedby:
-    title: employedby
-    type: general.employedby
-    description: An association linking person and employer
     schemas: []
+    title: Edited By
+    type: general.editedby
+general.employedby:
+    description: An association linking person and employer
+    id: fc310cd1-7ba8-462a-961e-b0d1070fff43
     key: [provider.NationalProviderIdentification, place.SequenceID, nc.SubjectIdentification]
     properties: [provider.NationalProviderIdentification, place.SequenceID, nc.SubjectIdentification]
     property_tags: {}
-    basetype: null
-    id: fc310cd1-7ba8-462a-961e-b0d1070fff43
+    schemas: []
+    title: employedby
+    type: general.employedby
 general.occurredat:
-    title: Occurred At
-    type: general.occurredat
     description: Links together a event with a location where it occurred.
-    schemas: [v2.v2]
+    id: 167c2511-b07f-416b-8e34-62b2a546d0e7
     key: [location.address, general.stringid]
     properties: [location.address, general.stringid]
     property_tags: {}
-    basetype: null
-    id: 167c2511-b07f-416b-8e34-62b2a546d0e7
+    schemas: [v2.v2]
+    title: Occurred At
+    type: general.occurredat
 general.oversaw:
-    title: Oversaw
-    type: general.oversaw
     description: Oversaw
-    schemas: []
+    id: d7d4cff2-5b0d-4200-a35b-786fcdfe3bf5
     key: [date.completeddatetime]
     properties: [date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: d7d4cff2-5b0d-4200-a35b-786fcdfe3bf5
+    schemas: []
+    title: Oversaw
+    type: general.oversaw
 general.participatedin:
-    title: Participated in
-    type: general.participatedin
     description: Association 'participated in'
-    schemas: [v2.v2]
+    id: 34836b35-76b1-4ecf-b588-c22ad19e2378
     key: [general.stringid]
     properties: [general.stringid, nc.SubjectIdentification, ol.datetimestart]
     property_tags: {}
-    basetype: null
-    id: 34836b35-76b1-4ecf-b588-c22ad19e2378
+    schemas: [v2.v2]
+    title: Participated in
+    type: general.participatedin
 general.participatedin_v1:
-    title: Participated In_deprecated
-    type: general.participatedin_v1
     description: Participated in
-    schemas: []
+    id: 92b91274-6ff6-4a06-bee0-10a1b7b0f056
     key: [general.id]
     properties: [general.id]
     property_tags: {}
-    basetype: null
-    id: 92b91274-6ff6-4a06-bee0-10a1b7b0f056
-general.person:
-    title: Person
-    type: general.person
-    description: A person
     schemas: []
+    title: Participated In_deprecated
+    type: general.participatedin_v1
+general.person:
+    description: A person
+    id: 31cf5595-3fe9-4d3e-a9cf-39355a4b8cab
     key: [nc.SubjectIdentification]
     properties: [nc.PersonGivenName, nc.PersonMiddleName, nc.PersonSurName, nc.SSN,
         nc.PersonBirthDate, nc.PersonSuffix, im.PersonNickName, nc.PersonRace, nc.PersonEthnicity,
@@ -531,174 +486,158 @@ general.person:
         housing.updatedat, nc.SubjectIdentification, housing.notes, ol.idtype, bhr.gender,
         ol.idjurisdiction, ol.idnumber, ol.numsourcesfoundin, ol.datasource]
     property_tags: {}
-    basetype: null
-    id: 31cf5595-3fe9-4d3e-a9cf-39355a4b8cab
-general.place:
-    title: Place
-    type: general.place
-    description: A building or an organization
     schemas: []
+    title: Person
+    type: general.person
+general.place:
+    description: A building or an organization
+    id: 04db765f-7c68-409d-83ac-530aac1736a2
     key: [place.SequenceID]
     properties: [place.SequenceID, general.fullname, contact.phonenumber, place.uniqueID]
     property_tags: {}
-    basetype: null
-    id: 04db765f-7c68-409d-83ac-530aac1736a2
-general.registeredfor:
-    title: Registered For
-    type: general.registeredfor
-    description: An association describing that one entity was registered for another.
     schemas: []
+    title: Place
+    type: general.place
+general.registeredfor:
+    description: An association describing that one entity was registered for another.
+    id: 36888d01-c1af-405b-8846-d03835a40cf2
     key: [date.completeddatetime]
     properties: [date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 36888d01-c1af-405b-8846-d03835a40cf2
-general.speakerverificationprofile:
-    title: Speaker Verification Profile
-    type: general.speakerverificationprofile
-    description: Details of a speaker verification profile.
     schemas: []
+    title: Registered For
+    type: general.registeredfor
+general.speakerverificationprofile:
+    description: Details of a speaker verification profile.
+    id: f6526a96-37c1-49e5-a362-3f33105ea6d8
     key: [general.id]
     properties: [general.pin, general.id, media.audio]
     property_tags: {}
-    basetype: null
-    id: f6526a96-37c1-49e5-a362-3f33105ea6d8
+    schemas: []
+    title: Speaker Verification Profile
+    type: general.speakerverificationprofile
 general.vehicle:
-    title: Vehicle
-    type: general.vehicle
     description: Vehicle
-    schemas: [v2.v2]
+    id: 03d89674-3a5f-4e3e-b619-2dd110022348
     key: [vehicle.id]
     properties: [vehicle.licensenumber, vehicle.color, vehicle.licenseplatetype, vehicle.vin,
         vehicle.make, vehicle.licenseyear, vehicle.model, vehicle.licensestate, vehicle.style,
         vehicle.id, vehicle.year, publicsafety.dispatchtransfervehicle, vehicle.secondarycolor]
     property_tags: {}
-    basetype: null
-    id: 03d89674-3a5f-4e3e-b619-2dd110022348
-geo.address:
-    title: Address
-    type: geo.address
-    description: Address
     schemas: [v2.v2]
+    title: Vehicle
+    type: general.vehicle
+geo.address:
+    description: Address
+    id: 0257769a-7b29-4ee3-9d64-dc2e7fcbab60
     key: [location.Address]
     properties: [geo.facility_name, geo.facility_type, location.address, location.street,
         location.apartment, location.city, location.state, location.zip, location.intersection,
         location.name, location.latitude, location.longitude, housing.notes, general.entryupdated,
         housing.updatedat, location.Address]
     property_tags: {}
-    basetype: null
-    id: 0257769a-7b29-4ee3-9d64-dc2e7fcbab60
+    schemas: [v2.v2]
+    title: Address
+    type: geo.address
 geo.contactedat:
-    title: Contacted At
-    type: geo.contactedat
     description: Association linking person and contact info (excluding address).
-    schemas: []
+    id: 0aab8372-2c95-4f8c-b67a-79066371365e
     key: [general.stringid]
     properties: [date.completeddatetime, contact.Active, contact.cellphone, general.stringid]
     property_tags: {}
-    basetype: null
-    id: 0aab8372-2c95-4f8c-b67a-79066371365e
-geo.contactedat_deprecated:
-    title: Contacted at_deprecated
-    type: geo.contactedat_deprecated
-    description: Association linking person and contact info (excluding address).
     schemas: []
+    title: Contacted At
+    type: geo.contactedat
+geo.contactedat_deprecated:
+    description: Association linking person and contact info (excluding address).
+    id: eb5c2845-6089-4d31-a5bd-f83371444154
     key: [date.completeddatetime]
     properties: [contact.Active, date.completeddatetime, contact.cellphone]
     property_tags: {}
-    basetype: null
-    id: eb5c2845-6089-4d31-a5bd-f83371444154
+    schemas: []
+    title: Contacted at_deprecated
+    type: geo.contactedat_deprecated
 geo.contactinfogiven:
-    title: Contact Information Given
-    type: geo.contactinfogiven
     description: Contact information other than address, given to an entity such as
         a dispatcher.
-    schemas: []
+    id: 1f4bb5db-61a8-4ab3-b69b-eb783e038848
     key: [contact.id]
     properties: [contact.id, contact.cellphone]
     property_tags: {}
-    basetype: null
-    id: 1f4bb5db-61a8-4ab3-b69b-eb783e038848
-geo.contactinformation:
-    title: Contact Information v1
-    type: geo.contactinformation
-    description: Contact information
     schemas: []
+    title: Contact Information Given
+    type: geo.contactinfogiven
+geo.contactinformation:
+    description: Contact information
+    id: 16bc7a2a-0c8c-4c54-af73-41585c49a224
     key: [contact.id]
     properties: [contact.Email, contact.phonenumber, contact.uniqueID, contact.id,
         contact.emergencynumber, contact.emergencyname, general.entryupdated, housing.notes,
         contact.cellphone, ol.preferredmethod]
     property_tags: {}
-    basetype: null
-    id: 16bc7a2a-0c8c-4c54-af73-41585c49a224
+    schemas: []
+    title: Contact Information v1
+    type: geo.contactinformation
 geo.getsmailat:
-    title: Gets Mail At -d
-    type: geo.getsmailat
     description: An association that describes a mailing address.
-    schemas: [v2.v2]
+    id: 558ecd39-ae52-4ab3-ba28-74d93e5ade6a
     key: [location.address, nc.SubjectIdentification]
     properties: [location.address, nc.SubjectIdentification]
     property_tags: {}
-    basetype: null
-    id: 558ecd39-ae52-4ab3-ba28-74d93e5ade6a
-geo.locatedat:
-    title: Located At (deprecated)
-    type: geo.locatedat
-    description: Links together a person with a location.
     schemas: [v2.v2]
+    title: Gets Mail At -d
+    type: geo.getsmailat
+geo.locatedat:
+    description: Links together a person with a location.
+    id: c11a8547-1a2f-41d8-b983-cc568f0f83ac
     key: [location.address, nc.SubjectIdentification, place.uniqueID]
     properties: [location.address, nc.SubjectIdentification, general.stringid, place.uniqueID]
     property_tags: {}
-    basetype: null
-    id: c11a8547-1a2f-41d8-b983-cc568f0f83ac
+    schemas: [v2.v2]
+    title: Located At (deprecated)
+    type: geo.locatedat
 geo.zonedwithin:
-    title: Zoned within
-    type: geo.zonedwithin
     description: Links together a call for service and a dispatch zone.
-    schemas: []
+    id: 9ac9f941-6ba5-42ce-884c-a405d232bc3a
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: 9ac9f941-6ba5-42ce-884c-a405d232bc3a
-health.allergy:
-    title: Allergies
-    type: health.allergy
-    description: Reported medical allergies
     schemas: []
+    title: Zoned within
+    type: geo.zonedwithin
+health.allergy:
+    description: Reported medical allergies
+    id: 8e38aace-12f1-41fb-861d-f3af2d08df39
     key: [medical.allergyreactiontype, medical.allergyreactionseverity, general.fullname]
     properties: [medical.allergyreactiontype, medical.allergyreactionseverity, general.fullname]
     property_tags: {}
-    basetype: null
-    id: 8e38aace-12f1-41fb-861d-f3af2d08df39
+    schemas: []
+    title: Allergies
+    type: health.allergy
 health.assessedby -d:
-    title: Assessed By
-    type: health.assessedby -d
     description: Association linking a patient and the medical staff who assessed
         them. NOTE this FQN will be changed to general.assessedby later.
-    schemas: [v2.v2]
+    id: 8a9e7698-a16e-4134-b63b-b3a379d0290b
     key: [date.completeddatetime]
     properties: [date.completeddatetime, nc.PersonGivenName, nc.PersonSurName, person.title,
         general.id]
     property_tags: {}
-    basetype: null
-    id: 8a9e7698-a16e-4134-b63b-b3a379d0290b
+    schemas: [v2.v2]
+    title: Assessed By
+    type: health.assessedby -d
 health.assessedwith:
-    title: Assessed with (health)
-    type: health.assessedwith
     description: An assessment given to a person, including medical, health, and housing.
         NOTE this FQN will be changed to general.assessedwith later.
-    schemas: [v2.v2]
+    id: 85bf7f0d-40e5-40d4-a403-60557afeff1f
     key: [date.completeddatetime]
     properties: [date.completeddatetime, general.stringid, general.id]
     property_tags: {}
-    basetype: null
-    id: 85bf7f0d-40e5-40d4-a403-60557afeff1f
+    schemas: [v2.v2]
+    title: Assessed with (health)
+    type: health.assessedwith
 health.biopsychosocial:
-    title: Biopsychosocial assessment
-    type: health.biopsychosocial
     description: Biopsychosocial Assessment
-    schemas: []
+    id: b46056ce-067a-48ae-b492-f9fb3f76288c
     key: [health.biopsychosocialid]
     properties: [health.admissiondate, health.admissionage, substance.patternsofuse,
         substance.quitnicotine, health.strengthsofpatient, health.otherstrengthsofpatient,
@@ -708,26 +647,24 @@ health.biopsychosocial:
         person.militaryhistory, health.militarybenefits, person.highesteducation,
         person.educationgoals, health.supportperson, substance.sobrietysupport, health.biopsychosocialid]
     property_tags: {}
-    basetype: null
-    id: b46056ce-067a-48ae-b492-f9fb3f76288c
+    schemas: []
+    title: Biopsychosocial assessment
+    type: health.biopsychosocial
 health.clinicalassessment:
-    title: Clinical Assessment and Diagnosis
-    type: health.clinicalassessment
     description: Clinical Assessment and Diagnosis, including DSM axes and aftercare
         recommendations.
-    schemas: []
+    id: 00a44d15-3d6d-4695-84cc-c16da39666a8
     key: [clinical.assessmentid]
     properties: [clinical.assessmentid, clinical.assessment, medical.axisI, medical.axisII,
         medical.axisIII, medical.axisIV, health.assessmentdefermentreason]
     property_tags: {}
-    basetype: null
-    id: 00a44d15-3d6d-4695-84cc-c16da39666a8
+    schemas: []
+    title: Clinical Assessment and Diagnosis
+    type: health.clinicalassessment
 health.consequencesofsubstanceuse:
-    title: Consequences of substance use
-    type: health.consequencesofsubstanceuse
     description: Both physical and biopsychosocial potential consequences of substance
         use.
-    schemas: []
+    id: 0fd30ad2-caf7-434e-b60f-80cea7eb1a3b
     key: [substance.consequenceid]
     properties: [substance.consequenceid, substance.blackouts, substance.tremorsshakes,
         substance.nauseavomiting, substance.sleepdisorder, substance.seizures, substance.deliriumtremens,
@@ -735,87 +672,79 @@ health.consequencesofsubstanceuse:
         substance.memoryproblems, substance.jobloss, substance.arrests, substance.oui,
         substance.relationshipproblems, substance.consequenceother, substance.consequenceothernotes]
     property_tags: {}
-    basetype: null
-    id: 0fd30ad2-caf7-434e-b60f-80cea7eb1a3b
-health.hospitals:
-    title: Hospitals
-    type: health.hospitals
-    description: 'List of hospitals '
     schemas: []
+    title: Consequences of substance use
+    type: health.consequencesofsubstanceuse
+health.hospitals:
+    description: 'List of hospitals '
+    id: 1a024fe2-693a-4cf2-95e9-7a18735ca3f2
     key: [general.stringid]
     properties: [health.hospitalname, general.stringid, location.address]
     property_tags: {}
-    basetype: null
-    id: 1a024fe2-693a-4cf2-95e9-7a18735ca3f2
-health.insuredby:
-    title: Insured By
-    type: health.insuredby
-    description: Association linking a patient with insurance.
     schemas: []
+    title: Hospitals
+    type: health.hospitals
+health.insuredby:
+    description: Association linking a patient with insurance.
+    id: be4d46af-b5b6-468e-8c76-d3d897de4dd5
     key: [date.completeddatetime]
     properties: [date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: be4d46af-b5b6-468e-8c76-d3d897de4dd5
-health.provider:
-    title: Healthcare Provider
-    type: health.provider
-    description: A person or an organization providing health services.
     schemas: []
+    title: Insured By
+    type: health.insuredby
+health.provider:
+    description: A person or an organization providing health services.
+    id: 7ecfd9f8-8bae-4244-a190-93cb383398fe
     key: [provider.NationalProviderIdentification]
     properties: [health.hospitalname, provider.name, general.Title, provider.NationalProviderIdentification]
     property_tags: {}
-    basetype: null
-    id: 7ecfd9f8-8bae-4244-a190-93cb383398fe
-health.referral:
-    title: Healthcare Referral
-    type: health.referral
-    description: Information on healthcare referrals
     schemas: []
+    title: Healthcare Provider
+    type: health.provider
+health.referral:
+    description: Information on healthcare referrals
+    id: 23f20ed7-e7b6-487d-8876-cbb552c2f62d
     key: [date.completeddatetime]
     properties: [health.referraltype, health.referralsource, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 23f20ed7-e7b6-487d-8876-cbb552c2f62d
+    schemas: []
+    title: Healthcare Referral
+    type: health.referral
 health.referredby:
+    description: An association linking a patient and referral information.
+    id: 311a1e88-e1e2-4166-819d-52aa00f9e3d1
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime]
+    property_tags: {}
+    schemas: []
     title: Referred by (health)
     type: health.referredby
-    description: An association linking a patient and referral information.
-    schemas: []
-    key: [date.completeddatetime]
-    properties: [date.completeddatetime]
-    property_tags: {}
-    basetype: null
-    id: 311a1e88-e1e2-4166-819d-52aa00f9e3d1
 health.reported:
-    title: Reported (health)
-    type: health.reported
     description: Linking a person/patient with various things they reported (medical
         history, allergies, etc.)
-    schemas: [v2.v2]
+    id: a8611fa4-64cc-469f-a7ea-b6bcf4daf28c
     key: [date.completeddatetime]
     properties: [date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: a8611fa4-64cc-469f-a7ea-b6bcf4daf28c
+    schemas: [v2.v2]
+    title: Reported (health)
+    type: health.reported
 health.substancetreatmenthistory:
-    title: Substance Treatment History
-    type: health.substancetreatmenthistory
     description: Substance Treatment History
-    schemas: []
+    id: 5b16b066-99a7-4dbc-81c3-2b10ea12929c
     key: [substance.TreatmentHistoryID]
     properties: [substance.TreatmentHistoryID, substance.PreviousLengthOfSobriety,
         substance.PreviousNotHelpfulTreatment, substance.PreviousLengthOfStay, date.CompletedDateTime,
         substance.PreviousTreatingFacility, event.comments, substance.PreviousLevelOfCare,
         substance.PreviousHelpfulTreatment, substance.IneffectiveTreatment]
     property_tags: {}
-    basetype: null
-    id: 5b16b066-99a7-4dbc-81c3-2b10ea12929c
+    schemas: []
+    title: Substance Treatment History
+    type: health.substancetreatmenthistory
 housing.assessment:
-    title: Housing Resident Assessment
-    type: housing.assessment
     description: Can be used for both admission assessments and discharge assessments.
-    schemas: [v2.v2]
+    id: 8d713e79-21ff-41c3-9bcb-6d460f02a845
     key: [housing.assessmentid]
     properties: [economy.employmentstatus, substance.type, person.pregnancy, housing.employment,
         housing.matprovider, housing.mat, person.maritalstatus, person.veteranstatus,
@@ -834,63 +763,58 @@ housing.assessment:
         health.physicaldisability, health.physicaldisabilitydescription, health.insurancecoverage,
         form.relationtoprimaryclient, economy.otherincome, housing.assessmentid, health.insurancetype]
     property_tags: {}
-    basetype: null
-    id: 8d713e79-21ff-41c3-9bcb-6d460f02a845
+    schemas: [v2.v2]
+    title: Housing Resident Assessment
+    type: housing.assessment
 housing.contactinformation:
-    title: Contact Information (Referrals)
-    type: housing.contactinformation
     description: Contact Information (housing and substance use)
-    schemas: []
+    id: a905d042-bea2-4e20-9959-c8eb3d096c70
     key: [contact.id]
     properties: [housing.contactdetails, contact.Email, contact.phonenumber, housing.contactdate,
         contact.emergencyname, contact.emergencynumber, housing.notes, contact.cellphone,
         contact.Active, contact.uniqueID, contact.id]
     property_tags: {}
-    basetype: null
-    id: a905d042-bea2-4e20-9959-c8eb3d096c70
+    schemas: []
+    title: Contact Information (Referrals)
+    type: housing.contactinformation
 housing.personnel:
-    title: Personnel - Housing, Peer Support and Recovery
-    type: housing.personnel
     description: Personnel and employees supporting the housing, peer support, and
         substance use recovery efforts.
-    schemas: []
+    id: 57d33e0a-6c84-4447-9d36-d39fb19efa6f
     key: [publicsafety.personnelid]
     properties: [housing.title, personnel.agency, publicsafety.personnelstatus, general.entryupdated,
         publicsafety.personnelid, person.picture]
     property_tags: {}
-    basetype: null
-    id: 57d33e0a-6c84-4447-9d36-d39fb19efa6f
+    schemas: []
+    title: Personnel - Housing, Peer Support and Recovery
+    type: housing.personnel
 housing.preassessment:
-    title: 'Referral Follow-up and Pre-housing Assessment '
-    type: housing.preassessment
     description: 'Followup with referred individuals; assessment to determine appropriateness
         for program and housing '
-    schemas: []
+    id: c751f67a-526a-4e4f-9278-431fb18764f2
     key: [housing.preassessmentid]
     properties: [housing.nextsteps, housing.status, housing.referraloutcome, housing.appropriateness,
         housing.actionitems, housing.preassessmentid, housing.appropriate, housing.notes,
         housing.followupdate, housing.updatedat, housing.employment, housing.contactdetails]
     property_tags: {}
-    basetype: null
-    id: c751f67a-526a-4e4f-9278-431fb18764f2
-housing.referral:
-    title: Housing Referral
-    type: housing.referral
-    description: Information from the individual providing a referral
     schemas: []
+    title: 'Referral Follow-up and Pre-housing Assessment '
+    type: housing.preassessment
+housing.referral:
+    description: Information from the individual providing a referral
+    id: 8f0eb3df-1a35-42a6-92f1-84474d9e118b
     key: [date.completeddatetime]
     properties: [housing.referralcontactname, housing.referraltype, housing.referralorganization,
         housing.referralreason, housing.referralcontactinfo, housing.referraldate,
         housing.notes, date.completeddatetime, housing.contactdetails, housing.referralrelationship]
     property_tags: {}
-    basetype: null
-    id: 8f0eb3df-1a35-42a6-92f1-84474d9e118b
+    schemas: []
+    title: Housing Referral
+    type: housing.referral
 housing.stay:
-    title: Supportive Housing/Shelter Stay
-    type: housing.stay
     description: Details about a person or household's stay in supportive housing,
         a shelter, or other temporary housing program.
-    schemas: [v2.v2]
+    id: 0d02fc2b-561d-4de9-ac14-611b54a99eb9
     key: [general.stringid]
     properties: [housing.program, housing.programtype, housing.projecttype, date.admission,
         person.gender, person.ageatevent, housing.residentid, housing.admittedadults,
@@ -899,14 +823,13 @@ housing.stay:
         housing.timeintransitionalorpermanentlessthan7nights, housing.notes, household.id,
         general.stringid, ol.datetimestart]
     property_tags: {}
-    basetype: null
-    id: 0d02fc2b-561d-4de9-ac14-611b54a99eb9
+    schemas: [v2.v2]
+    title: Supportive Housing/Shelter Stay
+    type: housing.stay
 housing.stay_deprecated:
-    title: Supportive Housing/Shelter Stay_deprecated
-    type: housing.stay_deprecated
     description: Details about a person or household's stay in supportive housing,
         a shelter, or other temporary housing program.
-    schemas: []
+    id: 250c6bb5-d43d-4516-849b-56e47246d95b
     key: [general.id]
     properties: [general.id, household.id, date.admission, person.ageatevent, housing.residentid,
         housing.admittedadults, housing.admittedchildren, housing.projecttype, housing.program,
@@ -914,36 +837,33 @@ housing.stay_deprecated:
         housing.timeintransitionalorpermanentlessthan7nights, housing.notes, housing.chronicallyhomeless,
         ol.datetime_release]
     property_tags: {}
-    basetype: null
-    id: 250c6bb5-d43d-4516-849b-56e47246d95b
+    schemas: []
+    title: Supportive Housing/Shelter Stay_deprecated
+    type: housing.stay_deprecated
 housing.worksas:
-    title: Works as (is employee or personnel of)_deprecated
-    type: housing.worksas
     description: Association between person and personnel/employee entity, noting
         when the person first started working with the agency or organization.
-    schemas: []
+    id: 21a97a1d-3652-48f4-9176-a501e0f821e5
     key: [general.id]
     properties: [housing.hiredate, general.id]
     property_tags: {}
-    basetype: null
-    id: 21a97a1d-3652-48f4-9176-a501e0f821e5
-j.EnforcementOfficial:
-    title: Officer
-    type: j.EnforcementOfficial
-    description: An officer
     schemas: []
+    title: Works as (is employee or personnel of)_deprecated
+    type: housing.worksas
+j.EnforcementOfficial:
+    description: An officer
+    id: 594bafb7-58c4-4722-bcf5-f3f87c884dea
     key: [justice.xref]
     properties: [publicsafety.officerID, nc.SubjectIdentification, nc.PersonSurName,
         j.EnforcementOfficialUnit, j.EnforcementOfficialCategoryText, nc.SystemUserName,
         publicsafety.officerbadgeid, justice.xref, place.EmployedByAgency, nc.PersonGivenName]
     property_tags: {}
-    basetype: null
-    id: 594bafb7-58c4-4722-bcf5-f3f87c884dea
-j.sentence:
-    title: Sentence
-    type: j.sentence
-    description: A sentence
     schemas: []
+    title: Officer
+    type: j.EnforcementOfficial
+j.sentence:
+    description: A sentence
+    id: e2de2838-5eb4-4ed9-9c08-52b51db712cd
     key: [general.id]
     properties: [justice.incarcerationstartdate, justice.incarcerationyears, justice.incarcerationsuspendedyears,
         justice.incarcerationmonths, justice.incarcerationsuspendedmonths, justice.incarcerationdays,
@@ -953,23 +873,21 @@ j.sentence:
         justice.communityservice, justice.licensepossessedbycourt, justice.licensecomment,
         justice.sentenceconditions, justice.licenseeffectivedate, justice.incarcerationlocation]
     property_tags: {}
-    basetype: null
-    id: e2de2838-5eb4-4ed9-9c08-52b51db712cd
-justice.ArrestedBy:
-    title: Arrested By
-    type: justice.ArrestedBy
-    description: Links together an officer with the act of conducting an arrest
     schemas: []
+    title: Sentence
+    type: j.sentence
+justice.ArrestedBy:
+    description: Links together an officer with the act of conducting an arrest
+    id: de895175-c50c-43e5-928b-284563335662
     key: [general.StringID]
     properties: [general.StringID, ol.arrestdatetime, publicsafety.ArrestID]
     property_tags: {}
-    basetype: null
-    id: de895175-c50c-43e5-928b-284563335662
-justice.ChargeDetails:
-    title: Charge Details
-    type: justice.ChargeDetails
-    description: Details of a charge
     schemas: []
+    title: Arrested By
+    type: justice.ArrestedBy
+justice.ChargeDetails:
+    description: Details of a charge
+    id: 7de3bc94-4571-4a3a-871f-3822e98ab60d
     key: [j.ChargeSequenceID]
     properties: [j.ChargeSequenceID, j.OffenseQualifierText, publicsafety.OffenseReleaseDate,
         publicsafety.OffenseEndDate, publicsafety.include, publicsafety.OffenseStartDate,
@@ -978,26 +896,24 @@ justice.ChargeDetails:
         publicsafety.BondMet, j.ArrestCharge, publicsafety.ChargeAgency, justice.CaseStatus,
         publicsafety.AlternateStartDate]
     property_tags: {}
-    basetype: null
-    id: 7de3bc94-4571-4a3a-871f-3822e98ab60d
-justice.JailBooking:
-    title: Jail Booking_deprecated
-    type: justice.JailBooking
-    description: A jail booking
     schemas: []
+    title: Charge Details
+    type: justice.ChargeDetails
+justice.JailBooking:
+    description: A jail booking
+    id: 415d008f-4310-4477-b333-404e6b11e537
     key: [criminaljustice.jailid]
     properties: [criminaljustice.jailid, publicsafety.ActualNumber, j.ArrestSequenceID,
         publicsafety.CustodyID, scr.DetentionReleaseReasonCategoryCodeType, j.BookingRelease,
         publicsafety.ArrestDate, justice.xref, j.ArrestAgency, ol.date_projectedrelease,
         ol.datetime_release, publicsafety.datebooked, ol.durationdays]
     property_tags: {}
-    basetype: null
-    id: 415d008f-4310-4477-b333-404e6b11e537
-justice.JailRecord:
-    title: Jail Record_deprecated
-    type: justice.JailRecord
-    description: A jail record.
     schemas: []
+    title: Jail Booking_deprecated
+    type: justice.JailBooking
+justice.JailRecord:
+    description: A jail record.
+    id: 2dbf1e58-e218-4211-965c-070b6c4388c9
     key: [justice.xref]
     properties: [publicsafety.Balance, publicsafety.CurrencyAmount, publicsafety.TotalTime,
         publicsafety.ChangeAmount, criminaljustice.releasetofacility, publicsafety.ArrestID,
@@ -1006,46 +922,42 @@ justice.JailRecord:
         justice.xref, criminaljustice.treatasadult, j.Remark, criminaljustice.releasenotes,
         criminaljustice.heldat, publicsafety.JuvHoldAuth, j.BookingTelephoneCall]
     property_tags: {}
-    basetype: null
-    id: 2dbf1e58-e218-4211-965c-070b6c4388c9
-justice.Offense:
-    title: Offense (v1)
-    type: justice.Offense
-    description: An offense
     schemas: []
+    title: Jail Record_deprecated
+    type: justice.JailRecord
+justice.Offense:
+    description: An offense
+    id: dfc59ce4-576b-4d61-9515-dba20e0dca5c
     key: [justice.severity, publicsafety.ReasonHeld, publicsafety.OffenseDate, publicsafety.OffenseViolatedLocalStatute,
         publicsafety.OffenseViolatedStateStatute, j.ArrestWarrant]
     properties: [justice.severity, justice.offensereportid, publicsafety.ReasonHeld,
         publicsafety.OffenseDate, publicsafety.OffenseViolatedLocalStatute, publicsafety.OffenseViolatedStateStatute,
         criminaljustice.nibrs, j.ArrestWarrant, j.ArrestCharge, general.id, general.StringID]
     property_tags: {}
-    basetype: null
-    id: dfc59ce4-576b-4d61-9515-dba20e0dca5c
+    schemas: []
+    title: Offense (v1)
+    type: justice.Offense
 justice.ReleasedBy:
+    description: Links together an officer with someone they are releasing
+    id: 46eeda56-f986-4da2-9584-23512aa2fb41
+    key: [general.StringID]
+    properties: [general.StringID]
+    property_tags: {}
+    schemas: []
     title: Released By
     type: justice.ReleasedBy
-    description: Links together an officer with someone they are releasing
-    schemas: []
+justice.SearchedBy:
+    description: Links together an officer with someone they are searching
+    id: 23ab47df-b236-4188-ab93-a99e5e1ef69f
     key: [general.StringID]
     properties: [general.StringID]
     property_tags: {}
-    basetype: null
-    id: 46eeda56-f986-4da2-9584-23512aa2fb41
-justice.SearchedBy:
+    schemas: []
     title: Searched By
     type: justice.SearchedBy
-    description: Links together an officer with someone they are searching
-    schemas: []
-    key: [general.StringID]
-    properties: [general.StringID]
-    property_tags: {}
-    basetype: null
-    id: 23ab47df-b236-4188-ab93-a99e5e1ef69f
 justice.Sentence:
-    title: A Sentence
-    type: justice.Sentence
     description: A sentence
-    schemas: []
+    id: ef890efc-3cfd-4de9-8788-aa2ec695235b
     key: [publicsafety.GoodTimeDays, publicsafety.TimeServedMinutes, publicsafety.GoodTimeMinutes,
         publicsafety.NoCounts, publicsafety.ConsecWith, publicsafety.GoodTimePCT,
         publicsafety.Concurrent, publicsafety.GoodTimeHours, j.RegisteredOffenderEntryDate,
@@ -1059,54 +971,49 @@ justice.Sentence:
         publicsafety.TimeServedHours, j.SentenceRegisterSexOffenderIndicator, ol.date_projectedrelease,
         person.ageatevent, person.releaseofficer, publicsafety.AlternateStartDate]
     property_tags: {}
-    basetype: null
-    id: ef890efc-3cfd-4de9-8788-aa2ec695235b
-justice.TransportedBy:
-    title: Transported By
-    type: justice.TransportedBy
-    description: Links together an officer with someone they are transporting
     schemas: []
+    title: A Sentence
+    type: justice.Sentence
+justice.TransportedBy:
+    description: Links together an officer with someone they are transporting
+    id: 533c7b58-116a-400f-a2df-08abbaa7eceb
     key: [general.StringID]
     properties: [general.StringID]
     property_tags: {}
-    basetype: null
-    id: 533c7b58-116a-400f-a2df-08abbaa7eceb
-justice.agency:
-    title: Agency
-    type: justice.agency
-    description: A criminal justice agency.
     schemas: []
+    title: Transported By
+    type: justice.TransportedBy
+justice.agency:
+    description: A criminal justice agency.
+    id: 64326d03-6cdb-4481-b817-e4e720311acc
     key: [j.ArrestAgency]
     properties: [j.ArrestAgency]
     property_tags: {}
-    basetype: null
-    id: 64326d03-6cdb-4481-b817-e4e720311acc
-justice.bond:
-    title: Bond
-    type: justice.bond
-    description: A bond
     schemas: []
+    title: Agency
+    type: justice.agency
+justice.bond:
+    description: A bond
+    id: 0f79443c-5ed8-4b1e-8e5f-61dee705e309
     key: [general.id]
     properties: [justice.bondamount, justice.suretyamount, justice.bonddescription,
         general.notes, general.id, ol.startdate, ol.enddate]
     property_tags: {}
-    basetype: null
-    id: 0f79443c-5ed8-4b1e-8e5f-61dee705e309
-justice.booked:
-    title: was booked_deprecated
-    type: justice.booked
-    description: Links together a person with a booking
     schemas: []
+    title: Bond
+    type: justice.bond
+justice.booked:
+    description: Links together a person with a booking
+    id: 06eb9cfc-8f72-4bb1-aaac-8fe336891e45
     key: [nc.SubjectIdentification, j.CaseNumberText]
     properties: [nc.SubjectIdentification, j.CaseNumberText]
     property_tags: {}
-    basetype: null
-    id: 06eb9cfc-8f72-4bb1-aaac-8fe336891e45
-justice.booking:
-    title: Booking (v1)
-    type: justice.booking
-    description: A booking
     schemas: []
+    title: was booked_deprecated
+    type: justice.booked
+justice.booking:
+    description: A booking
+    id: 161ca75e-8a16-41c1-8b02-7b1649c3a2d7
     key: [j.CaseNumberText]
     properties: [criminaljustice.jailid, j.CaseNumberText, date.booking, j.OffenseViolatedStatute,
         justice.Bail, justice.CaseStatus, person.ageatevent, justice.ReferralAgency,
@@ -1114,26 +1021,24 @@ justice.booking:
         justice.ReleaseComments, housing.dischargereason, justice.sbi, criminaljustice.timeserveddays,
         j.ArrestAgency, place.CommittingAuthority, person.releaseofficer]
     property_tags: {}
-    basetype: null
-    id: 161ca75e-8a16-41c1-8b02-7b1649c3a2d7
-justice.case:
-    title: Case/Hearing
-    type: justice.case
-    description: A court case or hearing.
     schemas: []
+    title: Booking (v1)
+    type: justice.booking
+justice.case:
+    description: A court case or hearing.
+    id: 352f83ba-55bd-4a45-becc-e302667ab865
     key: [j.CaseNumberText]
     properties: [justice.dacasenumber, justice.courtcasenumber, justice.ArrestTrackingNumber,
         justice.ReferralDate, justice.ReferralType, justice.AgencyCaseNumber, justice.courtcasetype,
         justice.ReferralAgency, j.CaseNumberText, justice.CaseStatus, event.comments,
         ol.update, general.date, date.timeOfDay, general.datetime, justice.courtroom]
     property_tags: {}
-    basetype: null
-    id: 352f83ba-55bd-4a45-becc-e302667ab865
-justice.charge:
-    title: Charge
-    type: justice.charge
-    description: A charge
     schemas: []
+    title: Case/Hearing
+    type: justice.case
+justice.charge:
+    description: A charge
+    id: 5386b226-1544-455f-b330-1107399b1ed2
     key: [justice.ArrestTrackingNumber]
     properties: [justice.ChargeStatus, justice.severity, justice.ArrestTrackingNumber,
         justice.ReferralDate, justice.plea, justice.disposition, publicsafety.ArrestDate,
@@ -1142,90 +1047,82 @@ justice.charge:
         event.ChargeLevelState, justice.pleadate, justice.dispositiondate, event.comments,
         ol.numberofcounts]
     property_tags: {}
-    basetype: null
-    id: 5386b226-1544-455f-b330-1107399b1ed2
-justice.chargedwith:
-    title: Charged With_deprecated
-    type: justice.chargedwith
-    description: The law enforcement charges that were laid upon a person (association).
     schemas: []
+    title: Charge
+    type: justice.charge
+justice.chargedwith:
+    description: The law enforcement charges that were laid upon a person (association).
+    id: 6f440883-660f-41e7-95f3-d923361e2b21
     key: [general.stringid]
     properties: [nc.SubjectIdentification, general.stringid, event.ChargeLevel, event.ChargeLevelState,
         ol.numberofcounts, publicsafety.agencyname]
     property_tags: {}
-    basetype: null
-    id: 6f440883-660f-41e7-95f3-d923361e2b21
+    schemas: []
+    title: Charged With_deprecated
+    type: justice.chargedwith
 justice.detailsof:
-    title: Details Of
-    type: justice.detailsof
     description: An association which describes that one entity provides details of
         another
-    schemas: []
+    id: 536f93ba-efd4-47b7-8b7c-51612cafd8c5
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: 536f93ba-efd4-47b7-8b7c-51612cafd8c5
-justice.dmf:
-    title: DMF
-    type: justice.dmf
-    description: A decision making framework result
     schemas: []
+    title: Details Of
+    type: justice.detailsof
+justice.dmf:
+    description: A decision making framework result
+    id: 464c494d-e90b-4518-9733-d713f950fa6f
     key: [general.id]
     properties: [general.color, criminaljustice.releasetype, justice.conditionslevel,
         justice.condition1, justice.condition2, justice.condition3, general.id, ol.outcome,
         ol.othertext]
     property_tags: {}
-    basetype: null
-    id: 464c494d-e90b-4518-9733-d713f950fa6f
-justice.fta:
-    title: Failure To Appear
-    type: justice.fta
-    description: A failure to appear for a court date.
     schemas: []
+    title: DMF
+    type: justice.dmf
+justice.fta:
+    description: A failure to appear for a court date.
+    id: a150f42d-801d-4d5d-bec1-50f46fa58a58
     key: [general.id]
     properties: [general.datetime, general.id]
     property_tags: {}
-    basetype: null
-    id: a150f42d-801d-4d5d-bec1-50f46fa58a58
-justice.interactedwith -d:
-    title: Interacted With
-    type: justice.interactedwith -d
-    description: An association which describes that one entity interacted with another
     schemas: []
+    title: Failure To Appear
+    type: justice.fta
+justice.interactedwith -d:
+    description: An association which describes that one entity interacted with another
+    id: 4b98be11-03e3-4924-a983-474e8898e56c
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: 4b98be11-03e3-4924-a983-474e8898e56c
+    schemas: []
+    title: Interacted With
+    type: justice.interactedwith -d
 justice.leadsto:
-    title: Leads To
-    type: justice.leadsto
     description: An association linking an offense to eventual court case, sentencing,
         or conviction outcomes.
-    schemas: []
+    id: ba032771-413f-4d07-9730-a8f8d2fb06e2
     key: [general.stringid]
     properties: [general.stringid, ol.convictionresults]
     property_tags: {}
-    basetype: null
-    id: ba032771-413f-4d07-9730-a8f8d2fb06e2
+    schemas: []
+    title: Leads To
+    type: justice.leadsto
 justice.psa:
-    title: Public Safety Assessment
-    type: justice.psa
     description: A set of public safety assessment scores, calculating likelihood
         of outcomes based on a set of risk factors.
-    schemas: []
+    id: 395da81a-0bf5-473d-92b3-11f47fdd5d9f
     key: [psa.ftaScale, psa.nvcaFlag, psa.ncaScale]
     properties: [psa.ftaScale, psa.nvcaFlag, psa.ncaScale, economy.anyincomesources,
-        general.id, general.status, justice.failurereason, general.statusnotes]
+        general.id, general.status, justice.failurereason, general.statusnotes, general.datetime]
     property_tags: {}
-    basetype: null
-    id: 395da81a-0bf5-473d-92b3-11f47fdd5d9f
-justice.psaRiskFactors:
-    title: PSA Risk Factors
-    type: justice.psaRiskFactors
-    description: Risk factors determined in a public safety assessment
     schemas: []
+    title: Public Safety Assessment
+    type: justice.psa
+justice.psaRiskFactors:
+    description: Risk factors determined in a public safety assessment
+    id: 26e338e2-670f-4770-a1de-d6038a53957a
     key: [psa.PriorMisdemeanorConviction, psa.PriorViolentConviction, psa.PriorConviction,
         psa.PriorFailureToAppearWithinTwoYears, psa.CurrentViolentOffense, psa.PriorFailureToAppearOlderThanTwoYears,
         psa.CurrentViolentOffenseAnd20OrYounger, psa.PendingCharge, psa.PriorSentenceToIncarceration,
@@ -1239,55 +1136,50 @@ justice.psaRiskFactors:
         psa.PendingChargeNotes, psa.PriorSentenceToIncarcerationNotes, psa.PriorFelonyConvictionNotes,
         psa.AgeAtCurrentArrestNotes]
     property_tags: {}
-    basetype: null
-    id: 26e338e2-670f-4770-a1de-d6038a53957a
-justice.psaoutcome:
-    title: PSA Outcome for Hearing
-    type: justice.psaoutcome
-    description: 'Did the judge accept, increase, or decrease the PSA recommendation '
     schemas: []
+    title: PSA Risk Factors
+    type: justice.psaRiskFactors
+justice.psaoutcome:
+    description: 'Did the judge accept, increase, or decrease the PSA recommendation '
+    id: cbc78bf2-e2e7-4aee-984c-9acdcbd967f6
     key: [general.id]
     properties: [criminaljustice.releasetype, ol.outcome, ol.othertext, general.id,
         justice.judgeacceptedrecommendation]
     property_tags: {}
-    basetype: null
-    id: cbc78bf2-e2e7-4aee-984c-9acdcbd967f6
-justice.releasecondition:
-    title: Release Condition
-    type: justice.releasecondition
-    description: A condition of release from jail
     schemas: []
+    title: PSA Outcome for Hearing
+    type: justice.psaoutcome
+justice.releasecondition:
+    description: A condition of release from jail
+    id: 043a8413-7066-41d2-acc1-14b24e5caf0d
     key: [general.id]
     properties: [ol.type, ol.startdate, ol.enddate, general.frequency, ol.plantype,
         ol.othertext, general.fullname, criminaljustice.persontype, general.id]
     property_tags: {}
-    basetype: null
-    id: 043a8413-7066-41d2-acc1-14b24e5caf0d
-justice.resultsin:
-    title: Results In
-    type: justice.resultsin
-    description: An association which describes that one entity results in another
     schemas: []
+    title: Release Condition
+    type: justice.releasecondition
+justice.resultsin:
+    description: An association which describes that one entity results in another
+    id: 1f9fdbe6-982f-48b1-a4f3-af1a75614fe3
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: 1f9fdbe6-982f-48b1-a4f3-af1a75614fe3
-justice.sentencedwith:
-    title: Sentenced With
-    type: justice.sentencedwith
-    description: Association indicating that one entity was sentenced with another
     schemas: []
+    title: Results In
+    type: justice.resultsin
+justice.sentencedwith:
+    description: Association indicating that one entity was sentenced with another
+    id: 3c3d0caa-5311-4423-bcb1-62df8eaacee5
     key: [general.id]
     properties: [general.id]
     property_tags: {}
-    basetype: null
-    id: 3c3d0caa-5311-4423-bcb1-62df8eaacee5
-lawenforcement.arrest:
-    title: Arrest (-d)
-    type: lawenforcement.arrest
-    description: An arrest
     schemas: []
+    title: Sentenced With
+    type: justice.sentencedwith
+lawenforcement.arrest:
+    description: An arrest
+    id: b3fbdeaa-b5c9-49fc-944c-67915a148905
     key: [j.ArrestSequenceID]
     properties: [justice.OffenderAlcohol, location.address, j.ArrestLocation, j.ArrestCategory,
         j.EnforcementOfficialBadgeIdentification, j.ArrestSequenceID, j.OffenseQualifierText,
@@ -1295,43 +1187,39 @@ lawenforcement.arrest:
         justice.cadnumber, publicsafety.OffenseDate, publicsafety.ArrestDate, publicsafety.ReleaseDate,
         justice.EventType, j.CaseNumberText, criminaljustice.nibrs, criminaljustice.victimalcohol]
     property_tags: {}
-    basetype: null
-    id: b3fbdeaa-b5c9-49fc-944c-67915a148905
-lawenforcement.arrestedin:
-    title: Arrested In (v1)
-    type: lawenforcement.arrestedin
-    description: Links together a person with an event they were arrested in.
     schemas: []
+    title: Arrest (-d)
+    type: lawenforcement.arrest
+lawenforcement.arrestedin:
+    description: Links together a person with an event they were arrested in.
+    id: ef0c2517-0ab1-48e4-a247-ef9812c4980c
     key: [j.ArrestSequenceID, nc.SubjectIdentification]
     properties: [j.ArrestCategory, j.ArrestSequenceID, nc.SubjectIdentification]
     property_tags: {}
-    basetype: null
-    id: ef0c2517-0ab1-48e4-a247-ef9812c4980c
-location.MailsAt:
-    title: Mails At
-    type: location.MailsAt
-    description: An association describe that location at which an entity mails
     schemas: []
+    title: Arrested In (v1)
+    type: lawenforcement.arrestedin
+location.MailsAt:
+    description: An association describe that location at which an entity mails
+    id: 96a79f1d-f70d-41e5-a0ee-a60cef3ad3c7
     key: [location.address, nc.SubjectIdentification]
     properties: [location.address, nc.SubjectIdentification]
     property_tags: {}
-    basetype: null
-    id: 96a79f1d-f70d-41e5-a0ee-a60cef3ad3c7
-location.livesat:
-    title: Lives at (deprecated)
-    type: location.livesat
-    description: An association describe that location at which an entity lives
     schemas: []
+    title: Mails At
+    type: location.MailsAt
+location.livesat:
+    description: An association describe that location at which an entity lives
+    id: 12d1ef04-d6c5-45a7-bb56-f667e88ba165
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: 12d1ef04-d6c5-45a7-bb56-f667e88ba165
-medical.DetoxScreening:
-    title: Detox Screen
-    type: medical.DetoxScreening
-    description: Detox Screening Form
     schemas: []
+    title: Lives at (deprecated)
+    type: location.livesat
+medical.DetoxScreening:
+    description: Detox Screening Form
+    id: 78c7c6a0-b961-4f9e-9bb6-a508d6cee219
     key: [detox.ScreeningID]
     properties: [screening.LastSeizureDate, screening.MHComments, neurological.historyofseizures,
         screening.AbdominalPain, screening.MedicalConditionMonitoring, screening.IssuePreventDetox,
@@ -1342,24 +1230,22 @@ medical.DetoxScreening:
         medical.suicidalideation, screening.AcuteIntoxicationWithdrawalRisk, neurological.DeliriumTremens,
         screening.MalignantHyperthermia]
     property_tags: {}
-    basetype: null
-    id: 78c7c6a0-b961-4f9e-9bb6-a508d6cee219
-medical.Diagnosis:
-    title: Diagnosis
-    type: medical.Diagnosis
-    description: Diagnosis
     schemas: []
+    title: Detox Screen
+    type: medical.DetoxScreening
+medical.Diagnosis:
+    description: Diagnosis
+    id: 7958998f-cc0c-4e09-ad4c-ad725e7ef1a9
     key: [medical.DiagnosisID]
     properties: [diagnosis.Code, medical.DiagnosisID, date.CompletedDateTime, event.comments,
         diagnosis.Description]
     property_tags: {}
-    basetype: null
-    id: 7958998f-cc0c-4e09-ad4c-ad725e7ef1a9
-medical.History:
-    title: Medical History
-    type: medical.History
-    description: Medical History
     schemas: []
+    title: Diagnosis
+    type: medical.Diagnosis
+medical.History:
+    description: Medical History
+    id: df6071bd-a585-47bb-8536-2a6fd5cb7adf
     key: [medical.HistoryID]
     properties: [screening.LastSeizureDate, screening.MHComments, medical.agefirstused,
         neurological.historyofseizures, screening.AbdominalPain, screening.IssuePreventDetox,
@@ -1368,94 +1254,86 @@ medical.History:
         respiratory.shortnessofbreath, medical.SmokeCigarettes_deprecated, cardiovascular.chestpain,
         medical.HistoryID, gastrointestinal.bleeding, medical.suicidalideation, neurological.DeliriumTremens]
     property_tags: {}
-    basetype: null
-    id: df6071bd-a585-47bb-8536-2a6fd5cb7adf
-medical.Insurance:
-    title: Insurance (deprecated)
-    type: medical.Insurance
-    description: An insurance
     schemas: []
+    title: Medical History
+    type: medical.History
+medical.Insurance:
+    description: An insurance
+    id: 14acfc18-6d46-4ba2-a09d-3dc38c4c202b
     key: [insurance.SequenceID]
     properties: [insurance.SequenceID, general.fullname, insurance.Status, insurance.PrescriptionGroup,
         insurance.PlanType, insurance.Type, insurance.GroupNumber, insurance.PrescriptionPCN,
         insurance.MemberIdentification, insurance.PrescriptionBIN, general.notes]
     property_tags: {}
-    basetype: null
-    id: 14acfc18-6d46-4ba2-a09d-3dc38c4c202b
+    schemas: []
+    title: Insurance (deprecated)
+    type: medical.Insurance
 medical.Medication:
-    title: Medication (deprecated)
-    type: medical.Medication
     description: The substance used in the preparation or simply the substance used
         for medical treatment.
-    schemas: []
+    id: 7c3bf67e-888f-472c-9555-119d7d91828e
     key: [medication.id]
     properties: [medication.id, medication.Regimen, medication.Dosage, medical.medicationtakenasprescribed,
         general.fullname, date.CompletedDateTime, event.comments, medication.Type,
         general.notes]
     property_tags: {}
-    basetype: null
-    id: 7c3bf67e-888f-472c-9555-119d7d91828e
-medical.Ordered:
-    title: Ordered
-    type: medical.Ordered
-    description: Ordered
     schemas: []
+    title: Medication (deprecated)
+    type: medical.Medication
+medical.Ordered:
+    description: Ordered
+    id: a2d61543-99ea-4d83-a746-098f6dea7757
     key: [provider.NationalProviderIdentification, medical.TreatmentOrderID]
     properties: [provider.NationalProviderIdentification, medical.TreatmentOrderID]
     property_tags: {}
-    basetype: null
-    id: a2d61543-99ea-4d83-a746-098f6dea7757
-medical.ReviewedBy:
-    title: Reviewed By
-    type: medical.ReviewedBy
-    description: Reviewed By
     schemas: []
+    title: Ordered
+    type: medical.Ordered
+medical.ReviewedBy:
+    description: Reviewed By
+    id: 47fd73fe-d66e-4d12-8703-7b9fcba1ba3c
     key: [medical.InitialAssessmentID, provider.NationalProviderIdentification, nc.SubjectIdentification,
         detox.ScreeningID]
     properties: [medical.InitialAssessmentID, provider.NationalProviderIdentification,
         nc.SubjectIdentification, detox.ScreeningID]
     property_tags: {}
-    basetype: null
-    id: 47fd73fe-d66e-4d12-8703-7b9fcba1ba3c
-medical.Substance:
-    title: Substance Used
-    type: medical.Substance
-    description: Substance used
     schemas: []
+    title: Reviewed By
+    type: medical.ReviewedBy
+medical.Substance:
+    description: Substance used
+    id: 23c2552f-8cf1-4a3e-8a5e-4832061bfa4c
     key: [substance.SequenceID]
     properties: [date.CompletedDateTime, substance.type, medical.agefirstused, substance.frequency,
         substance.Route, general.fullname, event.comments, substance.LastUsed, substance.SequenceID,
         substance.UsageDuration, substance.usageamount]
     property_tags: {}
-    basetype: null
-    id: 23c2552f-8cf1-4a3e-8a5e-4832061bfa4c
-medical.TreatmentOrder:
-    title: Treatment Order
-    type: medical.TreatmentOrder
-    description: Treatment Order
     schemas: []
+    title: Substance Used
+    type: medical.Substance
+medical.TreatmentOrder:
+    description: Treatment Order
+    id: 6defb169-7056-486f-abd1-e528a720ab8c
     key: [medical.TreatmentOrderID]
     properties: [medical.TreatmentOrderID, medical.TreatmentLength, medical.TreatmentOrderDescription,
         event.comments, date.CompletedDateTime]
     property_tags: {}
-    basetype: null
-    id: 6defb169-7056-486f-abd1-e528a720ab8c
-medical.assessedwith_deprecated:
-    title: Assessed with (old)
-    type: medical.assessedwith_deprecated
-    description: Medical assessments that a patient has been assessed with.
     schemas: []
+    title: Treatment Order
+    type: medical.TreatmentOrder
+medical.assessedwith_deprecated:
+    description: Medical assessments that a patient has been assessed with.
+    id: 3841c20f-cfa9-4dd8-b75d-a33649afbceb
     key: [medical.InitialAssessmentID, health.biopsychosocialid, nc.SubjectIdentification]
     properties: [medical.InitialAssessmentID, health.biopsychosocialid, nc.SubjectIdentification,
         general.stringid]
     property_tags: {}
-    basetype: null
-    id: 3841c20f-cfa9-4dd8-b75d-a33649afbceb
-medical.assessment:
-    title: deprecated_Nurse's mental/psychiatric health summary assessment.
-    type: medical.assessment
-    description: A Nurse's mental/psychiatric assessment.
     schemas: []
+    title: Assessed with (old)
+    type: medical.assessedwith_deprecated
+medical.assessment:
+    description: A Nurse's mental/psychiatric assessment.
+    id: 9bdfb9cd-a5ae-475d-a295-938888ced614
     key: [medical.InitialAssessmentID]
     properties: [medical.RecentOrImpendingMajorLoss, medical.InitialAssessmentID,
         medical.psychiatricdiagnosismedications, medical.homicidalideation, medical.moodswings,
@@ -1463,13 +1341,12 @@ medical.assessment:
         medical.TroubleRemembering, event.comments, medical.paranoia, medical.suicidalideation,
         medical.VisitReason, medical.psychiatrichospitalizationtreatment]
     property_tags: {}
-    basetype: null
-    id: 9bdfb9cd-a5ae-475d-a295-938888ced614
-medical.biomedicalassessment:
-    title: Biomedical Assessment
-    type: medical.biomedicalassessment
-    description: Biomedical Assessment
     schemas: []
+    title: deprecated_Nurse's mental/psychiatric health summary assessment.
+    type: medical.assessment
+medical.biomedicalassessment:
+    description: Biomedical Assessment
+    id: 4d7ac46b-16d8-4ec1-ad7d-e4a83205674b
     key: [biomedical.id]
     properties: [medical.surgicalhistory, medical.beingseenatotherclinics, vitals.BloodPressure,
         medical.otherclinicsdiagnosis, medical.hardofhearingear, medical.currentdentalproblem,
@@ -1478,15 +1355,14 @@ medical.biomedicalassessment:
         medical.primarydoctoratotherclinic, vitals.Pulse, nc.PersonHeightMeasure,
         medical.lastdentalvisit, medical.otherclinicsdates]
     property_tags: {}
-    basetype: null
-    id: 4d7ac46b-16d8-4ec1-ad7d-e4a83205674b
+    schemas: []
+    title: Biomedical Assessment
+    type: medical.biomedicalassessment
 medical.cardiovascularassessment:
-    title: Cardiovascular Assessment
-    type: medical.cardiovascularassessment
     description: The evaluation of the cardiovascular system focuses on the heart,
         but should also include an assessment for disease in the arterial system throughout
         the body.
-    schemas: [v2.v2]
+    id: 0110384a-f7ff-4e81-bb17-ec761ef8cdd5
     key: [cardiovascular.id]
     properties: [cardiovascular.hypertension, cardiovascular.id, cardiovascular.myocardialinfarction,
         cardiovascular.palpitations, cardiovascular.swellingofextremities, event.comments,
@@ -1494,13 +1370,12 @@ medical.cardiovascularassessment:
         cardiovascular.hypertensiontext, cardiovascular.chestpaintext, cardiovascular.swellingofextremitiestext,
         cardiovascular.palpitationstext, cardiovascular.myocardialinfarctiontext]
     property_tags: {}
-    basetype: null
-    id: 0110384a-f7ff-4e81-bb17-ec761ef8cdd5
+    schemas: [v2.v2]
+    title: Cardiovascular Assessment
+    type: medical.cardiovascularassessment
 medical.emotionalbehavioralassessment:
-    title: Emotional Behavioral Assessment
-    type: medical.emotionalbehavioralassessment
     description: Emotional Behavioral Assessment
-    schemas: []
+    id: 8a52735a-bb15-42e2-95e3-c96076d03a44
     key: [emotionalbehavioral.id]
     properties: [emotionalbehavioral.id, medical.seriousdepression, medical.selfharmingthoughts,
         medical.racingthoughts, medical.attemptedsuicide, medical.familyfriendsdistrusts,
@@ -1511,25 +1386,23 @@ medical.emotionalbehavioralassessment:
         medical.totalcountpertainingtrauma, medical.mentaltreatment, provider.name,
         health.staff, contact.phonenumber, event.comments, health.totalacokquestions]
     property_tags: {}
-    basetype: null
-    id: 8a52735a-bb15-42e2-95e3-c96076d03a44
+    schemas: []
+    title: Emotional Behavioral Assessment
+    type: medical.emotionalbehavioralassessment
 medical.endocrineassessment:
-    title: Endocrine Assessment
-    type: medical.endocrineassessment
     description: The evaluation of the endocrine system focuses on the glands that
         secrete hormones.
-    schemas: [v2.v2]
+    id: 22e9e2e6-59bb-449a-8ca3-e0123e8c1e6c
     key: [endocrine.id]
     properties: [endocrine.id, endocrine.diabeticmgmtcomments, endocrine.otherdiabeticmedication,
         endocrine.diabetic, event.comments, endocrine.insulindependent, endocrine.haspersonalinsulin]
     property_tags: {}
-    basetype: null
-    id: 22e9e2e6-59bb-449a-8ca3-e0123e8c1e6c
-medical.gastrointestinalassessment:
-    title: Gastrointestinal Assessment
-    type: medical.gastrointestinalassessment
-    description: Gastrointestinal Assessment
     schemas: [v2.v2]
+    title: Endocrine Assessment
+    type: medical.endocrineassessment
+medical.gastrointestinalassessment:
+    description: Gastrointestinal Assessment
+    id: 08f9f560-98b9-4804-a7b8-f286f4b144fb
     key: [gastrointestinal.id]
     properties: [gastrointestinal.ulcers, gastrointestinal.liverdisease, gastrointestinal.constipation,
         gastrointestinal.normalbowelpattern, gastrointestinal.id, gastrointestinal.hepatitis,
@@ -1539,37 +1412,34 @@ medical.gastrointestinalassessment:
         gastrointestinal.bleedingtext, gastrointestinal.constipationtext, gastrointestinal.diarrheatext,
         gastrointestinal.nauseavomitingtext, gastrointestinal.ulcerstext]
     property_tags: {}
-    basetype: null
-    id: 08f9f560-98b9-4804-a7b8-f286f4b144fb
+    schemas: [v2.v2]
+    title: Gastrointestinal Assessment
+    type: medical.gastrointestinalassessment
 medical.genitourinaryassessment:
-    title: Genitourinary Assessment
-    type: medical.genitourinaryassessment
     description: Genitourinary Assessment
-    schemas: []
+    id: 71cf1bcd-c011-48be-8bcd-687d35333faa
     key: [genitourinary.id]
     properties: [genitourinary.id, genitourinary.painordifficultyurinating, event.comments,
         genitourinary.other]
     property_tags: {}
-    basetype: null
-    id: 71cf1bcd-c011-48be-8bcd-687d35333faa
+    schemas: []
+    title: Genitourinary Assessment
+    type: medical.genitourinaryassessment
 medical.musculoskeletalassessment:
-    title: Musculoskeletal Assessment
-    type: medical.musculoskeletalassessment
     description: The evaluation of the musculoskeletal pain or injury.
-    schemas: [v2.v2]
+    id: 36121030-3743-4d73-9b53-300c179152d5
     key: [musculoskeletal.id]
     properties: [musculoskeletal.backproblemsdescription, musculoskeletal.backproblems,
         musculoskeletal.fractureinjury, musculoskeletal.id, musculoskeletal.fractureinjurydescription,
         musculoskeletal.currentlimitations]
     property_tags: {}
-    basetype: null
-    id: 36121030-3743-4d73-9b53-300c179152d5
+    schemas: [v2.v2]
+    title: Musculoskeletal Assessment
+    type: medical.musculoskeletalassessment
 medical.neurologicalassessment:
-    title: Neurological Assessment
-    type: medical.neurologicalassessment
     description: The evaluation of the neurological system focuses on the central
         nervous system and peripheral nervous system.
-    schemas: [v2.v2]
+    id: 66f2624c-4e5a-4a9a-bcc5-882c93d9d05b
     key: [neurological.id]
     properties: [neurological.id, neurological.historyoffalls, neurological.historyoffallsnotes,
         neurological.historyofheadinjuries, neurological.historyofheadinjuriesnotes,
@@ -1580,14 +1450,13 @@ medical.neurologicalassessment:
         neurological.historyofdizziness, neurological.historyofdizzinessnotes, neurological.historyofseizures,
         neurological.seizurewithdrawalordisorder, event.comments]
     property_tags: {}
-    basetype: null
-    id: 66f2624c-4e5a-4a9a-bcc5-882c93d9d05b
+    schemas: [v2.v2]
+    title: Neurological Assessment
+    type: medical.neurologicalassessment
 medical.nursepsychiatricassessment:
-    title: Nurse's Psychiatric Assessment
-    type: medical.nursepsychiatricassessment
     description: A nurse's brief psychiatric assessment; usually part of a larger
         medical assessment
-    schemas: [v2.v2]
+    id: 3c61180e-0371-4db8-a3b0-2fa9c284bff4
     key: [medical.nursepsychiatricassessmentid]
     properties: [medical.depressioncomments, medical.anxietycomments, medical.RecentOrImpendingMajorLoss,
         medical.homicidalideationcomments, medical.psychiatricdiagnosismedications,
@@ -1597,59 +1466,54 @@ medical.nursepsychiatricassessment:
         medical.TroubleRemembering, medical.paranoia, medical.psychiatrichospitalizationtreatment,
         medical.suicidalideation, medical.VisitReason]
     property_tags: {}
-    basetype: null
-    id: 3c61180e-0371-4db8-a3b0-2fa9c284bff4
+    schemas: [v2.v2]
+    title: Nurse's Psychiatric Assessment
+    type: medical.nursepsychiatricassessment
 medical.nutritionalassessment:
-    title: Nutritional Assessment
-    type: medical.nutritionalassessment
     description: The evaluation of the nutritional system focuses food necessary for
         health and growth.
-    schemas: [v2.v2]
+    id: 8333b42a-5a17-4e7c-a4c1-a02a2cf14969
     key: [nutritional.id]
     properties: [medical.prioreatinghabit, medical.foodallergyspecialdiet, nutritional.id,
         medical.weightgainlosspastmonth, event.comments]
     property_tags: {}
-    basetype: null
-    id: 8333b42a-5a17-4e7c-a4c1-a02a2cf14969
+    schemas: [v2.v2]
+    title: Nutritional Assessment
+    type: medical.nutritionalassessment
 medical.provider:
-    title: Provider_deprecated
-    type: medical.provider
     description: A person or an organization providing health services.
-    schemas: []
+    id: e597fb05-7e70-438e-9026-bd5a93074a58
     key: [provider.NationalProviderIdentification]
     properties: [provider.NationalProviderIdentification, provider.LicenseNumber,
         general.Title, general.LastName]
     property_tags: {}
-    basetype: null
-    id: e597fb05-7e70-438e-9026-bd5a93074a58
-medical.reported_deprecated:
-    title: Reported (old)
-    type: medical.reported_deprecated
-    description: An association which describes a person's and medical history
     schemas: []
+    title: Provider_deprecated
+    type: medical.provider
+medical.reported_deprecated:
+    description: An association which describes a person's and medical history
+    id: dde3b0ff-74ec-4aa3-bfc7-1fb1f4d20473
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: dde3b0ff-74ec-4aa3-bfc7-1fb1f4d20473
+    schemas: []
+    title: Reported (old)
+    type: medical.reported_deprecated
 medical.reproductiveassessment:
-    title: Reproductive Assessment
-    type: medical.reproductiveassessment
     description: Reproductive Assessment
-    schemas: [v2.v2]
+    id: 9b09efad-9fa2-4841-8748-a2a7b09f4f23
     key: [reproductive.id]
     properties: [reproductive.id, reproductive.hivtest, reproductive.sexuallyactive,
         reproductive.stdhistory, reproductive.stdcomments, reproductive.hepatitisctest,
         reproductive.gravidapregnancy, reproductive.paritypregnancy, event.comments,
         reproductive.lastmenstrualperiod, reproductive.hivtestdate, reproductive.hepatitisctestdate]
     property_tags: {}
-    basetype: null
-    id: 9b09efad-9fa2-4841-8748-a2a7b09f4f23
-medical.respiratoryassessment:
-    title: Respiratory Assessment
-    type: medical.respiratoryassessment
-    description: Respiratory Assessment
     schemas: [v2.v2]
+    title: Reproductive Assessment
+    type: medical.reproductiveassessment
+medical.respiratoryassessment:
+    description: Respiratory Assessment
+    id: 7229eb9e-f1bd-4bc9-b0aa-8de827ca968a
     key: [respiratory.id]
     properties: [respiratory.id, respiratory.historyoftuberculosis, medical.agefirstused,
         respiratory.testedfortuberculosis, respiratory.cxrtbtreatment, medical.smokecigarettes,
@@ -1657,435 +1521,386 @@ medical.respiratoryassessment:
         respiratory.cough, respiratory.productivecough, respiratory.coughcomment,
         event.comments]
     property_tags: {}
-    basetype: null
-    id: 7229eb9e-f1bd-4bc9-b0aa-8de827ca968a
-medical.skinassessment:
-    title: Skin Assessment
-    type: medical.skinassessment
-    description: Skin Assessment
     schemas: [v2.v2]
+    title: Respiratory Assessment
+    type: medical.respiratoryassessment
+medical.skinassessment:
+    description: Skin Assessment
+    id: eeee9f35-ad1f-469e-ab0f-722edbe92256
     key: [skin.id]
     properties: [skin.id, skin.trackmarks, skin.trackmarksdescription, skin.headpediculi,
         skin.headpediculidescription, skin.bedbugbitesorscabies, skin.bedbugorscabiesdescription,
         skin.diabeticfootchecks, skin.diabeticfootchecksdescription, skin.otherrashdermatitis,
         skin.otherrashdermatitisdescription, event.comments]
     property_tags: {}
-    basetype: null
-    id: eeee9f35-ad1f-469e-ab0f-722edbe92256
+    schemas: [v2.v2]
+    title: Skin Assessment
+    type: medical.skinassessment
 medical.taking:
-    title: Taking
-    type: medical.taking
     description: Association linking a patient and medication.
-    schemas: []
+    id: 25969640-655a-4484-9f66-4d919b1403e8
     key: [medication.id, nc.SubjectIdentification, date.completeddatetime]
     properties: [medication.Dosage, medication.Regimen, medical.medicationtakenasprescribed,
         substance.UsageDuration, substance.frequency, medication.id, nc.SubjectIdentification,
         date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 25969640-655a-4484-9f66-4d919b1403e8
+    schemas: []
+    title: Taking
+    type: medical.taking
 medical.withdrawalassessment:
-    title: Withdrawal Assessment
-    type: medical.withdrawalassessment
     description: 'Evaluation of the effects of substance use withdrawal. '
-    schemas: [v2.v2]
+    id: dbd01c6f-42bb-46b1-9401-ac92c0592498
     key: [withdrawal.id]
     properties: [withdrawal.id, substance.periodsofsobriety, substance.sobrietysupport,
         substance.sobrietyaftercareplan, substance.familyhistoryabuse, substance.familyabuseperson,
         substance.familyhistorymentalillness, substance.familymentalillnessperson]
     property_tags: {}
-    basetype: null
-    id: dbd01c6f-42bb-46b1-9401-ac92c0592498
+    schemas: [v2.v2]
+    title: Withdrawal Assessment
+    type: medical.withdrawalassessment
 o.device:
-    title: Device
-    type: o.device
     description: ''
-    schemas: [cafe.chronicle]
+    id: 64ac79e4-bc83-4144-bed3-a888be037741
     key: [general.id]
     properties: [vehicle.model, ol.version, general.id, ol.operatingsystem]
     property_tags: {}
-    basetype: null
-    id: 64ac79e4-bc83-4144-bed3-a888be037741
+    schemas: [cafe.chronicle]
+    title: Device
+    type: o.device
 o.employee:
-    title: An employee
-    type: o.employee
     description: ''
-    schemas: [v2.v2]
+    id: f32f0c3e-ed80-4155-89b6-0baaba21eaee
     key: [ol.id]
     properties: [ol.id, ol.status, person.title, publicsafety.employeeid]
     property_tags: {}
-    basetype: null
-    id: f32f0c3e-ed80-4155-89b6-0baaba21eaee
+    schemas: [v2.v2]
+    title: An employee
+    type: o.employee
 o.facility:
-    title: Facility
-    type: o.facility
     description: A facility, including jail, hospital, clinic, etc.
-    schemas: []
+    id: 34789bed-597c-47bd-953a-4ec859b455bb
     key: [general.id]
     properties: [location.address, ol.buildinglocation, ol.name, ol.type, general.id,
         general.notes, ol.roomnumber]
     property_tags: {}
-    basetype: null
-    id: 34789bed-597c-47bd-953a-4ec859b455bb
-o.is:
-    title: 'Is '
-    type: o.is
-    description: Is (person to patient, suspect, employee etc.)
     schemas: []
+    title: Facility
+    type: o.facility
+o.is:
+    description: Is (person to patient, suspect, employee etc.)
+    id: a823f47f-f2f3-497e-b78e-a8cf01ed6405
     key: [general.id, date.completeddatetime]
     properties: [general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: a823f47f-f2f3-497e-b78e-a8cf01ed6405
+    schemas: []
+    title: 'Is '
+    type: o.is
 o.study:
-    title: Research Study
-    type: o.study
     description: Information on a research study
-    schemas: [cafe.chronicle]
+    id: 1a017c43-8f63-40c3-bdba-064c7d2e5ab4
     key: [general.id]
     properties: [general.fullname, general.id, ol.version, ol.groupid, ol.description,
         staff.email]
     property_tags: {}
-    basetype: null
-    id: 1a017c43-8f63-40c3-bdba-064c7d2e5ab4
+    schemas: [cafe.chronicle]
+    title: Research Study
+    type: o.study
 ol.abdominalpain:
-    title: Abdominal Pain
-    type: ol.abdominalpain
     description: ''
-    schemas: []
+    id: 6651cc89-9a49-4c5a-9587-0b973321863e
     key: [general.id]
     properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
         ol.medicalconditionhistorynotes, general.id]
     property_tags: {}
-    basetype: null
-    id: 6651cc89-9a49-4c5a-9587-0b973321863e
-ol.admission:
-    title: Admission
-    type: ol.admission
-    description: ''
     schemas: []
+    title: Abdominal Pain
+    type: ol.abdominalpain
+ol.admission:
+    description: ''
+    id: c6088c26-29f0-4f7d-9491-dce34c4b9112
     key: [general.id]
     properties: [general.datetime, general.status, visit.reason, ol.admissionhistory,
         general.id, screening.noadmitreason, screening.admitapprovalindicator, ol.noadmitreasonother,
         ol.behavioralissue, ol.datetimelastreported]
     property_tags: {}
-    basetype: null
-    id: c6088c26-29f0-4f7d-9491-dce34c4b9112
+    schemas: []
+    title: Admission
+    type: ol.admission
 ol.agency:
-    title: An agency
-    type: ol.agency
     description: ''
-    schemas: [v2.v2]
+    id: e33ad963-60fd-489d-8cdb-9faca522e18a
     key: [ol.id]
     properties: [ol.name, ol.id, ol.type, ol.numberpeopleelsewhere, ol.numberarresteeselsewehere,
         ol.numberinmateselsewhere]
     property_tags: {}
-    basetype: null
-    id: e33ad963-60fd-489d-8cdb-9faca522e18a
+    schemas: [v2.v2]
+    title: An agency
+    type: ol.agency
 ol.allergy:
-    title: Allergy
-    type: ol.allergy
     description: ''
-    schemas: []
+    id: 5a50c786-050c-4ba6-a6e1-8c6f167424dc
     key: [general.id]
     properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
         ol.medicalconditionhistorynotes, general.id, ol.reactionseverity, ol.reactiontype,
         ol.name, ol.activelydenies]
     property_tags: {}
-    basetype: null
-    id: 5a50c786-050c-4ba6-a6e1-8c6f167424dc
+    schemas: []
+    title: Allergy
+    type: ol.allergy
 ol.appearsin:
-    title: Appears in
-    type: ol.appearsin
     description: ''
-    schemas: [v2.v2]
+    id: 03aac23e-56d5-4960-b739-fae7fa301a6e
     key: [ol.id]
     properties: [ol.id, person.age, ol.role, general.stringid, ol.personpoliceminutes,
         ol.personfireminutes, ol.personemsminutes, ol.organizationtime]
     property_tags: {}
-    basetype: null
-    id: 03aac23e-56d5-4960-b739-fae7fa301a6e
+    schemas: [v2.v2]
+    title: Appears in
+    type: ol.appearsin
 ol.application:
-    title: Application
-    type: ol.application
     description: Application data collected via a user's device (e.g., phone, tablet,
         etc.)
-    schemas: [cafe.chronicle]
+    id: 5f7c0b2b-614d-4d5d-929f-9efca07ba8d1
     key: [general.id]
     properties: [ol.durationinterval, ol.datetimestart, general.id, ol.recordtype,
         ol.datelogged, ol.datetimeend, general.fullname, ol.timezone]
     property_tags: {}
-    basetype: null
-    id: 5f7c0b2b-614d-4d5d-929f-9efca07ba8d1
+    schemas: [cafe.chronicle]
+    title: Application
+    type: ol.application
 ol.applicationdata:
-    title: Application Data - deprecated
-    type: ol.applicationdata
     description: Information on applications recently used on device
-    schemas: []
+    id: 14923c22-ac79-4efb-b298-c54c698b84de
     key: [general.stringid]
     properties: [general.fullname, ol.recordtype, general.stringid, ol.altitude, location.latitude,
         location.longitude, ol.datelogged, general.Duration, ol.datetimestart, general.EndTime,
         ol.timezone]
     property_tags: {}
-    basetype: null
-    id: 14923c22-ac79-4efb-b298-c54c698b84de
-ol.appointment:
-    title: Appointment
-    type: ol.appointment
-    description: ''
     schemas: []
+    title: Application Data - deprecated
+    type: ol.applicationdata
+ol.appointment:
+    description: ''
+    id: 4d9dcc53-1655-4869-8684-879a24bc5a7d
     key: [general.id]
     properties: [ol.priority, ol.type, general.datetime, ol.postponementreason, general.status,
         general.notes, general.id, visit.reason]
     property_tags: {}
-    basetype: null
-    id: 4d9dcc53-1655-4869-8684-879a24bc5a7d
-ol.arrest:
-    title: Arrest
-    type: ol.arrest
-    description: An arrest.
     schemas: []
+    title: Appointment
+    type: ol.appointment
+ol.arrest:
+    description: An arrest.
+    id: a8933914-d849-4b90-ab0f-eaa1525c4ec8
     key: [ol.id]
     properties: [ol.arrestdatetime, ol.category, criminaljustice.warranttype, publicsafety.weaponspresent,
         ol.id, ol.warrantnumber, ol.datetime_reported]
     property_tags: {}
-    basetype: null
-    id: a8933914-d849-4b90-ab0f-eaa1525c4ec8
+    schemas: []
+    title: Arrest
+    type: ol.arrest
 ol.arrestedby:
-    title: Arrested by
-    type: ol.arrestedby
     description: (Person) is arrested by (Authority).
-    schemas: [v2.v2]
+    id: edaca5dc-9255-460a-8013-e31ace5723db
     key: [ol.id]
     properties: [ol.arrestdatetime, ol.id]
     property_tags: {}
-    basetype: null
-    id: edaca5dc-9255-460a-8013-e31ace5723db
+    schemas: [v2.v2]
+    title: Arrested by
+    type: ol.arrestedby
 ol.assessedby:
-    title: Assessed By
-    type: ol.assessedby
     description: ''
-    schemas: []
+    id: 4f4df940-af84-48fc-ab28-990843e10349
     key: [general.id, date.completeddatetime]
     properties: [general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 4f4df940-af84-48fc-ab28-990843e10349
+    schemas: []
+    title: Assessed By
+    type: ol.assessedby
 ol.assignedto:
-    title: Assigned to
-    type: ol.assignedto
     description: ''
-    schemas: [v2.v2]
+    id: 50ce2984-8e2c-4c15-82cc-99aac72ee628
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 50ce2984-8e2c-4c15-82cc-99aac72ee628
+    schemas: [v2.v2]
+    title: Assigned to
+    type: ol.assignedto
 ol.associatedwith:
+    description: Bi-directional association linking an arrest and offense.
+    id: 2998be89-0183-4470-a9a2-e1efa5ad7414
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: []
     title: Associated with
     type: ol.associatedwith
-    description: An association linking a person and a vehicle.
-    schemas: []
-    key: [general.stringid]
-    properties: [general.stringid, vehicle.licensenumber, person.stateidstate]
-    property_tags: {}
-    basetype: null
-    id: 777d2d40-4c67-4fe0-8954-08383bd4f02a
 ol.bond:
-    title: Bond / bail
-    type: ol.bond
     description: ''
-    schemas: [v2.v2]
+    id: c8c1ef66-56da-43e1-a1b1-4b0a71d53968
     key: [ol.id]
     properties: [ol.id, criminaljustice.bailbondamount]
     property_tags: {}
-    basetype: null
-    id: c8c1ef66-56da-43e1-a1b1-4b0a71d53968
-ol.bondset:
-    title: (Bond) is set for a (Jailstay).
-    type: ol.bondset
-    description: ''
     schemas: [v2.v2]
+    title: Bond / bail
+    type: ol.bond
+ol.bondset:
+    description: ''
+    id: 26b30a9c-4ff0-4b44-a26a-19c3195a6b16
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 26b30a9c-4ff0-4b44-a26a-19c3195a6b16
-ol.booking:
-    title: A booking.
-    type: ol.booking
-    description: A booking (in jail or associated with an arrest).
     schemas: [v2.v2]
+    title: (Bond) is set for a (Jailstay).
+    type: ol.bondset
+ol.booking:
+    description: A booking (in jail or associated with an arrest).
+    id: 42c87ead-3038-4682-961c-5dd079071786
     key: [ol.id]
     properties: [person.ageatevent, ol.id, j.intoxicationlevel, publicsafety.portablebreathtest,
         ol.notes]
     property_tags: {}
-    basetype: null
-    id: 42c87ead-3038-4682-961c-5dd079071786
-ol.charge:
-    title: A charge.
-    type: ol.charge
-    description: A law enforcement charge.
     schemas: [v2.v2]
+    title: A booking.
+    type: ol.booking
+ol.charge:
+    description: A law enforcement charge.
+    id: d038e8f6-5910-46b2-88e4-b028a5120a46
     key: [ol.id]
     properties: [ol.id, ol.level, ol.levelstate, ol.name, ol.numberofcounts, ol.sexcrime,
         ol.juveniles, ol.protectivecustody, ol.attemptedcompleted]
     property_tags: {}
-    basetype: null
-    id: d038e8f6-5910-46b2-88e4-b028a5120a46
+    schemas: [v2.v2]
+    title: A charge.
+    type: ol.charge
 ol.chargedby:
+    description: ''
+    id: f5942bd5-685c-4a37-be0a-d55a3c952aa4
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
     title: (Person) is charged by (Authority).
     type: ol.chargedby
-    description: ''
-    schemas: [v2.v2]
+ol.chargedwith:
+    description: (Person) is charged with (A charge/offense).
+    id: 22f294e5-f3f4-4317-8ff8-63528125c95f
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: f5942bd5-685c-4a37-be0a-d55a3c952aa4
-ol.chargedwith:
+    schemas: [v2.v2]
     title: Charged With
     type: ol.chargedwith
-    description: (Person) is charged with (A charge/offense).
-    schemas: [v2.v2]
-    key: [ol.id]
-    properties: [ol.id]
-    property_tags: {}
-    basetype: null
-    id: 22f294e5-f3f4-4317-8ff8-63528125c95f
 ol.chestpain:
-    title: Chest Pain
-    type: ol.chestpain
     description: ''
-    schemas: []
+    id: aa07cf91-0fe7-4e5d-acdf-9b1f2b81106e
     key: [general.id]
     properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
         ol.medicalconditionhistorynotes, general.id]
     property_tags: {}
-    basetype: null
-    id: aa07cf91-0fe7-4e5d-acdf-9b1f2b81106e
+    schemas: []
+    title: Chest Pain
+    type: ol.chestpain
 ol.clearedby:
-    title: Cleared by
-    type: ol.clearedby
     description: ''
-    schemas: [v2.v2]
+    id: 589c5599-895c-497c-8864-3488d9ff4402
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 589c5599-895c-497c-8864-3488d9ff4402
+    schemas: [v2.v2]
+    title: Cleared by
+    type: ol.clearedby
 ol.collectedby:
-    title: Collected By
-    type: ol.collectedby
     description: Association between the person collecting the data and the data or
         form itself
-    schemas: []
+    id: 65416b16-626c-495a-9904-a22a4d113276
     key: [general.id]
     properties: [general.datetime, general.id, general.formname, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 65416b16-626c-495a-9904-a22a4d113276
+    schemas: []
+    title: Collected By
+    type: ol.collectedby
 ol.committedby:
-    title: Committed by
-    type: ol.committedby
     description: (Person) is committed by (Authority).
-    schemas: [v2.v2]
+    id: 5d88ee83-3be4-4a04-9650-e7f1c48c3662
     key: [ol.id]
     properties: [ol.id, ol.type, ol.notes]
     property_tags: {}
-    basetype: null
-    id: 5d88ee83-3be4-4a04-9650-e7f1c48c3662
-ol.consent:
-    title: Consent form text
-    type: ol.consent
-    description: Consent entity - text and type of form
-    schemas: []
-    key: [general.id]
-    properties: [ol.type, general.id, ol.description]
-    property_tags: {}
-    basetype: null
-    id: 55fa1695-ef6f-46e4-9a86-ce56d4bdc2e0
+    schemas: [v2.v2]
+    title: Committed by
+    type: ol.committedby
 ol.contactactivity:
-    title: Contact Activity
-    type: ol.contactactivity
     description: A contact with an individual. The contact can be initiated by law
         enforcement, probation, human services, school, and others.
-    schemas: []
+    id: a0432ae5-799f-4dfc-a72e-adbde3e312b9
     key: [general.id]
     properties: [ol.contactmethod, ol.contactdatetime, general.notes, general.id,
         ol.outcome, ol.othertext]
     property_tags: {}
-    basetype: null
-    id: a0432ae5-799f-4dfc-a72e-adbde3e312b9
+    schemas: []
+    title: Contact Activity
+    type: ol.contactactivity
 ol.contactedat:
-    title: Contacted at
-    type: ol.contactedat
     description: ''
-    schemas: [v2.v2]
+    id: 553cd731-73de-4377-bad8-ab4ec8b65b58
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 553cd731-73de-4377-bad8-ab4ec8b65b58
+    schemas: [v2.v2]
+    title: Contacted at
+    type: ol.contactedat
 ol.contactedvia:
-    title: Contacted via
-    type: ol.contactedvia
     description: ''
-    schemas: []
+    id: 3f417550-356f-4275-8a55-1d66ccb6642b
     key: [general.id]
     properties: [general.datetime, general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 3f417550-356f-4275-8a55-1d66ccb6642b
+    schemas: []
+    title: Contacted via
+    type: ol.contactedvia
 ol.contactinfogiven:
-    title: (Contact information) given to (entity)
-    type: ol.contactinfogiven
     description: ''
-    schemas: [v2.v2]
+    id: cf9b4d36-6f1a-4e6f-94f0-6458054fc567
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: cf9b4d36-6f1a-4e6f-94f0-6458054fc567
+    schemas: [v2.v2]
+    title: (Contact information) given to (entity)
+    type: ol.contactinfogiven
 ol.contactinformation:
-    title: Contact Information
-    type: ol.contactinformation
     description: A set of details about how to contact a person or an organization.
-    schemas: []
+    id: 2e20c21e-6448-4a2d-bc57-9a5f2c45b589
     key: [general.id]
     properties: [ol.contactmethod, staff.email, contact.phonenumber, general.notes,
         contact.cellphone, ol.preferredmethod, ol.availability, general.id, ol.id,
         contact.id]
     property_tags: {}
-    basetype: null
-    id: 2e20c21e-6448-4a2d-bc57-9a5f2c45b589
-ol.deleriumtremens:
-    title: Delerium Tremens
-    type: ol.deleriumtremens
-    description: Current status of medical condition and history thereof
     schemas: []
+    title: Contact Information
+    type: ol.contactinformation
+ol.deleriumtremens:
+    description: Current status of medical condition and history thereof
+    id: f704fe85-6c21-4370-bdc3-55eb1fc36f57
     key: [general.id]
     properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
         ol.medicalconditionhistorynotes, general.id]
     property_tags: {}
-    basetype: null
-    id: f704fe85-6c21-4370-bdc3-55eb1fc36f57
+    schemas: []
+    title: Delerium Tremens
+    type: ol.deleriumtremens
 ol.deletedby:
-    title: Deleted By
-    type: ol.deletedby
     description: An association elucidating the relationship between a data element
         and the person/system that deleted the data element.
-    schemas: []
+    id: e2b50c38-9b24-4643-9f64-4a655a4d6ce0
     key: [general.id]
     properties: [general.datetime, general.id]
     property_tags: {}
-    basetype: null
-    id: e2b50c38-9b24-4643-9f64-4a655a4d6ce0
-ol.detoxcautions:
-    title: Detox cautions and concerns
-    type: ol.detoxcautions
-    description: Barriers to treatment, issues, concerns, etc.
     schemas: []
+    title: Deleted By
+    type: ol.deletedby
+ol.detoxcautions:
+    description: Barriers to treatment, issues, concerns, etc.
+    id: 308edc79-512e-408c-a280-7a11477224fe
     key: [general.id]
     properties: [ol.issuespreventingdetox, ol.issuespreventingdetoxnotes, general.medicallegalissuescomments,
         health.otherstressorcontributetorelapse, ol.acuteintoxicationwithdrawalrisk,
@@ -2093,23 +1908,21 @@ ol.detoxcautions:
         ol.mentalhealthnotes, ol.nohealthproblems, ol.medicalconditionpresent, ol.medicalconditionpresentnotes,
         ol.psychdiagnosisindicator, general.notes]
     property_tags: {}
-    basetype: null
-    id: 308edc79-512e-408c-a280-7a11477224fe
-ol.device:
-    title: Device (deprecated)
-    type: ol.device
-    description: ''
     schemas: []
+    title: Detox cautions and concerns
+    type: ol.detoxcautions
+ol.device:
+    description: ''
+    id: 58b3a5cd-8806-400e-b91d-5ae314063378
     key: [general.stringid]
     properties: [vehicle.model, ol.version, general.stringid]
     property_tags: {}
-    basetype: null
-    id: 58b3a5cd-8806-400e-b91d-5ae314063378
+    schemas: []
+    title: Device (deprecated)
+    type: ol.device
 ol.dispatch:
-    title: Dispatch
-    type: ol.dispatch
     description: A dispatch (police, medical,...).
-    schemas: [v2.v2]
+    id: fb30b015-690d-4310-b9ec-30596cbaf85d
     key: [ol.id]
     properties: [ol.typeclass, datetime.alerted, ol.type, ol.priority, ol.id, datetime.arrived,
         criminaljustice.ncic, date.completeddatetime, ol.receiveddatetime, ol.notes,
@@ -2120,205 +1933,195 @@ ol.dispatch:
         ol.numberofemsunitsnoduration, ol.numberofpeople, ol.numberofpoliceunits,
         ol.numberofpoliceunitsnoduration, ol.policeunitminutes]
     property_tags: {}
-    basetype: null
-    id: fb30b015-690d-4310-b9ec-30596cbaf85d
-ol.disposition:
-    title: A disposition, solution, result.
-    type: ol.disposition
-    description: ''
     schemas: [v2.v2]
+    title: Dispatch
+    type: ol.dispatch
+ol.disposition:
+    description: ''
+    id: 9314b075-ac0f-4659-9fed-9be21931ada1
     key: [ol.id]
     properties: [ol.id, criminaljustice.disposition]
     property_tags: {}
-    basetype: null
-    id: 9314b075-ac0f-4659-9fed-9be21931ada1
+    schemas: [v2.v2]
+    title: A disposition, solution, result.
+    type: ol.disposition
 ol.employedby:
-    title: Employed By (person to organization)
-    type: ol.employedby
     description: ''
-    schemas: []
+    id: be5bddd5-f46d-4c66-b2be-05c2523a1508
     key: [general.id]
     properties: [general.datetime, general.id]
     property_tags: {}
-    basetype: null
-    id: be5bddd5-f46d-4c66-b2be-05c2523a1508
+    schemas: []
+    title: Employed By (person to organization)
+    type: ol.employedby
 ol.employee:
-    title: Employee
-    type: ol.employee
     description: A person who works for a business or a person. For users, the unique
         ID should be the auth0 ID.
-    schemas: []
+    id: deccb4b4-9156-4f43-983d-104c344c2096
     key: [general.id]
     properties: [general.status, staff.title, person.picture, publicsafety.employeeid,
-        general.id]
+        general.id, nc.PersonGivenName, nc.PersonSurName]
     property_tags: {}
-    basetype: null
-    id: deccb4b4-9156-4f43-983d-104c344c2096
-ol.emsunit:
-    title: EMS unit
-    type: ol.emsunit
-    description: A unit for an Emergency Medical Service
     schemas: []
+    title: Employee
+    type: ol.employee
+ol.emsunit:
+    description: A unit for an Emergency Medical Service
+    id: b8b95a13-3316-47db-b96c-97d1d5614fa2
     key: [ol.id]
     properties: [ol.name, ol.id]
     property_tags: {}
-    basetype: null
-    id: b8b95a13-3316-47db-b96c-97d1d5614fa2
-ol.enrolled:
-    title: Enrolled
-    type: ol.enrolled
-    description: ''
     schemas: []
+    title: EMS unit
+    type: ol.emsunit
+ol.enrolled:
+    description: ''
+    id: 7d289eb5-44f7-4cf5-8c3d-ac7a1799b21a
     key: [general.stringid, date.completeddatetime, nc.SubjectIdentification]
     properties: [general.fullname, ol.version, sharing.name, general.stringid, date.completeddatetime,
         nc.SubjectIdentification]
     property_tags: {}
-    basetype: null
-    id: 7d289eb5-44f7-4cf5-8c3d-ac7a1799b21a
-ol.exhibits:
-    title: Displays or exhibits
-    type: ol.exhibits
-    description: Person exhibits specific behaviors or thought patterns
     schemas: []
+    title: Enrolled
+    type: ol.enrolled
+ol.exhibits:
+    description: Person exhibits specific behaviors or thought patterns
+    id: 07e2b47c-e43a-4394-a6c3-d13bf6f1275b
     key: [general.id]
     properties: [general.datetime, general.id]
     property_tags: {}
-    basetype: null
-    id: 07e2b47c-e43a-4394-a6c3-d13bf6f1275b
-ol.facility:
-    title: Facility (deprecated)
-    type: ol.facility
-    description: A facility, including jail, hospital, clinic, etc.
     schemas: []
+    title: Displays or exhibits
+    type: ol.exhibits
+ol.facility:
+    description: A facility, including jail, hospital, clinic, etc.
+    id: e0aba7dd-8033-48d8-8336-89e942102709
     key: [general.stringid]
     properties: [ol.type, general.stringid, location.name, ol.buildinglocation]
     property_tags: {}
-    basetype: null
-    id: e0aba7dd-8033-48d8-8336-89e942102709
+    schemas: []
+    title: Facility (deprecated)
+    type: ol.facility
 ol.facilityreminders:
-    title: Facility notes and reminders
-    type: ol.facilityreminders
     description: Facility Notes and Provider Reminders to Patients  (e.g., facility
         rules and regulations providers must give and note)
-    schemas: []
+    id: 69c05f79-0b07-41c9-9fd6-d300946a6a15
     key: [general.id]
     properties: [ol.nosmoking, general.id, ol.bringmedications, ol.bringinsurance,
         ol.noweapons, ol.bringid, ol.bringclothing, ol.copayrequiredindicator, ol.loststolenproperty]
     property_tags: {}
-    basetype: null
-    id: 69c05f79-0b07-41c9-9fd6-d300946a6a15
-ol.fever:
-    title: Fever
-    type: ol.fever
-    description: ''
     schemas: []
+    title: Facility notes and reminders
+    type: ol.facilityreminders
+ol.fever:
+    description: ''
+    id: 7cb21770-9639-4f8a-95be-3ce479a3eaca
     key: [general.id]
     properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, general.id]
     property_tags: {}
-    basetype: null
-    id: 7cb21770-9639-4f8a-95be-3ce479a3eaca
-ol.fireunit:
-    title: Fire Unit
-    type: ol.fireunit
-    description: A unit for a Fire Dispatch
     schemas: []
+    title: Fever
+    type: ol.fever
+ol.fireunit:
+    description: A unit for a Fire Dispatch
+    id: 8fccb0a9-1554-4a01-bdc2-4200952ca25a
     key: [ol.id]
     properties: [ol.name, ol.id]
     property_tags: {}
-    basetype: null
-    id: 8fccb0a9-1554-4a01-bdc2-4200952ca25a
-ol.gastrointestinalbleeding:
-    title: Gastrointestinal Bleeding
-    type: ol.gastrointestinalbleeding
-    description: ''
     schemas: []
+    title: Fire Unit
+    type: ol.fireunit
+ol.form:
+    description: A form
+    id: b6c79daa-e6ce-4d6b-9c39-892feb9ff077
+    key: [general.id]
+    properties: [ol.name, ol.type, general.id, ol.description]
+    property_tags: {}
+    schemas: []
+    title: A form (e.g., consent form, release)
+    type: ol.form
+ol.gastrointestinalbleeding:
+    description: ''
+    id: 3c32486b-5a03-45ee-a4d0-d51bf6938f2d
     key: [general.id]
     properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
         ol.medicalconditionhistorynotes, general.id]
     property_tags: {}
-    basetype: null
-    id: 3c32486b-5a03-45ee-a4d0-d51bf6938f2d
+    schemas: []
+    title: Gastrointestinal Bleeding
+    type: ol.gastrointestinalbleeding
 ol.getsmailat:
-    title: Gets Mail At
-    type: ol.getsmailat
     description: Association between person and address at which the person receives
         mail.
-    schemas: []
+    id: af9dc7d8-e78c-456a-b861-0d383a11d4fa
     key: [general.id, date.completeddatetime]
     properties: [general.datetime, general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: af9dc7d8-e78c-456a-b861-0d383a11d4fa
+    schemas: []
+    title: Gets Mail At
+    type: ol.getsmailat
 ol.has:
+    description: Has association
+    id: 7aa9e000-0585-4dff-8512-aa35b329379a
+    key: [ol.id]
+    properties: [ol.id, general.datetime, general.entryupdated, date.completeddatetime]
+    property_tags: {}
+    schemas: []
     title: Has
     type: ol.has
-    description: Has association
-    schemas: []
-    key: [ol.id]
-    properties: [ol.id, general.datetime]
-    property_tags: {}
-    basetype: null
-    id: 7aa9e000-0585-4dff-8512-aa35b329379a
 ol.hasentity:
-    title: Has (-d)
-    type: ol.hasentity
     description: ''
-    schemas: []
+    id: edae9468-4eb4-4f34-a47b-f53423e3705b
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: edae9468-4eb4-4f34-a47b-f53423e3705b
-ol.homeless:
-    title: Homeless
-    type: ol.homeless
-    description: Information related to homelessness
     schemas: []
+    title: Has (-d)
+    type: ol.hasentity
+ol.homeless:
+    description: Information related to homelessness
+    id: 9e7a5933-f649-4061-9e29-b90b828089e1
     key: [general.id]
     properties: [general.status, location.state, general.notes, housing.chronicallyhomeless,
         general.id, ol.startdate, ol.enddate, housing.monthshomelessorinshelterinpast3yrs,
         ol.cause, location.address, ol.conditionindicator, ol.historicalconditionindicator]
     property_tags: {}
-    basetype: null
-    id: 9e7a5933-f649-4061-9e29-b90b828089e1
+    schemas: []
+    title: Homeless
+    type: ol.homeless
 ol.identification:
-    title: An identification (ID card, driver's license,...)
-    type: ol.identification
     description: ''
-    schemas: [v2.v2]
+    id: 671621a2-6173-4bb4-aafa-a7a69d402563
     key: [ol.id]
     properties: [location.state, ol.type, ol.id, ol.stringnumber, ol.notes]
     property_tags: {}
-    basetype: null
-    id: 671621a2-6173-4bb4-aafa-a7a69d402563
+    schemas: [v2.v2]
+    title: An identification (ID card, driver's license,...)
+    type: ol.identification
 ol.incident:
-    title: Incident
-    type: ol.incident
     description: A police incident
-    schemas: []
+    id: 72dc4594-8dc0-4956-959f-2408a069f2aa
     key: [ol.id]
     properties: [criminaljustice.casenumber, ol.datetime_reported, ol.id, criminaljustice.reportnumber,
         ol.gangactivity, ol.domesticviolenceflag, ol.datetimestart, ol.datetimeend,
-        ol.juveniles, ol.status]
+        ol.juveniles, ol.status, ol.description, ol.type]
     property_tags: {}
-    basetype: null
-    id: 72dc4594-8dc0-4956-959f-2408a069f2aa
+    schemas: []
+    title: Incident
+    type: ol.incident
 ol.includes:
-    title: Includes (Results Include)
-    type: ol.includes
     description: Association between an assessment and the information it collects
         (e.g., a lab test and the results it includes)
-    schemas: []
+    id: 2ace27da-9f86-48f7-80bd-f48556092b27
     key: [general.id]
     properties: [general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 2ace27da-9f86-48f7-80bd-f48556092b27
-ol.income:
-    title: Income
-    type: ol.income
-    description: Income financial support, cash and noncash.
     schemas: []
+    title: Includes / Contains (Results Include, Form Contains)
+    type: ol.includes
+ol.income:
+    description: Income financial support, cash and noncash.
+    id: d2b5c652-de2a-4870-9526-f5118de5fe19
     key: [general.id]
     properties: [economy.publicassistance, general.id, economy.noncashbenefits, economy.childsupportamount,
         economy.anyincomesources, economy.spousalsupport, economy.otherincome, economy.noncashbenefittypes,
@@ -2326,241 +2129,220 @@ ol.income:
         economy.childsupport, economy.publicassistanceamount, economy.anyincometimeunit,
         economy.anyincome, economy.earnedincome, economy.spousalsupportamount]
     property_tags: {}
-    basetype: null
-    id: d2b5c652-de2a-4870-9526-f5118de5fe19
-ol.insurance:
-    title: Insurance
-    type: ol.insurance
-    description: Insurance
     schemas: []
+    title: Income
+    type: ol.income
+ol.insurance:
+    description: Insurance
+    id: 26b6b5e0-7341-4941-b34a-3ee7b955335b
     key: [general.id]
     properties: [ol.organizationname, ol.name, ol.type, ol.groupnumber, ol.plantype,
         general.status, ol.prescriptionpcn, ol.prescriptionbin, ol.prescriptiongroup,
         ol.memberidnumber, general.id, ol.notes, general.notes]
     property_tags: {}
-    basetype: null
-    id: 26b6b5e0-7341-4941-b34a-3ee7b955335b
-ol.interactedwith:
-    title: Interacted with
-    type: ol.interactedwith
-    description: Association between people
     schemas: []
+    title: Insurance
+    type: ol.insurance
+ol.interactedwith:
+    description: Association between people
+    id: 774cb56a-2771-44ae-ba43-a465c9c1c6df
     key: [general.datetime, general.id]
     properties: [general.datetime, general.id, ol.contactdatetime, ol.contactmethod,
         ol.outcome, general.notes]
     property_tags: {}
-    basetype: null
-    id: 774cb56a-2771-44ae-ba43-a465c9c1c6df
+    schemas: []
+    title: Interacted with
+    type: ol.interactedwith
 ol.involvedin:
-    title: Involved in
-    type: ol.involvedin
     description: (Person) is involved in (an event).
-    schemas: [v2.v2]
+    id: 5bf88cde-65bc-4865-a58b-920eec4c4028
     key: [ol.id]
     properties: [ol.id, ol.personpoliceminutes, ol.personfireminutes, ol.personemsminutes,
         ol.organizationtime, person.age, general.stringid, ol.role, ol.datetimestart,
         ol.datetimeend, ol.roledescription]
     property_tags: {}
-    basetype: null
-    id: 5bf88cde-65bc-4865-a58b-920eec4c4028
+    schemas: [v2.v2]
+    title: Involved in
+    type: ol.involvedin
 ol.is:
-    title: Is - deprecated -  (person to patient, suspect, employee etc.)
-    type: ol.is
     description: '"Is" - deprecated - association connecting the general and more
         specific person-types (including employees).'
-    schemas: []
+    id: 14c4ec7c-af16-4a55-991c-46d574f0ff6c
     key: [general.stringid]
     properties: [nc.SSN, publicsafety.personnelstatus, ol.datetimestart, general.stringid,
         incident.enddatetime, ol.id]
     property_tags: {}
-    basetype: null
-    id: 14c4ec7c-af16-4a55-991c-46d574f0ff6c
+    schemas: []
+    title: Is - deprecated -  (person to patient, suspect, employee etc.)
+    type: ol.is
 ol.jailstay:
-    title: Jail stay/record
-    type: ol.jailstay
     description: A jail stay/record.
-    schemas: [v2.v2]
+    id: 892bce63-805e-4b45-b9b1-7eaea1c48f2f
     key: [ol.id]
     properties: [ol.id, ol.reasoncode, ol.juvenileholdauth, criminaljustice.releasenotes,
         ol.notes, ol.reasonheld, incident.startdatetime, ol.alternatestartdate, general.status,
         publicsafety.ssaconviction, publicsafety.SSA, criminaljustice.releasetype,
         ol.projectedreleasedatetime, ol.releasedatetime]
     property_tags: {}
-    basetype: null
-    id: 892bce63-805e-4b45-b9b1-7eaea1c48f2f
-ol.jailstaylength:
-    title: Jail stay length
-    type: ol.jailstaylength
-    description: Details of a jailstay with respect to its duration.
     schemas: [v2.v2]
+    title: Jail stay/record
+    type: ol.jailstay
+ol.jailstaylength:
+    description: Details of a jailstay with respect to its duration.
+    id: 8b626558-cf1d-495d-a0f5-53bbb59bc25e
     key: [ol.id]
     properties: [ol.id, ol.goodtimedays, ol.goodtimeminutes, ol.timeservedhours, ol.projectedreleasedatetime,
         ol.goodtimehours, ol.timeservedminutes, criminaljustice.timeserveddays, ol.goodtimePCT,
         ol.datetime_release]
     property_tags: {}
-    basetype: null
-    id: 8b626558-cf1d-495d-a0f5-53bbb59bc25e
-ol.kinto:
-    title: (Person) is kin to (Person).
-    type: ol.kinto
-    description: ''
     schemas: [v2.v2]
+    title: Jail stay length
+    type: ol.jailstaylength
+ol.kinto:
+    description: ''
+    id: 4bae15fb-4e1b-48ed-bf87-476df148b1c4
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 4bae15fb-4e1b-48ed-bf87-476df148b1c4
+    schemas: [v2.v2]
+    title: (Person) is kin to (Person).
+    type: ol.kinto
 ol.livesat:
-    title: Lives At
-    type: ol.livesat
     description: ''
-    schemas: []
+    id: 2ad709a7-da75-456f-831c-9f263ef9f510
     key: [general.id]
     properties: [general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 2ad709a7-da75-456f-831c-9f263ef9f510
-ol.locatedat:
-    title: Located At
-    type: ol.locatedat
-    description: The location of an event, organization, or person
     schemas: []
+    title: Lives At
+    type: ol.livesat
+ol.locatedat:
+    description: The location of an event, organization, or person
+    id: ecc09e28-0761-4ed0-9d9e-b1c1f883aed6
     key: [general.id]
     properties: [general.datetime, general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: ecc09e28-0761-4ed0-9d9e-b1c1f883aed6
-ol.location:
-    title: Location or address
-    type: ol.location
-    description: Location or address
     schemas: []
+    title: Located At
+    type: ol.locatedat
+ol.location:
+    description: Location or address
+    id: 136eee13-0113-4b91-a804-6154824daa49
     key: [general.id]
     properties: [location.address, location.street, location.addressline2, location.intersection,
         location.city, location.state, location.zip, location.latitude, location.longitude,
         ol.altitude, general.notes, general.id, location.apartment, ol.noaddress,
-        location.name, ol.id, ol.type]
+        location.name, ol.id, ol.type, ol.country]
     property_tags: {}
-    basetype: null
-    id: 136eee13-0113-4b91-a804-6154824daa49
-ol.malignanthyperthermia:
-    title: Malignant Hyperthermia
-    type: ol.malignanthyperthermia
-    description: Current status of medical condition and history thereof
     schemas: []
+    title: Location or address
+    type: ol.location
+ol.malignanthyperthermia:
+    description: Current status of medical condition and history thereof
+    id: abd5a44f-5b9e-4c6f-871a-73268db25f6d
     key: [general.id]
     properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
         ol.medicalconditionhistorynotes, general.id]
     property_tags: {}
-    basetype: null
-    id: abd5a44f-5b9e-4c6f-871a-73268db25f6d
+    schemas: []
+    title: Malignant Hyperthermia
+    type: ol.malignanthyperthermia
 ol.medicaltest:
+    description: Information on a medical test or screening.
+    id: 6ddd6161-c23c-4d25-9bef-ee283270d443
+    key: [general.id]
+    properties: [ol.name, general.id, ol.value, ol.datetimeadministered]
+    property_tags: {}
+    schemas: []
     title: Medical Test
     type: ol.medicaltest
-    description: Information on a medical test or screening.
-    schemas: []
-    key: [general.id]
-    properties: [ol.name, general.id, ol.value]
-    property_tags: {}
-    basetype: null
-    id: 6ddd6161-c23c-4d25-9bef-ee283270d443
 ol.medicaltestresult:
-    title: Medical Test Results
-    type: ol.medicaltestresult
     description: The results of a medical test (e.g., this entity can contain laboratory
         results, diagnostic test results, pathology, urinalysis, phlebotomy, other
         screenings, etc).
-    schemas: []
+    id: fbadb396-0497-413c-83ee-89e7370d7e4d
     key: [general.id]
     properties: [ol.name, ol.description, general.result, ol.qualifier, ol.value,
-        ol.units, ol.maximumvalue, ol.minimumvalue, ol.category, general.id]
+        ol.units, ol.maximumvalue, ol.minimumvalue, ol.category, general.id, ol.notes]
     property_tags: {}
-    basetype: null
-    id: fbadb396-0497-413c-83ee-89e7370d7e4d
-ol.medication:
-    title: Medication
-    type: ol.medication
-    description: Medication - prescribed.
     schemas: []
+    title: Medical Test Results
+    type: ol.medicaltestresult
+ol.medication:
+    description: Medication - prescribed.
+    id: 89eb9433-3ef9-46f4-96c3-543df6a9e64c
     key: [general.id]
     properties: [ol.name, ol.activelydenies, general.id, ol.takenasprescribed, ol.regimen,
         ol.dosage, general.notes, ol.expirationdate, ol.verificationsource]
     property_tags: {}
-    basetype: null
-    id: 89eb9433-3ef9-46f4-96c3-543df6a9e64c
+    schemas: []
+    title: Medication
+    type: ol.medication
 ol.offense:
-    title: Offense.
-    type: ol.offense
     description: A law enforcement offense
-    schemas: [v2.v2]
+    id: 33f389fe-9ff6-41eb-b7f9-aa1aad545014
     key: [ol.id]
     properties: [ol.id, criminaljustice.localstatute, ol.notes, general.date, ol.statestatute,
         criminaljustice.ncic, criminaljustice.nibrs, ol.statepenalchapter, ol.statepenalsection,
         ol.level, ol.description, ol.sexcrime, ol.juveniles, ol.protectivecustody,
-        ol.attemptedcompleted, ol.domesticviolenceflag, ol.number]
+        ol.attemptedcompleted, ol.domesticviolenceflag, ol.number, ol.datetime_reported]
     property_tags: {}
-    basetype: null
-    id: 33f389fe-9ff6-41eb-b7f9-aa1aad545014
-ol.oflength:
-    title: (Something) is of length (Length entity).
-    type: ol.oflength
-    description: ''
     schemas: [v2.v2]
+    title: Offense.
+    type: ol.offense
+ol.oflength:
+    description: ''
+    id: 5003d581-0cc3-4d05-b4e2-a62f56d28bb9
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 5003d581-0cc3-4d05-b4e2-a62f56d28bb9
+    schemas: [v2.v2]
+    title: (Something) is of length (Length entity).
+    type: ol.oflength
 ol.organization:
-    title: Organization
-    type: ol.organization
     description: Organization information
-    schemas: []
+    id: 436da824-c9b5-4a6d-b121-72c77be98ac8
     key: [general.id]
     properties: [ol.organizationname, ol.abbreviation, ol.activity, general.id, ol.branch,
         ol.id, ol.name]
     property_tags: {}
-    basetype: null
-    id: 436da824-c9b5-4a6d-b121-72c77be98ac8
-ol.overdosehistory:
-    title: Overdose History
-    type: ol.overdosehistory
-    description: Information on Past Overdoses
     schemas: []
+    title: Organization
+    type: ol.organization
+ol.overdosehistory:
+    description: Information on Past Overdoses
+    id: 829c5955-243a-42ef-b395-3327563364f5
     key: [general.id]
     properties: [ol.recentoverdoseindicator, general.datetime, ol.activelydenies,
         general.id, ol.substancename, general.notes, ol.narcanadministered]
     property_tags: {}
-    basetype: null
-    id: 829c5955-243a-42ef-b395-3327563364f5
-ol.patient:
-    title: Person - health care setting (patient)
-    type: ol.patient
-    description: Person entity for health care settings (e.g., medical, detox, etc).
     schemas: []
+    title: Overdose History
+    type: ol.overdosehistory
+ol.patient:
+    description: Person entity for health care settings (e.g., medical, detox, etc).
+    id: 8d365f28-71b1-491f-8227-9107b053b2c9
     key: [general.id]
     properties: [general.datetime, general.id]
     property_tags: {}
-    basetype: null
-    id: 8d365f28-71b1-491f-8227-9107b053b2c9
+    schemas: []
+    title: Person - health care setting (patient)
+    type: ol.patient
 ol.person:
-    title: A person
-    type: ol.person
     description: An individual, its immutable characteristics, and unique identifiers
         (aka government-issued IDs)
-    schemas: []
+    id: 6faf5245-3ad1-4d47-96fe-ea11cd4bf1c8
     key: [general.id]
     properties: [ol.surname, ol.givenname, ol.middlename, ol.birthdate, ol.ssn, ol.birthplace,
         ol.suffix, bhr.race, ol.ethnicity, ol.sex, general.id, ol.idtype, ol.idnumber,
         ol.idjurisdiction]
     property_tags: {}
-    basetype: null
-    id: 6faf5245-3ad1-4d47-96fe-ea11cd4bf1c8
-ol.persondetails:
-    title: Person Details
-    type: ol.persondetails
-    description: Mutable (changeable) characteristics of a person
     schemas: []
+    title: A person
+    type: ol.person
+ol.persondetails:
+    description: Mutable (changeable) characteristics of a person
+    id: b83efabb-b89a-4beb-9a84-190da4adc990
     key: [general.id]
     properties: [person.maritalstatus, person.gender, person.sexualorientation, ol.illiterate,
         nc.complexion, person.veteranstatus, person.picture, person.juvenile, general.id,
@@ -2570,290 +2352,271 @@ ol.persondetails:
         ol.numberofchildren, ol.title, ol.bodydescription, ol.language, ol.ears, ol.face,
         ol.nose, ol.facialhair, ol.glasses, ol.handedness, ol.nationality]
     property_tags: {}
-    basetype: null
-    id: b83efabb-b89a-4beb-9a84-190da4adc990
+    schemas: []
+    title: Person Details
+    type: ol.persondetails
 ol.persondetailscriminaljustice:
-    title: Personal details (criminal justice)
-    type: ol.persondetailscriminaljustice
     description: Personal details related to criminal justice.
-    schemas: [v2.v2]
+    id: 10438ac7-5083-42c0-95b8-9ad5c4c6c87a
     key: [ol.id]
     properties: [criminaljustice.cautioninformation, criminaljustice.treatasadult,
         ol.sexoffender, ol.id, ol.photographs, ol.fingerprints, medical.suicidalideation,
         ol.probationnumber]
     property_tags: {}
-    basetype: null
-    id: 10438ac7-5083-42c0-95b8-9ad5c4c6c87a
+    schemas: [v2.v2]
+    title: Personal details (criminal justice)
+    type: ol.persondetailscriminaljustice
 ol.policecad:
-    title: Police CAD
-    type: ol.policecad
     description: A police CAD record/event.
-    schemas: []
+    id: b3562c95-33bc-4143-a970-0d173a3f35fc
     key: [ol.id]
     properties: [criminaljustice.reportnumber, ol.description, ol.datetime_reported,
         ol.datetimestart, ol.datetimeend, ol.sexcrime, ol.id]
     property_tags: {}
-    basetype: null
-    id: b3562c95-33bc-4143-a970-0d173a3f35fc
+    schemas: []
+    title: Police CAD
+    type: ol.policecad
 ol.postedby:
-    title: (Bail / bond /...) is posted by (Person).
-    type: ol.postedby
     description: ''
-    schemas: [v2.v2]
+    id: a86eff53-3558-4cce-88e9-403c509c157a
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: a86eff53-3558-4cce-88e9-403c509c157a
+    schemas: [v2.v2]
+    title: (Bail / bond /...) is posted by (Person).
+    type: ol.postedby
 ol.pregnancy:
-    title: Pregnancy
-    type: ol.pregnancy
     description: ''
-    schemas: []
+    id: 331445f1-3cd7-46f1-a0fd-a6118319a15f
     key: [general.id]
     properties: [ol.pregnancyindicator, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
         ol.medicalconditionhistorynotes, ol.medicalconditionpresent, general.id]
     property_tags: {}
-    basetype: null
-    id: 331445f1-3cd7-46f1-a0fd-a6118319a15f
-ol.provided:
-    title: Provided (information, supports)
-    type: ol.provided
-    description: ''
     schemas: []
+    title: Pregnancy
+    type: ol.pregnancy
+ol.provided:
+    description: ''
+    id: 02fb0106-41fb-446e-a055-4aa3c7e23acc
     key: [general.id]
     properties: [general.datetime, general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 02fb0106-41fb-446e-a055-4aa3c7e23acc
+    schemas: []
+    title: Provided (information, supports)
+    type: ol.provided
 ol.receivedby:
-    title: Received by
-    type: ol.receivedby
     description: ''
-    schemas: [v2.v2]
+    id: 564b21e8-3132-4eb5-8124-65f54ceee5c2
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 564b21e8-3132-4eb5-8124-65f54ceee5c2
+    schemas: [v2.v2]
+    title: Received by
+    type: ol.receivedby
 ol.recordedby:
-    title: Recorded By
-    type: ol.recordedby
     description: Association linking data and the data collection tool, device, or
         collector. AKA logged by, collected by, etc.
-    schemas: []
+    id: 9b44a35d-d414-4f7e-929a-92175017b809
     key: [ol.datelogged, general.stringid]
     properties: [nc.SystemUserName, ol.altitude, ol.datelogged, general.stringid,
         location.latitude, location.longitude]
     property_tags: {}
-    basetype: null
-    id: 9b44a35d-d414-4f7e-929a-92175017b809
-ol.referral:
-    title: Referral Information
-    type: ol.referral
-    description: ''
     schemas: []
+    title: Recorded By
+    type: ol.recordedby
+ol.referral:
+    description: ''
+    id: 3c0320b0-93cf-4b16-8b16-3720feafff93
     key: [general.id]
     properties: [housing.referralorganization, ol.type, visit.reason, housing.contactdetails,
         ol.referrername, ol.organizationname, general.id]
     property_tags: {}
-    basetype: null
-    id: 3c0320b0-93cf-4b16-8b16-3720feafff93
-ol.relatedto:
-    title: related to
-    type: ol.relatedto
-    description: Association to indicate a bidirectional relationship
     schemas: []
+    title: Referral Information
+    type: ol.referral
+ol.relatedto:
+    description: Association to indicate a bidirectional relationship
+    id: a5aa644f-767d-4b22-986d-1e7e88cf20f4
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: a5aa644f-767d-4b22-986d-1e7e88cf20f4
+    schemas: []
+    title: related to
+    type: ol.relatedto
 ol.relative:
-    title: A relative (eg. brother, sister), to be used when the name is unknown.
-    type: ol.relative
     description: ''
-    schemas: [v2.v2]
+    id: 503bc786-437c-4591-9e4e-64e7d4d1286a
     key: [ol.id]
     properties: [ol.name, ol.id]
     property_tags: {}
-    basetype: null
-    id: 503bc786-437c-4591-9e4e-64e7d4d1286a
-ol.releasedby:
-    title: (Person) released by (Authority).
-    type: ol.releasedby
-    description: ''
     schemas: [v2.v2]
+    title: A relative (eg. brother, sister), to be used when the name is unknown.
+    type: ol.relative
+ol.releasedby:
+    description: ''
+    id: a094e89f-3b4f-4e98-9d2c-12e604ae9d6a
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: a094e89f-3b4f-4e98-9d2c-12e604ae9d6a
+    schemas: [v2.v2]
+    title: (Person) released by (Authority).
+    type: ol.releasedby
 ol.reminder:
-    title: 'Reminders '
-    type: ol.reminder
     description: Building or facility reminders provided - unique, write-in format.
-    schemas: []
+    id: c9739135-e5c7-4f0f-9967-f2312a2846d4
     key: [general.id]
     properties: [ol.remindertext, ol.confirmationindicator, general.id]
     property_tags: {}
-    basetype: null
-    id: c9739135-e5c7-4f0f-9967-f2312a2846d4
+    schemas: []
+    title: 'Reminders '
+    type: ol.reminder
 ol.reported:
-    title: Reported
-    type: ol.reported
     description: Association linking a person or patient with various conditions,
         issues, and concerns they reported (medical history, medical conditions, allergies,
         potential barriers to treatment, etc.). Self-report, not diagnosis.
-    schemas: []
+    id: 40f687c8-c6e5-47c0-8459-e1b3b06d19fd
     key: [general.id]
     properties: [general.datetime, general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 40f687c8-c6e5-47c0-8459-e1b3b06d19fd
-ol.residence:
-    title: Residence
-    type: ol.residence
-    description: Residence details
     schemas: []
+    title: Reported
+    type: ol.reported
+ol.residence:
+    description: Residence details
+    id: 59832bb7-3e3a-4352-a155-ee806c6d21ff
     key: [general.id]
     properties: [ol.type, general.status, general.id]
     property_tags: {}
-    basetype: null
-    id: 59832bb7-3e3a-4352-a155-ee806c6d21ff
+    schemas: []
+    title: Residence
+    type: ol.residence
 ol.resultsin:
-    title: results in
-    type: ol.resultsin
     description: (Event) results in (Event)
-    schemas: [v2.v2]
+    id: aa29d6c3-1cb9-445f-b722-07f6a40efa31
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: aa29d6c3-1cb9-445f-b722-07f6a40efa31
+    schemas: [v2.v2]
+    title: results in
+    type: ol.resultsin
 ol.scheduled:
-    title: Scheduled
-    type: ol.scheduled
     description: Association between a person and scheduled appointment, admission,
         etc
-    schemas: []
+    id: 2c625199-7f01-4344-8730-afd4eea52e70
     key: [general.id]
     properties: [date.completeddatetime, general.id, general.datetime]
     property_tags: {}
-    basetype: null
-    id: 2c625199-7f01-4344-8730-afd4eea52e70
+    schemas: []
+    title: Scheduled
+    type: ol.scheduled
 ol.screenedwith:
-    title: Screened With / Assessed Using
-    type: ol.screenedwith
     description: Association between a person and a screening tool, assessment tool,
         or the results of said assessment.
-    schemas: []
+    id: 3de26710-64a1-4a3f-9c7e-61f9bc9d3dae
     key: [general.id]
     properties: [general.id, date.completeddatetime, ol.datetimeadministered]
     property_tags: {}
-    basetype: null
-    id: 3de26710-64a1-4a3f-9c7e-61f9bc9d3dae
+    schemas: []
+    title: Screened With / Assessed Using
+    type: ol.screenedwith
 ol.searchedby:
-    title: (Person) is searched by (Authority).
-    type: ol.searchedby
     description: ''
-    schemas: [v2.v2]
+    id: 061a7746-158b-4f1c-b1c3-82ee9aa95aad
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 061a7746-158b-4f1c-b1c3-82ee9aa95aad
+    schemas: [v2.v2]
+    title: (Person) is searched by (Authority).
+    type: ol.searchedby
 ol.securityaccess:
-    title: Security access or access restrictions
-    type: ol.securityaccess
     description: ''
-    schemas: []
+    id: 0be3c02a-4dee-4bff-855d-24861be57249
     key: [general.id]
     properties: [general.status, ol.statusdetails, ol.effectivedate, ol.expirationdate,
         ol.duration, general.notes, general.id]
     property_tags: {}
-    basetype: null
-    id: 0be3c02a-4dee-4bff-855d-24861be57249
-ol.seizures:
-    title: Seizures
-    type: ol.seizures
-    description: ''
     schemas: []
+    title: Security access or access restrictions
+    type: ol.securityaccess
+ol.seizures:
+    description: ''
+    id: bb0191de-76c4-4756-bf85-142bb29bc274
     key: [general.id]
     properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
         ol.medicalconditionhistorynotes, ol.lastseizuredate, ol.seizurehistorytext,
         general.id]
     property_tags: {}
-    basetype: null
-    id: bb0191de-76c4-4756-bf85-142bb29bc274
+    schemas: []
+    title: Seizures
+    type: ol.seizures
 ol.sentence:
-    title: A sentence.
-    type: ol.sentence
     description: ''
-    schemas: [v2.v2]
+    id: 782b8d93-af16-423c-ae6d-8841ac60d752
     key: [ol.id]
     properties: [ol.id, ol.consecutive, ol.concurrent, ol.probation, ol.sentencehours,
         ol.sentencedays, ol.convictionresults, ol.sentenceyears]
     property_tags: {}
-    basetype: null
-    id: 782b8d93-af16-423c-ae6d-8841ac60d752
-ol.sentencedwith:
-    title: (Person) sentenced with (Sentence).
-    type: ol.sentencedwith
-    description: ''
     schemas: [v2.v2]
+    title: A sentence.
+    type: ol.sentence
+ol.sentencedwith:
+    description: ''
+    id: 76677f67-c0bf-4db9-bc9c-c050828ba477
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 76677f67-c0bf-4db9-bc9c-c050828ba477
+    schemas: [v2.v2]
+    title: (Person) sentenced with (Sentence).
+    type: ol.sentencedwith
 ol.shortnessofbreath:
-    title: Shortness of Breath
-    type: ol.shortnessofbreath
     description: ''
-    schemas: []
+    id: 217df3df-1ff4-47fc-a01a-0d13e9aeb976
     key: [general.id]
     properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
         ol.medicalconditionhistorynotes, general.id]
     property_tags: {}
-    basetype: null
-    id: 217df3df-1ff4-47fc-a01a-0d13e9aeb976
-ol.signedby:
-    title: 'Signed by / signed at '
-    type: ol.signedby
-    description: Association between individual and consent form with signature. This
-        is also the association between the consent form and the location at which
-        it is signed.
     schemas: []
+    title: Shortness of Breath
+    type: ol.shortnessofbreath
+ol.signature:
+    description: Signature information
+    id: 463ef34e-4344-4243-a540-816d9123bb49
     key: [general.id]
-    properties: [general.datetime, ol.role, general.id, general.signature]
+    properties: [location.latitude, location.longitude, general.signature, general.datetime,
+        general.id, ol.role]
     property_tags: {}
-    basetype: null
-    id: db52d8a2-4354-4ed8-9ad6-b2f16f9951de
-ol.study:
-    title: Study Data Collection Event
-    type: ol.study
-    description: ''
     schemas: []
+    title: Signature information (e.g., for consent document)
+    type: ol.signature
+ol.signedby:
+    description: Association between individual and signature information.
+    id: db52d8a2-4354-4ed8-9ad6-b2f16f9951de
+    key: [general.id]
+    properties: [general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    title: Signed by
+    type: ol.signedby
+ol.study:
+    description: ''
+    id: 80c86a96-0e3f-46eb-9fbb-60d9174566a5
     key: [general.stringid]
     properties: [general.fullname, ol.version, general.stringid, contact.Email, diagnosis.Description,
         sharing.name, location.latitude, location.longitude]
     property_tags: {}
-    basetype: null
-    id: 80c86a96-0e3f-46eb-9fbb-60d9174566a5
+    schemas: []
+    title: Study Data Collection Event
+    type: ol.study
 ol.subjectof:
-    title: (Person) is subject of ...
-    type: ol.subjectof
-    description: ''
-    schemas: [v2.v2]
+    description: (Person) is subject of ...
+    id: 34aeaca4-d424-43cd-a3b4-f2032d583280
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 34aeaca4-d424-43cd-a3b4-f2032d583280
+    schemas: [v2.v2]
+    title: ' is subject of'
+    type: ol.subjectof
 ol.substance:
-    title: Substance use, drug abuse, and addiction entity
-    type: ol.substance
     description: 'Substance use, drug abuse, and addiction entity. TYPE: options should
         be Options: (1) alcohol; (2) opioids; (3) cannabis; (4) sedatives, hypnotics,
         or anxiolytics; (5) cocaine; (6) other stimulants; (7) hallucinogens; (8)
@@ -2868,7 +2631,7 @@ ol.substance:
         (psilocybin). NICOTINE: cigarrettes, tobacco products, vape pens; INHALANTS:  solvents
         (liquids that become gas at room temperature) aerosol sprays gases nitrites
         (prescription medicines for chest pain).'
-    schemas: []
+    id: b1a52c96-17d5-495a-98b7-22128b97059f
     key: [general.id]
     properties: [ol.duration, general.id, substance.frequency, ol.preferredname, ol.type,
         ol.ivadministration, medical.agefirstused, substance.usageamount, ol.datelastreported,
@@ -2876,202 +2639,194 @@ ol.substance:
         ol.substanceuseindicator, substance.patternsofuse, ol.routeofadministration,
         ol.datetimelastreported]
     property_tags: {}
-    basetype: null
-    id: b1a52c96-17d5-495a-98b7-22128b97059f
-ol.suicidalideation:
-    title: Suicidal Ideation
-    type: ol.suicidalideation
-    description: ''
     schemas: []
+    title: Substance use, drug abuse, and addiction entity
+    type: ol.substance
+ol.suicidalideation:
+    description: ''
+    id: c77f715a-85e3-4bb4-a25f-850e568dd068
     key: [general.id]
     properties: [ol.medicalconditionpresent, ol.medicalconditionpresentnotes, ol.medicalconditionhistory,
-        ol.medicalconditionhistorynotes, general.id]
+        ol.medicalconditionhistorynotes, general.id, ol.supervisornotified, ol.supervisioninstituted,
+        ol.referfortreatment]
     property_tags: {}
-    basetype: null
-    id: c77f715a-85e3-4bb4-a25f-850e568dd068
-ol.transportedby:
-    title: (Person) transported by (Authority).
-    type: ol.transportedby
-    description: ''
-    schemas: [v2.v2]
+    schemas: []
+    title: Suicidal Ideation
+    type: ol.suicidalideation
+ol.suspectedof:
+    description: (Person) suspected of (offense)
+    id: a4da94ce-450e-4740-87a0-ef05d57597c6
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: a404cc39-0259-4c8e-91b5-8def2071d997
-ol.unit:
-    title: A unit
-    type: ol.unit
+    schemas: []
+    title: Suspected of
+    type: ol.suspectedof
+ol.transportedby:
     description: ''
+    id: a404cc39-0259-4c8e-91b5-8def2071d997
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
     schemas: [v2.v2]
+    title: (Person) transported by (Authority).
+    type: ol.transportedby
+ol.unit:
+    description: ''
+    id: 4c6bca41-6660-45ab-ab8c-7f88cd9d6d70
     key: [ol.id]
     properties: [ol.id, ol.name]
     property_tags: {}
-    basetype: null
-    id: 4c6bca41-6660-45ab-ab8c-7f88cd9d6d70
+    schemas: [v2.v2]
+    title: A unit
+    type: ol.unit
 ol.updatedby:
-    title: Updated By
-    type: ol.updatedby
     description: An association that elucidates the relationship between a data element
         and the person/system that updated the data.
-    schemas: []
+    id: 6cfefe90-49a9-4f9d-8aec-54f836a20352
     key: [general.id]
     properties: [general.datetime, general.id]
     property_tags: {}
-    basetype: null
-    id: 6cfefe90-49a9-4f9d-8aec-54f836a20352
+    schemas: []
+    title: Updated By
+    type: ol.updatedby
 ol.urinalysis:
-    title: Urinalysis (test results)
-    type: ol.urinalysis
     description: 'Values and flags for abnormal results of urinalysis screening. Flags
         should be based on relevant value property and reference scales, when available. '
-    schemas: []
+    id: 3a98a633-3a0f-49db-9b5b-64508945f533
     key: [general.id]
     properties: [ol.specificgravityvalue, ol.nitritesvalue, general.id, ol.hemoglobinflag,
         general.datetime, ol.glucoseflag, ol.phflag, ol.specificgravityflag, ol.nitritesflag,
         ol.bilirubinflag, ol.phvalue, ol.ketonesflag, ol.proteinflag, ol.leukocyteflag,
         ol.urobilinogenflag]
     property_tags: {}
-    basetype: null
-    id: 3a98a633-3a0f-49db-9b5b-64508945f533
+    schemas: []
+    title: Urinalysis (test results)
+    type: ol.urinalysis
 ol.usedby:
-    title: Used By
-    type: ol.usedby
     description: Association between an entity (AKAa device, data collection tool,
         object or other entity) and the person using it.
-    schemas: []
+    id: 16c6c1f7-0428-4205-90f9-6d6c15ab4961
     key: [general.stringid]
     properties: [general.stringid, nc.SubjectIdentification]
     property_tags: {}
-    basetype: null
-    id: 16c6c1f7-0428-4205-90f9-6d6c15ab4961
-ol.using:
-    title: Using (substance, medication)
-    type: ol.using
-    description: ''
     schemas: []
+    title: Used By
+    type: ol.usedby
+ol.using:
+    description: ''
+    id: 3d70c2e3-6517-4ff4-ba8e-361a9774de18
     key: [general.id]
     properties: [general.datetime, general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 3d70c2e3-6517-4ff4-ba8e-361a9774de18
+    schemas: []
+    title: Using (substance, medication)
+    type: ol.using
 ol.vehicle:
-    title: A vehicle.
-    type: ol.vehicle
     description: ''
-    schemas: [v2.v2]
+    id: 3c6dad54-c4b4-4dfb-bd8b-d8dd56e342ec
     key: [ol.id]
     properties: [vehicle.make, vehicle.licensenumber, vehicle.model, ol.id, ol.dispatchtransfer,
         vehicle.color, vehicle.licenseyear, vehicle.licenseplatetype, vehicle.vin,
         vehicle.licensestate, vehicle.year, vehicle.style]
     property_tags: {}
-    basetype: null
-    id: 3c6dad54-c4b4-4dfb-bd8b-d8dd56e342ec
+    schemas: [v2.v2]
+    title: A vehicle.
+    type: ol.vehicle
 ol.violentbehavior:
-    title: Violent Behavior
-    type: ol.violentbehavior
     description: ''
-    schemas: []
+    id: 60f91c1e-a11a-49dd-ba35-4f386a657122
     key: [general.id]
     properties: [ol.scale1to10, ol.directedagainst, ol.directedagainstother, ol.historyofviolence,
         ol.historicaldirectedagainst, ol.historicaldirectedagainstother, general.id]
     property_tags: {}
-    basetype: null
-    id: 60f91c1e-a11a-49dd-ba35-4f386a657122
+    schemas: []
+    title: Violent Behavior
+    type: ol.violentbehavior
 ol.vitalsigns:
-    title: Vital Signs
-    type: ol.vitalsigns
     description: A set of clinical measurements, specifically pulse rate, temperature,
         respiration rate, and blood pressure, that indicate the state of a patient's
         essential body functions.
-    schemas: []
+    id: 215f54f1-830e-4edb-bdc5-d4938f4a3e04
     key: [general.id]
     properties: [ol.systolicbloodpressure, ol.diastolicbloodpressure, ol.pulserate,
         ol.pulseratecategory, ol.bloodpressurecategory, ol.temperature, ol.respirationrate,
-        general.id]
+        general.id, ol.datetimeadministered]
     property_tags: {}
-    basetype: null
-    id: 215f54f1-830e-4edb-bdc5-d4938f4a3e04
-ol.weapon:
-    title: Weapon
-    type: ol.weapon
-    description: Description of weapons involved in various events.
     schemas: []
+    title: Vital Signs
+    type: ol.vitalsigns
+ol.weapon:
+    description: Description of weapons involved in various events.
+    id: 27d58f4f-0c0c-47c5-9d27-cb25e9a98bbf
     key: [ol.id]
     properties: [ol.type, ol.id, ol.accessible, ol.armed, ol.conditionindicator]
     property_tags: {}
-    basetype: null
-    id: 27d58f4f-0c0c-47c5-9d27-cb25e9a98bbf
+    schemas: []
+    title: Weapon
+    type: ol.weapon
 ol.worksat:
-    title: (Person) works at (agency/organization/...).
-    type: ol.worksat
     description: ''
-    schemas: [v2.v2]
+    id: 9912f936-b36c-458d-aa13-61c914df1ed2
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 9912f936-b36c-458d-aa13-61c914df1ed2
+    schemas: [v2.v2]
+    title: (Person) works at (agency/organization/...).
+    type: ol.worksat
 ol.workson:
-    title: Works On / With
-    type: ol.workson
     description: ''
-    schemas: []
+    id: e16171ac-26b6-4e85-8437-c6d65ca5f2d1
     key: [general.stringid, nc.SubjectIdentification]
     properties: [general.stringid, nc.SubjectIdentification, ol.datetimestart]
     property_tags: {}
-    basetype: null
-    id: e16171ac-26b6-4e85-8437-c6d65ca5f2d1
-ol.zone:
-    title: Zone (location)
-    type: ol.zone
-    description: Zone (location)
     schemas: []
+    title: Works On / With
+    type: ol.workson
+ol.zone:
+    description: Zone (location)
+    id: 05aa5c8b-7410-4316-8511-ec4ed7734e91
     key: [general.id]
     properties: [ol.code, ol.name, ol.type, general.id, ol.subzone, ol.id]
     property_tags: {}
-    basetype: null
-    id: 05aa5c8b-7410-4316-8511-ec4ed7734e91
-patient.visit:
-    title: Patient Visit
-    type: patient.visit
-    description: A patient visit
     schemas: []
+    title: Zone (location)
+    type: ol.zone
+patient.visit:
+    description: A patient visit
+    id: 2150bad7-7c4f-47fc-9f9c-db6cbed102df
     key: [general.stringid]
     properties: [mock.drugpresent, mock.symptoms, mock.temp, visit.reason, vitals.BloodPressure,
         medical.provider_lastname, medical.provider_firstname, housing.followupdate,
         date.dr_appt_datetime, housing.notes, health.admissiondate, date.admission,
         general.datetime, medical.servicesetting, general.stringid]
     property_tags: {}
-    basetype: null
-    id: 2150bad7-7c4f-47fc-9f9c-db6cbed102df
+    schemas: []
+    title: Patient Visit
+    type: patient.visit
 person.becomes:
-    title: Becomes (person to patient, suspect etc.)
-    type: person.becomes
     description: '"Becomes" association connecting the general and more specific person-types
         (excluding employees).'
-    schemas: []
+    id: d0742bcc-2155-4b9e-824f-1d9fbda46bc8
     key: [nc.SubjectIdentification]
     properties: [nc.SubjectIdentification, nc.SSN]
     property_tags: {}
-    basetype: null
-    id: d0742bcc-2155-4b9e-824f-1d9fbda46bc8
-personnel.employer:
-    title: Employer Information
-    type: personnel.employer
-    description: Collection of Employer Information
     schemas: []
+    title: Becomes (person to patient, suspect etc.)
+    type: person.becomes
+personnel.employer:
+    description: Collection of Employer Information
+    id: ab43ae3f-e83a-45e3-9ba4-eace79b589ae
     key: [personnel.employerid, personnel.employername]
     properties: [location.address, location.state, personnel.employername, personnel.employerid,
         housing.notes, location.city, location.zip, housing.updatedat, contact.WorkPhone]
     property_tags: {}
-    basetype: null
-    id: ab43ae3f-e83a-45e3-9ba4-eace79b589ae
+    schemas: []
+    title: Employer Information
+    type: personnel.employer
 publicsafety.callforservice:
-    title: Call For Service (CFS)
-    type: publicsafety.callforservice
     description: A dispatch Call For Service
-    schemas: [v2.v2]
+    id: 963b597b-b28d-4f59-b2e6-4d443499e464
     key: [publicsafety.dispatchid]
     properties: [publicsafety.dispatchid, publicsafety.cfsid, publicsafety.dispatchnumber,
         date.received, publicsafety.dispatchpriority, date.dayofweek, time.alerted,
@@ -3087,47 +2842,43 @@ publicsafety.callforservice:
         event.comments, datetime.alerted, datetime.received, datetime.enroute, datetime.arrived,
         date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 963b597b-b28d-4f59-b2e6-4d443499e464
+    schemas: [v2.v2]
+    title: Call For Service (CFS)
+    type: publicsafety.callforservice
 publicsafety.checkin:
-    title: Check-In
-    type: publicsafety.checkin
     description: Details collected from a phone check-in.
-    schemas: []
+    id: ed89706e-a4e4-44e4-983e-56035e2fd160
     key: [general.result, general.confidence]
     properties: [general.result, general.confidence]
     property_tags: {}
-    basetype: null
-    id: ed89706e-a4e4-44e4-983e-56035e2fd160
+    schemas: []
+    title: Check-In
+    type: publicsafety.checkin
 publicsafety.dispatchzone:
-    title: Dispatch Zone
-    type: publicsafety.dispatchzone
     description: Details on a dispatch zone for a call for service.
-    schemas: [v2.v2]
+    id: 20ae81b5-7574-460f-89be-a66e10ffa67e
     key: [publicsafety.dispatchzoneid]
     properties: [publicsafety.medicalzone, publicsafety.dispatchzonename, dispatch.zoneid_deprecated,
         publicsafety.firedistrictname, publicsafety.dispatchsubzone, publicsafety.dispatchzoneid,
         publicsafety.firedistrictcode]
     property_tags: {}
-    basetype: null
-    id: 20ae81b5-7574-460f-89be-a66e10ffa67e
+    schemas: [v2.v2]
+    title: Dispatch Zone
+    type: publicsafety.dispatchzone
 publicsafety.involvedin:
-    title: Involved in (cj)
-    type: publicsafety.involvedin
     description: '"Involved in" association. Links together a call for service and
         a vehicle.'
-    schemas: [v2.v2]
+    id: 19d53b9f-7f5a-4ad8-8f8c-8548032af2b3
     key: [publicsafety.dispatchid]
     properties: [publicsafety.dispatchid]
     property_tags: {}
-    basetype: null
-    id: 19d53b9f-7f5a-4ad8-8f8c-8548032af2b3
+    schemas: [v2.v2]
+    title: Involved in (cj)
+    type: publicsafety.involvedin
 publicsafety.personnel:
-    title: Justice-Involved/Public Safety Employees
-    type: publicsafety.personnel
     description: Someone employed in criminal justice (i.e., officer, communications,
         jail guard) or public safety (i.e., fireman, EMT).
-    schemas: [v2.v2]
+    id: 1bbc14f8-06cf-4cb0-a103-68ba9df08867
     key: [publicsafety.personnelid]
     properties: [publicsafety.personnelid, publicsafety.personneltitle, publicsafety.officerid,
         publicsafety.employeeid, publicsafety.officerbadgeid, publicsafety.agencyname,
@@ -3135,13 +2886,12 @@ publicsafety.personnel:
         person.stateidstate, nc.PersonHairColorText, nc.PersonEyeColorText, nc.PersonHeightMeasure,
         nc.PersonWeightMeasure]
     property_tags: {}
-    basetype: null
-    id: 1bbc14f8-06cf-4cb0-a103-68ba9df08867
+    schemas: [v2.v2]
+    title: Justice-Involved/Public Safety Employees
+    type: publicsafety.personnel
 publicsafety.pretrialstatuscaseprocessings:
-    title: Pretrial Status Case Processings
-    type: publicsafety.pretrialstatuscaseprocessings
     description: Pre-trial cases
-    schemas: []
+    id: 9c3153bb-e5e2-495c-88c4-fa4185cca7f8
     key: [publicsafety.NumberOfCharges, publicsafety.MostSeriousChargeStatuteNumber,
         publicsafety.MostSeriousStatuteDescription, publicsafety.CaseDispositionDate,
         publicsafety.MostSeriousChargeDegree, publicsafety.ReleasedPendingCaseDisposition,
@@ -3154,37 +2904,35 @@ publicsafety.pretrialstatuscaseprocessings:
         publicsafety.datebooked, j.CaseNumberText, publicsafety.FileDate, general.entryupdated,
         ol.arrestdatetime, criminaljustice.arrestagency]
     property_tags: {}
-    basetype: null
-    id: 9c3153bb-e5e2-495c-88c4-fa4185cca7f8
-publicsafety.releaserecommendation:
-    title: Release Recommendation
-    type: publicsafety.releaserecommendation
-    description: A person's pre-trial release recommendation
     schemas: []
+    title: Pretrial Status Case Processings
+    type: publicsafety.pretrialstatuscaseprocessings
+publicsafety.releaserecommendation:
+    description: A person's pre-trial release recommendation
+    id: 19bf1241-e6c0-4eee-af3d-9ef92756546c
     key: [general.id]
     properties: [publicsafety.recommendation, general.id]
     property_tags: {}
-    basetype: null
-    id: 19bf1241-e6c0-4eee-af3d-9ef92756546c
+    schemas: []
+    title: Release Recommendation
+    type: publicsafety.releaserecommendation
 publicsafety.transportedtohospital:
-    title: Transported to (hosp.)
-    type: publicsafety.transportedtohospital
     description: Association linking a hospital with the entity (i.e., police dept.)
         transporting someone there.
-    schemas: []
+    id: 0da18c64-1fe3-43a7-aca3-d8ebf01ddbde
     key: [health.hospitalname, location.address]
     properties: [health.hospitalname, location.address]
     property_tags: {}
-    basetype: null
-    id: 0da18c64-1fe3-43a7-aca3-d8ebf01ddbde
+    schemas: []
+    title: Transported to (hosp.)
+    type: publicsafety.transportedtohospital
 publicsafety.unit:
-    title: Unit
-    type: publicsafety.unit
     description: A police patrol, fire, or other type of unit.
-    schemas: [v2.v2]
+    id: e2089bf9-9472-4f5a-bc64-7f0ca3adf966
     key: [publicsafety.unitid]
     properties: [publicsafety.unitname, publicsafety.agencyname, publicsafety.agencyid,
         publicsafety.unitid]
     property_tags: {}
-    basetype: null
-    id: e2089bf9-9472-4f5a-bc64-7f0ca3adf966
+    schemas: [v2.v2]
+    title: Unit
+    type: publicsafety.unit

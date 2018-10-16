@@ -1,3 +1,4 @@
+from . import utils
 from collections import OrderedDict
 import yamlordereddictloader
 import openapi_client
@@ -6,23 +7,8 @@ import yaml
 import json
 import os
 
-def get_constants():
-    constants = {}
-    basedir = os.path.dirname(os.path.realpath(__file__))
-    datadir = os.path.abspath(os.path.join(basedir,"../..","data"))
-    constants['propfile'] = os.path.join(datadir,'propertytypes.yaml')
-    constants['entfile'] = os.path.join(datadir,'entitytypes.yaml')
-    constants['assfile'] = os.path.join(datadir,'associationtypes.yaml')
-    return constants
 
-
-def grab_edm_from_prod():
-    # Configure API key authorization
-    baseurl = 'https://api.openlattice.com'
-    configuration = openapi_client.Configuration()
-    configuration.host = baseurl
-    api_instance = openapi_client.EdmApi(openapi_client.ApiClient(configuration))
-
+def grab_edm_from_prod(api_instance):
     edm = {}
     # get and process property types
     properties = api_instance.get_all_property_types()
@@ -42,10 +28,12 @@ def grab_edm_from_prod():
     assformatted = [get_human_association(x.to_dict(), propdict, entdict) for x in associations]
     edm['associations'] = {x['type']: x for x in assformatted}
 
+    edm = {k: {l: dict(w) for l,w in v.items()} for k,v in edm.items()}
+
     return edm
 
 def grab_edm_from_repo():
-    constants = get_constants()
+    constants = utils.get_constants()
     edm = {}
     with open(constants['propfile'], 'r') as infile:
         edm['properties'] = yaml.load(infile)
@@ -55,9 +43,14 @@ def grab_edm_from_repo():
         edm['associations'] = yaml.load(infile)
     return edm
 
+def grab_constants():
+    constants = utils.get_constants()
+    with open(constants['constantsfile'], 'r') as infile:
+        constants = yaml.load(infile)
+    return constants
 
 def write_edm(edm):
-    constants = get_constants()
+    constants = utils.get_constants()
     with open(constants['propfile'], 'w') as outfile:
         yaml.dump(edm['properties'], outfile, Dumper=yamlordereddictloader.Dumper,indent=4)
     with open(constants['entfile'], 'w') as outfile:
@@ -66,6 +59,7 @@ def write_edm(edm):
         yaml.dump(edm['associations'], outfile, Dumper=yamlordereddictloader.Dumper,indent=4)
     return 0
 
+# GET HUMANISED VERSIONS OF ELEMENTS
 
 def type_to_fqn(type):
     fqn = "%s.%s"%(type['namespace'], type['name'])
@@ -77,14 +71,16 @@ def get_human_entity(ent, propdict):
     entity['schemas'] = [type_to_fqn(x) for x in entity['schemas']]
     entity['key'] = [propdict[x] for x in entity['key']]
     entity['properties'] = [propdict[x] for x in entity['properties']]
-    keyorder = ['title','type', 'description', 'schemas','key','properties', 'property_tags', 'basetype', 'id']
+    entity['property_tags'] = {propdict[k]:v for k,v in entity['property_tags'].items()}
+    entity.pop('basetype', None)
+    keyorder = utils.get_fields('entities')
     return OrderedDict((k, entity[k]) for k in keyorder)
 
 def get_human_property(prop):
     property = copy.deepcopy(prop)
     property['type'] = type_to_fqn(property['type'])
     property['schemas'] = [type_to_fqn(x) for x in property['schemas']]
-    keyorder = ['title','type', 'description', 'schemas','datatype','pii_field', 'multi_valued', 'analyzer', 'id']
+    keyorder = utils.get_fields('properties')
     return OrderedDict((k, property[k]) for k in keyorder)
 
 def get_human_association(ass, propdict, entdict):
@@ -99,5 +95,5 @@ def get_human_association(ass, propdict, entdict):
             if x in entdict.keys():
                 enttype = entdict[x]
                 association[key].append(enttype)
-    keyorder = ['title','type', 'description', 'src','dst','schemas','key','properties', 'property_tags', 'basetype', 'id']
+    keyorder = utils.get_fields('associations')
     return OrderedDict((k, association[k]) for k in keyorder)

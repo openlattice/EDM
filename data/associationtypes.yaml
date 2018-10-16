@@ -1,10 +1,7 @@
 criminaljustice.arrestedin:
-    title: Arrested In
-    type: criminaljustice.arrestedin
     description: An arrest (associated with an incident, case, or booking)
-    src: [general.person]
     dst: [general.person]
-    schemas: [v2.v2]
+    id: 44740981-b05c-43a1-91a7-e62e4737fe52
     key: [arrestedin.id, nc.SubjectIdentification]
     properties: [arrestedin.id, event.comments, nc.SubjectIdentification, ol.arrestcategory,
         criminaljustice.nibrs, criminaljustice.localstatute, criminaljustice.ncic,
@@ -13,93 +10,86 @@ criminaljustice.arrestedin:
         criminaljustice.arrestagency, ol.arrestdatetime, person.ageatevent, j.ArrestCharge,
         ol.mapreference, ol.numberofcounts, ol.personpoliceminutes]
     property_tags: {}
-    basetype: null
-    id: 44740981-b05c-43a1-91a7-e62e4737fe52
-criminaljustice.bookedin:
-    title: Booking (assn.)
-    type: criminaljustice.bookedin
-    description: A booking (associated with an incident, case, or jail stay).
-    src: [general.person]
-    dst: [general.person]
     schemas: [v2.v2]
+    src: [general.person]
+    title: Arrested In
+    type: criminaljustice.arrestedin
+criminaljustice.bookedin:
+    description: A booking (associated with an incident, case, or jail stay).
+    dst: [general.person]
+    id: afe9d19d-99c5-481c-867d-42f01ce8143b
     key: [general.stringid]
     properties: [general.stringid, criminaljustice.localstatute, criminaljustice.ncic,
         criminaljustice.nibrs, event.comments, date.booking, general.datetime, person.ageatevent,
         j.intoxicationlevel, publicsafety.portablebreathtest]
     property_tags: {}
-    basetype: null
-    id: afe9d19d-99c5-481c-867d-42f01ce8143b
+    schemas: [v2.v2]
+    src: [general.person]
+    title: Booking (assn.)
+    type: criminaljustice.bookedin
 criminaljustice.initiated:
-    title: Initiated (cj)
-    type: criminaljustice.initiated
     description: Association between a call for service (CFS) and a CFS origin.
-    src: [criminaljustice.cfsorigin]
     dst: [criminaljustice.cfsorigin]
-    schemas: []
+    id: 3cc9e141-df51-4d12-aebf-716ebc613b65
     key: [datetime.received]
     properties: [datetime.received]
     property_tags: {}
-    basetype: null
-    id: 3cc9e141-df51-4d12-aebf-716ebc613b65
+    schemas: []
+    src: [criminaljustice.cfsorigin]
+    title: Initiated (cj)
+    type: criminaljustice.initiated
 demographics.haskinties:
-    title: Has kin ties to
-    type: demographics.haskinties
     description: Association linking an individual to a household.
-    src: [general.person]
     dst: [general.person]
-    schemas: [v2.v2]
+    id: 014aa343-58e4-4b7b-93e2-ae4c9035f6a0
     key: [general.stringid]
     properties: [demographics.hhsize, demographics.hhtype, general.stringid]
     property_tags: {}
-    basetype: null
-    id: 014aa343-58e4-4b7b-93e2-ae4c9035f6a0
+    schemas: [v2.v2]
+    src: [general.person]
+    title: Has kin ties to
+    type: demographics.haskinties
 economy.worksas:
-    title: Works as (person to employment)
-    type: economy.worksas
     description: Association between person and personnel/employee entity, noting
         when the person first started working with the agency or organization.
-    src: [general.person]
     dst: [general.person]
-    schemas: []
+    id: 713885e6-566c-478c-a1c3-bc8a6d5e149e
     key: [general.stringid]
     properties: [general.stringid, housing.hiredate]
     property_tags: {}
-    basetype: null
-    id: 713885e6-566c-478c-a1c3-bc8a6d5e149e
-general.AssessedBy:
-    title: Assessed By (old)
-    type: general.AssessedBy
-    description: Assessed By
-    src: [medical.DetoxScreening, medical.assessment, health.biopsychosocial]
-    dst: [medical.DetoxScreening, medical.assessment, health.biopsychosocial]
     schemas: []
+    src: [general.person]
+    title: Works as (person to employment)
+    type: economy.worksas
+general.AssessedBy:
+    description: Assessed By
+    dst: [medical.DetoxScreening, medical.assessment, health.biopsychosocial]
+    id: 60555acd-8e50-41f9-ac95-630e8ea3ff8b
     key: [medical.InitialAssessmentID, provider.NationalProviderIdentification, health.biopsychosocialid,
         detox.ScreeningID]
     properties: [medical.InitialAssessmentID, provider.NationalProviderIdentification,
         health.biopsychosocialid, detox.ScreeningID, date.CompletedDateTime, general.stringid]
     property_tags: {}
-    basetype: null
-    id: 60555acd-8e50-41f9-ac95-630e8ea3ff8b
+    schemas: []
+    src: [medical.DetoxScreening, medical.assessment, health.biopsychosocial]
+    title: Assessed By (old)
+    type: general.AssessedBy
 general.DiagnosedWith:
-    title: DiagnosedWith
-    type: general.DiagnosedWith
     description: An association between a diagnosis and patient. NOTE this will eventually
         be renamed "general.assessedwith"
-    src: [general.person]
     dst: [general.person]
-    schemas: []
+    id: 09e3ab1f-fa13-4371-93d7-e7adf61c7876
     key: [medical.DiagnosisID, nc.SubjectIdentification]
     properties: [nc.SubjectIdentification, medical.DiagnosisID, ol.mapreference]
     property_tags: {}
-    basetype: null
-    id: 09e3ab1f-fa13-4371-93d7-e7adf61c7876
-general.Has:
-    title: Has (deprecated)
-    type: general.Has
-    description: Links together 2 entities
-    src: [general.place, general.person, medical.provider]
-    dst: [general.place, general.person, medical.provider]
     schemas: []
+    src: [general.person]
+    title: DiagnosedWith
+    type: general.DiagnosedWith
+general.Has:
+    description: Links together 2 entities
+    dst: [general.place, general.person, medical.provider]
+    id: 28941f24-f621-4e25-b373-40a50703d71b
     key: [provider.NationalProviderIdentification, location.address, place.SequenceID,
         insurance.SequenceID, substance.TreatmentHistoryID, nc.SubjectIdentification,
         medical.allergyid, contact.id]
@@ -107,15 +97,14 @@ general.Has:
         insurance.SequenceID, substance.TreatmentHistoryID, nc.SubjectIdentification,
         medical.allergyid, general.stringid, contact.id]
     property_tags: {}
-    basetype: null
-    id: 28941f24-f621-4e25-b373-40a50703d71b
-general.Includes_deprecated:
-    title: Includes_deprecated
-    type: general.Includes_deprecated
-    description: An association where an entity includes another entity
-    src: [medical.DetoxScreening, medical.assessment, health.biopsychosocial, housing.assessment]
-    dst: [medical.DetoxScreening, medical.assessment, health.biopsychosocial, housing.assessment]
     schemas: []
+    src: [general.place, general.person, medical.provider]
+    title: Has (deprecated)
+    type: general.Has
+general.Includes_deprecated:
+    description: An association where an entity includes another entity
+    dst: [medical.DetoxScreening, medical.assessment, health.biopsychosocial, housing.assessment]
+    id: 639269b8-95c2-420d-85e0-21121e51c85d
     key: [medication.id, medical.InitialAssessmentID, endocrine.id, gastrointestinal.id,
         health.biopsychosocialid, emotionalbehavioral.id, substance.TreatmentHistoryID,
         genitourinary.id, respiratory.id, cardiovascular.id, neurological.id, nutritional.id,
@@ -127,101 +116,92 @@ general.Includes_deprecated:
         detox.ScreeningID, withdrawal.id, musculoskeletal.id, substance.SequenceID,
         biomedical.id, reproductive.id, general.stringid]
     property_tags: {}
-    basetype: null
-    id: 639269b8-95c2-420d-85e0-21121e51c85d
-general.InsuredBy:
-    title: Insured By (deprecated)
-    type: general.InsuredBy
-    description: Insured By
-    src: [general.person]
-    dst: [general.person]
     schemas: []
+    src: [medical.DetoxScreening, medical.assessment, health.biopsychosocial, housing.assessment]
+    title: Includes_deprecated
+    type: general.Includes_deprecated
+general.InsuredBy:
+    description: Insured By
+    dst: [general.person]
+    id: 184f05d9-8fd3-45c8-94e0-d959b0262f12
     key: [general.stringid]
     properties: [date.CompletedDateTime, general.stringid]
     property_tags: {}
-    basetype: null
-    id: 184f05d9-8fd3-45c8-94e0-d959b0262f12
-general.ReferredBy_deprecated:
-    title: ReferredBy_deprecated
-    type: general.ReferredBy_deprecated
-    description: An association linking patients and referral information.
-    src: [general.person]
-    dst: [general.person]
     schemas: []
+    src: [general.person]
+    title: Insured By (deprecated)
+    type: general.InsuredBy
+general.ReferredBy_deprecated:
+    description: An association linking patients and referral information.
+    dst: [general.person]
+    id: 21aa7d22-17a6-4380-99cb-bbecb08bd196
     key: [provider.NationalProviderIdentification, nc.SubjectIdentification]
     properties: [provider.NationalProviderIdentification, nc.SubjectIdentification]
     property_tags: {}
-    basetype: null
-    id: 21aa7d22-17a6-4380-99cb-bbecb08bd196
-general.ReviewedBy:
-    title: Reviewed By
-    type: general.ReviewedBy
-    description: An association between a provider
-    src: [general.person, medical.DetoxScreening]
-    dst: [general.person, medical.DetoxScreening]
     schemas: []
+    src: [general.person]
+    title: ReferredBy_deprecated
+    type: general.ReferredBy_deprecated
+general.ReviewedBy:
+    description: An association between a provider
+    dst: [general.person, medical.DetoxScreening]
+    id: 4dc7e153-a383-4059-99d0-4d0a6caeb5f8
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: 4dc7e153-a383-4059-99d0-4d0a6caeb5f8
-general.Screened:
-    title: Screened
-    type: general.Screened
-    description: An association describe that location at which an entity mails
-    src: [general.person]
-    dst: [general.person]
     schemas: []
+    src: [general.person, medical.DetoxScreening]
+    title: Reviewed By
+    type: general.ReviewedBy
+general.Screened:
+    description: An association describe that location at which an entity mails
+    dst: [general.person]
+    id: 31ac0fbf-ae3b-446f-a624-fdad9c9bf71a
     key: [nc.SubjectIdentification, detox.ScreeningID]
     properties: [nc.SubjectIdentification, detox.ScreeningID, general.stringid]
     property_tags: {}
-    basetype: null
-    id: 31ac0fbf-ae3b-446f-a624-fdad9c9bf71a
-general.ScreenedBy:
-    title: Screened By
-    type: general.ScreenedBy
-    description: Screened By
-    src: [medical.DetoxScreening]
-    dst: [medical.DetoxScreening]
     schemas: []
+    src: [general.person]
+    title: Screened
+    type: general.Screened
+general.ScreenedBy:
+    description: Screened By
+    dst: [medical.DetoxScreening]
+    id: 59268706-36ea-4ad1-99e2-7ad36dbf0345
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: 59268706-36ea-4ad1-99e2-7ad36dbf0345
-general.Taking_deprecated:
-    title: Taking_deprecated
-    type: general.Taking_deprecated
-    description: An association describe that location at which an entity mails
-    src: [general.person]
-    dst: [general.person]
     schemas: []
+    src: [medical.DetoxScreening]
+    title: Screened By
+    type: general.ScreenedBy
+general.Taking_deprecated:
+    description: An association describe that location at which an entity mails
+    dst: [general.person]
+    id: eb528589-882c-462a-b057-45f58d7565fc
     key: [medication.id, nc.SubjectIdentification]
     properties: [medication.id, nc.SubjectIdentification, general.stringid]
     property_tags: {}
-    basetype: null
-    id: eb528589-882c-462a-b057-45f58d7565fc
-general.Used:
-    title: Used_deprecated
-    type: general.Used
-    description: An association describe that location at which an entity mails
-    src: [general.person]
-    dst: [general.person]
     schemas: []
+    src: [general.person]
+    title: Taking_deprecated
+    type: general.Taking_deprecated
+general.Used:
+    description: An association describe that location at which an entity mails
+    dst: [general.person]
+    id: c5825d85-c832-4363-8259-9bad7135db34
     key: [nc.SubjectIdentification, substance.SequenceID]
     properties: [nc.SubjectIdentification, substance.SequenceID, general.stringid]
     property_tags: {}
-    basetype: null
-    id: c5825d85-c832-4363-8259-9bad7135db34
+    schemas: []
+    src: [general.person]
+    title: Used_deprecated
+    type: general.Used
 general.appearsin:
-    title: Appears In
-    type: general.appearsin
     description: An association wherein one entity appears in another entity or event.
-    src: [general.person, justice.charge, justice.ChargeDetails, publicsafety.personnel,
-        geo.address, justice.case, justice.psa]
     dst: [general.person, justice.charge, justice.ChargeDetails, publicsafety.personnel,
         geo.address, justice.case, justice.psa]
-    schemas: []
+    id: c2845f96-e252-491c-b49c-da0810d3deaa
     key: [general.stringid]
     properties: [nc.SubjectIdentification, general.stringid, general.datetime, person.juvenile,
         person.age, publicsafety.dispatchpersontype, publicsafety.dispatchpersontypedescription,
@@ -229,1224 +209,1141 @@ general.appearsin:
         location.address, datetime.alerted, datetime.arrived, date.completeddatetime,
         datetime.enroute, ol.personpoliceminutes]
     property_tags: {}
-    basetype: null
-    id: c2845f96-e252-491c-b49c-da0810d3deaa
-general.assignto:
-    title: Assign To
-    type: general.assignto
-    description: An association which describes that one entity was assigned to another
-    src: [justice.case]
-    dst: [justice.case]
     schemas: []
+    src: [general.person, justice.charge, justice.ChargeDetails, publicsafety.personnel,
+        geo.address, justice.case, justice.psa]
+    title: Appears In
+    type: general.appearsin
+general.assignto:
+    description: An association which describes that one entity was assigned to another
+    dst: [justice.case]
+    id: 629691c7-7385-4f10-87d2-3d0cc1068350
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: 629691c7-7385-4f10-87d2-3d0cc1068350
+    schemas: []
+    src: [justice.case]
+    title: Assign To
+    type: general.assignto
 general.calculatedfor:
-    title: Calculated For
-    type: general.calculatedfor
     description: An association which describes that one entity was calculated for
         another
-    src: [justice.psaRiskFactors, justice.psa, publicsafety.releaserecommendation,
-        dmf.riskfactors, justice.dmf]
     dst: [justice.psaRiskFactors, justice.psa, publicsafety.releaserecommendation,
         dmf.riskfactors, justice.dmf]
-    schemas: []
+    id: 7a4d2b22-7f39-4a54-986a-54abcb86f374
     key: [psa.GeneratedDate]
     properties: [psa.GeneratedDate]
     property_tags: {}
-    basetype: null
-    id: 7a4d2b22-7f39-4a54-986a-54abcb86f374
-general.called:
-    title: Called
-    type: general.called
-    description: Association in which one entity called another.
-    src: [general.person]
-    dst: [general.person]
     schemas: []
+    src: [justice.psaRiskFactors, justice.psa, publicsafety.releaserecommendation,
+        dmf.riskfactors, justice.dmf]
+    title: Calculated For
+    type: general.calculatedfor
+general.called:
+    description: Association in which one entity called another.
+    dst: [general.person]
+    id: 78b5c431-8533-4dde-931f-50489496989f
     key: [date.completeddatetime, contact.phonenumber]
     properties: [date.completeddatetime, contact.phonenumber]
     property_tags: {}
-    basetype: null
-    id: 78b5c431-8533-4dde-931f-50489496989f
+    schemas: []
+    src: [general.person]
+    title: Called
+    type: general.called
 general.callreceivedby:
-    title: Call Received By (CFS to operator)
-    type: general.callreceivedby
     description: '"Received by" association connecting a call for service to an operator'
-    src: [publicsafety.callforservice]
     dst: [publicsafety.callforservice]
-    schemas: [v2.v2]
+    id: 96b06ed5-98b0-42d0-964e-824953bc904f
     key: [datetime.received]
     properties: [datetime.received]
     property_tags: {}
-    basetype: null
-    id: 96b06ed5-98b0-42d0-964e-824953bc904f
+    schemas: [v2.v2]
+    src: [publicsafety.callforservice]
+    title: Call Received By (CFS to operator)
+    type: general.callreceivedby
 general.consentedto:
-    title: Consented To
-    type: general.consentedto
     description: Consented to
-    src: [general.person]
     dst: [general.person]
-    schemas: []
+    id: 49ab0eb9-1129-4ea9-a987-868d5ad7255a
     key: [date.completeddatetime]
     properties: [date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 49ab0eb9-1129-4ea9-a987-868d5ad7255a
-general.editedby:
-    title: Edited By
-    type: general.editedby
-    description: Association describing that one entity was edited by another.
-    src: [justice.psa, justice.psaRiskFactors, dmf.riskfactors, justice.dmf]
-    dst: [justice.psa, justice.psaRiskFactors, dmf.riskfactors, justice.dmf]
     schemas: []
+    src: [general.person]
+    title: Consented To
+    type: general.consentedto
+general.editedby:
+    description: Association describing that one entity was edited by another.
+    dst: [justice.psa, justice.psaRiskFactors, dmf.riskfactors, justice.dmf]
+    id: 1c9601f9-7b37-44ae-a7a1-5b546952a08a
     key: [general.datetime]
     properties: [general.datetime]
     property_tags: {}
-    basetype: null
-    id: 1c9601f9-7b37-44ae-a7a1-5b546952a08a
-general.employedby:
-    title: employedby
-    type: general.employedby
-    description: An association linking person and employer
-    src: [general.person]
-    dst: [general.person]
     schemas: []
+    src: [justice.psa, justice.psaRiskFactors, dmf.riskfactors, justice.dmf]
+    title: Edited By
+    type: general.editedby
+general.employedby:
+    description: An association linking person and employer
+    dst: [general.person]
+    id: fc310cd1-7ba8-462a-961e-b0d1070fff43
     key: [provider.NationalProviderIdentification, place.SequenceID, nc.SubjectIdentification]
     properties: [provider.NationalProviderIdentification, place.SequenceID, nc.SubjectIdentification]
     property_tags: {}
-    basetype: null
-    id: fc310cd1-7ba8-462a-961e-b0d1070fff43
+    schemas: []
+    src: [general.person]
+    title: employedby
+    type: general.employedby
 general.occurredat:
-    title: Occurred At
-    type: general.occurredat
     description: Links together a event with a location where it occurred.
-    src: [justice.charge, justice.ChargeDetails, lawenforcement.arrest, publicsafety.callforservice,
-        criminaljustice.incident, justice.case, criminaljustice.jailrecord]
     dst: [justice.charge, justice.ChargeDetails, lawenforcement.arrest, publicsafety.callforservice,
         criminaljustice.incident, justice.case, criminaljustice.jailrecord]
-    schemas: [v2.v2]
+    id: 167c2511-b07f-416b-8e34-62b2a546d0e7
     key: [location.address, general.stringid]
     properties: [location.address, general.stringid]
     property_tags: {}
-    basetype: null
-    id: 167c2511-b07f-416b-8e34-62b2a546d0e7
+    schemas: [v2.v2]
+    src: [justice.charge, justice.ChargeDetails, lawenforcement.arrest, publicsafety.callforservice,
+        criminaljustice.incident, justice.case, criminaljustice.jailrecord]
+    title: Occurred At
+    type: general.occurredat
 general.oversaw:
-    title: Oversaw
-    type: general.oversaw
     description: Oversaw
-    src: [general.person]
     dst: [general.person]
-    schemas: []
+    id: d7d4cff2-5b0d-4200-a35b-786fcdfe3bf5
     key: [date.completeddatetime]
     properties: [date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: d7d4cff2-5b0d-4200-a35b-786fcdfe3bf5
-general.participatedin:
-    title: Participated in
-    type: general.participatedin
-    description: Association 'participated in'
+    schemas: []
     src: [general.person]
+    title: Oversaw
+    type: general.oversaw
+general.participatedin:
+    description: Association 'participated in'
     dst: [general.person]
-    schemas: [v2.v2]
+    id: 34836b35-76b1-4ecf-b588-c22ad19e2378
     key: [general.stringid]
     properties: [general.stringid, nc.SubjectIdentification, ol.datetimestart]
     property_tags: {}
-    basetype: null
-    id: 34836b35-76b1-4ecf-b588-c22ad19e2378
-general.participatedin_v1:
-    title: Participated In_deprecated
-    type: general.participatedin_v1
-    description: Participated in
+    schemas: [v2.v2]
     src: [general.person]
+    title: Participated in
+    type: general.participatedin
+general.participatedin_v1:
+    description: Participated in
     dst: [general.person]
-    schemas: []
+    id: 92b91274-6ff6-4a06-bee0-10a1b7b0f056
     key: [general.id]
     properties: [general.id]
     property_tags: {}
-    basetype: null
-    id: 92b91274-6ff6-4a06-bee0-10a1b7b0f056
-general.registeredfor:
-    title: Registered For
-    type: general.registeredfor
-    description: An association describing that one entity was registered for another.
-    src: [general.speakerverificationprofile, justice.bond, justice.fta]
-    dst: [general.speakerverificationprofile, justice.bond, justice.fta]
     schemas: []
+    src: [general.person]
+    title: Participated In_deprecated
+    type: general.participatedin_v1
+general.registeredfor:
+    description: An association describing that one entity was registered for another.
+    dst: [general.speakerverificationprofile, justice.bond, justice.fta]
+    id: 36888d01-c1af-405b-8846-d03835a40cf2
     key: [date.completeddatetime]
     properties: [date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 36888d01-c1af-405b-8846-d03835a40cf2
-geo.contactedat:
-    title: Contacted At
-    type: geo.contactedat
-    description: Association linking person and contact info (excluding address).
-    src: [general.person, publicsafety.callforservice, ol.person]
-    dst: [general.person, publicsafety.callforservice, ol.person]
     schemas: []
+    src: [general.speakerverificationprofile, justice.bond, justice.fta]
+    title: Registered For
+    type: general.registeredfor
+geo.contactedat:
+    description: Association linking person and contact info (excluding address).
+    dst: [general.person, publicsafety.callforservice, ol.person]
+    id: 0aab8372-2c95-4f8c-b67a-79066371365e
     key: [general.stringid]
     properties: [date.completeddatetime, contact.Active, contact.cellphone, general.stringid]
     property_tags: {}
-    basetype: null
-    id: 0aab8372-2c95-4f8c-b67a-79066371365e
-geo.contactedat_deprecated:
-    title: Contacted at_deprecated
-    type: geo.contactedat_deprecated
-    description: Association linking person and contact info (excluding address).
-    src: [general.person, publicsafety.callforservice]
-    dst: [general.person, publicsafety.callforservice]
     schemas: []
+    src: [general.person, publicsafety.callforservice, ol.person]
+    title: Contacted At
+    type: geo.contactedat
+geo.contactedat_deprecated:
+    description: Association linking person and contact info (excluding address).
+    dst: [general.person, publicsafety.callforservice]
+    id: eb5c2845-6089-4d31-a5bd-f83371444154
     key: [date.completeddatetime]
     properties: [contact.Active, date.completeddatetime, contact.cellphone]
     property_tags: {}
-    basetype: null
-    id: eb5c2845-6089-4d31-a5bd-f83371444154
+    schemas: []
+    src: [general.person, publicsafety.callforservice]
+    title: Contacted at_deprecated
+    type: geo.contactedat_deprecated
 geo.contactinfogiven:
-    title: Contact Information Given
-    type: geo.contactinfogiven
     description: Contact information other than address, given to an entity such as
         a dispatcher.
-    src: [geo.contactinformation]
     dst: [geo.contactinformation]
-    schemas: []
+    id: 1f4bb5db-61a8-4ab3-b69b-eb783e038848
     key: [contact.id]
     properties: [contact.id, contact.cellphone]
     property_tags: {}
-    basetype: null
-    id: 1f4bb5db-61a8-4ab3-b69b-eb783e038848
+    schemas: []
+    src: [geo.contactinformation]
+    title: Contact Information Given
+    type: geo.contactinfogiven
 geo.getsmailat:
-    title: Gets Mail At -d
-    type: geo.getsmailat
     description: An association that describes a mailing address.
-    src: [general.person]
     dst: [general.person]
-    schemas: [v2.v2]
+    id: 558ecd39-ae52-4ab3-ba28-74d93e5ade6a
     key: [location.address, nc.SubjectIdentification]
     properties: [location.address, nc.SubjectIdentification]
     property_tags: {}
-    basetype: null
-    id: 558ecd39-ae52-4ab3-ba28-74d93e5ade6a
-geo.locatedat:
-    title: Located At (deprecated)
-    type: geo.locatedat
-    description: Links together a person with a location.
-    src: [general.place, general.person]
-    dst: [general.place, general.person]
     schemas: [v2.v2]
+    src: [general.person]
+    title: Gets Mail At -d
+    type: geo.getsmailat
+geo.locatedat:
+    description: Links together a person with a location.
+    dst: [general.place, general.person]
+    id: c11a8547-1a2f-41d8-b983-cc568f0f83ac
     key: [location.address, nc.SubjectIdentification, place.uniqueID]
     properties: [location.address, nc.SubjectIdentification, general.stringid, place.uniqueID]
     property_tags: {}
-    basetype: null
-    id: c11a8547-1a2f-41d8-b983-cc568f0f83ac
+    schemas: [v2.v2]
+    src: [general.place, general.person]
+    title: Located At (deprecated)
+    type: geo.locatedat
 geo.zonedwithin:
-    title: Zoned within
-    type: geo.zonedwithin
     description: Links together a call for service and a dispatch zone.
-    src: [publicsafety.callforservice]
     dst: [publicsafety.callforservice]
-    schemas: []
+    id: 9ac9f941-6ba5-42ce-884c-a405d232bc3a
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: 9ac9f941-6ba5-42ce-884c-a405d232bc3a
+    schemas: []
+    src: [publicsafety.callforservice]
+    title: Zoned within
+    type: geo.zonedwithin
 health.assessedby -d:
-    title: Assessed By
-    type: health.assessedby -d
     description: Association linking a patient and the medical staff who assessed
         them. NOTE this FQN will be changed to general.assessedby later.
-    src: [general.person, ol.person]
     dst: [general.person, ol.person]
-    schemas: [v2.v2]
+    id: 8a9e7698-a16e-4134-b63b-b3a379d0290b
     key: [date.completeddatetime]
     properties: [date.completeddatetime, nc.PersonGivenName, nc.PersonSurName, person.title,
         general.id]
     property_tags: {}
-    basetype: null
-    id: 8a9e7698-a16e-4134-b63b-b3a379d0290b
+    schemas: [v2.v2]
+    src: [general.person, ol.person]
+    title: Assessed By
+    type: health.assessedby -d
 health.assessedwith:
-    title: Assessed with (health)
-    type: health.assessedwith
     description: An assessment given to a person, including medical, health, and housing.
         NOTE this FQN will be changed to general.assessedwith later.
-    src: [general.person]
     dst: [general.person]
-    schemas: [v2.v2]
+    id: 85bf7f0d-40e5-40d4-a403-60557afeff1f
     key: [date.completeddatetime]
     properties: [date.completeddatetime, general.stringid, general.id]
     property_tags: {}
-    basetype: null
-    id: 85bf7f0d-40e5-40d4-a403-60557afeff1f
+    schemas: [v2.v2]
+    src: [general.person]
+    title: Assessed with (health)
+    type: health.assessedwith
 health.insuredby:
+    description: Association linking a patient with insurance.
+    dst: [general.person, ol.person]
+    id: be4d46af-b5b6-468e-8c76-d3d897de4dd5
+    key: [date.completeddatetime]
+    properties: [date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [general.person, ol.person]
     title: Insured By
     type: health.insuredby
-    description: Association linking a patient with insurance.
-    src: [general.person, ol.person]
+health.referredby:
+    description: An association linking a patient and referral information.
     dst: [general.person, ol.person]
-    schemas: []
+    id: 311a1e88-e1e2-4166-819d-52aa00f9e3d1
     key: [date.completeddatetime]
     properties: [date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: be4d46af-b5b6-468e-8c76-d3d897de4dd5
-health.referredby:
+    schemas: []
+    src: [general.person, ol.person]
     title: Referred by (health)
     type: health.referredby
-    description: An association linking a patient and referral information.
-    src: [general.person, ol.person]
-    dst: [general.person, ol.person]
-    schemas: []
-    key: [date.completeddatetime]
-    properties: [date.completeddatetime]
-    property_tags: {}
-    basetype: null
-    id: 311a1e88-e1e2-4166-819d-52aa00f9e3d1
 health.reported:
-    title: Reported (health)
-    type: health.reported
     description: Linking a person/patient with various things they reported (medical
         history, allergies, etc.)
-    src: [general.person, ol.person]
     dst: [general.person, ol.person]
-    schemas: [v2.v2]
+    id: a8611fa4-64cc-469f-a7ea-b6bcf4daf28c
     key: [date.completeddatetime]
     properties: [date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: a8611fa4-64cc-469f-a7ea-b6bcf4daf28c
+    schemas: [v2.v2]
+    src: [general.person, ol.person]
+    title: Reported (health)
+    type: health.reported
 housing.worksas:
-    title: Works as (is employee or personnel of)_deprecated
-    type: housing.worksas
     description: Association between person and personnel/employee entity, noting
         when the person first started working with the agency or organization.
-    src: [general.person]
     dst: [general.person]
-    schemas: []
+    id: 21a97a1d-3652-48f4-9176-a501e0f821e5
     key: [general.id]
     properties: [housing.hiredate, general.id]
     property_tags: {}
-    basetype: null
-    id: 21a97a1d-3652-48f4-9176-a501e0f821e5
-justice.ArrestedBy:
-    title: Arrested By
-    type: justice.ArrestedBy
-    description: Links together an officer with the act of conducting an arrest
-    src: [general.person]
-    dst: [general.person]
     schemas: []
+    src: [general.person]
+    title: Works as (is employee or personnel of)_deprecated
+    type: housing.worksas
+justice.ArrestedBy:
+    description: Links together an officer with the act of conducting an arrest
+    dst: [general.person]
+    id: de895175-c50c-43e5-928b-284563335662
     key: [general.StringID]
     properties: [general.StringID, ol.arrestdatetime, publicsafety.ArrestID]
     property_tags: {}
-    basetype: null
-    id: de895175-c50c-43e5-928b-284563335662
+    schemas: []
+    src: [general.person]
+    title: Arrested By
+    type: justice.ArrestedBy
 justice.ReleasedBy:
+    description: Links together an officer with someone they are releasing
+    dst: [general.person]
+    id: 46eeda56-f986-4da2-9584-23512aa2fb41
+    key: [general.StringID]
+    properties: [general.StringID]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
     title: Released By
     type: justice.ReleasedBy
-    description: Links together an officer with someone they are releasing
-    src: [general.person]
+justice.SearchedBy:
+    description: Links together an officer with someone they are searching
     dst: [general.person]
-    schemas: []
+    id: 23ab47df-b236-4188-ab93-a99e5e1ef69f
     key: [general.StringID]
     properties: [general.StringID]
     property_tags: {}
-    basetype: null
-    id: 46eeda56-f986-4da2-9584-23512aa2fb41
-justice.SearchedBy:
+    schemas: []
+    src: [general.person]
     title: Searched By
     type: justice.SearchedBy
-    description: Links together an officer with someone they are searching
-    src: [general.person]
+justice.TransportedBy:
+    description: Links together an officer with someone they are transporting
     dst: [general.person]
-    schemas: []
+    id: 533c7b58-116a-400f-a2df-08abbaa7eceb
     key: [general.StringID]
     properties: [general.StringID]
     property_tags: {}
-    basetype: null
-    id: 23ab47df-b236-4188-ab93-a99e5e1ef69f
-justice.TransportedBy:
+    schemas: []
+    src: [general.person]
     title: Transported By
     type: justice.TransportedBy
-    description: Links together an officer with someone they are transporting
-    src: [general.person]
-    dst: [general.person]
-    schemas: []
-    key: [general.StringID]
-    properties: [general.StringID]
-    property_tags: {}
-    basetype: null
-    id: 533c7b58-116a-400f-a2df-08abbaa7eceb
 justice.booked:
-    title: was booked_deprecated
-    type: justice.booked
     description: Links together a person with a booking
-    src: [general.person]
     dst: [general.person]
-    schemas: []
+    id: 06eb9cfc-8f72-4bb1-aaac-8fe336891e45
     key: [nc.SubjectIdentification, j.CaseNumberText]
     properties: [nc.SubjectIdentification, j.CaseNumberText]
     property_tags: {}
-    basetype: null
-    id: 06eb9cfc-8f72-4bb1-aaac-8fe336891e45
-justice.chargedwith:
-    title: Charged With_deprecated
-    type: justice.chargedwith
-    description: The law enforcement charges that were laid upon a person (association).
-    src: [justice.charge, general.person]
-    dst: [justice.charge, general.person]
     schemas: []
+    src: [general.person]
+    title: was booked_deprecated
+    type: justice.booked
+justice.chargedwith:
+    description: The law enforcement charges that were laid upon a person (association).
+    dst: [justice.charge, general.person]
+    id: 6f440883-660f-41e7-95f3-d923361e2b21
     key: [general.stringid]
     properties: [nc.SubjectIdentification, general.stringid, event.ChargeLevel, event.ChargeLevelState,
         ol.numberofcounts, publicsafety.agencyname]
     property_tags: {}
-    basetype: null
-    id: 6f440883-660f-41e7-95f3-d923361e2b21
+    schemas: []
+    src: [justice.charge, general.person]
+    title: Charged With_deprecated
+    type: justice.chargedwith
 justice.detailsof:
-    title: Details Of
-    type: justice.detailsof
     description: An association which describes that one entity provides details of
         another
-    src: [justice.JailRecord]
     dst: [justice.JailRecord]
-    schemas: []
+    id: 536f93ba-efd4-47b7-8b7c-51612cafd8c5
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: 536f93ba-efd4-47b7-8b7c-51612cafd8c5
+    schemas: []
+    src: [justice.JailRecord]
+    title: Details Of
+    type: justice.detailsof
 justice.interactedwith -d:
+    description: An association which describes that one entity interacted with another
+    dst: [general.person]
+    id: 4b98be11-03e3-4924-a983-474e8898e56c
+    key: [general.stringid]
+    properties: [general.stringid]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
     title: Interacted With
     type: justice.interactedwith -d
-    description: An association which describes that one entity interacted with another
-    src: [general.person]
-    dst: [general.person]
-    schemas: []
-    key: [general.stringid]
-    properties: [general.stringid]
-    property_tags: {}
-    basetype: null
-    id: 4b98be11-03e3-4924-a983-474e8898e56c
 justice.leadsto:
-    title: Leads To
-    type: justice.leadsto
     description: An association linking an offense to eventual court case, sentencing,
         or conviction outcomes.
-    src: [justice.charge, justice.ChargeDetails, criminaljustice.offense, ol.policecad]
     dst: [justice.charge, justice.ChargeDetails, criminaljustice.offense, ol.policecad]
-    schemas: []
+    id: ba032771-413f-4d07-9730-a8f8d2fb06e2
     key: [general.stringid]
     properties: [general.stringid, ol.convictionresults]
     property_tags: {}
-    basetype: null
-    id: ba032771-413f-4d07-9730-a8f8d2fb06e2
-justice.resultsin:
-    title: Results In
-    type: justice.resultsin
-    description: An association which describes that one entity results in another
-    src: [justice.Offense]
-    dst: [justice.Offense]
     schemas: []
+    src: [justice.charge, justice.ChargeDetails, criminaljustice.offense, ol.policecad]
+    title: Leads To
+    type: justice.leadsto
+justice.resultsin:
+    description: An association which describes that one entity results in another
+    dst: [justice.Offense]
+    id: 1f9fdbe6-982f-48b1-a4f3-af1a75614fe3
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: 1f9fdbe6-982f-48b1-a4f3-af1a75614fe3
-justice.sentencedwith:
-    title: Sentenced With
-    type: justice.sentencedwith
-    description: Association indicating that one entity was sentenced with another
-    src: [general.person]
-    dst: [general.person]
     schemas: []
+    src: [justice.Offense]
+    title: Results In
+    type: justice.resultsin
+justice.sentencedwith:
+    description: Association indicating that one entity was sentenced with another
+    dst: [general.person]
+    id: 3c3d0caa-5311-4423-bcb1-62df8eaacee5
     key: [general.id]
     properties: [general.id]
     property_tags: {}
-    basetype: null
-    id: 3c3d0caa-5311-4423-bcb1-62df8eaacee5
-lawenforcement.arrestedin:
-    title: Arrested In (v1)
-    type: lawenforcement.arrestedin
-    description: Links together a person with an event they were arrested in.
-    src: [general.person]
-    dst: [general.person]
     schemas: []
+    src: [general.person]
+    title: Sentenced With
+    type: justice.sentencedwith
+lawenforcement.arrestedin:
+    description: Links together a person with an event they were arrested in.
+    dst: [general.person]
+    id: ef0c2517-0ab1-48e4-a247-ef9812c4980c
     key: [j.ArrestSequenceID, nc.SubjectIdentification]
     properties: [j.ArrestCategory, j.ArrestSequenceID, nc.SubjectIdentification]
     property_tags: {}
-    basetype: null
-    id: ef0c2517-0ab1-48e4-a247-ef9812c4980c
-location.MailsAt:
-    title: Mails At
-    type: location.MailsAt
-    description: An association describe that location at which an entity mails
-    src: [general.person]
-    dst: [general.person]
     schemas: []
+    src: [general.person]
+    title: Arrested In (v1)
+    type: lawenforcement.arrestedin
+location.MailsAt:
+    description: An association describe that location at which an entity mails
+    dst: [general.person]
+    id: 96a79f1d-f70d-41e5-a0ee-a60cef3ad3c7
     key: [location.address, nc.SubjectIdentification]
     properties: [location.address, nc.SubjectIdentification]
     property_tags: {}
-    basetype: null
-    id: 96a79f1d-f70d-41e5-a0ee-a60cef3ad3c7
-location.livesat:
-    title: Lives at (deprecated)
-    type: location.livesat
-    description: An association describe that location at which an entity lives
-    src: [general.person]
-    dst: [general.person]
     schemas: []
+    src: [general.person]
+    title: Mails At
+    type: location.MailsAt
+location.livesat:
+    description: An association describe that location at which an entity lives
+    dst: [general.person]
+    id: 12d1ef04-d6c5-45a7-bb56-f667e88ba165
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: 12d1ef04-d6c5-45a7-bb56-f667e88ba165
-medical.Ordered:
-    title: Ordered
-    type: medical.Ordered
-    description: Ordered
-    src: [medical.provider]
-    dst: [medical.provider]
     schemas: []
+    src: [general.person]
+    title: Lives at (deprecated)
+    type: location.livesat
+medical.Ordered:
+    description: Ordered
+    dst: [medical.provider]
+    id: a2d61543-99ea-4d83-a746-098f6dea7757
     key: [provider.NationalProviderIdentification, medical.TreatmentOrderID]
     properties: [provider.NationalProviderIdentification, medical.TreatmentOrderID]
     property_tags: {}
-    basetype: null
-    id: a2d61543-99ea-4d83-a746-098f6dea7757
-medical.ReviewedBy:
-    title: Reviewed By
-    type: medical.ReviewedBy
-    description: Reviewed By
-    src: [general.person, medical.DetoxScreening, medical.assessment]
-    dst: [general.person, medical.DetoxScreening, medical.assessment]
     schemas: []
+    src: [medical.provider]
+    title: Ordered
+    type: medical.Ordered
+medical.ReviewedBy:
+    description: Reviewed By
+    dst: [general.person, medical.DetoxScreening, medical.assessment]
+    id: 47fd73fe-d66e-4d12-8703-7b9fcba1ba3c
     key: [medical.InitialAssessmentID, provider.NationalProviderIdentification, nc.SubjectIdentification,
         detox.ScreeningID]
     properties: [medical.InitialAssessmentID, provider.NationalProviderIdentification,
         nc.SubjectIdentification, detox.ScreeningID]
     property_tags: {}
-    basetype: null
-    id: 47fd73fe-d66e-4d12-8703-7b9fcba1ba3c
-medical.assessedwith_deprecated:
-    title: Assessed with (old)
-    type: medical.assessedwith_deprecated
-    description: Medical assessments that a patient has been assessed with.
-    src: [general.person]
-    dst: [general.person]
     schemas: []
+    src: [general.person, medical.DetoxScreening, medical.assessment]
+    title: Reviewed By
+    type: medical.ReviewedBy
+medical.assessedwith_deprecated:
+    description: Medical assessments that a patient has been assessed with.
+    dst: [general.person]
+    id: 3841c20f-cfa9-4dd8-b75d-a33649afbceb
     key: [medical.InitialAssessmentID, health.biopsychosocialid, nc.SubjectIdentification]
     properties: [medical.InitialAssessmentID, health.biopsychosocialid, nc.SubjectIdentification,
         general.stringid]
     property_tags: {}
-    basetype: null
-    id: 3841c20f-cfa9-4dd8-b75d-a33649afbceb
-medical.reported_deprecated:
-    title: Reported (old)
-    type: medical.reported_deprecated
-    description: An association which describes a person's and medical history
-    src: [general.person]
-    dst: [general.person]
     schemas: []
+    src: [general.person]
+    title: Assessed with (old)
+    type: medical.assessedwith_deprecated
+medical.reported_deprecated:
+    description: An association which describes a person's and medical history
+    dst: [general.person]
+    id: dde3b0ff-74ec-4aa3-bfc7-1fb1f4d20473
     key: [general.stringid]
     properties: [general.stringid]
     property_tags: {}
-    basetype: null
-    id: dde3b0ff-74ec-4aa3-bfc7-1fb1f4d20473
-medical.taking:
-    title: Taking
-    type: medical.taking
-    description: Association linking a patient and medication.
-    src: [general.person]
-    dst: [general.person]
     schemas: []
+    src: [general.person]
+    title: Reported (old)
+    type: medical.reported_deprecated
+medical.taking:
+    description: Association linking a patient and medication.
+    dst: [general.person]
+    id: 25969640-655a-4484-9f66-4d919b1403e8
     key: [medication.id, nc.SubjectIdentification, date.completeddatetime]
     properties: [medication.Dosage, medication.Regimen, medical.medicationtakenasprescribed,
         substance.UsageDuration, substance.frequency, medication.id, nc.SubjectIdentification,
         date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 25969640-655a-4484-9f66-4d919b1403e8
-o.is:
-    title: 'Is '
-    type: o.is
-    description: Is (person to patient, suspect, employee etc.)
-    src: [ol.person, general.person]
-    dst: [ol.person, general.person]
     schemas: []
+    src: [general.person]
+    title: Taking
+    type: medical.taking
+o.is:
+    description: Is (person to patient, suspect, employee etc.)
+    dst: [ol.person, general.person]
+    id: a823f47f-f2f3-497e-b78e-a8cf01ed6405
     key: [general.id, date.completeddatetime]
     properties: [general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: a823f47f-f2f3-497e-b78e-a8cf01ed6405
+    schemas: []
+    src: [ol.person, general.person]
+    title: 'Is '
+    type: o.is
 ol.appearsin:
-    title: Appears in
-    type: ol.appearsin
     description: ''
-    src: [ol.employee, ol.unit, ol.identification, general.person, ol.organization,
-        ol.location, o.employee]
     dst: [ol.employee, ol.unit, ol.identification, general.person, ol.organization,
         ol.location, o.employee]
-    schemas: [v2.v2]
+    id: 03aac23e-56d5-4960-b739-fae7fa301a6e
     key: [ol.id]
     properties: [ol.id, person.age, ol.role, general.stringid, ol.personpoliceminutes,
         ol.personfireminutes, ol.personemsminutes, ol.organizationtime]
     property_tags: {}
-    basetype: null
-    id: 03aac23e-56d5-4960-b739-fae7fa301a6e
-ol.arrestedby:
-    title: Arrested by
-    type: ol.arrestedby
-    description: (Person) is arrested by (Authority).
-    src: [general.person]
-    dst: [general.person]
     schemas: [v2.v2]
+    src: [ol.employee, ol.unit, ol.identification, general.person, ol.organization,
+        ol.location, o.employee]
+    title: Appears in
+    type: ol.appearsin
+ol.arrestedby:
+    description: (Person) is arrested by (Authority).
+    dst: [general.person]
+    id: edaca5dc-9255-460a-8013-e31ace5723db
     key: [ol.id]
     properties: [ol.arrestdatetime, ol.id]
     property_tags: {}
-    basetype: null
-    id: edaca5dc-9255-460a-8013-e31ace5723db
+    schemas: [v2.v2]
+    src: [general.person]
+    title: Arrested by
+    type: ol.arrestedby
 ol.assessedby:
-    title: Assessed By
-    type: ol.assessedby
     description: ''
-    src: [ol.employee, ol.person, general.person]
     dst: [ol.employee, ol.person, general.person]
-    schemas: []
+    id: 4f4df940-af84-48fc-ab28-990843e10349
     key: [general.id, date.completeddatetime]
     properties: [general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 4f4df940-af84-48fc-ab28-990843e10349
+    schemas: []
+    src: [ol.employee, ol.person, general.person]
+    title: Assessed By
+    type: ol.assessedby
 ol.assignedto:
+    description: ''
+    dst: [ol.dispatch]
+    id: 50ce2984-8e2c-4c15-82cc-99aac72ee628
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [ol.dispatch]
     title: Assigned to
     type: ol.assignedto
-    description: ''
-    src: [ol.dispatch]
-    dst: [ol.dispatch]
-    schemas: [v2.v2]
+ol.associatedwith:
+    description: Bi-directional association linking an arrest and offense.
+    dst: [ol.arrest]
+    id: 2998be89-0183-4470-a9a2-e1efa5ad7414
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 50ce2984-8e2c-4c15-82cc-99aac72ee628
-ol.associatedwith:
+    schemas: []
+    src: [ol.arrest]
     title: Associated with
     type: ol.associatedwith
-    description: An association linking a person and a vehicle.
-    src: [general.person]
-    dst: [general.person]
-    schemas: []
-    key: [general.stringid]
-    properties: [general.stringid, vehicle.licensenumber, person.stateidstate]
-    property_tags: {}
-    basetype: null
-    id: 777d2d40-4c67-4fe0-8954-08383bd4f02a
 ol.bondset:
+    description: ''
+    dst: [ol.jailstay]
+    id: 26b30a9c-4ff0-4b44-a26a-19c3195a6b16
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [ol.jailstay]
     title: (Bond) is set for a (Jailstay).
     type: ol.bondset
+ol.chargedby:
     description: ''
-    src: [ol.jailstay]
-    dst: [ol.jailstay]
-    schemas: [v2.v2]
+    dst: [general.person]
+    id: f5942bd5-685c-4a37-be0a-d55a3c952aa4
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 26b30a9c-4ff0-4b44-a26a-19c3195a6b16
-ol.chargedby:
+    schemas: [v2.v2]
+    src: [general.person]
     title: (Person) is charged by (Authority).
     type: ol.chargedby
-    description: ''
-    src: [general.person]
+ol.chargedwith:
+    description: (Person) is charged with (A charge/offense).
     dst: [general.person]
-    schemas: [v2.v2]
+    id: 22f294e5-f3f4-4317-8ff8-63528125c95f
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: f5942bd5-685c-4a37-be0a-d55a3c952aa4
-ol.chargedwith:
+    schemas: [v2.v2]
+    src: [general.person]
     title: Charged With
     type: ol.chargedwith
-    description: (Person) is charged with (A charge/offense).
-    src: [general.person]
-    dst: [general.person]
-    schemas: [v2.v2]
+ol.clearedby:
+    description: ''
+    dst: [ol.dispatch]
+    id: 589c5599-895c-497c-8864-3488d9ff4402
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 22f294e5-f3f4-4317-8ff8-63528125c95f
-ol.clearedby:
+    schemas: [v2.v2]
+    src: [ol.dispatch]
     title: Cleared by
     type: ol.clearedby
-    description: ''
-    src: [ol.dispatch]
-    dst: [ol.dispatch]
-    schemas: [v2.v2]
-    key: [ol.id]
-    properties: [ol.id]
-    property_tags: {}
-    basetype: null
-    id: 589c5599-895c-497c-8864-3488d9ff4402
 ol.collectedby:
-    title: Collected By
-    type: ol.collectedby
     description: Association between the person collecting the data and the data or
         form itself
-    src: [general.person, ol.employee, ol.allergy, ol.fever, ol.facilityreminders,
-        ol.residence, ol.detoxcautions, ol.appointment, ol.pregnancy, ol.seizures,
-        ol.referral, ol.admission, ol.insurance, ol.malignanthyperthermia, ol.suicidalideation,
-        ol.persondetails, ol.chestpain, ol.contactinformation, ol.medication, ol.abdominalpain,
-        ol.homeless, ol.substance, ol.shortnessofbreath, ol.overdosehistory, ol.organization,
-        ol.location, ol.medicaltestresult]
     dst: [general.person, ol.employee, ol.allergy, ol.fever, ol.facilityreminders,
         ol.residence, ol.detoxcautions, ol.appointment, ol.pregnancy, ol.seizures,
         ol.referral, ol.admission, ol.insurance, ol.malignanthyperthermia, ol.suicidalideation,
         ol.persondetails, ol.chestpain, ol.contactinformation, ol.medication, ol.abdominalpain,
         ol.homeless, ol.substance, ol.shortnessofbreath, ol.overdosehistory, ol.organization,
         ol.location, ol.medicaltestresult]
-    schemas: []
+    id: 65416b16-626c-495a-9904-a22a4d113276
     key: [general.id]
     properties: [general.datetime, general.id, general.formname, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 65416b16-626c-495a-9904-a22a4d113276
+    schemas: []
+    src: [general.person, ol.employee, ol.allergy, ol.fever, ol.facilityreminders,
+        ol.residence, ol.detoxcautions, ol.appointment, ol.pregnancy, ol.seizures,
+        ol.referral, ol.admission, ol.insurance, ol.malignanthyperthermia, ol.suicidalideation,
+        ol.persondetails, ol.chestpain, ol.contactinformation, ol.medication, ol.abdominalpain,
+        ol.homeless, ol.substance, ol.shortnessofbreath, ol.overdosehistory, ol.organization,
+        ol.location, ol.medicaltestresult]
+    title: Collected By
+    type: ol.collectedby
 ol.committedby:
-    title: Committed by
-    type: ol.committedby
     description: (Person) is committed by (Authority).
-    src: [general.person]
     dst: [general.person]
-    schemas: [v2.v2]
+    id: 5d88ee83-3be4-4a04-9650-e7f1c48c3662
     key: [ol.id]
     properties: [ol.id, ol.type, ol.notes]
     property_tags: {}
-    basetype: null
-    id: 5d88ee83-3be4-4a04-9650-e7f1c48c3662
-ol.contactedat:
-    title: Contacted at
-    type: ol.contactedat
-    description: ''
-    src: [ol.employee, general.person, o.employee]
-    dst: [ol.employee, general.person, o.employee]
     schemas: [v2.v2]
+    src: [general.person]
+    title: Committed by
+    type: ol.committedby
+ol.contactedat:
+    description: ''
+    dst: [ol.employee, general.person, o.employee]
+    id: 553cd731-73de-4377-bad8-ab4ec8b65b58
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 553cd731-73de-4377-bad8-ab4ec8b65b58
+    schemas: [v2.v2]
+    src: [ol.employee, general.person, o.employee]
+    title: Contacted at
+    type: ol.contactedat
 ol.contactedvia:
-    title: Contacted via
-    type: ol.contactedvia
     description: ''
-    src: [ol.person, general.person]
     dst: [ol.person, general.person]
-    schemas: []
+    id: 3f417550-356f-4275-8a55-1d66ccb6642b
     key: [general.id]
     properties: [general.datetime, general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 3f417550-356f-4275-8a55-1d66ccb6642b
+    schemas: []
+    src: [ol.person, general.person]
+    title: Contacted via
+    type: ol.contactedvia
 ol.contactinfogiven:
-    title: (Contact information) given to (entity)
-    type: ol.contactinfogiven
     description: ''
-    src: [ol.contactinformation]
     dst: [ol.contactinformation]
-    schemas: [v2.v2]
+    id: cf9b4d36-6f1a-4e6f-94f0-6458054fc567
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: cf9b4d36-6f1a-4e6f-94f0-6458054fc567
+    schemas: [v2.v2]
+    src: [ol.contactinformation]
+    title: (Contact information) given to (entity)
+    type: ol.contactinfogiven
 ol.deletedby:
-    title: Deleted By
-    type: ol.deletedby
     description: An association elucidating the relationship between a data element
         and the person/system that deleted the data element.
-    src: [ol.allergy, ol.abdominalpain, ol.malignanthyperthermia, ol.admission, ol.appointment,
-        ol.chestpain, ol.contactactivity, ol.contactinformation, ol.detoxcautions,
-        ol.deleriumtremens, ol.fever, ol.gastrointestinalbleeding, ol.homeless, ol.insurance,
-        ol.location, ol.medication, ol.organization, ol.overdosehistory, ol.pregnancy,
-        ol.referral, ol.seizures, ol.shortnessofbreath, ol.employee, ol.substance,
-        ol.suicidalideation, ol.persondetails, general.person, ol.facilityreminders]
     dst: [ol.allergy, ol.abdominalpain, ol.malignanthyperthermia, ol.admission, ol.appointment,
         ol.chestpain, ol.contactactivity, ol.contactinformation, ol.detoxcautions,
         ol.deleriumtremens, ol.fever, ol.gastrointestinalbleeding, ol.homeless, ol.insurance,
         ol.location, ol.medication, ol.organization, ol.overdosehistory, ol.pregnancy,
         ol.referral, ol.seizures, ol.shortnessofbreath, ol.employee, ol.substance,
         ol.suicidalideation, ol.persondetails, general.person, ol.facilityreminders]
-    schemas: []
+    id: e2b50c38-9b24-4643-9f64-4a655a4d6ce0
     key: [general.id]
     properties: [general.datetime, general.id]
     property_tags: {}
-    basetype: null
-    id: e2b50c38-9b24-4643-9f64-4a655a4d6ce0
+    schemas: []
+    src: [ol.allergy, ol.abdominalpain, ol.malignanthyperthermia, ol.admission, ol.appointment,
+        ol.chestpain, ol.contactactivity, ol.contactinformation, ol.detoxcautions,
+        ol.deleriumtremens, ol.fever, ol.gastrointestinalbleeding, ol.homeless, ol.insurance,
+        ol.location, ol.medication, ol.organization, ol.overdosehistory, ol.pregnancy,
+        ol.referral, ol.seizures, ol.shortnessofbreath, ol.employee, ol.substance,
+        ol.suicidalideation, ol.persondetails, general.person, ol.facilityreminders]
+    title: Deleted By
+    type: ol.deletedby
 ol.employedby:
+    description: ''
+    dst: [general.person, ol.person]
+    id: be5bddd5-f46d-4c66-b2be-05c2523a1508
+    key: [general.id]
+    properties: [general.datetime, general.id]
+    property_tags: {}
+    schemas: []
+    src: [general.person, ol.person]
     title: Employed By (person to organization)
     type: ol.employedby
-    description: ''
-    src: [general.person, ol.person]
-    dst: [general.person, ol.person]
-    schemas: []
-    key: [general.id]
-    properties: [general.datetime, general.id]
-    property_tags: {}
-    basetype: null
-    id: be5bddd5-f46d-4c66-b2be-05c2523a1508
 ol.enrolled:
-    title: Enrolled
-    type: ol.enrolled
     description: ''
-    src: [general.person]
     dst: [general.person]
-    schemas: []
+    id: 7d289eb5-44f7-4cf5-8c3d-ac7a1799b21a
     key: [general.stringid, date.completeddatetime, nc.SubjectIdentification]
     properties: [general.fullname, ol.version, sharing.name, general.stringid, date.completeddatetime,
         nc.SubjectIdentification]
     property_tags: {}
-    basetype: null
-    id: 7d289eb5-44f7-4cf5-8c3d-ac7a1799b21a
-ol.exhibits:
-    title: Displays or exhibits
-    type: ol.exhibits
-    description: Person exhibits specific behaviors or thought patterns
-    src: [general.person, ol.person]
-    dst: [general.person, ol.person]
     schemas: []
+    src: [general.person]
+    title: Enrolled
+    type: ol.enrolled
+ol.exhibits:
+    description: Person exhibits specific behaviors or thought patterns
+    dst: [general.person, ol.person]
+    id: 07e2b47c-e43a-4394-a6c3-d13bf6f1275b
     key: [general.id]
     properties: [general.datetime, general.id]
     property_tags: {}
-    basetype: null
-    id: 07e2b47c-e43a-4394-a6c3-d13bf6f1275b
+    schemas: []
+    src: [general.person, ol.person]
+    title: Displays or exhibits
+    type: ol.exhibits
 ol.getsmailat:
-    title: Gets Mail At
-    type: ol.getsmailat
     description: Association between person and address at which the person receives
         mail.
-    src: [ol.person, ol.employee, ol.patient, general.person]
     dst: [ol.person, ol.employee, ol.patient, general.person]
-    schemas: []
+    id: af9dc7d8-e78c-456a-b861-0d383a11d4fa
     key: [general.id, date.completeddatetime]
     properties: [general.datetime, general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: af9dc7d8-e78c-456a-b861-0d383a11d4fa
+    schemas: []
+    src: [ol.person, ol.employee, ol.patient, general.person]
+    title: Gets Mail At
+    type: ol.getsmailat
 ol.has:
+    description: Has association
+    dst: [general.person]
+    id: 7aa9e000-0585-4dff-8512-aa35b329379a
+    key: [ol.id]
+    properties: [ol.id, general.datetime, general.entryupdated, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
     title: Has
     type: ol.has
-    description: Has association
-    src: [general.person]
-    dst: [general.person]
-    schemas: []
-    key: [ol.id]
-    properties: [ol.id, general.datetime]
-    property_tags: {}
-    basetype: null
-    id: 7aa9e000-0585-4dff-8512-aa35b329379a
 ol.includes:
-    title: Includes (Results Include)
-    type: ol.includes
     description: Association between an assessment and the information it collects
         (e.g., a lab test and the results it includes)
-    src: [ol.medicaltest]
-    dst: [ol.medicaltest]
-    schemas: []
+    dst: [ol.medicaltest, ol.form]
+    id: 2ace27da-9f86-48f7-80bd-f48556092b27
     key: [general.id]
     properties: [general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 2ace27da-9f86-48f7-80bd-f48556092b27
-ol.interactedwith:
-    title: Interacted with
-    type: ol.interactedwith
-    description: Association between people
-    src: [ol.person, ol.employee]
-    dst: [ol.person, ol.employee]
     schemas: []
+    src: [ol.medicaltest, ol.form]
+    title: Includes / Contains (Results Include, Form Contains)
+    type: ol.includes
+ol.interactedwith:
+    description: Association between people
+    dst: [ol.person, ol.employee]
+    id: 774cb56a-2771-44ae-ba43-a465c9c1c6df
     key: [general.datetime, general.id]
     properties: [general.datetime, general.id, ol.contactdatetime, ol.contactmethod,
         ol.outcome, general.notes]
     property_tags: {}
-    basetype: null
-    id: 774cb56a-2771-44ae-ba43-a465c9c1c6df
+    schemas: []
+    src: [ol.person, ol.employee]
+    title: Interacted with
+    type: ol.interactedwith
 ol.involvedin:
-    title: Involved in
-    type: ol.involvedin
     description: (Person) is involved in (an event).
-    src: [ol.agency, o.employee, ol.vehicle, ol.booking, general.person, ol.emsunit,
-        ol.unit, ol.fireunit, ol.organization, ol.location, ol.weapon]
     dst: [ol.agency, o.employee, ol.vehicle, ol.booking, general.person, ol.emsunit,
-        ol.unit, ol.fireunit, ol.organization, ol.location, ol.weapon]
-    schemas: [v2.v2]
+        ol.unit, ol.fireunit, ol.organization, ol.location, ol.weapon, ol.substance]
+    id: 5bf88cde-65bc-4865-a58b-920eec4c4028
     key: [ol.id]
     properties: [ol.id, ol.personpoliceminutes, ol.personfireminutes, ol.personemsminutes,
         ol.organizationtime, person.age, general.stringid, ol.role, ol.datetimestart,
         ol.datetimeend, ol.roledescription]
     property_tags: {}
-    basetype: null
-    id: 5bf88cde-65bc-4865-a58b-920eec4c4028
+    schemas: [v2.v2]
+    src: [ol.agency, o.employee, ol.vehicle, ol.booking, general.person, ol.emsunit,
+        ol.unit, ol.fireunit, ol.organization, ol.location, ol.weapon, ol.substance]
+    title: Involved in
+    type: ol.involvedin
 ol.is:
-    title: Is - deprecated -  (person to patient, suspect, employee etc.)
-    type: ol.is
     description: '"Is" - deprecated - association connecting the general and more
         specific person-types (including employees).'
-    src: [general.person]
     dst: [general.person]
-    schemas: []
+    id: 14c4ec7c-af16-4a55-991c-46d574f0ff6c
     key: [general.stringid]
     properties: [nc.SSN, publicsafety.personnelstatus, ol.datetimestart, general.stringid,
         incident.enddatetime, ol.id]
     property_tags: {}
-    basetype: null
-    id: 14c4ec7c-af16-4a55-991c-46d574f0ff6c
-ol.kinto:
-    title: (Person) is kin to (Person).
-    type: ol.kinto
-    description: ''
+    schemas: []
     src: [general.person]
+    title: Is - deprecated -  (person to patient, suspect, employee etc.)
+    type: ol.is
+ol.kinto:
+    description: ''
     dst: [general.person]
-    schemas: [v2.v2]
+    id: 4bae15fb-4e1b-48ed-bf87-476df148b1c4
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 4bae15fb-4e1b-48ed-bf87-476df148b1c4
+    schemas: [v2.v2]
+    src: [general.person]
+    title: (Person) is kin to (Person).
+    type: ol.kinto
 ol.livesat:
-    title: Lives At
-    type: ol.livesat
     description: ''
-    src: [ol.person, general.person]
     dst: [ol.person, general.person]
-    schemas: []
+    id: 2ad709a7-da75-456f-831c-9f263ef9f510
     key: [general.id]
     properties: [general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 2ad709a7-da75-456f-831c-9f263ef9f510
+    schemas: []
+    src: [ol.person, general.person]
+    title: Lives At
+    type: ol.livesat
 ol.locatedat:
-    title: Located At
-    type: ol.locatedat
     description: The location of an event, organization, or person
-    src: [ol.person, ol.organization, general.person, ol.sentence, ol.jailstay, ol.dispatch,
-        ol.incident, ol.policecad]
     dst: [ol.person, ol.organization, general.person, ol.sentence, ol.jailstay, ol.dispatch,
         ol.incident, ol.policecad]
-    schemas: []
+    id: ecc09e28-0761-4ed0-9d9e-b1c1f883aed6
     key: [general.id]
     properties: [general.datetime, general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: ecc09e28-0761-4ed0-9d9e-b1c1f883aed6
+    schemas: []
+    src: [ol.person, ol.organization, general.person, ol.sentence, ol.jailstay, ol.dispatch,
+        ol.incident, ol.policecad]
+    title: Located At
+    type: ol.locatedat
 ol.oflength:
+    description: ''
+    dst: [ol.jailstay]
+    id: 5003d581-0cc3-4d05-b4e2-a62f56d28bb9
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [ol.jailstay]
     title: (Something) is of length (Length entity).
     type: ol.oflength
+ol.postedby:
     description: ''
-    src: [ol.jailstay]
-    dst: [ol.jailstay]
-    schemas: [v2.v2]
+    dst: [ol.bond]
+    id: a86eff53-3558-4cce-88e9-403c509c157a
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 5003d581-0cc3-4d05-b4e2-a62f56d28bb9
-ol.postedby:
+    schemas: [v2.v2]
+    src: [ol.bond]
     title: (Bail / bond /...) is posted by (Person).
     type: ol.postedby
-    description: ''
-    src: [ol.bond]
-    dst: [ol.bond]
-    schemas: [v2.v2]
-    key: [ol.id]
-    properties: [ol.id]
-    property_tags: {}
-    basetype: null
-    id: a86eff53-3558-4cce-88e9-403c509c157a
 ol.provided:
-    title: Provided (information, supports)
-    type: ol.provided
     description: ''
-    src: [ol.person, ol.employee, general.person]
     dst: [ol.person, ol.employee, general.person]
-    schemas: []
+    id: 02fb0106-41fb-446e-a055-4aa3c7e23acc
     key: [general.id]
     properties: [general.datetime, general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 02fb0106-41fb-446e-a055-4aa3c7e23acc
+    schemas: []
+    src: [ol.person, ol.employee, general.person]
+    title: Provided (information, supports)
+    type: ol.provided
 ol.receivedby:
-    title: Received by
-    type: ol.receivedby
     description: ''
-    src: [ol.dispatch]
     dst: [ol.dispatch]
-    schemas: [v2.v2]
+    id: 564b21e8-3132-4eb5-8124-65f54ceee5c2
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 564b21e8-3132-4eb5-8124-65f54ceee5c2
+    schemas: [v2.v2]
+    src: [ol.dispatch]
+    title: Received by
+    type: ol.receivedby
 ol.recordedby:
-    title: Recorded By
-    type: ol.recordedby
     description: Association linking data and the data collection tool, device, or
         collector. AKA logged by, collected by, etc.
-    src: [ol.applicationdata]
     dst: [ol.applicationdata]
-    schemas: []
+    id: 9b44a35d-d414-4f7e-929a-92175017b809
     key: [ol.datelogged, general.stringid]
     properties: [nc.SystemUserName, ol.altitude, ol.datelogged, general.stringid,
         location.latitude, location.longitude]
     property_tags: {}
-    basetype: null
-    id: 9b44a35d-d414-4f7e-929a-92175017b809
+    schemas: []
+    src: [ol.applicationdata]
+    title: Recorded By
+    type: ol.recordedby
 ol.relatedto:
+    description: Association to indicate a bidirectional relationship
+    dst: [ol.arrest, ol.offense, ol.policecad]
+    id: a5aa644f-767d-4b22-986d-1e7e88cf20f4
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: []
+    src: [ol.arrest, ol.offense, ol.policecad]
     title: related to
     type: ol.relatedto
-    description: Association to indicate a bidirectional relationship
-    src: [ol.arrest, ol.offense, ol.policecad]
-    dst: [ol.arrest, ol.offense, ol.policecad]
-    schemas: []
+ol.releasedby:
+    description: ''
+    dst: [general.person]
+    id: a094e89f-3b4f-4e98-9d2c-12e604ae9d6a
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: a5aa644f-767d-4b22-986d-1e7e88cf20f4
-ol.releasedby:
+    schemas: [v2.v2]
+    src: [general.person]
     title: (Person) released by (Authority).
     type: ol.releasedby
-    description: ''
-    src: [general.person]
-    dst: [general.person]
-    schemas: [v2.v2]
-    key: [ol.id]
-    properties: [ol.id]
-    property_tags: {}
-    basetype: null
-    id: a094e89f-3b4f-4e98-9d2c-12e604ae9d6a
 ol.reported:
-    title: Reported
-    type: ol.reported
     description: Association linking a person or patient with various conditions,
         issues, and concerns they reported (medical history, medical conditions, allergies,
         potential barriers to treatment, etc.). Self-report, not diagnosis.
-    src: [ol.person, general.person]
     dst: [ol.person, general.person]
-    schemas: []
+    id: 40f687c8-c6e5-47c0-8459-e1b3b06d19fd
     key: [general.id]
     properties: [general.datetime, general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 40f687c8-c6e5-47c0-8459-e1b3b06d19fd
+    schemas: []
+    src: [ol.person, general.person]
+    title: Reported
+    type: ol.reported
 ol.resultsin:
-    title: results in
-    type: ol.resultsin
     description: (Event) results in (Event)
-    src: [ol.sentence, ol.offense, ol.jailstay, ol.booking]
     dst: [ol.sentence, ol.offense, ol.jailstay, ol.booking]
-    schemas: [v2.v2]
+    id: aa29d6c3-1cb9-445f-b722-07f6a40efa31
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: aa29d6c3-1cb9-445f-b722-07f6a40efa31
+    schemas: [v2.v2]
+    src: [ol.sentence, ol.offense, ol.jailstay, ol.booking]
+    title: results in
+    type: ol.resultsin
 ol.scheduled:
-    title: Scheduled
-    type: ol.scheduled
     description: Association between a person and scheduled appointment, admission,
         etc
-    src: [ol.person, general.person]
     dst: [ol.person, general.person]
-    schemas: []
+    id: 2c625199-7f01-4344-8730-afd4eea52e70
     key: [general.id]
     properties: [date.completeddatetime, general.id, general.datetime]
     property_tags: {}
-    basetype: null
-    id: 2c625199-7f01-4344-8730-afd4eea52e70
+    schemas: []
+    src: [ol.person, general.person]
+    title: Scheduled
+    type: ol.scheduled
 ol.screenedwith:
-    title: Screened With / Assessed Using
-    type: ol.screenedwith
     description: Association between a person and a screening tool, assessment tool,
         or the results of said assessment.
-    src: [general.person]
     dst: [general.person]
-    schemas: []
+    id: 3de26710-64a1-4a3f-9c7e-61f9bc9d3dae
     key: [general.id]
     properties: [general.id, date.completeddatetime, ol.datetimeadministered]
     property_tags: {}
-    basetype: null
-    id: 3de26710-64a1-4a3f-9c7e-61f9bc9d3dae
+    schemas: []
+    src: [general.person]
+    title: Screened With / Assessed Using
+    type: ol.screenedwith
 ol.searchedby:
+    description: ''
+    dst: [general.person]
+    id: 061a7746-158b-4f1c-b1c3-82ee9aa95aad
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
     title: (Person) is searched by (Authority).
     type: ol.searchedby
+ol.sentencedwith:
     description: ''
-    src: [general.person]
     dst: [general.person]
-    schemas: [v2.v2]
+    id: 76677f67-c0bf-4db9-bc9c-c050828ba477
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 061a7746-158b-4f1c-b1c3-82ee9aa95aad
-ol.sentencedwith:
+    schemas: [v2.v2]
+    src: [general.person]
     title: (Person) sentenced with (Sentence).
     type: ol.sentencedwith
-    description: ''
-    src: [general.person]
-    dst: [general.person]
-    schemas: [v2.v2]
-    key: [ol.id]
-    properties: [ol.id]
-    property_tags: {}
-    basetype: null
-    id: 76677f67-c0bf-4db9-bc9c-c050828ba477
 ol.signedby:
-    title: 'Signed by / signed at '
-    type: ol.signedby
-    description: Association between individual and consent form with signature. This
-        is also the association between the consent form and the location at which
-        it is signed.
-    src: [ol.consent]
-    dst: [ol.consent]
-    schemas: []
-    key: [general.id]
-    properties: [general.datetime, ol.role, general.id, general.signature]
-    property_tags: {}
-    basetype: null
+    description: Association between individual and signature information.
+    dst: [ol.signature, ol.form]
     id: db52d8a2-4354-4ed8-9ad6-b2f16f9951de
+    key: [general.id]
+    properties: [general.id, date.completeddatetime]
+    property_tags: {}
+    schemas: []
+    src: [ol.signature, ol.form]
+    title: Signed by
+    type: ol.signedby
 ol.subjectof:
-    title: (Person) is subject of ...
-    type: ol.subjectof
-    description: ''
-    src: [general.person]
+    description: (Person) is subject of ...
     dst: [general.person]
-    schemas: [v2.v2]
+    id: 34aeaca4-d424-43cd-a3b4-f2032d583280
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 34aeaca4-d424-43cd-a3b4-f2032d583280
+    schemas: [v2.v2]
+    src: [general.person]
+    title: ' is subject of'
+    type: ol.subjectof
+ol.suspectedof:
+    description: (Person) suspected of (offense)
+    dst: [general.person]
+    id: a4da94ce-450e-4740-87a0-ef05d57597c6
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: []
+    src: [general.person]
+    title: Suspected of
+    type: ol.suspectedof
 ol.transportedby:
+    description: ''
+    dst: [general.person]
+    id: a404cc39-0259-4c8e-91b5-8def2071d997
+    key: [ol.id]
+    properties: [ol.id]
+    property_tags: {}
+    schemas: [v2.v2]
+    src: [general.person]
     title: (Person) transported by (Authority).
     type: ol.transportedby
-    description: ''
-    src: [general.person]
-    dst: [general.person]
-    schemas: [v2.v2]
-    key: [ol.id]
-    properties: [ol.id]
-    property_tags: {}
-    basetype: null
-    id: a404cc39-0259-4c8e-91b5-8def2071d997
 ol.updatedby:
-    title: Updated By
-    type: ol.updatedby
     description: An association that elucidates the relationship between a data element
         and the person/system that updated the data.
-    src: [ol.allergy, ol.malignanthyperthermia, ol.abdominalpain, ol.admission, ol.appointment,
-        ol.chestpain, ol.contactactivity, ol.contactinformation, ol.detoxcautions,
-        ol.deleriumtremens, ol.fever, ol.gastrointestinalbleeding, ol.homeless, ol.insurance,
-        ol.location, ol.medication, ol.organization, ol.overdosehistory, ol.pregnancy,
-        ol.referral, ol.seizures, ol.shortnessofbreath, ol.substance, ol.suicidalideation,
-        ol.persondetails, general.person, ol.employee, ol.facilityreminders]
     dst: [ol.allergy, ol.malignanthyperthermia, ol.abdominalpain, ol.admission, ol.appointment,
         ol.chestpain, ol.contactactivity, ol.contactinformation, ol.detoxcautions,
         ol.deleriumtremens, ol.fever, ol.gastrointestinalbleeding, ol.homeless, ol.insurance,
         ol.location, ol.medication, ol.organization, ol.overdosehistory, ol.pregnancy,
         ol.referral, ol.seizures, ol.shortnessofbreath, ol.substance, ol.suicidalideation,
         ol.persondetails, general.person, ol.employee, ol.facilityreminders]
-    schemas: []
+    id: 6cfefe90-49a9-4f9d-8aec-54f836a20352
     key: [general.id]
     properties: [general.datetime, general.id]
     property_tags: {}
-    basetype: null
-    id: 6cfefe90-49a9-4f9d-8aec-54f836a20352
+    schemas: []
+    src: [ol.allergy, ol.malignanthyperthermia, ol.abdominalpain, ol.admission, ol.appointment,
+        ol.chestpain, ol.contactactivity, ol.contactinformation, ol.detoxcautions,
+        ol.deleriumtremens, ol.fever, ol.gastrointestinalbleeding, ol.homeless, ol.insurance,
+        ol.location, ol.medication, ol.organization, ol.overdosehistory, ol.pregnancy,
+        ol.referral, ol.seizures, ol.shortnessofbreath, ol.substance, ol.suicidalideation,
+        ol.persondetails, general.person, ol.employee, ol.facilityreminders]
+    title: Updated By
+    type: ol.updatedby
 ol.usedby:
-    title: Used By
-    type: ol.usedby
     description: Association between an entity (AKAa device, data collection tool,
         object or other entity) and the person using it.
-    src: [ol.device]
     dst: [ol.device]
-    schemas: []
+    id: 16c6c1f7-0428-4205-90f9-6d6c15ab4961
     key: [general.stringid]
     properties: [general.stringid, nc.SubjectIdentification]
     property_tags: {}
-    basetype: null
-    id: 16c6c1f7-0428-4205-90f9-6d6c15ab4961
-ol.using:
-    title: Using (substance, medication)
-    type: ol.using
-    description: ''
-    src: [general.person]
-    dst: [general.person]
     schemas: []
+    src: [ol.device]
+    title: Used By
+    type: ol.usedby
+ol.using:
+    description: ''
+    dst: [general.person]
+    id: 3d70c2e3-6517-4ff4-ba8e-361a9774de18
     key: [general.id]
     properties: [general.datetime, general.id, date.completeddatetime]
     property_tags: {}
-    basetype: null
-    id: 3d70c2e3-6517-4ff4-ba8e-361a9774de18
+    schemas: []
+    src: [general.person]
+    title: Using (substance, medication)
+    type: ol.using
 ol.worksat:
-    title: (Person) works at (agency/organization/...).
-    type: ol.worksat
     description: ''
-    src: [o.employee]
     dst: [o.employee]
-    schemas: [v2.v2]
+    id: 9912f936-b36c-458d-aa13-61c914df1ed2
     key: [ol.id]
     properties: [ol.id]
     property_tags: {}
-    basetype: null
-    id: 9912f936-b36c-458d-aa13-61c914df1ed2
+    schemas: [v2.v2]
+    src: [o.employee]
+    title: (Person) works at (agency/organization/...).
+    type: ol.worksat
 ol.workson:
-    title: Works On / With
-    type: ol.workson
     description: ''
-    src: [general.person]
     dst: [general.person]
-    schemas: []
+    id: e16171ac-26b6-4e85-8437-c6d65ca5f2d1
     key: [general.stringid, nc.SubjectIdentification]
     properties: [general.stringid, nc.SubjectIdentification, ol.datetimestart]
     property_tags: {}
-    basetype: null
-    id: e16171ac-26b6-4e85-8437-c6d65ca5f2d1
+    schemas: []
+    src: [general.person]
+    title: Works On / With
+    type: ol.workson
 person.becomes:
-    title: Becomes (person to patient, suspect etc.)
-    type: person.becomes
     description: '"Becomes" association connecting the general and more specific person-types
         (excluding employees).'
-    src: [general.person]
     dst: [general.person]
-    schemas: []
+    id: d0742bcc-2155-4b9e-824f-1d9fbda46bc8
     key: [nc.SubjectIdentification]
     properties: [nc.SubjectIdentification, nc.SSN]
     property_tags: {}
-    basetype: null
-    id: d0742bcc-2155-4b9e-824f-1d9fbda46bc8
+    schemas: []
+    src: [general.person]
+    title: Becomes (person to patient, suspect etc.)
+    type: person.becomes
 publicsafety.involvedin:
-    title: Involved in (cj)
-    type: publicsafety.involvedin
     description: '"Involved in" association. Links together a call for service and
         a vehicle.'
-    src: [general.vehicle]
     dst: [general.vehicle]
-    schemas: [v2.v2]
+    id: 19d53b9f-7f5a-4ad8-8f8c-8548032af2b3
     key: [publicsafety.dispatchid]
     properties: [publicsafety.dispatchid]
     property_tags: {}
-    basetype: null
-    id: 19d53b9f-7f5a-4ad8-8f8c-8548032af2b3
+    schemas: [v2.v2]
+    src: [general.vehicle]
+    title: Involved in (cj)
+    type: publicsafety.involvedin
 publicsafety.transportedtohospital:
-    title: Transported to (hosp.)
-    type: publicsafety.transportedtohospital
     description: Association linking a hospital with the entity (i.e., police dept.)
         transporting someone there.
-    src: [bhr.report]
     dst: [bhr.report]
-    schemas: []
+    id: 0da18c64-1fe3-43a7-aca3-d8ebf01ddbde
     key: [health.hospitalname, location.address]
     properties: [health.hospitalname, location.address]
     property_tags: {}
-    basetype: null
-    id: 0da18c64-1fe3-43a7-aca3-d8ebf01ddbde
+    schemas: []
+    src: [bhr.report]
+    title: Transported to (hosp.)
+    type: publicsafety.transportedtohospital
