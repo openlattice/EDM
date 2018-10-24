@@ -8220,7 +8220,7 @@
         "name": "signature"
       },
       "id": "347d5723-a19c-4ab7-8e6d-31e6173f3a0d",
-      "description": "Signature (e.g., for consent form)",
+      "description": "Signature (e.g., for consent form) digital stuffs",
       "category": "EntityType",
       "key": [
         "c8caac70-2e49-4752-90cd-9d87f814844a"
