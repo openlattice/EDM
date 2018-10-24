@@ -2418,7 +2418,8 @@
       },
       "src": [
         "6faf5245-3ad1-4d47-96fe-ea11cd4bf1c8",
-        "31cf5595-3fe9-4d3e-a9cf-39355a4b8cab"
+        "31cf5595-3fe9-4d3e-a9cf-39355a4b8cab",
+        "436da824-c9b5-4a6d-b121-72c77be98ac8"
       ],
       "dst": [
         "2e20c21e-6448-4a2d-bc57-9a5f2c45b589",
@@ -3844,19 +3845,19 @@
       "propertyTags": {},
       "schemas": [],
       "properties": [
-        "a98b2c04-3f18-4d4e-aace-338145bd8416",
-        "ee619fe4-c2e8-4f30-8f37-90e3ba843ca4"
+        "7268c7db-6367-46d3-9a84-a43568b83d06",
+        "75654873-e2bb-4017-8c7f-31f6defa2926"
       ],
       "title": "OpenLattice Audit",
       "type": {
         "namespace": "OPENLATTICE_AUDIT",
         "name": "AUDIT"
       },
-      "id": "1eb4605a-b46a-4360-8c86-e1dbdca50b9f",
+      "id": "0d90b1ab-681f-4658-bab2-ac5a881609ee",
       "description": "The OpenLattice Audit Entity Type.",
       "category": "EntityType",
       "key": [
-        "a98b2c04-3f18-4d4e-aace-338145bd8416"
+        "75654873-e2bb-4017-8c7f-31f6defa2926"
       ]
     },
     {
@@ -6654,7 +6655,8 @@
         "13b5c5a1-8335-4798-ba53-fc855b8f00ec",
         "e4c4cac8-aa44-4b99-9c6d-d3b3c6ef0734",
         "39e13db7-a730-421a-a600-ae0674060140",
-        "ff7c3f66-1904-481b-b7d7-56d8b331be00"
+        "ff7c3f66-1904-481b-b7d7-56d8b331be00",
+        "e107ace7-8fad-40d0-9d2e-57cf47cbb839"
       ],
       "title": "Contact Information",
       "type": {
@@ -8940,7 +8942,7 @@
       "title": "DELETE_MEDELETE_MEDELETE_MEDELETE_ME",
       "type": {
         "namespace": "DELETE_ME",
-        "name": "fun"
+        "name": "DELETE_ME"
       },
       "id": "ad1e2829-400a-4227-ae7b-e917f099a8c3",
       "description": "DELETE_ME DELETE_ME DELETE_ME "
@@ -8956,7 +8958,7 @@
         "namespace": "OPENLATTICE_AUDIT",
         "name": "DETAILS"
       },
-      "id": "ee619fe4-c2e8-4f30-8f37-90e3ba843ca4",
+      "id": "7268c7db-6367-46d3-9a84-a43568b83d06",
       "description": "Any details about the event being logged."
     },
     {
@@ -8970,7 +8972,7 @@
         "namespace": "OPENLATTICE_AUDIT",
         "name": "TYPE"
       },
-      "id": "a98b2c04-3f18-4d4e-aace-338145bd8416",
+      "id": "75654873-e2bb-4017-8c7f-31f6defa2926",
       "description": "The type of event being logged."
     },
     {
@@ -21212,6 +21214,20 @@
       },
       "id": "b9e4901c-ae6c-4e6e-b456-9511f1e71934",
       "description": " Result of screening; based on pH value property, when available. "
+    },
+    {
+      "datatype": "String",
+      "analyzer": "METAPHONE",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Phone number description",
+      "type": {
+        "namespace": "ol",
+        "name": "phonenumberdescription"
+      },
+      "id": "e107ace7-8fad-40d0-9d2e-57cf47cbb839",
+      "description": ""
     },
     {
       "datatype": "Boolean",
