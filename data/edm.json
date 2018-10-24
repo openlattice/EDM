@@ -8855,7 +8855,6 @@
     }
   ],
   "namespaces": [
-    "DELETE_ME",
     "OPENLATTICE_AUDIT",
     "arrestedin",
     "bhr",
@@ -8928,20 +8927,6 @@
     "witness"
   ],
   "propertyTypes": [
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "DELETE_ME",
-      "type": {
-        "namespace": "DELETE_ME",
-        "name": "DELETE_ME"
-      },
-      "id": "ad1e2829-400a-4227-ae7b-e917f099a8c3",
-      "description": "DELETE_ME"
-    },
     {
       "datatype": "String",
       "analyzer": "STANDARD",
@@ -19758,6 +19743,20 @@
       },
       "id": "5b7a2aba-9d5a-4026-8a9a-319f00a8e4ac",
       "description": "Total time spent at an event by responding fire units."
+    },
+    {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "sad",
+      "type": {
+        "namespace": "ol",
+        "name": "fuuuuun"
+      },
+      "id": "ad1e2829-400a-4227-ae7b-e917f099a8c3",
+      "description": "DELETE_ME"
     },
     {
       "datatype": "String",
