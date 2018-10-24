@@ -3844,19 +3844,19 @@
       "propertyTags": {},
       "schemas": [],
       "properties": [
-        "6953e6d5-246d-4fd6-8451-15b17bf83b2c",
-        "2ae4a667-76b8-4ac7-b2c5-3fe3dd27d46b"
+        "a98b2c04-3f18-4d4e-aace-338145bd8416",
+        "ee619fe4-c2e8-4f30-8f37-90e3ba843ca4"
       ],
       "title": "OpenLattice Audit",
       "type": {
         "namespace": "OPENLATTICE_AUDIT",
         "name": "AUDIT"
       },
-      "id": "99778cf9-8568-4ccc-b474-e308475c34ab",
+      "id": "1eb4605a-b46a-4360-8c86-e1dbdca50b9f",
       "description": "The OpenLattice Audit Entity Type.",
       "category": "EntityType",
       "key": [
-        "2ae4a667-76b8-4ac7-b2c5-3fe3dd27d46b"
+        "a98b2c04-3f18-4d4e-aace-338145bd8416"
       ]
     },
     {
@@ -6971,7 +6971,9 @@
         "ddb5d841-4c82-407c-8fcb-58f04ffc20fe",
         "a791ca8d-b433-4a2b-be04-43d43cea14a7",
         "e4c4cac8-aa44-4b99-9c6d-d3b3c6ef0734",
-        "80be96e6-58e5-4015-a851-312c9c2327bd"
+        "80be96e6-58e5-4015-a851-312c9c2327bd",
+        "e928aace-725d-4bfc-9a4d-c817a3d5871f",
+        "77bc519c-24d7-4cae-ae19-9b07c549765e"
       ],
       "title": "A form (e.g., consent form, release)",
       "type": {
@@ -7188,7 +7190,8 @@
         "e481c9b7-d3b5-4c7a-bdfc-54ec801a541a",
         "a7ecc119-6f7f-4603-b9ec-68b9141ea114",
         "c87cdbb7-c4bd-4c71-b0ec-70b1ed69e00d",
-        "e030091b-4447-4bdc-804f-430fb664978b"
+        "e030091b-4447-4bdc-804f-430fb664978b",
+        "369051b0-1f54-4651-8c8c-4017f3882d0b"
       ],
       "title": "Insurance (plan or coverage information)",
       "type": {
@@ -7196,7 +7199,7 @@
         "name": "insurance"
       },
       "id": "26b6b5e0-7341-4941-b34a-3ee7b955335b",
-      "description": "Insurance plan (e.g., an individual's coverage details).",
+      "description": "Insurance plan (e.g., an individual's coverage details). Use Person -> eligiblefor -> insurance for specific insurance benefits.",
       "category": "EntityType",
       "key": [
         "e4c4cac8-aa44-4b99-9c6d-d3b3c6ef0734"
@@ -8934,12 +8937,26 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
+      "title": "DELETE_MEDELETE_MEDELETE_MEDELETE_ME",
+      "type": {
+        "namespace": "DELETE_ME",
+        "name": "fun"
+      },
+      "id": "ad1e2829-400a-4227-ae7b-e917f099a8c3",
+      "description": "DELETE_ME DELETE_ME DELETE_ME "
+    },
+    {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
       "title": "Details",
       "type": {
         "namespace": "OPENLATTICE_AUDIT",
         "name": "DETAILS"
       },
-      "id": "6953e6d5-246d-4fd6-8451-15b17bf83b2c",
+      "id": "ee619fe4-c2e8-4f30-8f37-90e3ba843ca4",
       "description": "Any details about the event being logged."
     },
     {
@@ -8953,7 +8970,7 @@
         "namespace": "OPENLATTICE_AUDIT",
         "name": "TYPE"
       },
-      "id": "2ae4a667-76b8-4ac7-b2c5-3fe3dd27d46b",
+      "id": "a98b2c04-3f18-4d4e-aace-338145bd8416",
       "description": "The type of event being logged."
     },
     {
@@ -18746,6 +18763,34 @@
     },
     {
       "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Authorization / Preauthorization / Referral Number or ID",
+      "type": {
+        "namespace": "ol",
+        "name": "authorization"
+      },
+      "id": "e928aace-725d-4bfc-9a4d-c817a3d5871f",
+      "description": ""
+    },
+    {
+      "datatype": "String",
+      "analyzer": "METAPHONE",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Authorization / Preauthorization / Referral Description",
+      "type": {
+        "namespace": "ol",
+        "name": "authorizationdescription"
+      },
+      "id": "77bc519c-24d7-4cae-ae19-9b07c549765e",
+      "description": ""
+    },
+    {
+      "datatype": "String",
       "analyzer": "METAPHONE",
       "piiField": false,
       "multiValued": true,
@@ -19744,20 +19789,6 @@
       },
       "id": "5b7a2aba-9d5a-4026-8a9a-319f00a8e4ac",
       "description": "Total time spent at an event by responding fire units."
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "happy",
-      "type": {
-        "namespace": "ol",
-        "name": "fun"
-      },
-      "id": "ad1e2829-400a-4227-ae7b-e917f099a8c3",
-      "description": "DELETE_ME"
     },
     {
       "datatype": "String",
