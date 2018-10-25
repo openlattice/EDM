@@ -3972,7 +3972,7 @@
         "7c1b100f-8ca2-4dfd-a751-0fce1339991b",
         "8bb0fb29-b210-4ace-a3d4-17a7b1af39fd"
       ],
-      "title": "Behavioral Health Report (BHR) - TEST",
+      "title": "Behavioral Health Report (BHR)",
       "type": {
         "namespace": "bhr",
         "name": "report"
@@ -8939,7 +8939,7 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "DELETE_MEDELETE_MEDELETE_MEDELETE_ME",
+      "title": "DELETE_ME",
       "type": {
         "namespace": "DELETE_ME",
         "name": "DELETE_ME"
