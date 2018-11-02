@@ -1098,7 +1098,7 @@
           "ee3a7573-aa70-4afb-814d-3fad27cda988",
           "f5628aca-71b2-40fe-ad66-374cb1f4d506"
         ],
-        "title": "Located At (deprecated)",
+        "title": "Located At (-d)",
         "type": {
           "namespace": "geo",
           "name": "locatedat"
@@ -1255,6 +1255,7 @@
       ],
       "dst": [
         "14acfc18-6d46-4ba2-a09d-3dc38c4c202b",
+        "436da824-c9b5-4a6d-b121-72c77be98ac8",
         "26b6b5e0-7341-4941-b34a-3ee7b955335b"
       ],
       "bidirectional": false
@@ -1401,7 +1402,7 @@
         "properties": [
           "73224904-f769-47c6-85f0-d70c519b54cd"
         ],
-        "title": "Released By",
+        "title": "Released By (-d)",
         "type": {
           "namespace": "justice",
           "name": "ReleasedBy"
@@ -1457,7 +1458,7 @@
         "properties": [
           "73224904-f769-47c6-85f0-d70c519b54cd"
         ],
-        "title": "Transported By",
+        "title": "Transported By (-d)",
         "type": {
           "namespace": "justice",
           "name": "TransportedBy"
@@ -1637,7 +1638,7 @@
         "properties": [
           "ee3a7573-aa70-4afb-814d-3fad27cda988"
         ],
-        "title": "Results In",
+        "title": "Results In (-d)",
         "type": {
           "namespace": "justice",
           "name": "resultsin"
@@ -2347,7 +2348,7 @@
           "name": "committedby"
         },
         "id": "5d88ee83-3be4-4a04-9650-e7f1c48c3662",
-        "description": "(Person) is committed by (Authority).",
+        "description": "(Person) is committed by (Authority) to jail.",
         "category": "EntityType",
         "key": [
           "39e13db7-a730-421a-a600-ae0674060140"
@@ -2988,13 +2989,13 @@
         "properties": [
           "39e13db7-a730-421a-a600-ae0674060140"
         ],
-        "title": "(Something) is of length (Length entity).",
+        "title": "Length of",
         "type": {
           "namespace": "ol",
           "name": "oflength"
         },
         "id": "5003d581-0cc3-4d05-b4e2-a62f56d28bb9",
-        "description": "",
+        "description": "(Something) is of length (Length entity).",
         "category": "EntityType",
         "key": [
           "39e13db7-a730-421a-a600-ae0674060140"
@@ -3005,6 +3006,33 @@
       ],
       "dst": [
         "8b626558-cf1d-495d-a0f5-53bbb59bc25e"
+      ],
+      "bidirectional": false
+    },
+    {
+      "entityType": {
+        "propertyTags": {},
+        "schemas": [],
+        "properties": [
+          "39e13db7-a730-421a-a600-ae0674060140"
+        ],
+        "title": "Part of",
+        "type": {
+          "namespace": "ol",
+          "name": "partof"
+        },
+        "id": "d9ccdae1-db25-40ad-9e9d-b2144fedb4bd",
+        "description": "\"Part of\" association",
+        "category": "AssociationType",
+        "key": [
+          "39e13db7-a730-421a-a600-ae0674060140"
+        ]
+      },
+      "src": [
+        "00e752c4-b042-45ae-85c1-c5bed5c23e03"
+      ],
+      "dst": [
+        "892bce63-805e-4b45-b9b1-7eaea1c48f2f"
       ],
       "bidirectional": false
     },
@@ -3164,12 +3192,15 @@
       "src": [
         "a8933914-d849-4b90-ab0f-eaa1525c4ec8",
         "33f389fe-9ff6-41eb-b7f9-aa1aad545014",
-        "b3562c95-33bc-4143-a970-0d173a3f35fc"
+        "b3562c95-33bc-4143-a970-0d173a3f35fc",
+        "892bce63-805e-4b45-b9b1-7eaea1c48f2f",
+        "26b6b5e0-7341-4941-b34a-3ee7b955335b"
       ],
       "dst": [
         "72dc4594-8dc0-4956-959f-2408a069f2aa",
         "42c87ead-3038-4682-961c-5dd079071786",
-        "d038e8f6-5910-46b2-88e4-b028a5120a46"
+        "d038e8f6-5910-46b2-88e4-b028a5120a46",
+        "c2f00f3d-48c9-47a2-80a4-b1cbcf7d5397"
       ],
       "bidirectional": true
     },
@@ -3185,13 +3216,13 @@
         "properties": [
           "39e13db7-a730-421a-a600-ae0674060140"
         ],
-        "title": "(Person) released by (Authority).",
+        "title": "Released by",
         "type": {
           "namespace": "ol",
           "name": "releasedby"
         },
         "id": "a094e89f-3b4f-4e98-9d2c-12e604ae9d6a",
-        "description": "",
+        "description": "Links together an officer/agency with someone they are releasing. (Person) released by (Authority).",
         "category": "EntityType",
         "key": [
           "39e13db7-a730-421a-a600-ae0674060140"
@@ -3255,6 +3286,34 @@
     {
       "entityType": {
         "propertyTags": {},
+        "schemas": [],
+        "properties": [
+          "6675a7e8-2159-41b1-9431-4053690fa3c9",
+          "39e13db7-a730-421a-a600-ae0674060140"
+        ],
+        "title": "Required by / required for",
+        "type": {
+          "namespace": "ol",
+          "name": "required"
+        },
+        "id": "ee45604f-3d9f-4ceb-8b83-a4ba5fa3cfd0",
+        "description": "Association linking a requirement with the entity requiring it / the entity for which it is required.",
+        "category": "AssociationType",
+        "key": [
+          "39e13db7-a730-421a-a600-ae0674060140"
+        ]
+      },
+      "src": [
+        "f55feb4f-1a3c-43f9-9259-1beb33ca61d9"
+      ],
+      "dst": [
+        "26b6b5e0-7341-4941-b34a-3ee7b955335b"
+      ],
+      "bidirectional": false
+    },
+    {
+      "entityType": {
+        "propertyTags": {},
         "schemas": [
           {
             "namespace": "v2",
@@ -3270,7 +3329,7 @@
           "name": "resultsin"
         },
         "id": "aa29d6c3-1cb9-445f-b722-07f6a40efa31",
-        "description": "(Event) results in (Event)",
+        "description": "An association which describes that one entity results in another. (Event) results in (Event).",
         "category": "EntityType",
         "key": [
           "39e13db7-a730-421a-a600-ae0674060140"
@@ -3280,14 +3339,16 @@
         "782b8d93-af16-423c-ae6d-8841ac60d752",
         "33f389fe-9ff6-41eb-b7f9-aa1aad545014",
         "892bce63-805e-4b45-b9b1-7eaea1c48f2f",
-        "42c87ead-3038-4682-961c-5dd079071786"
+        "42c87ead-3038-4682-961c-5dd079071786",
+        "a0432ae5-799f-4dfc-a72e-adbde3e312b9"
       ],
       "dst": [
         "892bce63-805e-4b45-b9b1-7eaea1c48f2f",
         "33f389fe-9ff6-41eb-b7f9-aa1aad545014",
         "782b8d93-af16-423c-ae6d-8841ac60d752",
         "d038e8f6-5910-46b2-88e4-b028a5120a46",
-        "a8933914-d849-4b90-ab0f-eaa1525c4ec8"
+        "a8933914-d849-4b90-ab0f-eaa1525c4ec8",
+        "f55feb4f-1a3c-43f9-9259-1beb33ca61d9"
       ],
       "bidirectional": false
     },
@@ -3397,13 +3458,13 @@
         "properties": [
           "39e13db7-a730-421a-a600-ae0674060140"
         ],
-        "title": "(Person) sentenced with (Sentence).",
+        "title": "Sentenced with",
         "type": {
           "namespace": "ol",
           "name": "sentencedwith"
         },
         "id": "76677f67-c0bf-4db9-bc9c-c050828ba477",
-        "description": "",
+        "description": "(Person) sentenced with (Sentence).",
         "category": "EntityType",
         "key": [
           "39e13db7-a730-421a-a600-ae0674060140"
@@ -3522,13 +3583,13 @@
         "properties": [
           "39e13db7-a730-421a-a600-ae0674060140"
         ],
-        "title": "(Person) transported by (Authority).",
+        "title": "Transported by",
         "type": {
           "namespace": "ol",
           "name": "transportedby"
         },
         "id": "a404cc39-0259-4c8e-91b5-8def2071d997",
-        "description": "",
+        "description": "Links together an officer/agency with someone they are transporting.",
         "category": "EntityType",
         "key": [
           "39e13db7-a730-421a-a600-ae0674060140"
@@ -3845,19 +3906,19 @@
       "propertyTags": {},
       "schemas": [],
       "properties": [
-        "7268c7db-6367-46d3-9a84-a43568b83d06",
-        "75654873-e2bb-4017-8c7f-31f6defa2926"
+        "bfb12b9c-161d-4853-bf15-ecf79bc8bd31",
+        "1a2e64a6-b1bb-4a18-87af-b824dc54b0eb"
       ],
       "title": "OpenLattice Audit",
       "type": {
         "namespace": "OPENLATTICE_AUDIT",
         "name": "AUDIT"
       },
-      "id": "0d90b1ab-681f-4658-bab2-ac5a881609ee",
+      "id": "8c835701-02b4-4a0a-8dbd-0933960425f6",
       "description": "The OpenLattice Audit Entity Type.",
       "category": "EntityType",
       "key": [
-        "75654873-e2bb-4017-8c7f-31f6defa2926"
+        "1a2e64a6-b1bb-4a18-87af-b824dc54b0eb"
       ]
     },
     {
@@ -6098,7 +6159,8 @@
         "a791ca8d-b433-4a2b-be04-43d43cea14a7",
         "f9010dd8-ce62-4d2f-a6a7-e4cf32ec6940",
         "7acb8cda-34bc-4fbc-b320-7481debfa294",
-        "84b850d8-4fb8-4507-b0f6-0b0466d39c0a"
+        "84b850d8-4fb8-4507-b0f6-0b0466d39c0a",
+        "80be96e6-58e5-4015-a851-312c9c2327bd"
       ],
       "title": "An agency",
       "type": {
@@ -6330,6 +6392,30 @@
       "propertyTags": {},
       "schemas": [],
       "properties": [
+        "a791ca8d-b433-4a2b-be04-43d43cea14a7",
+        "80be96e6-58e5-4015-a851-312c9c2327bd",
+        "2a45205e-703c-43eb-a060-921bf7245f6a",
+        "39e13db7-a730-421a-a600-ae0674060140",
+        "bf4f1c24-65f5-47c7-88d7-48aec1e4e591",
+        "0ee3acba-51a7-4f8d-921f-e23d75b07f65",
+        "d750e74f-0829-439c-b6ef-1dfc3692a78f"
+      ],
+      "title": "Authorization / Preauthorization (Status)",
+      "type": {
+        "namespace": "ol",
+        "name": "authorization"
+      },
+      "id": "f55feb4f-1a3c-43f9-9259-1beb33ca61d9",
+      "description": "",
+      "category": "EntityType",
+      "key": [
+        "39e13db7-a730-421a-a600-ae0674060140"
+      ]
+    },
+    {
+      "propertyTags": {},
+      "schemas": [],
+      "properties": [
         "c2e01b3e-76a3-46ed-9617-0ab4cea5a883",
         "db9aa49b-38a1-4852-bb90-dd077ac29495",
         "4cd0f372-8bed-417d-8941-e815d22a18f3",
@@ -6412,7 +6498,10 @@
         "8ce79ba8-b498-460a-a1b3-325954bb6d4f",
         "f7f01aa6-159a-435f-901b-44e62679bc51",
         "e481c9b7-d3b5-4c7a-bdfc-54ec801a541a",
-        "24f9de48-5c58-4697-a68c-fe156bfa3c3c"
+        "24f9de48-5c58-4697-a68c-fe156bfa3c3c",
+        "55bd8483-ae7e-466f-88bd-84d67160bd3f",
+        "a5753546-902d-4eb0-8914-e014487138e4",
+        "5ef69814-cd40-4209-ba7a-04f966c2fd00"
       ],
       "title": "A booking.",
       "type": {
@@ -6567,7 +6656,7 @@
         "name": "committedby"
       },
       "id": "5d88ee83-3be4-4a04-9650-e7f1c48c3662",
-      "description": "(Person) is committed by (Authority).",
+      "description": "(Person) is committed by (Authority) to jail.",
       "category": "EntityType",
       "key": [
         "39e13db7-a730-421a-a600-ae0674060140"
@@ -6844,6 +6933,29 @@
       "propertyTags": {},
       "schemas": [],
       "properties": [
+        "b0884db2-ae90-4a71-9219-e4748d239932",
+        "f7c5a55d-7c69-49f7-8da1-f9e078c5b95d",
+        "f989f7f6-45bb-4c95-9a24-a86fb2fdc8a4",
+        "3c0b1425-9ce8-499c-ad76-6c7e55b1af40",
+        "2e3ed8a0-0724-438e-89b3-a106e4d5c6f7",
+        "39e13db7-a730-421a-a600-ae0674060140"
+      ],
+      "title": "DSM Axis and scales",
+      "type": {
+        "namespace": "ol",
+        "name": "dsm"
+      },
+      "id": "8969dba7-7ff5-4aa5-ab14-1bed6723e4cc",
+      "description": "",
+      "category": "EntityType",
+      "key": [
+        "39e13db7-a730-421a-a600-ae0674060140"
+      ]
+    },
+    {
+      "propertyTags": {},
+      "schemas": [],
+      "properties": [
         "14908e47-923a-4c87-8d94-5881bf871cc1",
         "6bfc4a96-a4b9-49d7-affb-874f1edd9c91",
         "0111a451-0f30-4e53-8902-79b55f53ef1a",
@@ -6973,9 +7085,7 @@
         "ddb5d841-4c82-407c-8fcb-58f04ffc20fe",
         "a791ca8d-b433-4a2b-be04-43d43cea14a7",
         "e4c4cac8-aa44-4b99-9c6d-d3b3c6ef0734",
-        "80be96e6-58e5-4015-a851-312c9c2327bd",
-        "e928aace-725d-4bfc-9a4d-c817a3d5871f",
-        "77bc519c-24d7-4cae-ae19-9b07c549765e"
+        "80be96e6-58e5-4015-a851-312c9c2327bd"
       ],
       "title": "A form (e.g., consent form, release)",
       "type": {
@@ -7193,7 +7303,10 @@
         "a7ecc119-6f7f-4603-b9ec-68b9141ea114",
         "c87cdbb7-c4bd-4c71-b0ec-70b1ed69e00d",
         "e030091b-4447-4bdc-804f-430fb664978b",
-        "369051b0-1f54-4651-8c8c-4017f3882d0b"
+        "369051b0-1f54-4651-8c8c-4017f3882d0b",
+        "2543aa27-0f71-4346-bf62-9049a49ea014",
+        "cd114021-0bd3-4fec-8a97-5430c31de20b",
+        "d0a6add5-7bb7-428d-aeea-5359ab0cbfd4"
       ],
       "title": "Insurance (plan or coverage information)",
       "type": {
@@ -7262,7 +7375,10 @@
         "cfea602e-9b53-4f10-8c2f-97173b77003d",
         "92ecb196-23f1-4ab4-a8c3-084ccbcc151a",
         "6e22d468-4977-4bec-8b87-9a9a9b10963e",
-        "e5471522-9ec6-46e1-8b91-56b7e9291605"
+        "e5471522-9ec6-46e1-8b91-56b7e9291605",
+        "1023b3ee-f2d4-4eea-84a5-824ce6fa1bc0",
+        "d16ed792-851b-42cb-9e82-246869355651",
+        "3e6d3232-6469-46ee-b437-aa0d0458a88e"
       ],
       "title": "Jail stay/record",
       "type": {
@@ -7473,18 +7589,25 @@
       "propertyTags": {},
       "schemas": [],
       "properties": [
-        "ddb5d841-4c82-407c-8fcb-58f04ffc20fe",
-        "7ec77a05-c779-407c-9c6d-8890860fcbcf",
         "e4c4cac8-aa44-4b99-9c6d-d3b3c6ef0734",
-        "d4e8e212-6400-4947-9997-8469ddec8bf5",
-        "c15a4228-99cb-4439-8c5f-25fccb8ed781",
+        "ddb5d841-4c82-407c-8fcb-58f04ffc20fe",
+        "b89258a2-d190-4367-b3bc-ab0278749f85",
+        "fa1cb70f-c5f4-481f-a9ad-561eb5d7a41a",
+        "3d2144ea-dec1-496a-b83d-86597ae934dd",
         "abaa98db-9265-42ca-a272-74d667c972e1",
+        "c15a4228-99cb-4439-8c5f-25fccb8ed781",
+        "df0277b0-df7e-406f-8360-4a6ed6437fbe",
+        "c42fc7c4-2ec6-45d5-9061-f51ed79284c6",
         "a7ecc119-6f7f-4603-b9ec-68b9141ea114",
+        "caf53ac1-30f2-492a-a284-65eef9ed7827",
         "e274bded-fbce-46b9-b845-0a239c83956e",
         "93a23f2b-8528-4173-89d9-cb049bb036ee",
-        "8e65eca6-a3d1-4c05-885f-cc3156257139"
+        "8e65eca6-a3d1-4c05-885f-cc3156257139",
+        "d4e8e212-6400-4947-9997-8469ddec8bf5",
+        "7ec77a05-c779-407c-9c6d-8890860fcbcf",
+        "a0534dd8-0150-4d37-a41c-32d351c2fa22"
       ],
-      "title": "Medication (personal)",
+      "title": "Medication",
       "type": {
         "namespace": "ol",
         "name": "medication"
@@ -7574,13 +7697,13 @@
       "properties": [
         "39e13db7-a730-421a-a600-ae0674060140"
       ],
-      "title": "(Something) is of length (Length entity).",
+      "title": "Length of",
       "type": {
         "namespace": "ol",
         "name": "oflength"
       },
       "id": "5003d581-0cc3-4d05-b4e2-a62f56d28bb9",
-      "description": "",
+      "description": "(Something) is of length (Length entity).",
       "category": "EntityType",
       "key": [
         "39e13db7-a730-421a-a600-ae0674060140"
@@ -7590,13 +7713,13 @@
       "propertyTags": {},
       "schemas": [],
       "properties": [
+        "ddb5d841-4c82-407c-8fcb-58f04ffc20fe",
+        "ebe830b0-2ce9-4f84-9c11-3eaba875ee0d",
         "24cd6477-01c5-4f25-8453-904d8a5ce84d",
         "db5e822d-9255-43a8-83a3-0f178da477c9",
         "0dde9277-25af-4c3d-980c-936ebb112c0d",
         "e4c4cac8-aa44-4b99-9c6d-d3b3c6ef0734",
-        "ebe830b0-2ce9-4f84-9c11-3eaba875ee0d",
-        "39e13db7-a730-421a-a600-ae0674060140",
-        "ddb5d841-4c82-407c-8fcb-58f04ffc20fe"
+        "39e13db7-a730-421a-a600-ae0674060140"
       ],
       "title": "Organization",
       "type": {
@@ -7882,6 +8005,52 @@
     },
     {
       "propertyTags": {},
+      "schemas": [],
+      "properties": [
+        "a791ca8d-b433-4a2b-be04-43d43cea14a7",
+        "80be96e6-58e5-4015-a851-312c9c2327bd",
+        "92a6a5c5-b4f1-40ce-ace9-be232acdce2a",
+        "0ee3acba-51a7-4f8d-921f-e23d75b07f65",
+        "39e13db7-a730-421a-a600-ae0674060140"
+      ],
+      "title": "Program",
+      "type": {
+        "namespace": "ol",
+        "name": "program"
+      },
+      "id": "d5982da5-8f13-40d9-8b43-c4e2926e1395",
+      "description": "A program.",
+      "category": "EntityType",
+      "key": [
+        "39e13db7-a730-421a-a600-ae0674060140"
+      ]
+    },
+    {
+      "propertyTags": {},
+      "schemas": [],
+      "properties": [
+        "f2787ef1-8a9d-4297-9189-e78b12b76daf",
+        "58929d33-1c01-42f1-891c-f3e55c4d4fc4",
+        "6675a7e8-2159-41b1-9431-4053690fa3c9",
+        "98ea0781-13fd-4bef-ab3d-893e1757dfe5",
+        "52722320-b04e-41ae-95b3-ec670256e0b9",
+        "39e13db7-a730-421a-a600-ae0674060140",
+        "8be727f4-adcd-486c-b860-918595908c9f"
+      ],
+      "title": "Program outcome",
+      "type": {
+        "namespace": "ol",
+        "name": "programoutcome"
+      },
+      "id": "a323b0b9-a248-447c-87bc-29cfb2b78d58",
+      "description": "A program's outcome.",
+      "category": "EntityType",
+      "key": [
+        "39e13db7-a730-421a-a600-ae0674060140"
+      ]
+    },
+    {
+      "propertyTags": {},
       "schemas": [
         {
           "namespace": "v2",
@@ -7962,13 +8131,13 @@
       "properties": [
         "39e13db7-a730-421a-a600-ae0674060140"
       ],
-      "title": "(Person) released by (Authority).",
+      "title": "Released by",
       "type": {
         "namespace": "ol",
         "name": "releasedby"
       },
       "id": "a094e89f-3b4f-4e98-9d2c-12e604ae9d6a",
-      "description": "",
+      "description": "Links together an officer/agency with someone they are releasing. (Person) released by (Authority).",
       "category": "EntityType",
       "key": [
         "39e13db7-a730-421a-a600-ae0674060140"
@@ -8053,7 +8222,7 @@
         "name": "resultsin"
       },
       "id": "aa29d6c3-1cb9-445f-b722-07f6a40efa31",
-      "description": "(Event) results in (Event)",
+      "description": "An association which describes that one entity results in another. (Event) results in (Event).",
       "category": "EntityType",
       "key": [
         "39e13db7-a730-421a-a600-ae0674060140"
@@ -8172,13 +8341,13 @@
       "properties": [
         "39e13db7-a730-421a-a600-ae0674060140"
       ],
-      "title": "(Person) sentenced with (Sentence).",
+      "title": "Sentenced with",
       "type": {
         "namespace": "ol",
         "name": "sentencedwith"
       },
       "id": "76677f67-c0bf-4db9-bc9c-c050828ba477",
-      "description": "",
+      "description": "(Person) sentenced with (Sentence).",
       "category": "EntityType",
       "key": [
         "39e13db7-a730-421a-a600-ae0674060140"
@@ -8210,9 +8379,9 @@
       "propertyTags": {},
       "schemas": [],
       "properties": [
-        "2fa8da7b-85a2-4d50-9f54-c3400f9c6d71",
         "5ef69814-cd40-4209-ba7a-04f966c2fd00",
-        "c8caac70-2e49-4752-90cd-9d87f814844a"
+        "c8caac70-2e49-4752-90cd-9d87f814844a",
+        "90abc3fb-f0c4-45e5-b385-8cf70c06ef81"
       ],
       "title": "Signature",
       "type": {
@@ -8220,7 +8389,7 @@
         "name": "signature"
       },
       "id": "347d5723-a19c-4ab7-8e6d-31e6173f3a0d",
-      "description": "Signature (e.g., for consent form) digital stuffs",
+      "description": "Signature (e.g., for consent form)",
       "category": "EntityType",
       "key": [
         "c8caac70-2e49-4752-90cd-9d87f814844a"
@@ -8336,6 +8505,28 @@
     },
     {
       "propertyTags": {},
+      "schemas": [],
+      "properties": [
+        "92a6a5c5-b4f1-40ce-ace9-be232acdce2a",
+        "0ee3acba-51a7-4f8d-921f-e23d75b07f65",
+        "92ecb196-23f1-4ab4-a8c3-084ccbcc151a",
+        "39e13db7-a730-421a-a600-ae0674060140",
+        "e481c9b7-d3b5-4c7a-bdfc-54ec801a541a"
+      ],
+      "title": "Temporary Release",
+      "type": {
+        "namespace": "ol",
+        "name": "temporaryrelease"
+      },
+      "id": "00e752c4-b042-45ae-85c1-c5bed5c23e03",
+      "description": "A temporary release from jail or prison.",
+      "category": "EntityType",
+      "key": [
+        "39e13db7-a730-421a-a600-ae0674060140"
+      ]
+    },
+    {
+      "propertyTags": {},
       "schemas": [
         {
           "namespace": "v2",
@@ -8345,13 +8536,13 @@
       "properties": [
         "39e13db7-a730-421a-a600-ae0674060140"
       ],
-      "title": "(Person) transported by (Authority).",
+      "title": "Transported by",
       "type": {
         "namespace": "ol",
         "name": "transportedby"
       },
       "id": "a404cc39-0259-4c8e-91b5-8def2071d997",
-      "description": "",
+      "description": "Links together an officer/agency with someone they are transporting.",
       "category": "EntityType",
       "key": [
         "39e13db7-a730-421a-a600-ae0674060140"
@@ -8939,13 +9130,13 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "DELETE_ME",
+      "title": "DELETE_MEDELETE_MEDELETE_MEDELETE_ME",
       "type": {
         "namespace": "DELETE_ME",
         "name": "DELETE_ME"
       },
       "id": "ad1e2829-400a-4227-ae7b-e917f099a8c3",
-      "description": "DELETE_ME DELETE_ME DELETE_ME "
+      "description": "DELETE_ME "
     },
     {
       "datatype": "String",
@@ -8958,7 +9149,7 @@
         "namespace": "OPENLATTICE_AUDIT",
         "name": "DETAILS"
       },
-      "id": "7268c7db-6367-46d3-9a84-a43568b83d06",
+      "id": "bfb12b9c-161d-4853-bf15-ecf79bc8bd31",
       "description": "Any details about the event being logged."
     },
     {
@@ -8972,7 +9163,7 @@
         "namespace": "OPENLATTICE_AUDIT",
         "name": "TYPE"
       },
-      "id": "75654873-e2bb-4017-8c7f-31f6defa2926",
+      "id": "1a2e64a6-b1bb-4a18-87af-b824dc54b0eb",
       "description": "The type of event being logged."
     },
     {
@@ -11201,7 +11392,7 @@
           "name": "v2"
         }
       ],
-      "title": "Commit date",
+      "title": "Commit date (-d)",
       "type": {
         "namespace": "date",
         "name": "commit"
@@ -16188,7 +16379,7 @@
           "name": "v2"
         }
       ],
-      "title": "FullAddress",
+      "title": "FullAddress (-d)",
       "type": {
         "namespace": "location",
         "name": "Address"
@@ -16244,7 +16435,7 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "StreetAddress",
+      "title": "StreetAddress (-d)",
       "type": {
         "namespace": "location",
         "name": "Street"
@@ -16277,7 +16468,7 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Location or Address Line 2",
+      "title": "Location/Address Line 2",
       "type": {
         "namespace": "location",
         "name": "addressline2"
@@ -16443,7 +16634,7 @@
           "name": "v2"
         }
       ],
-      "title": "Location or Address Line 1 - Street Address",
+      "title": "Street Address",
       "type": {
         "namespace": "location",
         "name": "street"
@@ -16532,20 +16723,6 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "AxisIV",
-      "type": {
-        "namespace": "medical",
-        "name": "AxisIV"
-      },
-      "id": "3c0b1425-9ce8-499c-ad76-6c7e55b1af40",
-      "description": "AxisIV"
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
       "title": "DiagnosisID",
       "type": {
         "namespace": "medical",
@@ -16553,20 +16730,6 @@
       },
       "id": "0ee66bf8-7158-4b33-9cbf-63682291536c",
       "description": "DiagnosisID"
-    },
-    {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Hearing Aid (Y/N)",
-      "type": {
-        "namespace": "medical",
-        "name": "HearingAid"
-      },
-      "id": "c1adfed6-85af-4c58-bdb5-cf75f99bdb62",
-      "description": "Whether person has a hearing aid (Y/N)"
     },
     {
       "datatype": "String",
@@ -16808,62 +16971,6 @@
       "description": "Attempted suicide (Y/N)"
     },
     {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "axisI",
-      "type": {
-        "namespace": "medical",
-        "name": "axisI"
-      },
-      "id": "b0884db2-ae90-4a71-9219-e4748d239932",
-      "description": "axisI"
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "axisII",
-      "type": {
-        "namespace": "medical",
-        "name": "axisII"
-      },
-      "id": "2e3ed8a0-0724-438e-89b3-a106e4d5c6f7",
-      "description": "axisII"
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "axisIII",
-      "type": {
-        "namespace": "medical",
-        "name": "axisIII"
-      },
-      "id": "f989f7f6-45bb-4c95-9a24-a86fb2fdc8a4",
-      "description": "axisIII"
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "axisIV",
-      "type": {
-        "namespace": "medical",
-        "name": "axisIV"
-      },
-      "id": "0d50b4c2-dfb6-442c-be6e-a8679b568477",
-      "description": "axisIV"
-    },
-    {
       "datatype": "Boolean",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -16965,20 +17072,6 @@
       },
       "id": "a40e8509-2b90-4abf-84e4-cfaede8004f0",
       "description": "Emotional or physical abuse (Y/N)"
-    },
-    {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Use substances more than intended (Y/N)",
-      "type": {
-        "namespace": "medical",
-        "name": "excesssubstanceuse"
-      },
-      "id": "f50befa4-b472-4eeb-b460-926d0433c7eb",
-      "description": "Question on whether one uses substances more than intended (Y/N)"
     },
     {
       "datatype": "Boolean",
@@ -17154,20 +17247,6 @@
       "description": "Current or history of mood swings (comments)"
     },
     {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Need substance to alter feeling (Y/N) ",
-      "type": {
-        "namespace": "medical",
-        "name": "needsubstancetoalterfeeling"
-      },
-      "id": "4e27fc5f-3944-4027-8048-aaa48b746250",
-      "description": "Question on whether one needs substances to alter feelings (Y/N) "
-    },
-    {
       "datatype": "String",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -17283,20 +17362,6 @@
       },
       "id": "00210258-6b91-4767-a825-1dcea77f5fda",
       "description": "Prior eating habits"
-    },
-    {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Problems caused by substance use, and keep using (Y/N)",
-      "type": {
-        "namespace": "medical",
-        "name": "problemsfromsubstance"
-      },
-      "id": "90ad7f5b-29ee-41fc-a80e-830b1da0dd25",
-      "description": "ProblemsCausedDrinkingAlcoholOrDrugs"
     },
     {
       "datatype": "String",
@@ -18582,6 +18647,20 @@
     },
     {
       "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Admission type",
+      "type": {
+        "namespace": "ol",
+        "name": "admissiontype"
+      },
+      "id": "d16ed792-851b-42cb-9e82-246869355651",
+      "description": "Admission type"
+    },
+    {
+      "datatype": "String",
       "analyzer": "METAPHONE",
       "piiField": false,
       "multiValued": true,
@@ -18765,20 +18844,6 @@
     },
     {
       "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Authorization / Preauthorization / Referral Number or ID",
-      "type": {
-        "namespace": "ol",
-        "name": "authorization"
-      },
-      "id": "e928aace-725d-4bfc-9a4d-c817a3d5871f",
-      "description": ""
-    },
-    {
-      "datatype": "String",
       "analyzer": "METAPHONE",
       "piiField": false,
       "multiValued": true,
@@ -18804,6 +18869,76 @@
       },
       "id": "13b5c5a1-8335-4798-ba53-fc855b8f00ec",
       "description": "A period of time or a situation in which an entity is available to be contacted with the given contact information."
+    },
+    {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "DSM Axis I (Axis 1)",
+      "type": {
+        "namespace": "ol",
+        "name": "axisI"
+      },
+      "id": "b0884db2-ae90-4a71-9219-e4748d239932",
+      "description": "axis I"
+    },
+    {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "DSM Axis II (Axis 2)",
+      "type": {
+        "namespace": "ol",
+        "name": "axisII"
+      },
+      "id": "2e3ed8a0-0724-438e-89b3-a106e4d5c6f7",
+      "description": "axis II"
+    },
+    {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "DSM Axis III (Axis 3)",
+      "type": {
+        "namespace": "ol",
+        "name": "axisIII"
+      },
+      "id": "f989f7f6-45bb-4c95-9a24-a86fb2fdc8a4",
+      "description": "axis III"
+    },
+    {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "DSM Axis IV (Axis 4)",
+      "type": {
+        "namespace": "ol",
+        "name": "axisiv"
+      },
+      "id": "3c0b1425-9ce8-499c-ad76-6c7e55b1af40",
+      "description": "Axis 4V"
+    },
+    {
+      "datatype": "Double",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "DSM Axis V (Axis 5)",
+      "type": {
+        "namespace": "ol",
+        "name": "axisv"
+      },
+      "id": "f7c5a55d-7c69-49f7-8da1-f9e078c5b95d",
+      "description": ""
     },
     {
       "datatype": "String",
@@ -19008,6 +19143,20 @@
     },
     {
       "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Class",
+      "type": {
+        "namespace": "ol",
+        "name": "class"
+      },
+      "id": "1023b3ee-f2d4-4eea-84a5-824ce6fa1bc0",
+      "description": "A class."
+    },
+    {
+      "datatype": "String",
       "analyzer": "METAPHONE",
       "piiField": false,
       "multiValued": true,
@@ -19047,6 +19196,34 @@
       },
       "id": "54566157-0be7-4e75-9e69-035d141c4499",
       "description": ""
+    },
+    {
+      "datatype": "DateTimeOffset",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Commit datetime",
+      "type": {
+        "namespace": "ol",
+        "name": "commitdatetime"
+      },
+      "id": "3e6d3232-6469-46ee-b437-aa0d0458a88e",
+      "description": "The date and time of a law enforcement commitment to jail or further hearing."
+    },
+    {
+      "datatype": "Boolean",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Completed (Y/N)",
+      "type": {
+        "namespace": "ol",
+        "name": "completed"
+      },
+      "id": "f2787ef1-8a9d-4297-9189-e78b12b76daf",
+      "description": "Flag for whether something was completed."
     },
     {
       "datatype": "String",
@@ -19354,6 +19531,20 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
+      "title": "Datetime certified",
+      "type": {
+        "namespace": "ol",
+        "name": "datetimecertified"
+      },
+      "id": "98ea0781-13fd-4bef-ab3d-893e1757dfe5",
+      "description": "Date-time certified"
+    },
+    {
+      "datatype": "DateTimeOffset",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
       "title": "End Date-Time",
       "type": {
         "namespace": "ol",
@@ -19475,15 +19666,29 @@
       "description": "The bottom number of a blood pressure reading is the amount of pressure in your arteries between beats (diastolic pressure)."
     },
     {
+      "datatype": "Binary",
+      "analyzer": "STANDARD",
+      "piiField": true,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Digital Signature (Binary)",
+      "type": {
+        "namespace": "ol",
+        "name": "digitalsignature"
+      },
+      "id": "90abc3fb-f0c4-45e5-b385-8cf70c06ef81",
+      "description": "Digital signature (e.g., for a consent form)"
+    },
+    {
       "datatype": "String",
       "analyzer": "STANDARD",
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Digital Signature",
+      "title": "Digital Signature Index",
       "type": {
         "namespace": "ol",
-        "name": "digitalsignature"
+        "name": "digitalsignatureindex"
       },
       "id": "c8caac70-2e49-4752-90cd-9d87f814844a",
       "description": "This is an automatically-generated property verifying a digital signature. It includes hashed information associated with the amalgamation of all properties in a form (e.g., a consent form's info: lat, long, signature, time, content). "
@@ -19555,13 +19760,13 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Medication Dosage",
+      "title": "Medication Dose / Dosage",
       "type": {
         "namespace": "ol",
         "name": "dosage"
       },
       "id": "abaa98db-9265-42ca-a272-74d667c972e1",
-      "description": ""
+      "description": "Dosage of medication (e.g., how much taken at a given time). If more than one active ingredient, list all."
     },
     {
       "datatype": "String",
@@ -19794,6 +19999,20 @@
     },
     {
       "datatype": "String",
+      "analyzer": "METAPHONE",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Form / Formulation",
+      "type": {
+        "namespace": "ol",
+        "name": "formulation"
+      },
+      "id": "b89258a2-d190-4367-b3bc-ab0278749f85",
+      "description": "Form or formulation (e.g., of a medication - capsule, tablet, liquid, topical, etc)."
+    },
+    {
+      "datatype": "String",
       "analyzer": "STANDARD",
       "piiField": false,
       "multiValued": true,
@@ -19958,7 +20177,7 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Group identifier",
+      "title": "Group identifier or group name",
       "type": {
         "namespace": "ol",
         "name": "groupid"
@@ -19972,7 +20191,7 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Group Number",
+      "title": "Group Number or ID String",
       "type": {
         "namespace": "ol",
         "name": "groupnumber"
@@ -20726,6 +20945,20 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
+      "title": "National Drug Code (NDC)",
+      "type": {
+        "namespace": "ol",
+        "name": "nationaldrugcode"
+      },
+      "id": "c42fc7c4-2ec6-45d5-9061-f51ed79284c6",
+      "description": "National Drug Code (NDC)"
+    },
+    {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
       "title": "Nationality",
       "type": {
         "namespace": "ol",
@@ -20733,6 +20966,34 @@
       },
       "id": "cf068e11-5ed4-4aee-8363-f52e9969c486",
       "description": "Nationality"
+    },
+    {
+      "datatype": "Boolean",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "NCIC check (Y/N)",
+      "type": {
+        "namespace": "ol",
+        "name": "nciccheck"
+      },
+      "id": "55bd8483-ae7e-466f-88bd-84d67160bd3f",
+      "description": "Whether a person or item has been checked against the FBI's NCIC databases."
+    },
+    {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "NCIC check result",
+      "type": {
+        "namespace": "ol",
+        "name": "ncicresult"
+      },
+      "id": "a5753546-902d-4eb0-8914-e014487138e4",
+      "description": "The results from an NCIC search against a person or item."
     },
     {
       "datatype": "String",
@@ -21095,13 +21356,13 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Organization Name",
+      "title": "Organization Name / Network Name",
       "type": {
         "namespace": "ol",
         "name": "organizationname"
       },
       "id": "24cd6477-01c5-4f25-8453-904d8a5ce84d",
-      "description": ""
+      "description": "Name of larger organization or network"
     },
     {
       "datatype": "Int64",
@@ -21256,6 +21517,34 @@
       },
       "id": "71bd7c15-6abe-49eb-be27-2997d8d02056",
       "description": "pH - numeric value, result of screening "
+    },
+    {
+      "datatype": "Binary",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Picture - Back",
+      "type": {
+        "namespace": "ol",
+        "name": "pictureback"
+      },
+      "id": "cd114021-0bd3-4fec-8a97-5430c31de20b",
+      "description": "Picture - Back"
+    },
+    {
+      "datatype": "Binary",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Picture - Front",
+      "type": {
+        "namespace": "ol",
+        "name": "picturefront"
+      },
+      "id": "d0a6add5-7bb7-428d-aeea-5359ab0cbfd4",
+      "description": "Picture - Front"
     },
     {
       "datatype": "String",
@@ -21576,6 +21865,20 @@
       "description": "For example, < or >."
     },
     {
+      "datatype": "Double",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Quantity (numeric value)",
+      "type": {
+        "namespace": "ol",
+        "name": "quantity"
+      },
+      "id": "df0277b0-df7e-406f-8360-4a6ed6437fbe",
+      "description": "Quantity of an object (e.g., a medication)"
+    },
+    {
       "datatype": "String",
       "analyzer": "METAPHONE",
       "piiField": false,
@@ -21637,6 +21940,20 @@
       "description": "Reason person is held."
     },
     {
+      "datatype": "Boolean",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Received certification (Y/N)",
+      "type": {
+        "namespace": "ol",
+        "name": "receivedcertification"
+      },
+      "id": "8be727f4-adcd-486c-b860-918595908c9f",
+      "description": "Flag for whether a person has received a certification."
+    },
+    {
       "datatype": "DateTimeOffset",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -21684,6 +22001,20 @@
       "description": "A type of record."
     },
     {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": true,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Authorization / Preauthorization / Referral Number / Unique Confirmation Code or ID",
+      "type": {
+        "namespace": "ol",
+        "name": "referenceid"
+      },
+      "id": "d750e74f-0829-439c-b6ef-1dfc3692a78f",
+      "description": "Authorization / Preauthorization / Referral Number or ID"
+    },
+    {
       "datatype": "Boolean",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -21724,6 +22055,20 @@
       },
       "id": "4b30c32e-da3d-488b-ac52-d25484c8033e",
       "description": "Name of referrer"
+    },
+    {
+      "datatype": "Double",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Refills",
+      "type": {
+        "namespace": "ol",
+        "name": "refills"
+      },
+      "id": "a0534dd8-0150-4d37-a41c-32d351c2fa22",
+      "description": "Number of refills allowed"
     },
     {
       "datatype": "String",
@@ -21806,13 +22151,13 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Description of role, usually more detailed than ol.role",
+      "title": "Description of role",
       "type": {
         "namespace": "ol",
         "name": "roledescription"
       },
       "id": "9e0ddd74-6881-44b3-a7d8-f98e9b45e02d",
-      "description": "This propertytype represents a description of someone's role in an association or event."
+      "description": "This propertytype represents a description of someone's role in an association or event. Usually more detailed than ol.role"
     },
     {
       "datatype": "String",
@@ -22175,6 +22520,20 @@
       "analyzer": "STANDARD",
       "piiField": false,
       "multiValued": true,
+      "schemas": [],
+      "title": "Strength",
+      "type": {
+        "namespace": "ol",
+        "name": "strength"
+      },
+      "id": "3d2144ea-dec1-496a-b83d-86597ae934dd",
+      "description": "Strength (e.g., of medication)"
+    },
+    {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
       "schemas": [
         {
           "namespace": "v2",
@@ -22201,7 +22560,7 @@
         "name": "substancename"
       },
       "id": "b836ff20-b9b2-4b1d-a1a0-63ae293d8067",
-      "description": "The name of a substance (i.e., beer or wine) at a more specific level than the type of a substance (i.e., alcohol)."
+      "description": "The name of a substance/molecule (i.e., beer or wine) at a more specific level than the type of a substance (i.e., alcohol)."
     },
     {
       "datatype": "Boolean",
@@ -23152,20 +23511,6 @@
       },
       "id": "20b7d73c-f569-4663-89fd-6b46699425e4",
       "description": "NationalProviderIdentification"
-    },
-    {
-      "datatype": "String",
-      "analyzer": "METAPHONE",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Medical Provider ",
-      "type": {
-        "namespace": "provider",
-        "name": "name"
-      },
-      "id": "b34d7370-bf48-4eca-b11b-7b269e0fe653",
-      "description": "Name of a provider (not a person, but clinic, hospital, etc.)"
     },
     {
       "datatype": "String",
@@ -26217,34 +26562,6 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "substance OtherConsequenceComments",
-      "type": {
-        "namespace": "substance",
-        "name": "OtherConsequenceComments"
-      },
-      "id": "b4147f66-69d3-4175-88cb-b9854f0ae097",
-      "description": "substance OtherConsequenceComments"
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "OtherConsequenceOfSubstanceUse",
-      "type": {
-        "namespace": "substance",
-        "name": "OtherConsequenceOfSubstanceUse"
-      },
-      "id": "c83eeb97-7ab1-46f1-843d-6fa23ee063f4",
-      "description": "OtherConsequenceOfSubstanceUse"
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
       "title": "PreviousHelpfulTreatment",
       "type": {
         "namespace": "substance",
@@ -26380,34 +26697,6 @@
       "description": "Drug Usage Duration"
     },
     {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Arrests from substance use (Y/N)",
-      "type": {
-        "namespace": "substance",
-        "name": "arrests"
-      },
-      "id": "1e8bcd73-b194-4d4a-bd82-cbdb3444f4ba",
-      "description": "Arrests from substance use (Y/N)"
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Biopsychosocial Consequence",
-      "type": {
-        "namespace": "substance",
-        "name": "biopsychosocialconsequenceofuse"
-      },
-      "id": "fcc324a1-96c5-4db9-8826-9e344fd9309d",
-      "description": "Biopsychosocial consequence of substance use"
-    },
-    {
       "datatype": "String",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -26458,25 +26747,6 @@
       },
       "id": "f987df92-7280-4164-8f0b-9d891a646502",
       "description": "Other consequences of substance use (Comments)"
-    },
-    {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [
-        {
-          "namespace": "v2",
-          "name": "v2"
-        }
-      ],
-      "title": "Cravings from substance use (Y/N)",
-      "type": {
-        "namespace": "substance",
-        "name": "craving"
-      },
-      "id": "e2354e9e-2f15-487e-9c83-0169f01a85db",
-      "description": "Cravings from substance use (Y/N)"
     },
     {
       "datatype": "Boolean",
@@ -26588,110 +26858,6 @@
       "description": "Drug Usage Frequency"
     },
     {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [
-        {
-          "namespace": "v2",
-          "name": "v2"
-        }
-      ],
-      "title": "Hallucinations from substance use (Y/N)",
-      "type": {
-        "namespace": "substance",
-        "name": "hallucinations"
-      },
-      "id": "694fc9d7-0fa8-45ab-b629-8d14965004ee",
-      "description": "Hallucinations from substance use (Y/N)"
-    },
-    {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [
-        {
-          "namespace": "v2",
-          "name": "v2"
-        }
-      ],
-      "title": "Hangovers from substance use (Y/N)",
-      "type": {
-        "namespace": "substance",
-        "name": "hangover"
-      },
-      "id": "0a289a9a-a9e9-4e35-bca8-55246b9cf078",
-      "description": "Hangovers from substance use (Y/N)"
-    },
-    {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Job loss from substance use (Y/N)",
-      "type": {
-        "namespace": "substance",
-        "name": "jobloss"
-      },
-      "id": "a506cbde-8089-4ed6-82eb-d948321efb26",
-      "description": "Job loss from substance use (Y/N)"
-    },
-    {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [
-        {
-          "namespace": "v2",
-          "name": "v2"
-        }
-      ],
-      "title": "Memory Problems from substance use (Y/N)",
-      "type": {
-        "namespace": "substance",
-        "name": "memoryproblems"
-      },
-      "id": "3a13f977-6e36-4b28-82b2-2443b2870c00",
-      "description": "Memory Problems from substance use (Y/N)"
-    },
-    {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [
-        {
-          "namespace": "v2",
-          "name": "v2"
-        }
-      ],
-      "title": "Morning use of substances (Y/N)",
-      "type": {
-        "namespace": "substance",
-        "name": "morninguse"
-      },
-      "id": "5da8c765-e8b2-4834-b6f8-30c4e91ba120",
-      "description": "Morning use of substances (Y/N)"
-    },
-    {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "OUIs from substance use (Y/N)",
-      "type": {
-        "namespace": "substance",
-        "name": "oui"
-      },
-      "id": "ea59876e-aa0c-4ce6-ba5f-706a983e5156",
-      "description": "OUIs from substance use (Y/N)"
-    },
-    {
       "datatype": "String",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -26725,20 +26891,6 @@
       "description": "Description of any periods of sobriety."
     },
     {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Physical Consequence",
-      "type": {
-        "namespace": "substance",
-        "name": "physicalconsequenceofuse"
-      },
-      "id": "55bc2532-f87f-4607-ac89-de0520745f4b",
-      "description": "Physical consequence of substance use"
-    },
-    {
       "datatype": "Boolean",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -26751,20 +26903,6 @@
       },
       "id": "450b6a3a-1cf3-4a75-b6bc-fe173156daa4",
       "description": "Interested in Quitting Nicotine (Y/N)"
-    },
-    {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Relationship problems from substance use (Y/N)",
-      "type": {
-        "namespace": "substance",
-        "name": "relationshipproblems"
-      },
-      "id": "27e26f8a-2e1f-4bd2-9465-155dbe605db3",
-      "description": "Relationship problems from substance use (Y/N)"
     },
     {
       "datatype": "Boolean",
@@ -26843,25 +26981,6 @@
       "description": "Description of any sobriety support."
     },
     {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [
-        {
-          "namespace": "v2",
-          "name": "v2"
-        }
-      ],
-      "title": "Tremors/shakes from substance use (Y/N)",
-      "type": {
-        "namespace": "substance",
-        "name": "tremorsshakes"
-      },
-      "id": "f49f87ca-117e-442b-bfa3-4ca5641a07f1",
-      "description": "Tremors/shakes from substance use (Y/N)"
-    },
-    {
       "datatype": "String",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -26928,7 +27047,7 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Time completed",
+      "title": "Time completed (-d)",
       "type": {
         "namespace": "time",
         "name": "completed"
@@ -27570,25 +27689,6 @@
           },
           "id": "0de9808a-d8e3-4f62-9413-e86e5ede304a",
           "description": "Details on how a Call for Service is initiated or originated. Could be by a person, or an organization."
-        },
-        {
-          "datatype": "Boolean",
-          "analyzer": "STANDARD",
-          "piiField": false,
-          "multiValued": true,
-          "schemas": [
-            {
-              "namespace": "v2",
-              "name": "v2"
-            }
-          ],
-          "title": "Memory Problems from substance use (Y/N)",
-          "type": {
-            "namespace": "substance",
-            "name": "memoryproblems"
-          },
-          "id": "3a13f977-6e36-4b28-82b2-2443b2870c00",
-          "description": "Memory Problems from substance use (Y/N)"
         },
         {
           "datatype": "DateTimeOffset",
@@ -28522,25 +28622,6 @@
           "description": "License plate type-auto, truck, apportioned, etc."
         },
         {
-          "datatype": "Boolean",
-          "analyzer": "STANDARD",
-          "piiField": false,
-          "multiValued": true,
-          "schemas": [
-            {
-              "namespace": "v2",
-              "name": "v2"
-            }
-          ],
-          "title": "Morning use of substances (Y/N)",
-          "type": {
-            "namespace": "substance",
-            "name": "morninguse"
-          },
-          "id": "5da8c765-e8b2-4834-b6f8-30c4e91ba120",
-          "description": "Morning use of substances (Y/N)"
-        },
-        {
           "datatype": "String",
           "analyzer": "STANDARD",
           "piiField": false,
@@ -28760,7 +28841,7 @@
               "name": "v2"
             }
           ],
-          "title": "Commit date",
+          "title": "Commit date (-d)",
           "type": {
             "namespace": "date",
             "name": "commit"
@@ -30194,25 +30275,6 @@
           "description": "Additional text descriptions of heart disease."
         },
         {
-          "datatype": "Boolean",
-          "analyzer": "STANDARD",
-          "piiField": false,
-          "multiValued": true,
-          "schemas": [
-            {
-              "namespace": "v2",
-              "name": "v2"
-            }
-          ],
-          "title": "Tremors/shakes from substance use (Y/N)",
-          "type": {
-            "namespace": "substance",
-            "name": "tremorsshakes"
-          },
-          "id": "f49f87ca-117e-442b-bfa3-4ca5641a07f1",
-          "description": "Tremors/shakes from substance use (Y/N)"
-        },
-        {
           "datatype": "String",
           "analyzer": "STANDARD",
           "piiField": false,
@@ -30536,25 +30598,6 @@
           "description": "Active or inactive employees (i.e., former employees)"
         },
         {
-          "datatype": "Boolean",
-          "analyzer": "STANDARD",
-          "piiField": false,
-          "multiValued": true,
-          "schemas": [
-            {
-              "namespace": "v2",
-              "name": "v2"
-            }
-          ],
-          "title": "Hangovers from substance use (Y/N)",
-          "type": {
-            "namespace": "substance",
-            "name": "hangover"
-          },
-          "id": "0a289a9a-a9e9-4e35-bca8-55246b9cf078",
-          "description": "Hangovers from substance use (Y/N)"
-        },
-        {
           "datatype": "String",
           "analyzer": "STANDARD",
           "piiField": false,
@@ -30584,7 +30627,7 @@
               "name": "v2"
             }
           ],
-          "title": "Location or Address Line 1 - Street Address",
+          "title": "Street Address",
           "type": {
             "namespace": "location",
             "name": "street"
@@ -30667,25 +30710,6 @@
           },
           "id": "d08410b0-5e37-4fef-a29a-fbc30a7cd9db",
           "description": "Additional text descriptions of any swelling of extremities."
-        },
-        {
-          "datatype": "Boolean",
-          "analyzer": "STANDARD",
-          "piiField": false,
-          "multiValued": true,
-          "schemas": [
-            {
-              "namespace": "v2",
-              "name": "v2"
-            }
-          ],
-          "title": "Hallucinations from substance use (Y/N)",
-          "type": {
-            "namespace": "substance",
-            "name": "hallucinations"
-          },
-          "id": "694fc9d7-0fa8-45ab-b629-8d14965004ee",
-          "description": "Hallucinations from substance use (Y/N)"
         },
         {
           "datatype": "Int16",
@@ -31743,7 +31767,7 @@
               "name": "v2"
             }
           ],
-          "title": "FullAddress",
+          "title": "FullAddress (-d)",
           "type": {
             "namespace": "location",
             "name": "Address"
@@ -33405,25 +33429,6 @@
           "description": "Field for notes and other data"
         },
         {
-          "datatype": "Boolean",
-          "analyzer": "STANDARD",
-          "piiField": false,
-          "multiValued": true,
-          "schemas": [
-            {
-              "namespace": "v2",
-              "name": "v2"
-            }
-          ],
-          "title": "Cravings from substance use (Y/N)",
-          "type": {
-            "namespace": "substance",
-            "name": "craving"
-          },
-          "id": "e2354e9e-2f15-487e-9c83-0169f01a85db",
-          "description": "Cravings from substance use (Y/N)"
-        },
-        {
           "datatype": "String",
           "analyzer": "STANDARD",
           "piiField": false,
@@ -33919,7 +33924,10 @@
             "8ce79ba8-b498-460a-a1b3-325954bb6d4f",
             "f7f01aa6-159a-435f-901b-44e62679bc51",
             "e481c9b7-d3b5-4c7a-bdfc-54ec801a541a",
-            "24f9de48-5c58-4697-a68c-fe156bfa3c3c"
+            "24f9de48-5c58-4697-a68c-fe156bfa3c3c",
+            "55bd8483-ae7e-466f-88bd-84d67160bd3f",
+            "a5753546-902d-4eb0-8914-e014487138e4",
+            "5ef69814-cd40-4209-ba7a-04f966c2fd00"
           ],
           "title": "A booking.",
           "type": {
@@ -34321,7 +34329,7 @@
             "name": "committedby"
           },
           "id": "5d88ee83-3be4-4a04-9650-e7f1c48c3662",
-          "description": "(Person) is committed by (Authority).",
+          "description": "(Person) is committed by (Authority) to jail.",
           "category": "EntityType",
           "key": [
             "39e13db7-a730-421a-a600-ae0674060140"
@@ -34349,7 +34357,10 @@
             "cfea602e-9b53-4f10-8c2f-97173b77003d",
             "92ecb196-23f1-4ab4-a8c3-084ccbcc151a",
             "6e22d468-4977-4bec-8b87-9a9a9b10963e",
-            "e5471522-9ec6-46e1-8b91-56b7e9291605"
+            "e5471522-9ec6-46e1-8b91-56b7e9291605",
+            "1023b3ee-f2d4-4eea-84a5-824ce6fa1bc0",
+            "d16ed792-851b-42cb-9e82-246869355651",
+            "3e6d3232-6469-46ee-b437-aa0d0458a88e"
           ],
           "title": "Jail stay/record",
           "type": {
@@ -34663,13 +34674,13 @@
           "properties": [
             "39e13db7-a730-421a-a600-ae0674060140"
           ],
-          "title": "(Person) sentenced with (Sentence).",
+          "title": "Sentenced with",
           "type": {
             "namespace": "ol",
             "name": "sentencedwith"
           },
           "id": "76677f67-c0bf-4db9-bc9c-c050828ba477",
-          "description": "",
+          "description": "(Person) sentenced with (Sentence).",
           "category": "EntityType",
           "key": [
             "39e13db7-a730-421a-a600-ae0674060140"
@@ -35008,13 +35019,13 @@
           "properties": [
             "39e13db7-a730-421a-a600-ae0674060140"
           ],
-          "title": "(Person) released by (Authority).",
+          "title": "Released by",
           "type": {
             "namespace": "ol",
             "name": "releasedby"
           },
           "id": "a094e89f-3b4f-4e98-9d2c-12e604ae9d6a",
-          "description": "",
+          "description": "Links together an officer/agency with someone they are releasing. (Person) released by (Authority).",
           "category": "EntityType",
           "key": [
             "39e13db7-a730-421a-a600-ae0674060140"
@@ -35085,13 +35096,13 @@
           "properties": [
             "39e13db7-a730-421a-a600-ae0674060140"
           ],
-          "title": "(Person) transported by (Authority).",
+          "title": "Transported by",
           "type": {
             "namespace": "ol",
             "name": "transportedby"
           },
           "id": "a404cc39-0259-4c8e-91b5-8def2071d997",
-          "description": "",
+          "description": "Links together an officer/agency with someone they are transporting.",
           "category": "EntityType",
           "key": [
             "39e13db7-a730-421a-a600-ae0674060140"
@@ -35180,7 +35191,7 @@
             "ee3a7573-aa70-4afb-814d-3fad27cda988",
             "f5628aca-71b2-40fe-ad66-374cb1f4d506"
           ],
-          "title": "Located At (deprecated)",
+          "title": "Located At (-d)",
           "type": {
             "namespace": "geo",
             "name": "locatedat"
@@ -35230,13 +35241,13 @@
           "properties": [
             "39e13db7-a730-421a-a600-ae0674060140"
           ],
-          "title": "(Something) is of length (Length entity).",
+          "title": "Length of",
           "type": {
             "namespace": "ol",
             "name": "oflength"
           },
           "id": "5003d581-0cc3-4d05-b4e2-a62f56d28bb9",
-          "description": "",
+          "description": "(Something) is of length (Length entity).",
           "category": "EntityType",
           "key": [
             "39e13db7-a730-421a-a600-ae0674060140"
@@ -35361,7 +35372,8 @@
             "a791ca8d-b433-4a2b-be04-43d43cea14a7",
             "f9010dd8-ce62-4d2f-a6a7-e4cf32ec6940",
             "7acb8cda-34bc-4fbc-b320-7481debfa294",
-            "84b850d8-4fb8-4507-b0f6-0b0466d39c0a"
+            "84b850d8-4fb8-4507-b0f6-0b0466d39c0a",
+            "80be96e6-58e5-4015-a851-312c9c2327bd"
           ],
           "title": "An agency",
           "type": {
@@ -35392,7 +35404,7 @@
             "name": "resultsin"
           },
           "id": "aa29d6c3-1cb9-445f-b722-07f6a40efa31",
-          "description": "(Event) results in (Event)",
+          "description": "An association which describes that one entity results in another. (Event) results in (Event).",
           "category": "EntityType",
           "key": [
             "39e13db7-a730-421a-a600-ae0674060140"
