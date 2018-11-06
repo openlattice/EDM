@@ -27986,69 +27986,7 @@
         "namespace": "ol",
         "name": "deprecated"
       },
-      "propertyTypes": [
-        {
-          "datatype": "Int32",
-          "analyzer": "STANDARD",
-          "piiField": false,
-          "multiValued": true,
-          "schemas": [],
-          "title": "Class (-d)",
-          "type": {
-            "namespace": "cfs",
-            "name": "class"
-          },
-          "id": "ba457ac1-37ec-4866-b273-a4d3a09e6992",
-          "description": "CFS Type Class"
-        },
-        {
-          "datatype": "DateTimeOffset",
-          "analyzer": "STANDARD",
-          "piiField": false,
-          "multiValued": true,
-          "schemas": [],
-          "title": "Completed DateTime (-d)",
-          "type": {
-            "namespace": "date",
-            "name": "CompletedDateTime"
-          },
-          "id": "adf443f7-eae6-4276-8f4b-55cc5b705880",
-          "description": "Completed DateTime"
-        },
-        {
-          "datatype": "DateTimeOffset",
-          "analyzer": "STANDARD",
-          "piiField": false,
-          "multiValued": true,
-          "schemas": [
-            {
-              "namespace": "v2",
-              "name": "v2"
-            }
-          ],
-          "title": "Commit date (-d)",
-          "type": {
-            "namespace": "date",
-            "name": "commit"
-          },
-          "id": "3cfead4f-09ce-4ef8-bd03-a70dce298ac5",
-          "description": "Commit date"
-        },
-        {
-          "datatype": "TimeOfDay",
-          "analyzer": "STANDARD",
-          "piiField": false,
-          "multiValued": true,
-          "schemas": [],
-          "title": "Time Of Day (-d)",
-          "type": {
-            "namespace": "date",
-            "name": "timeOfDay"
-          },
-          "id": "d24888b1-cbbc-4557-b928-20c16ad744cf",
-          "description": "Time Of Day"
-        }
-      ],
+      "propertyTypes": [],
       "entityTypes": []
     },
     {
