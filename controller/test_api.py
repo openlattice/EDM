@@ -27,5 +27,3 @@ from utils import edm, edm_utils
 # # pull.create_issue_comment(report)
 
 print(os.environ.get("bamboo.planRepository.branch"))
-
-print("ya")
