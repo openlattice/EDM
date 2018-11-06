@@ -27986,8 +27986,132 @@
         "namespace": "ol",
         "name": "deprecated"
       },
-      "propertyTypes": [],
-      "entityTypes": []
+      "propertyTypes": [
+        {
+          "datatype": "Int32",
+          "analyzer": "STANDARD",
+          "piiField": false,
+          "multiValued": true,
+          "schemas": [],
+          "title": "Class (-d)",
+          "type": {
+            "namespace": "cfs",
+            "name": "class"
+          },
+          "id": "ba457ac1-37ec-4866-b273-a4d3a09e6992",
+          "description": "CFS Type Class"
+        },
+        {
+          "datatype": "DateTimeOffset",
+          "analyzer": "STANDARD",
+          "piiField": false,
+          "multiValued": true,
+          "schemas": [],
+          "title": "Completed DateTime (-d)",
+          "type": {
+            "namespace": "date",
+            "name": "CompletedDateTime"
+          },
+          "id": "adf443f7-eae6-4276-8f4b-55cc5b705880",
+          "description": "Completed DateTime"
+        },
+        {
+          "datatype": "DateTimeOffset",
+          "analyzer": "STANDARD",
+          "piiField": false,
+          "multiValued": true,
+          "schemas": [
+            {
+              "namespace": "v2",
+              "name": "v2"
+            }
+          ],
+          "title": "Commit date (-d)",
+          "type": {
+            "namespace": "date",
+            "name": "commit"
+          },
+          "id": "3cfead4f-09ce-4ef8-bd03-a70dce298ac5",
+          "description": "Commit date"
+        }
+      ],
+      "entityTypes": [
+        {
+          "propertyTags": {
+            "91106b89-5842-48e4-a21f-ef923557c1b8": [
+              "timeline"
+            ]
+          },
+          "schemas": [
+            {
+              "namespace": "v2",
+              "name": "v2"
+            }
+          ],
+          "properties": [
+            "3ca03e79-6b50-4fc4-94a0-17b25eabae34",
+            "999dbc43-519f-43b2-8119-73a2ef196bf5",
+            "477db70c-ee49-41bf-97d2-c4eb0e1ffcc4",
+            "91106b89-5842-48e4-a21f-ef923557c1b8",
+            "eabab409-8ce7-499f-a4fb-d71356ada13b",
+            "5f122ec5-f8cd-4618-8bfa-3f387141616c",
+            "13ad1d8a-24da-4c5d-9168-018d33979007",
+            "25431c60-6c26-4210-a422-569c5226ba7e",
+            "c228a9c8-e0f3-4bb0-8b09-78b2c6162caa",
+            "c97555a0-ed79-4944-a000-ab961da3ab48",
+            "d673e32c-6e67-4885-8e30-47e98f6229f2",
+            "9d2d4a0e-26af-46c8-b366-fd872dbc5506",
+            "062fd4f6-30c0-4a4a-a221-18bb1da2cb88",
+            "f7c87cb1-7ddd-4dec-b634-bef6f184a557",
+            "e71e3faa-fc19-45f8-87e7-c3e2449a1dac",
+            "c2b18c7a-6625-4a31-8196-a8d3cb0e3309",
+            "19466bb0-eeba-4c69-9ab1-8999b3cb43bf",
+            "8de9d1f4-9fe1-4056-a342-9142b227fd86",
+            "80c3ffc7-5a8a-4547-8d60-dfb0b06e92b4",
+            "285e6bfc-2a73-49ae-8cb2-b112244ed85d",
+            "cb92bd0b-0338-4f93-9936-e857e12be830",
+            "6f995298-c6b7-4f9c-b9a2-81d873a7c692",
+            "b94361f0-7172-4556-a4f3-99a183bff03c",
+            "e6d790e8-f2aa-457f-9597-369cf7e0214a",
+            "92a6a5c5-b4f1-40ce-ace9-be232acdce2a",
+            "bd96f0c8-dbc0-49cd-b3a2-bb3faa9d6860",
+            "d7a0c31f-6bea-4818-a299-7378b5516df2",
+            "f105dd1b-1c71-4042-8ea8-53013070d9da"
+          ],
+          "title": "Incident (-d)",
+          "type": {
+            "namespace": "criminaljustice",
+            "name": "incident"
+          },
+          "id": "4c21bcc3-0d4c-40ba-95cd-275a763f94ef",
+          "description": "A police incident",
+          "category": "EntityType",
+          "key": [
+            "3ca03e79-6b50-4fc4-94a0-17b25eabae34"
+          ]
+        },
+        {
+          "propertyTags": {},
+          "schemas": [],
+          "properties": [
+            "6675a7e8-2159-41b1-9431-4053690fa3c9",
+            "620b3e07-7f85-4629-a075-7e8c6f7eb3cb",
+            "ee34032c-9082-4535-af42-8d568683324f",
+            "ee3a7573-aa70-4afb-814d-3fad27cda988"
+          ],
+          "title": "Contacted At (-d)",
+          "type": {
+            "namespace": "geo",
+            "name": "contactedat"
+          },
+          "id": "0aab8372-2c95-4f8c-b67a-79066371365e",
+          "description": "Association linking person and contact info (excluding address).",
+          "category": "AssociationType",
+          "key": [
+            "ee3a7573-aa70-4afb-814d-3fad27cda988"
+          ]
+        }
+      ]
     },
     {
       "fqn": {
