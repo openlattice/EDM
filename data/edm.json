@@ -332,7 +332,7 @@
         "14908e47-923a-4c87-8d94-5881bf871cc1",
         "e6d740ac-daa7-40e6-b864-c83d5054fa21"
       ],
-      "title": "Jail stay/record_deprecated",
+      "title": "Jail stay/record (-d)",
       "type": {
         "namespace": "criminaljustice",
         "name": "jailrecord"
@@ -30572,7 +30572,7 @@
             "14908e47-923a-4c87-8d94-5881bf871cc1",
             "e6d740ac-daa7-40e6-b864-c83d5054fa21"
           ],
-          "title": "Jail stay/record_deprecated",
+          "title": "Jail stay/record (-d)",
           "type": {
             "namespace": "criminaljustice",
             "name": "jailrecord"
