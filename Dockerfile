@@ -7,11 +7,7 @@ ADD requirements.txt requirements.txt
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# install openapi straight from openapi-specs
-RUN git clone -b feature/openapispecs https://github.com/openlattice/api.git
-RUN cd api && \
-  ./gradlew generatePythonClient && \
-  cd build/openapi/python && \
-  python setup.py install
+RUN mkdir /controller
+ADD controller /controller
 
 ENTRYPOINT ["python", "-u", "/controller/test_api.py"]
