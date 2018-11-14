@@ -312,7 +312,6 @@
         "5b16b066-99a7-4dbc-81c3-2b10ea12929c",
         "7229eb9e-f1bd-4bc9-b0aa-8de827ca968a",
         "7c3bf67e-888f-472c-9555-119d7d91828e",
-        "8333b42a-5a17-4e7c-a4c1-a02a2cf14969",
         "dbd01c6f-42bb-46b1-9401-ac92c0592498",
         "2150bad7-7c4f-47fc-9f9c-db6cbed102df",
         "0d02fc2b-561d-4de9-ac14-611b54a99eb9"
@@ -1254,7 +1253,7 @@
         "properties": [
           "6675a7e8-2159-41b1-9431-4053690fa3c9"
         ],
-        "title": "Referred by (health)",
+        "title": "Referred by / referred to (health)",
         "type": {
           "namespace": "health",
           "name": "referredby"
@@ -1273,7 +1272,8 @@
       "dst": [
         "23f20ed7-e7b6-487d-8876-cbb552c2f62d",
         "8f0eb3df-1a35-42a6-92f1-84474d9e118b",
-        "3c0320b0-93cf-4b16-8b16-3720feafff93"
+        "3c0320b0-93cf-4b16-8b16-3720feafff93",
+        "436da824-c9b5-4a6d-b121-72c77be98ac8"
       ],
       "bidirectional": false
     },
@@ -1941,7 +1941,6 @@
       "dst": [
         "deccb4b4-9156-4f43-983d-104c344c2096",
         "9e7a5933-f649-4061-9e29-b90b828089e1",
-        "8d365f28-71b1-491f-8227-9107b053b2c9",
         "ab43ae3f-e83a-45e3-9ba4-eace79b589ae"
       ],
       "bidirectional": false
@@ -2088,7 +2087,8 @@
       "dst": [
         "6faf5245-3ad1-4d47-96fe-ea11cd4bf1c8",
         "deccb4b4-9156-4f43-983d-104c344c2096",
-        "31cf5595-3fe9-4d3e-a9cf-39355a4b8cab"
+        "31cf5595-3fe9-4d3e-a9cf-39355a4b8cab",
+        "697c12ec-fec3-4f6e-b603-89d48cbdf4fe"
       ],
       "bidirectional": false
     },
@@ -2709,7 +2709,6 @@
       "src": [
         "6faf5245-3ad1-4d47-96fe-ea11cd4bf1c8",
         "deccb4b4-9156-4f43-983d-104c344c2096",
-        "8d365f28-71b1-491f-8227-9107b053b2c9",
         "31cf5595-3fe9-4d3e-a9cf-39355a4b8cab"
       ],
       "dst": [
@@ -2811,7 +2810,6 @@
       ],
       "dst": [
         "deccb4b4-9156-4f43-983d-104c344c2096",
-        "8d365f28-71b1-491f-8227-9107b053b2c9",
         "6faf5245-3ad1-4d47-96fe-ea11cd4bf1c8"
       ],
       "bidirectional": true
@@ -2887,13 +2885,13 @@
           "5f122ec5-f8cd-4618-8bfa-3f387141616c",
           "39e13db7-a730-421a-a600-ae0674060140"
         ],
-        "title": "Is - deprecated -  (person to patient, suspect, employee etc.)",
+        "title": "Is (person to patient, suspect, employee etc.) (-d)",
         "type": {
           "namespace": "ol",
           "name": "is"
         },
         "id": "14c4ec7c-af16-4a55-991c-46d574f0ff6c",
-        "description": "\"Is\" - deprecated - association connecting the general and more specific person-types (including employees).",
+        "description": "\"Is\" association connecting the general and more specific person-types (including employees).",
         "category": "AssociationType",
         "key": [
           "ee3a7573-aa70-4afb-814d-3fad27cda988"
@@ -3007,7 +3005,8 @@
         "33f389fe-9ff6-41eb-b7f9-aa1aad545014",
         "b6c79daa-e6ce-4d6b-9c39-892feb9ff077",
         "347d5723-a19c-4ab7-8e6d-31e6173f3a0d",
-        "993b3736-88e4-411a-bcba-2ef6605f8b22"
+        "993b3736-88e4-411a-bcba-2ef6605f8b22",
+        "29aa89f5-682f-4c12-8435-a3cf5fa1bbaa"
       ],
       "dst": [
         "136eee13-0113-4b91-a804-6154824daa49",
@@ -3108,6 +3107,35 @@
         "c8c1ef66-56da-43e1-a1b1-4b0a71d53968",
         "e33ad963-60fd-489d-8cdb-9faca522e18a",
         "503bc786-437c-4591-9e4e-64e7d4d1286a"
+      ],
+      "bidirectional": false
+    },
+    {
+      "entityType": {
+        "propertyTags": {},
+        "schemas": [],
+        "properties": [
+          "6675a7e8-2159-41b1-9431-4053690fa3c9",
+          "8e65eca6-a3d1-4c05-885f-cc3156257139",
+          "39e13db7-a730-421a-a600-ae0674060140"
+        ],
+        "title": "Presents For (e.g., person presents for health encounter)",
+        "type": {
+          "namespace": "ol",
+          "name": "presentsfor"
+        },
+        "id": "bc37fd8c-3de5-49e1-80db-ad5feb37e408",
+        "description": "Person presents for health encounter or health service",
+        "category": "AssociationType",
+        "key": [
+          "39e13db7-a730-421a-a600-ae0674060140"
+        ]
+      },
+      "src": [
+        "31cf5595-3fe9-4d3e-a9cf-39355a4b8cab"
+      ],
+      "dst": [
+        "29aa89f5-682f-4c12-8435-a3cf5fa1bbaa"
       ],
       "bidirectional": false
     },
@@ -3234,7 +3262,8 @@
         "33f389fe-9ff6-41eb-b7f9-aa1aad545014",
         "b3562c95-33bc-4143-a970-0d173a3f35fc",
         "892bce63-805e-4b45-b9b1-7eaea1c48f2f",
-        "26b6b5e0-7341-4941-b34a-3ee7b955335b"
+        "26b6b5e0-7341-4941-b34a-3ee7b955335b",
+        "d038e8f6-5910-46b2-88e4-b028a5120a46"
       ],
       "dst": [
         "72dc4594-8dc0-4956-959f-2408a069f2aa",
@@ -3413,7 +3442,8 @@
         "33f389fe-9ff6-41eb-b7f9-aa1aad545014",
         "892bce63-805e-4b45-b9b1-7eaea1c48f2f",
         "42c87ead-3038-4682-961c-5dd079071786",
-        "a0432ae5-799f-4dfc-a72e-adbde3e312b9"
+        "a0432ae5-799f-4dfc-a72e-adbde3e312b9",
+        "29aa89f5-682f-4c12-8435-a3cf5fa1bbaa"
       ],
       "dst": [
         "892bce63-805e-4b45-b9b1-7eaea1c48f2f",
@@ -3423,7 +3453,8 @@
         "a8933914-d849-4b90-ab0f-eaa1525c4ec8",
         "f55feb4f-1a3c-43f9-9259-1beb33ca61d9",
         "3a98a633-3a0f-49db-9b5b-64508945f533",
-        "fbadb396-0497-413c-83ee-89e7370d7e4d"
+        "fbadb396-0497-413c-83ee-89e7370d7e4d",
+        "9d40e6a5-5e00-47ec-9645-32fcfd276a86"
       ],
       "bidirectional": false
     },
@@ -3454,7 +3485,8 @@
       ],
       "dst": [
         "4d9dcc53-1655-4869-8684-879a24bc5a7d",
-        "c6088c26-29f0-4f7d-9491-dce34c4b9112"
+        "c6088c26-29f0-4f7d-9491-dce34c4b9112",
+        "d36848f0-ed6c-4c7a-9292-3bffe112bac3"
       ],
       "bidirectional": false
     },
@@ -3981,19 +4013,19 @@
       "propertyTags": {},
       "schemas": [],
       "properties": [
-        "e6878b9c-9a88-4818-8681-b65d592b1075",
-        "310c5884-e572-473b-b917-17b5b50d9298"
+        "a98b2c04-3f18-4d4e-aace-338145bd8416",
+        "ee619fe4-c2e8-4f30-8f37-90e3ba843ca4"
       ],
       "title": "OpenLattice Audit",
       "type": {
         "namespace": "OPENLATTICE_AUDIT",
         "name": "AUDIT"
       },
-      "id": "f451a8f1-c46f-484e-a45a-a1970ab20ca2",
+      "id": "1eb4605a-b46a-4360-8c86-e1dbdca50b9f",
       "description": "The OpenLattice Audit Entity Type.",
       "category": "EntityType",
       "key": [
-        "e6878b9c-9a88-4818-8681-b65d592b1075"
+        "a98b2c04-3f18-4d4e-aace-338145bd8416"
       ]
     },
     {
@@ -4029,9 +4061,11 @@
       "schemas": [],
       "properties": [
         "0442724d-526e-4abb-a98c-49245ad7cfae",
+        "b71a2186-e56a-4ade-b5a9-561d21db1331",
         "998bc748-4f40-4f5d-98ed-91ac4dab28a1",
         "9c82a2ce-0492-40ca-bfd8-7323f12e1e29",
         "9ee60ae1-d4f1-4cd6-a242-0cd287e7cad8",
+        "c5e40bd2-df10-450f-beed-ac1f4f9d0b89",
         "1c1d84ba-40f6-46ec-aaaf-c681d2366c8e",
         "2a7b3588-c3c4-49e2-9b4f-6b9fca771795",
         "6668b209-7b41-4fef-8c76-b70998f02a35",
@@ -4049,6 +4083,7 @@
         "aa335fd9-5212-4b11-b6bb-cace9cf6cb56",
         "80c95ba4-5c9d-457c-b7b2-85f4702a82f6",
         "68023b1d-9025-466d-80e2-b548eddeca8b",
+        "1eea0dc5-bea2-4462-8de5-4b7c8f9ad0cf",
         "bd4a3c16-cf71-4757-bc5a-b2c0eb32dcb8",
         "10dc1a8d-a0b1-48b7-8383-e003fc521559",
         "977ee856-bcda-4d35-b8d6-3271c4b0a456",
@@ -4056,6 +4091,7 @@
         "70916123-0a98-430d-81b5-8dca614728da",
         "227132f3-7802-43fd-b0fb-5950dcd6e21c",
         "3c05d4f1-3201-4117-8228-40ec6dd3e4b3",
+        "c65408d0-c966-413b-b868-d13f29402faf",
         "4b28408e-78e9-4d32-967e-e1ad8e26027f",
         "31ab7160-6a8b-46fa-aa9c-01d9b3f11806",
         "44d1f72b-9246-4d22-b5a7-d72ce0cf6db7",
@@ -4108,8 +4144,6 @@
         "7c1b100f-8ca2-4dfd-a751-0fce1339991b",
         "8bb0fb29-b210-4ace-a3d4-17a7b1af39fd",
         "6c29dee0-f4bf-4bd5-8034-7334f4a3074b",
-        "4f08f1e4-e7d9-41a5-b629-61de4c0ea983",
-        "833c2bb7-d6fb-4e19-91fc-5bca5ed8628c",
         "457b03d7-84b9-4028-a7f9-9836d7cd2658",
         "9441199f-3c8f-4f4b-af15-3e9546bc2531",
         "41b6073c-5198-4465-8338-166f41fd1e54",
@@ -4122,7 +4156,18 @@
         "e2a6b1bc-fcf9-4b7d-a7da-998e794c0583",
         "39e13db7-a730-421a-a600-ae0674060140",
         "a791ca8d-b433-4a2b-be04-43d43cea14a7",
-        "b02188e0-3001-4cef-9184-e31b1bba4cc0"
+        "b02188e0-3001-4cef-9184-e31b1bba4cc0",
+        "95c7b8b5-8a7b-41a3-8bdc-2a8f1df99cca",
+        "d9e349fc-8207-4d46-a0cc-f2ec179cb6a8",
+        "8b455c6e-0c0e-478c-a291-7519f1b0c279",
+        "3391e728-bfc1-43e2-bd9b-1106ec9d64c7",
+        "9a32aedd-6d65-4bde-b919-d6eb073a4273",
+        "24cd6477-01c5-4f25-8453-904d8a5ce84d",
+        "68c294ec-2b0c-449a-857c-397a92ca2a74",
+        "5a3b4a37-4675-410d-93cd-2f9262c23bef",
+        "437e5dac-d5e2-4a8f-beb5-7bb067ac015c",
+        "e75d3b82-3d82-485d-b203-984c64b5dc5c",
+        "44b84985-9849-4f8e-af7f-8f8e0c9557ff"
       ],
       "title": "Behavioral Health Report (BHR)",
       "type": {
@@ -5949,33 +5994,6 @@
         }
       ],
       "properties": [
-        "00210258-6b91-4767-a825-1dcea77f5fda",
-        "4202cfe6-a28d-4a96-a7e8-9cfbfa11acc6",
-        "60bcb7e1-297a-4631-bb69-11d54362fa6a",
-        "8256b8a3-8876-4202-8a3a-4908ddddf1ad",
-        "c16ab352-3099-4579-b900-40d54fec44c6"
-      ],
-      "title": "Nutritional Assessment",
-      "type": {
-        "namespace": "medical",
-        "name": "nutritionalassessment"
-      },
-      "id": "8333b42a-5a17-4e7c-a4c1-a02a2cf14969",
-      "description": "The evaluation of the nutritional system focuses food necessary for health and growth.",
-      "category": "EntityType",
-      "key": [
-        "60bcb7e1-297a-4631-bb69-11d54362fa6a"
-      ]
-    },
-    {
-      "propertyTags": {},
-      "schemas": [
-        {
-          "namespace": "v2",
-          "name": "v2"
-        }
-      ],
-      "properties": [
         "59666069-adae-4974-b328-c96340c4af75",
         "1c8ab6f0-e77b-42da-8140-becc02e6fd19",
         "2d975f4a-a244-4651-909c-3f4eb7ec27cc",
@@ -6088,21 +6106,22 @@
       "propertyTags": {},
       "schemas": [],
       "properties": [
-        "25431c60-6c26-4210-a422-569c5226ba7e",
-        "09ebda14-780d-489d-89e2-640f1b67c85c",
         "ddb5d841-4c82-407c-8fcb-58f04ffc20fe",
+        "2956a11f-b787-4fe9-b396-4f00b1bfecd8",
         "a791ca8d-b433-4a2b-be04-43d43cea14a7",
+        "09ebda14-780d-489d-89e2-640f1b67c85c",
         "e4c4cac8-aa44-4b99-9c6d-d3b3c6ef0734",
+        "91289250-d7aa-4cef-8069-02f0956a1ffa",
         "a7ecc119-6f7f-4603-b9ec-68b9141ea114",
-        "91289250-d7aa-4cef-8069-02f0956a1ffa"
+        "25431c60-6c26-4210-a422-569c5226ba7e"
       ],
-      "title": "Facility",
+      "title": "Facility or service delivery setting",
       "type": {
         "namespace": "o",
         "name": "facility"
       },
       "id": "34789bed-597c-47bd-953a-4ec859b455bb",
-      "description": "A facility, including jail, hospital, clinic, etc.",
+      "description": "A facility, including a jail, hospital, clinic, etc.; can also be used to describe another service setting in which a health care encounter occurs.",
       "category": "EntityType",
       "key": [
         "e4c4cac8-aa44-4b99-9c6d-d3b3c6ef0734"
@@ -6367,7 +6386,10 @@
         "80c3ffc7-5a8a-4547-8d60-dfb0b06e92b4",
         "39e13db7-a730-421a-a600-ae0674060140",
         "fc486634-adbf-4108-aa0b-65225cad5618",
-        "b94361f0-7172-4556-a4f3-99a183bff03c"
+        "b94361f0-7172-4556-a4f3-99a183bff03c",
+        "4cd3b524-8c33-4efe-8bbc-09738a06facf",
+        "28bf3e65-3497-4fe3-a080-b758caf65053",
+        "b9170d9b-8265-452c-b9e8-ebeab5f7556f"
       ],
       "title": "Arrest",
       "type": {
@@ -6434,12 +6456,13 @@
       "properties": [
         "a791ca8d-b433-4a2b-be04-43d43cea14a7",
         "80be96e6-58e5-4015-a851-312c9c2327bd",
+        "14908e47-923a-4c87-8d94-5881bf871cc1",
         "2a45205e-703c-43eb-a060-921bf7245f6a",
         "39e13db7-a730-421a-a600-ae0674060140",
         "bf4f1c24-65f5-47c7-88d7-48aec1e4e591",
         "0ee3acba-51a7-4f8d-921f-e23d75b07f65",
         "d750e74f-0829-439c-b6ef-1dfc3692a78f",
-        "14908e47-923a-4c87-8d94-5881bf871cc1"
+        "e092d7b6-6788-46c3-8c0a-f7438745514e"
       ],
       "title": "Authorization / Preauthorization (Status)",
       "type": {
@@ -6542,7 +6565,8 @@
         "24f9de48-5c58-4697-a68c-fe156bfa3c3c",
         "55bd8483-ae7e-466f-88bd-84d67160bd3f",
         "a5753546-902d-4eb0-8914-e014487138e4",
-        "5ef69814-cd40-4209-ba7a-04f966c2fd00"
+        "5ef69814-cd40-4209-ba7a-04f966c2fd00",
+        "b9170d9b-8265-452c-b9e8-ebeab5f7556f"
       ],
       "title": "A booking.",
       "type": {
@@ -6880,7 +6904,8 @@
         "ed3de637-df5d-47cf-bb91-9a8ee346a6ab",
         "28d5e08f-0d92-4c25-9f78-191d0632a11d",
         "8ec3bc52-0b2a-40a2-8816-2430c6daf627",
-        "a7ecc119-6f7f-4603-b9ec-68b9141ea114"
+        "a7ecc119-6f7f-4603-b9ec-68b9141ea114",
+        "db6eb03a-2eb5-4eb2-abee-b97147e9778e"
       ],
       "title": "Detox cautions and concerns",
       "type": {
@@ -6926,7 +6951,7 @@
         "14908e47-923a-4c87-8d94-5881bf871cc1",
         "f52ecac3-f1ab-46e4-8af8-3b8dcf68fe4d"
       ],
-      "title": "Diagnosis",
+      "title": "Diagnosis / Problem",
       "type": {
         "namespace": "ol",
         "name": "diagnosis"
@@ -7056,7 +7081,7 @@
       "title": "Employee",
       "type": {
         "namespace": "ol",
-        "name": "employee"
+        "name": "employee (-d)"
       },
       "id": "deccb4b4-9156-4f43-983d-104c344c2096",
       "description": "A person who works for a business or a person. For users, the unique ID should be the auth0 ID.",
@@ -7080,6 +7105,25 @@
       },
       "id": "7b0fbacb-d8e6-4a0c-93f7-9ca784120473",
       "description": "",
+      "category": "EntityType",
+      "key": [
+        "39e13db7-a730-421a-a600-ae0674060140"
+      ]
+    },
+    {
+      "propertyTags": {},
+      "schemas": [],
+      "properties": [
+        "39e13db7-a730-421a-a600-ae0674060140",
+        "2a45205e-703c-43eb-a060-921bf7245f6a"
+      ],
+      "title": "Employment information/ employment history",
+      "type": {
+        "namespace": "ol",
+        "name": "employment"
+      },
+      "id": "224bee1a-6f7b-42e6-89eb-d8d3cda0b342",
+      "description": "General employment information for a person or population",
       "category": "EntityType",
       "key": [
         "39e13db7-a730-421a-a600-ae0674060140"
@@ -7121,6 +7165,30 @@
       },
       "id": "c2f00f3d-48c9-47a2-80a4-b1cbcf7d5397",
       "description": "Enrollment Status - (e.g., enrollment in health insurance, government programs, etc)",
+      "category": "EntityType",
+      "key": [
+        "39e13db7-a730-421a-a600-ae0674060140"
+      ]
+    },
+    {
+      "propertyTags": {},
+      "schemas": [],
+      "properties": [
+        "92a6a5c5-b4f1-40ce-ace9-be232acdce2a",
+        "0ee3acba-51a7-4f8d-921f-e23d75b07f65",
+        "ddb5d841-4c82-407c-8fcb-58f04ffc20fe",
+        "a791ca8d-b433-4a2b-be04-43d43cea14a7",
+        "39e13db7-a730-421a-a600-ae0674060140",
+        "5c58f7b1-83ec-4ddc-b501-25eb3b25c7f6",
+        "2a45205e-703c-43eb-a060-921bf7245f6a"
+      ],
+      "title": "Event",
+      "type": {
+        "namespace": "ol",
+        "name": "event"
+      },
+      "id": "d36848f0-ed6c-4c7a-9292-3bffe112bac3",
+      "description": "",
       "category": "EntityType",
       "key": [
         "39e13db7-a730-421a-a600-ae0674060140"
@@ -7193,7 +7261,8 @@
         "ddb5d841-4c82-407c-8fcb-58f04ffc20fe",
         "a791ca8d-b433-4a2b-be04-43d43cea14a7",
         "e4c4cac8-aa44-4b99-9c6d-d3b3c6ef0734",
-        "80be96e6-58e5-4015-a851-312c9c2327bd"
+        "80be96e6-58e5-4015-a851-312c9c2327bd",
+        "c4ebb166-0d09-4499-beb3-627c3372168f"
       ],
       "title": "A form (e.g., consent form, release)",
       "type": {
@@ -7300,6 +7369,25 @@
     },
     {
       "propertyTags": {},
+      "schemas": [],
+      "properties": [
+        "a791ca8d-b433-4a2b-be04-43d43cea14a7",
+        "39e13db7-a730-421a-a600-ae0674060140"
+      ],
+      "title": "Housing / Living Arrangements",
+      "type": {
+        "namespace": "ol",
+        "name": "housing"
+      },
+      "id": "2fb96971-862a-4cd9-a9bc-00e89436a9d5",
+      "description": "Summary or persistent information about the housing, accommodation and living arrangements for an individual.",
+      "category": "EntityType",
+      "key": [
+        "39e13db7-a730-421a-a600-ae0674060140"
+      ]
+    },
+    {
+      "propertyTags": {},
       "schemas": [
         {
           "namespace": "v2",
@@ -7367,7 +7455,13 @@
         "351e51ad-9f7e-4bd5-a237-84b16e1e1ce8",
         "2a45205e-703c-43eb-a060-921bf7245f6a",
         "80be96e6-58e5-4015-a851-312c9c2327bd",
-        "a791ca8d-b433-4a2b-be04-43d43cea14a7"
+        "a791ca8d-b433-4a2b-be04-43d43cea14a7",
+        "bd96f0c8-dbc0-49cd-b3a2-bb3faa9d6860",
+        "8de9d1f4-9fe1-4056-a342-9142b227fd86",
+        "d7a0c31f-6bea-4818-a299-7378b5516df2",
+        "e481c9b7-d3b5-4c7a-bdfc-54ec801a541a",
+        "b9170d9b-8265-452c-b9e8-ebeab5f7556f",
+        "82798057-1496-4fd2-96cb-5156217fd8f7"
       ],
       "title": "Incident",
       "type": {
@@ -7601,7 +7695,9 @@
         "a791ca8d-b433-4a2b-be04-43d43cea14a7",
         "afd4df97-11ee-4c9d-85e0-58d33ed4d840",
         "7c2ddf7e-81da-4fe7-91d8-4d2e1f6c5e22",
-        "28d661b8-a45a-41b6-aec4-ed9988fa28dc"
+        "28d661b8-a45a-41b6-aec4-ed9988fa28dc",
+        "8a8a4b3a-2530-40ab-afb4-55db1641f6c5",
+        "e558a4e8-db25-478e-8f22-c5c230c27383"
       ],
       "title": "Location or address",
       "type": {
@@ -7758,7 +7854,8 @@
       "schemas": [],
       "properties": [
         "ddb5d841-4c82-407c-8fcb-58f04ffc20fe",
-        "39e13db7-a730-421a-a600-ae0674060140"
+        "39e13db7-a730-421a-a600-ae0674060140",
+        "a791ca8d-b433-4a2b-be04-43d43cea14a7"
       ],
       "title": "Medication Protocol",
       "type": {
@@ -7815,6 +7912,8 @@
         "39e13db7-a730-421a-a600-ae0674060140",
         "e481c9b7-d3b5-4c7a-bdfc-54ec801a541a",
         "29e89dab-2d08-4d19-922f-18b611cd12f1",
+        "98795356-940f-42c2-9929-383931cac3bf",
+        "1130598d-991c-43d5-911b-a824d9af0fb7",
         "c97555a0-ed79-4944-a000-ab961da3ab48",
         "729da80b-be28-496d-b6ce-bb118024408e",
         "24091b3a-9093-4db3-a540-9d83f4f76e01",
@@ -7867,10 +7966,11 @@
       "schemas": [],
       "properties": [
         "ddb5d841-4c82-407c-8fcb-58f04ffc20fe",
+        "80be96e6-58e5-4015-a851-312c9c2327bd",
         "ebe830b0-2ce9-4f84-9c11-3eaba875ee0d",
+        "0dde9277-25af-4c3d-980c-936ebb112c0d",
         "24cd6477-01c5-4f25-8453-904d8a5ce84d",
         "db5e822d-9255-43a8-83a3-0f178da477c9",
-        "0dde9277-25af-4c3d-980c-936ebb112c0d",
         "e4c4cac8-aa44-4b99-9c6d-d3b3c6ef0734",
         "39e13db7-a730-421a-a600-ae0674060140"
       ],
@@ -7880,7 +7980,7 @@
         "name": "organization"
       },
       "id": "436da824-c9b5-4a6d-b121-72c77be98ac8",
-      "description": "Organization information",
+      "description": "An organization is an entity comprising multiple people, such as an institution or an association, that has a collective goal and is linked to an external environment.",
       "category": "EntityType",
       "key": [
         "e4c4cac8-aa44-4b99-9c6d-d3b3c6ef0734"
@@ -7914,19 +8014,18 @@
       "propertyTags": {},
       "schemas": [],
       "properties": [
-        "5ef69814-cd40-4209-ba7a-04f966c2fd00",
-        "e4c4cac8-aa44-4b99-9c6d-d3b3c6ef0734"
+        "39e13db7-a730-421a-a600-ae0674060140"
       ],
-      "title": "Person - health care setting (patient)",
+      "title": "Patient",
       "type": {
         "namespace": "ol",
         "name": "patient"
       },
-      "id": "8d365f28-71b1-491f-8227-9107b053b2c9",
+      "id": "45013f5d-fd6f-41bc-983d-d7b4cfe9876c",
       "description": "Person entity for health care settings (e.g., medical, detox, etc).",
       "category": "EntityType",
       "key": [
-        "e4c4cac8-aa44-4b99-9c6d-d3b3c6ef0734"
+        "39e13db7-a730-421a-a600-ae0674060140"
       ]
     },
     {
@@ -8028,7 +8127,9 @@
         "f393b40b-884b-45d6-a351-845cb31c46ba",
         "f2c3c58f-e643-4990-9297-e0f009a67f86",
         "56cd7bc4-3d81-4a81-a5e2-308c4678efc4",
-        "45aa6695-a7e7-46b6-96bd-782e6aa9ac13"
+        "45aa6695-a7e7-46b6-96bd-782e6aa9ac13",
+        "2846a99b-daff-4f70-852a-091304ac49e9",
+        "cb92bd0b-0338-4f93-9936-e857e12be830"
       ],
       "title": "Personal details (criminal justice)",
       "type": {
@@ -8071,7 +8172,10 @@
         "92a6a5c5-b4f1-40ce-ace9-be232acdce2a",
         "0ee3acba-51a7-4f8d-921f-e23d75b07f65",
         "1e5bc2c5-3320-4ae0-b4eb-38edf65a4942",
-        "39e13db7-a730-421a-a600-ae0674060140"
+        "39e13db7-a730-421a-a600-ae0674060140",
+        "d9e349fc-8207-4d46-a0cc-f2ec179cb6a8",
+        "b9170d9b-8265-452c-b9e8-ebeab5f7556f",
+        "cb92bd0b-0338-4f93-9936-e857e12be830"
       ],
       "title": "Police CAD",
       "type": {
@@ -8686,6 +8790,31 @@
       "propertyTags": {},
       "schemas": [],
       "properties": [
+        "ddb5d841-4c82-407c-8fcb-58f04ffc20fe",
+        "80be96e6-58e5-4015-a851-312c9c2327bd",
+        "caf53ac1-30f2-492a-a284-65eef9ed7827",
+        "39e13db7-a730-421a-a600-ae0674060140",
+        "c4ebb166-0d09-4499-beb3-627c3372168f",
+        "2a45205e-703c-43eb-a060-921bf7245f6a",
+        "2a9c1cae-e3a8-437f-9fc3-ecfb3d43e3bf",
+        "d3bd803c-9dd6-4cf2-b6f7-8a66017d1c97"
+      ],
+      "title": "Symptom or Sign",
+      "type": {
+        "namespace": "ol",
+        "name": "symptom"
+      },
+      "id": "dc429aee-68fc-4ba2-b943-316ed83dee60",
+      "description": "Reported observation of a physical or mental disturbance in an individual. Use to record details about a single episode of a symptom or reported sign in an individual, as reported by the individual, parent, caregiver or other party. It may be recorded by a clinician as part of a clinical history record as reported to them, observed by the clinician or self-recorded as part of a clinical questionnaire or personal health record.",
+      "category": "EntityType",
+      "key": [
+        "39e13db7-a730-421a-a600-ae0674060140"
+      ]
+    },
+    {
+      "propertyTags": {},
+      "schemas": [],
+      "properties": [
         "92a6a5c5-b4f1-40ce-ace9-be232acdce2a",
         "0ee3acba-51a7-4f8d-921f-e23d75b07f65",
         "92ecb196-23f1-4ab4-a8c3-084ccbcc151a",
@@ -8792,17 +8921,17 @@
         }
       ],
       "properties": [
-        "8c798836-862f-4a84-af8b-0c982b11dfae",
         "43a6df96-1cb8-4daa-9a82-f9361b8777c7",
+        "ae27e6cd-701b-4952-b3ee-4ecbeeeb2eea",
+        "8c798836-862f-4a84-af8b-0c982b11dfae",
         "93b8b60b-bcfc-4778-99b8-8c57ce6cb502",
+        "f9398bdd-3f01-4628-9e3d-1c0bf7ed098e",
+        "5470892c-00f4-4511-ab04-495b3061afa3",
         "39e13db7-a730-421a-a600-ae0674060140",
         "539d322d-41d0-4596-aceb-17551af9b0ae",
-        "5470892c-00f4-4511-ab04-495b3061afa3",
-        "9177cb91-4596-4efc-b9f2-2335528c3376",
         "592062ad-d868-4bcf-8ee0-daa1331fc138",
+        "9177cb91-4596-4efc-b9f2-2335528c3376",
         "686bb9d4-766d-4ff5-bf63-a0d43bd6e9fc",
-        "ae27e6cd-701b-4952-b3ee-4ecbeeeb2eea",
-        "f9398bdd-3f01-4628-9e3d-1c0bf7ed098e",
         "afe0e263-adf3-4803-9053-2566f0220075",
         "0f95049c-b668-49b1-bf32-f26835471b0a",
         "881c2601-f3b9-40cd-bb9b-86e811182156",
@@ -9239,7 +9368,6 @@
     }
   ],
   "namespaces": [
-    "DELETE_ME",
     "OPENLATTICE_AUDIT",
     "arrestedin",
     "bhr",
@@ -9279,7 +9407,6 @@
     "location",
     "media",
     "medical",
-    "medicalcondition",
     "medication",
     "mock",
     "musculoskeletal",
@@ -9318,26 +9445,12 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "DELETE_MEDELETE_MEDELETE_MEDELETE_ME",
-      "type": {
-        "namespace": "DELETE_ME",
-        "name": "DELETE_ME"
-      },
-      "id": "ad1e2829-400a-4227-ae7b-e917f099a8c3",
-      "description": "DELETE_ME DELETE_ME DELETE_ME "
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
       "title": "Details",
       "type": {
         "namespace": "OPENLATTICE_AUDIT",
         "name": "DETAILS"
       },
-      "id": "310c5884-e572-473b-b917-17b5b50d9298",
+      "id": "ee619fe4-c2e8-4f30-8f37-90e3ba843ca4",
       "description": "Any details about the event being logged."
     },
     {
@@ -9351,7 +9464,7 @@
         "namespace": "OPENLATTICE_AUDIT",
         "name": "TYPE"
       },
-      "id": "e6878b9c-9a88-4818-8681-b65d592b1075",
+      "id": "a98b2c04-3f18-4d4e-aace-338145bd8416",
       "description": "The type of event being logged."
     },
     {
@@ -11605,7 +11718,7 @@
         "name": "completeddatetime"
       },
       "id": "6675a7e8-2159-41b1-9431-4053690fa3c9",
-      "description": "Completed date & time of an occurrence, or datetime at which an entity (usually an association) was sumitted."
+      "description": "Completed date & time of an occurrence, or datetime at which an entity (usually an association) was submitted."
     },
     {
       "datatype": "String",
@@ -12392,31 +12505,12 @@
       "description": "Unique ID for endocrine assessments"
     },
     {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [
-        {
-          "namespace": "v2",
-          "name": "v2"
-        }
-      ],
-      "title": "Insulin dependent (Y/N)",
-      "type": {
-        "namespace": "endocrine",
-        "name": "insulindependent"
-      },
-      "id": "eea67862-6b65-484a-abb8-2e03d5618129",
-      "description": "Insulin dependent (Y/N)"
-    },
-    {
       "datatype": "String",
       "analyzer": "STANDARD",
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Warrant Number",
+      "title": "Warrant Number (-d)",
       "type": {
         "namespace": "event",
         "name": "ArrestWarrantNumber"
@@ -13221,7 +13315,7 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Id (deprecated)",
+      "title": "Id (-d)",
       "type": {
         "namespace": "general",
         "name": "StringID"
@@ -13562,7 +13656,7 @@
           "name": "v2"
         }
       ],
-      "title": "Id (deprecated)",
+      "title": "Id (-d)",
       "type": {
         "namespace": "general",
         "name": "stringid"
@@ -14158,7 +14252,7 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Individual level names of medical staff (i.e., doctors, nurses, counselors) ",
+      "title": "Individual names of medical staff (i.e., doctors, nurses, counselors) ",
       "type": {
         "namespace": "health",
         "name": "staff"
@@ -15283,7 +15377,7 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Arrest Agency",
+      "title": "Arrest Agency (-d)",
       "type": {
         "namespace": "j",
         "name": "ArrestAgency"
@@ -15297,7 +15391,7 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Arrest Category",
+      "title": "Arrest Category (-d)",
       "type": {
         "namespace": "j",
         "name": "ArrestCategory"
@@ -15325,7 +15419,7 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Arrest Location",
+      "title": "Arrest Location (-d)",
       "type": {
         "namespace": "j",
         "name": "ArrestLocation"
@@ -15353,7 +15447,7 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Warrant Number",
+      "title": "Warrant Number (-d)",
       "type": {
         "namespace": "j",
         "name": "ArrestWarrant"
@@ -15493,7 +15587,7 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Agency (v1)",
+      "title": "Agency (-d)",
       "type": {
         "namespace": "j",
         "name": "EnforcementOfficialUnit"
@@ -17004,20 +17098,6 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "TroubleRemembering",
-      "type": {
-        "namespace": "medical",
-        "name": "TroubleRemembering"
-      },
-      "id": "bfd533ea-04d0-4841-80f4-106b845117e2",
-      "description": "TroubleRemembering"
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
       "title": "ViolentBehaviorWhenIntoxicated",
       "type": {
         "namespace": "medical",
@@ -17112,20 +17192,6 @@
       "description": "Current or history of anxiety (Y/N)"
     },
     {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Current or history of anxiety (comments)",
-      "type": {
-        "namespace": "medical",
-        "name": "anxietycomments"
-      },
-      "id": "0ba34f92-03fb-44ca-9048-5c648d404204",
-      "description": "Current or history of anxiety (comments)"
-    },
-    {
       "datatype": "Boolean",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -17138,20 +17204,6 @@
       },
       "id": "4374fb0e-5aab-4fc4-ac27-3d08f55a360f",
       "description": "Attempted suicide (Y/N)"
-    },
-    {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Being Seen At Other Clinics (Y/N)",
-      "type": {
-        "namespace": "medical",
-        "name": "beingseenatotherclinics"
-      },
-      "id": "5be0c5f8-d41f-4430-92cc-804bf6aa0a3d",
-      "description": "Whether being seen at other clinics"
     },
     {
       "datatype": "String",
@@ -17173,20 +17225,6 @@
       "description": "Cigarettes Per Day"
     },
     {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Current Dental Problem",
-      "type": {
-        "namespace": "medical",
-        "name": "currentdentalproblem"
-      },
-      "id": "822739a8-39a2-49c0-8d7f-f36c01dca4c1",
-      "description": "Description of any current dental problem or concern"
-    },
-    {
       "datatype": "Boolean",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -17199,20 +17237,6 @@
       },
       "id": "4a4e430a-a9f1-4b29-8a25-47d58635debd",
       "description": "Current or history of Depression (Y/N)"
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Current of history of Depression (comments)",
-      "type": {
-        "namespace": "medical",
-        "name": "depressioncomments"
-      },
-      "id": "0b7f958f-0f0b-4c3e-b651-25d83550adbf",
-      "description": "Current of history of Depression (comments)"
     },
     {
       "datatype": "Boolean",
@@ -17243,39 +17267,6 @@
       "description": "Distrust of family and friends (Y/N)"
     },
     {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [
-        {
-          "namespace": "v2",
-          "name": "v2"
-        }
-      ],
-      "title": "Food allergies/special diet",
-      "type": {
-        "namespace": "medical",
-        "name": "foodallergyspecialdiet"
-      },
-      "id": "4202cfe6-a28d-4a96-a7e8-9cfbfa11acc6",
-      "description": "Food allergies/special diet considerations"
-    },
-    {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Hallucinations (Y/N)",
-      "type": {
-        "namespace": "medical",
-        "name": "hallucinations"
-      },
-      "id": "bcd15ade-eaa7-4de2-9d09-6e5e675a4416",
-      "description": "Hallucinations (Y/N)"
-    },
-    {
       "datatype": "Boolean",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -17302,20 +17293,6 @@
       },
       "id": "79b728ce-8884-4526-a38d-96e54129f4e5",
       "description": "Increased tolerance (Y/N)"
-    },
-    {
-      "datatype": "DateTimeOffset",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Date of last dental visit",
-      "type": {
-        "namespace": "medical",
-        "name": "lastdentalvisit"
-      },
-      "id": "3fa83d4e-21ed-4fa6-a687-cb0bbd2fb6b5",
-      "description": "Date of last dental visit"
     },
     {
       "datatype": "String",
@@ -17346,20 +17323,6 @@
       "description": "Whether receiving treatment for mental health/trauma issues. (Y/N)"
     },
     {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Current or history of mood swings (Y/N)",
-      "type": {
-        "namespace": "medical",
-        "name": "moodswings"
-      },
-      "id": "3f4a86d8-8ca7-4352-a587-154d2e54780a",
-      "description": "Current or history of mood swings (Y/N)"
-    },
-    {
       "datatype": "String",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -17372,20 +17335,6 @@
       },
       "id": "21543237-91a0-4990-95c4-121673726483",
       "description": "Current or history of mood swings (comments)"
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Nurse's Psychiatric Assessment ID",
-      "type": {
-        "namespace": "medical",
-        "name": "nursepsychiatricassessmentid"
-      },
-      "id": "3c883a1a-74d3-4c23-9724-1320c62d34d8",
-      "description": "Unique ID for nurse's psychiatric assessment"
     },
     {
       "datatype": "DateTimeOffset",
@@ -17407,34 +17356,6 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Current or history of paranoia (Y/N)",
-      "type": {
-        "namespace": "medical",
-        "name": "paranoia"
-      },
-      "id": "d6348d4f-b1fa-4372-b27e-0905fa9fb338",
-      "description": "Current or history of paranoia (Y/N)"
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Current or history of paranoia (comments)",
-      "type": {
-        "namespace": "medical",
-        "name": "paranoiacomments"
-      },
-      "id": "b1369c38-9fc1-4cd4-b4f4-30a1e3c096b1",
-      "description": "Current or history of paranoia (comments)"
-    },
-    {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
       "title": "Preoccupied with drinking alcohol or drugs (Y/N)",
       "type": {
         "namespace": "medical",
@@ -17442,25 +17363,6 @@
       },
       "id": "e46e35fd-2e65-47e2-9768-46a44917488a",
       "description": "Preoccupied with drinking alcohol or drugs (Y/N)"
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [
-        {
-          "namespace": "v2",
-          "name": "v2"
-        }
-      ],
-      "title": "Prior eating habits",
-      "type": {
-        "namespace": "medical",
-        "name": "prioreatinghabit"
-      },
-      "id": "00210258-6b91-4767-a825-1dcea77f5fda",
-      "description": "Prior eating habits"
     },
     {
       "datatype": "String",
@@ -17489,20 +17391,6 @@
       },
       "id": "1ae3a121-f61b-43b4-8ca4-b95dd503fa9c",
       "description": ""
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Psychiatric diagnosis / medications",
-      "type": {
-        "namespace": "medical",
-        "name": "psychiatricdiagnosismedications"
-      },
-      "id": "20ec1e23-c5fa-4c06-bf1c-7bc7f248e81b",
-      "description": "PsychiatricDiagnosisPsychiatric diagnosis / medications"
     },
     {
       "datatype": "String",
@@ -17566,20 +17454,6 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Self-harming thoughts (Y/N)",
-      "type": {
-        "namespace": "medical",
-        "name": "selfharmingthoughts"
-      },
-      "id": "10f12cc7-0ed2-4aee-a139-20a37559aac8",
-      "description": "Self-harming thoughts (Y/N)"
-    },
-    {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
       "title": "Serious Depression (Y/N)",
       "type": {
         "namespace": "medical",
@@ -17634,20 +17508,6 @@
       },
       "id": "f2c3c58f-e643-4990-9297-e0f009a67f86",
       "description": "Suicidal Ideation (Y/N)"
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Suicidal Ideation (comments)",
-      "type": {
-        "namespace": "medical",
-        "name": "suicidalideationcomments"
-      },
-      "id": "bcda1990-8baf-4a24-b58b-5f3a131e480e",
-      "description": "Suicidal Ideation (comments)"
     },
     {
       "datatype": "String",
@@ -17751,20 +17611,6 @@
       },
       "id": "8256b8a3-8876-4202-8a3a-4908ddddf1ad",
       "description": "Weight gain/loss in the past month"
-    },
-    {
-      "datatype": "Boolean",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Delirium Tremens",
-      "type": {
-        "namespace": "medicalcondition",
-        "name": "DeliriumTremens"
-      },
-      "id": "49f85954-f0a0-4d57-8d99-d326017d1ec1",
-      "description": "Whether has Delirium Tremens."
     },
     {
       "datatype": "String",
@@ -18661,6 +18507,20 @@
       "description": "Flag for whether something (e.g., a weapon) is accessible."
     },
     {
+      "datatype": "String",
+      "analyzer": "METAPHONE",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Action taken",
+      "type": {
+        "namespace": "ol",
+        "name": "action"
+      },
+      "id": "5c58f7b1-83ec-4ddc-b501-25eb3b25c7f6",
+      "description": ""
+    },
+    {
       "datatype": "Boolean",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -18957,17 +18817,31 @@
     },
     {
       "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Attitude (other)",
+      "type": {
+        "namespace": "ol",
+        "name": "attitudeother"
+      },
+      "id": "44b84985-9849-4f8e-af7f-8f8e0c9557ff",
+      "description": ""
+    },
+    {
+      "datatype": "String",
       "analyzer": "METAPHONE",
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Authorization / Preauthorization / Referral Description",
+      "title": "Authorized entity - Description of authorization or link to entity being authorized",
       "type": {
         "namespace": "ol",
-        "name": "authorizationdescription"
+        "name": "authorizing"
       },
-      "id": "77bc519c-24d7-4cae-ae19-9b07c549765e",
-      "description": ""
+      "id": "e092d7b6-6788-46c3-8c0a-f7438745514e",
+      "description": "Link to entity being authorized"
     },
     {
       "datatype": "String",
@@ -19957,13 +19831,27 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
+      "title": "District",
+      "type": {
+        "namespace": "ol",
+        "name": "district"
+      },
+      "id": "8a8a4b3a-2530-40ab-afb4-55db1641f6c5",
+      "description": "A district."
+    },
+    {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
       "title": "Domestic violence flag (Y/N)",
       "type": {
         "namespace": "ol",
         "name": "domesticviolenceflag"
       },
       "id": "6f995298-c6b7-4f9c-b9a2-81d873a7c692",
-      "description": "Whether domestic violence is involved in a law enforcement or other event."
+      "description": "Whether domestic violence or \"domestic dispute\" is involved in a law enforcement or other event."
     },
     {
       "datatype": "String",
@@ -19978,6 +19866,20 @@
       },
       "id": "abaa98db-9265-42ca-a272-74d667c972e1",
       "description": "Dosage of medication (e.g., how much taken at a given time). If more than one active ingredient, list all."
+    },
+    {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Drug type (other)",
+      "type": {
+        "namespace": "ol",
+        "name": "drugtypeother"
+      },
+      "id": "1eea0dc5-bea2-4462-8de5-4b7c8f9ad0cf",
+      "description": ""
     },
     {
       "datatype": "String",
@@ -20725,6 +20627,20 @@
       "description": "Person needs help reading or writing (Y/N) "
     },
     {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Incident type (other)",
+      "type": {
+        "namespace": "ol",
+        "name": "incidenttypeother"
+      },
+      "id": "c5e40bd2-df10-450f-beed-ac1f4f9d0b89",
+      "description": ""
+    },
+    {
       "datatype": "Boolean",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -21320,6 +21236,20 @@
     },
     {
       "datatype": "String",
+      "analyzer": "METAPHONE",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Neighborhood",
+      "type": {
+        "namespace": "ol",
+        "name": "neighborhood"
+      },
+      "id": "e558a4e8-db25-478e-8f22-c5c230c27383",
+      "description": "A neighborhood."
+    },
+    {
+      "datatype": "String",
       "analyzer": "STANDARD",
       "piiField": false,
       "multiValued": true,
@@ -21448,6 +21378,20 @@
       },
       "id": "e481c9b7-d3b5-4c7a-bdfc-54ec801a541a",
       "description": "Field for notes and other data"
+    },
+    {
+      "datatype": "Boolean",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Notified (Y/N)",
+      "type": {
+        "namespace": "ol",
+        "name": "notified"
+      },
+      "id": "68c294ec-2b0c-449a-857c-397a92ca2a74",
+      "description": "flag for whether someone was notified."
     },
     {
       "datatype": "Int64",
@@ -21674,6 +21618,20 @@
       "description": "Number of data sources a person is found in (e.g., iIn how many police jurisdictions does a record of someone come up?) For aggregation and ranking of top utilizers."
     },
     {
+      "datatype": "Boolean",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Offered & Declined (Y/N)",
+      "type": {
+        "namespace": "ol",
+        "name": "offereddeclined"
+      },
+      "id": "8b455c6e-0c0e-478c-a291-7519f1b0c279",
+      "description": "Flag for when services were offered, and declined. "
+    },
+    {
       "datatype": "String",
       "analyzer": "METAPHONE",
       "piiField": false,
@@ -21714,6 +21672,34 @@
       },
       "id": "58b549ca-62af-4e09-8624-4989f776d4d2",
       "description": "Time spent by an agency or organization at an event. (minutes)"
+    },
+    {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Notified (other)",
+      "type": {
+        "namespace": "ol",
+        "name": "othernotified"
+      },
+      "id": "5a3b4a37-4675-410d-93cd-2f9262c23bef",
+      "description": ""
+    },
+    {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Person injured (other)",
+      "type": {
+        "namespace": "ol",
+        "name": "otherpersoninjured"
+      },
+      "id": "95c7b8b5-8a7b-41a3-8bdc-2a8f1df99cca",
+      "description": "Person injured, other than one of a set list of categories."
     },
     {
       "datatype": "String",
@@ -22333,6 +22319,20 @@
       "description": "Reason person is held."
     },
     {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Reason (other)",
+      "type": {
+        "namespace": "ol",
+        "name": "reasonother"
+      },
+      "id": "b71a2186-e56a-4ade-b5a9-561d21db1331",
+      "description": "Other reason."
+    },
+    {
       "datatype": "Boolean",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -22690,6 +22690,34 @@
     },
     {
       "datatype": "String",
+      "analyzer": "METAPHONE",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Service Setting",
+      "type": {
+        "namespace": "ol",
+        "name": "servicesetting"
+      },
+      "id": "2956a11f-b787-4fe9-b396-4f00b1bfecd8",
+      "description": "Specific service setting (e.g., for a health care interaction)."
+    },
+    {
+      "datatype": "String",
+      "analyzer": "METAPHONE",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Severity",
+      "type": {
+        "namespace": "ol",
+        "name": "severity"
+      },
+      "id": "c4ebb166-0d09-4499-beb3-627c3372168f",
+      "description": "Mild [The problem or diagnosis does not interfere with normal activity or may cause damage to health if left untreated.]\nModerate [The problem or diagnosis causes interference with normal activity or will damage health if left untreated.]\nSevere [The problem or diagnosis prevents normal activity or will seriously damage health if left untreated.]  Fatal."
+    },
+    {
+      "datatype": "String",
       "analyzer": "STANDARD",
       "piiField": false,
       "multiValued": true,
@@ -22892,7 +22920,7 @@
         "name": "status"
       },
       "id": "2a45205e-703c-43eb-a060-921bf7245f6a",
-      "description": "General Status"
+      "description": "Status  (e.g., status of condition - active/present, inactive, resolved, in remission)"
     },
     {
       "datatype": "String",
@@ -23152,6 +23180,20 @@
       "description": "Text of form; reminder text; text of statement to be administered to individual (write-in)."
     },
     {
+      "datatype": "Boolean",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Threatened (Y/N)",
+      "type": {
+        "namespace": "ol",
+        "name": "threatened"
+      },
+      "id": "437e5dac-d5e2-4a8f-beb5-7bb067ac015c",
+      "description": "Flag for when someone threatened violence."
+    },
+    {
       "datatype": "String",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -23253,6 +23295,62 @@
       },
       "id": "e404a3f0-3e98-412f-b146-52aa80ec98c2",
       "description": "Class of type."
+    },
+    {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "UCR Code",
+      "type": {
+        "namespace": "ol",
+        "name": "ucr"
+      },
+      "id": "98795356-940f-42c2-9929-383931cac3bf",
+      "description": "UCR crime reporting code"
+    },
+    {
+      "datatype": "Int16",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "UCR count",
+      "type": {
+        "namespace": "ol",
+        "name": "ucrcount"
+      },
+      "id": "82798057-1496-4fd2-96cb-5156217fd8f7",
+      "description": "Count of UCR codes associated with record"
+    },
+    {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "UCR group",
+      "type": {
+        "namespace": "ol",
+        "name": "ucrgroup"
+      },
+      "id": "1130598d-991c-43d5-911b-a824d9af0fb7",
+      "description": "UCR crime reporting group"
+    },
+    {
+      "datatype": "Boolean",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Unable to contact ",
+      "type": {
+        "namespace": "ol",
+        "name": "unabletocontact"
+      },
+      "id": "3391e728-bfc1-43e2-bd9b-1106ec9d64c7",
+      "description": "Flag for when a person/organization is unable to be contacted."
     },
     {
       "datatype": "String",
@@ -23395,6 +23493,20 @@
       "description": "Was action voluntary (yes) or involuntary (no)"
     },
     {
+      "datatype": "Boolean",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Warrant (Y/N)",
+      "type": {
+        "namespace": "ol",
+        "name": "warrant"
+      },
+      "id": "2846a99b-daff-4f70-852a-091304ac49e9",
+      "description": "Flag for whether a warrant exists or has been issued."
+    },
+    {
       "datatype": "String",
       "analyzer": "STANDARD",
       "piiField": false,
@@ -23407,6 +23519,20 @@
       },
       "id": "fc486634-adbf-4108-aa0b-65225cad5618",
       "description": "Arrest warrant number."
+    },
+    {
+      "datatype": "String",
+      "analyzer": "STANDARD",
+      "piiField": false,
+      "multiValued": true,
+      "schemas": [],
+      "title": "Weapon type (other)",
+      "type": {
+        "namespace": "ol",
+        "name": "weapontypeother"
+      },
+      "id": "c65408d0-c966-413b-b868-d13f29402faf",
+      "description": "Other weapon type."
     },
     {
       "datatype": "Int16",
@@ -23841,7 +23967,7 @@
       "piiField": false,
       "multiValued": true,
       "schemas": [],
-      "title": "Location",
+      "title": "Location (-d)",
       "type": {
         "namespace": "place",
         "name": "Location"
@@ -26880,7 +27006,7 @@
       "piiField": true,
       "multiValued": true,
       "schemas": [],
-      "title": "Staff Email",
+      "title": "Email",
       "type": {
         "namespace": "staff",
         "name": "email"
@@ -27983,14 +28109,6 @@
     },
     {
       "fqn": {
-        "namespace": "ol",
-        "name": "deprecated"
-      },
-      "propertyTypes": [],
-      "entityTypes": []
-    },
-    {
-      "fqn": {
         "namespace": "v2",
         "name": "v2"
       },
@@ -28317,25 +28435,6 @@
           },
           "id": "a55ade07-1f39-464c-9028-5789baecd172",
           "description": "Whether a neurological symptom is baseline or a symptom of withdrawal"
-        },
-        {
-          "datatype": "Boolean",
-          "analyzer": "STANDARD",
-          "piiField": false,
-          "multiValued": true,
-          "schemas": [
-            {
-              "namespace": "v2",
-              "name": "v2"
-            }
-          ],
-          "title": "Insulin dependent (Y/N)",
-          "type": {
-            "namespace": "endocrine",
-            "name": "insulindependent"
-          },
-          "id": "eea67862-6b65-484a-abb8-2e03d5618129",
-          "description": "Insulin dependent (Y/N)"
         },
         {
           "datatype": "DateTimeOffset",
@@ -28868,25 +28967,6 @@
           },
           "id": "06083695-aebe-4a56-9b98-da6013e93a5e",
           "description": "Latitude"
-        },
-        {
-          "datatype": "String",
-          "analyzer": "STANDARD",
-          "piiField": false,
-          "multiValued": true,
-          "schemas": [
-            {
-              "namespace": "v2",
-              "name": "v2"
-            }
-          ],
-          "title": "Food allergies/special diet",
-          "type": {
-            "namespace": "medical",
-            "name": "foodallergyspecialdiet"
-          },
-          "id": "4202cfe6-a28d-4a96-a7e8-9cfbfa11acc6",
-          "description": "Food allergies/special diet considerations"
         },
         {
           "datatype": "String",
@@ -32053,7 +32133,7 @@
               "name": "v2"
             }
           ],
-          "title": "Id (deprecated)",
+          "title": "Id (-d)",
           "type": {
             "namespace": "general",
             "name": "stringid"
@@ -33364,25 +33444,6 @@
               "name": "v2"
             }
           ],
-          "title": "Prior eating habits",
-          "type": {
-            "namespace": "medical",
-            "name": "prioreatinghabit"
-          },
-          "id": "00210258-6b91-4767-a825-1dcea77f5fda",
-          "description": "Prior eating habits"
-        },
-        {
-          "datatype": "String",
-          "analyzer": "STANDARD",
-          "piiField": false,
-          "multiValued": true,
-          "schemas": [
-            {
-              "namespace": "v2",
-              "name": "v2"
-            }
-          ],
           "title": "Substance Type",
           "type": {
             "namespace": "substance",
@@ -33598,7 +33659,7 @@
             "name": "completeddatetime"
           },
           "id": "6675a7e8-2159-41b1-9431-4053690fa3c9",
-          "description": "Completed date & time of an occurrence, or datetime at which an entity (usually an association) was sumitted."
+          "description": "Completed date & time of an occurrence, or datetime at which an entity (usually an association) was submitted."
         },
         {
           "datatype": "String",
@@ -34073,7 +34134,7 @@
             "name": "status"
           },
           "id": "2a45205e-703c-43eb-a060-921bf7245f6a",
-          "description": "General Status"
+          "description": "Status  (e.g., status of condition - active/present, inactive, resolved, in remission)"
         },
         {
           "datatype": "String",
@@ -34153,33 +34214,6 @@
         }
       ],
       "entityTypes": [
-        {
-          "propertyTags": {},
-          "schemas": [
-            {
-              "namespace": "v2",
-              "name": "v2"
-            }
-          ],
-          "properties": [
-            "00210258-6b91-4767-a825-1dcea77f5fda",
-            "4202cfe6-a28d-4a96-a7e8-9cfbfa11acc6",
-            "60bcb7e1-297a-4631-bb69-11d54362fa6a",
-            "8256b8a3-8876-4202-8a3a-4908ddddf1ad",
-            "c16ab352-3099-4579-b900-40d54fec44c6"
-          ],
-          "title": "Nutritional Assessment",
-          "type": {
-            "namespace": "medical",
-            "name": "nutritionalassessment"
-          },
-          "id": "8333b42a-5a17-4e7c-a4c1-a02a2cf14969",
-          "description": "The evaluation of the nutritional system focuses food necessary for health and growth.",
-          "category": "EntityType",
-          "key": [
-            "60bcb7e1-297a-4631-bb69-11d54362fa6a"
-          ]
-        },
         {
           "propertyTags": {},
           "schemas": [
@@ -34329,7 +34363,8 @@
             "24f9de48-5c58-4697-a68c-fe156bfa3c3c",
             "55bd8483-ae7e-466f-88bd-84d67160bd3f",
             "a5753546-902d-4eb0-8914-e014487138e4",
-            "5ef69814-cd40-4209-ba7a-04f966c2fd00"
+            "5ef69814-cd40-4209-ba7a-04f966c2fd00",
+            "b9170d9b-8265-452c-b9e8-ebeab5f7556f"
           ],
           "title": "A booking.",
           "type": {
@@ -34488,7 +34523,9 @@
             "f393b40b-884b-45d6-a351-845cb31c46ba",
             "f2c3c58f-e643-4990-9297-e0f009a67f86",
             "56cd7bc4-3d81-4a81-a5e2-308c4678efc4",
-            "45aa6695-a7e7-46b6-96bd-782e6aa9ac13"
+            "45aa6695-a7e7-46b6-96bd-782e6aa9ac13",
+            "2846a99b-daff-4f70-852a-091304ac49e9",
+            "cb92bd0b-0338-4f93-9936-e857e12be830"
           ],
           "title": "Personal details (criminal justice)",
           "type": {
@@ -34920,17 +34957,17 @@
             }
           ],
           "properties": [
-            "8c798836-862f-4a84-af8b-0c982b11dfae",
             "43a6df96-1cb8-4daa-9a82-f9361b8777c7",
+            "ae27e6cd-701b-4952-b3ee-4ecbeeeb2eea",
+            "8c798836-862f-4a84-af8b-0c982b11dfae",
             "93b8b60b-bcfc-4778-99b8-8c57ce6cb502",
+            "f9398bdd-3f01-4628-9e3d-1c0bf7ed098e",
+            "5470892c-00f4-4511-ab04-495b3061afa3",
             "39e13db7-a730-421a-a600-ae0674060140",
             "539d322d-41d0-4596-aceb-17551af9b0ae",
-            "5470892c-00f4-4511-ab04-495b3061afa3",
-            "9177cb91-4596-4efc-b9f2-2335528c3376",
             "592062ad-d868-4bcf-8ee0-daa1331fc138",
+            "9177cb91-4596-4efc-b9f2-2335528c3376",
             "686bb9d4-766d-4ff5-bf63-a0d43bd6e9fc",
-            "ae27e6cd-701b-4952-b3ee-4ecbeeeb2eea",
-            "f9398bdd-3f01-4628-9e3d-1c0bf7ed098e",
             "afe0e263-adf3-4803-9053-2566f0220075",
             "0f95049c-b668-49b1-bf32-f26835471b0a",
             "881c2601-f3b9-40cd-bb9b-86e811182156",
@@ -35001,6 +35038,8 @@
             "39e13db7-a730-421a-a600-ae0674060140",
             "e481c9b7-d3b5-4c7a-bdfc-54ec801a541a",
             "29e89dab-2d08-4d19-922f-18b611cd12f1",
+            "98795356-940f-42c2-9929-383931cac3bf",
+            "1130598d-991c-43d5-911b-a824d9af0fb7",
             "c97555a0-ed79-4944-a000-ab961da3ab48",
             "729da80b-be28-496d-b6ce-bb118024408e",
             "24091b3a-9093-4db3-a540-9d83f4f76e01",
