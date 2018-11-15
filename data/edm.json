@@ -326,7 +326,7 @@
           "adf443f7-eae6-4276-8f4b-55cc5b705880",
           "ee3a7573-aa70-4afb-814d-3fad27cda988"
         ],
-        "title": "Insured By (deprecated)",
+        "title": "Insured By (-d)",
         "type": {
           "namespace": "general",
           "name": "InsuredBy"
@@ -4013,19 +4013,19 @@
       "propertyTags": {},
       "schemas": [],
       "properties": [
-        "a98b2c04-3f18-4d4e-aace-338145bd8416",
-        "ee619fe4-c2e8-4f30-8f37-90e3ba843ca4"
+        "e816dfd5-098b-4b93-8dac-77f03527a220",
+        "9bc2ccb1-5296-4d54-82ea-dbea99ae3da8"
       ],
       "title": "OpenLattice Audit",
       "type": {
         "namespace": "OPENLATTICE_AUDIT",
         "name": "AUDIT"
       },
-      "id": "1eb4605a-b46a-4360-8c86-e1dbdca50b9f",
+      "id": "13a388b0-781d-4eb7-a204-7e67d67e3a4e",
       "description": "The OpenLattice Audit Entity Type.",
       "category": "EntityType",
       "key": [
-        "a98b2c04-3f18-4d4e-aace-338145bd8416"
+        "e816dfd5-098b-4b93-8dac-77f03527a220"
       ]
     },
     {
@@ -9450,7 +9450,7 @@
         "namespace": "OPENLATTICE_AUDIT",
         "name": "DETAILS"
       },
-      "id": "ee619fe4-c2e8-4f30-8f37-90e3ba843ca4",
+      "id": "9bc2ccb1-5296-4d54-82ea-dbea99ae3da8",
       "description": "Any details about the event being logged."
     },
     {
@@ -9464,7 +9464,7 @@
         "namespace": "OPENLATTICE_AUDIT",
         "name": "TYPE"
       },
-      "id": "a98b2c04-3f18-4d4e-aace-338145bd8416",
+      "id": "e816dfd5-098b-4b93-8dac-77f03527a220",
       "description": "The type of event being logged."
     },
     {
