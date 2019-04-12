@@ -13720,6 +13720,22 @@
       "key": [
         "c2e168ac-ded5-4f00-b282-e2896e394ab1"
       ]
+    },
+    {
+      "type": {
+        "namespace": "this",
+        "name": "newentity"
+      },
+      "title": "This newentity is even better.",
+      "schemas": [],
+      "key": [
+        "d6e65a58-78b3-4aeb-b3c2-df0a6b039bec"
+      ],
+      "properties": [
+        "d6e65a58-78b3-4aeb-b3c2-df0a6b039bec"
+      ],
+      "id": "1376b66d-faed-4091-9e5d-a1e3518e4f99",
+      "category": "EntityType"
     }
   ],
   "namespaces": [
@@ -34890,6 +34906,19 @@
       },
       "id": "f16be3da-1066-4702-9dd0-ccb3a887a4e2",
       "description": "Drug Usage Amount"
+    },
+    {
+      "type": {
+        "namespace": "this",
+        "name": "newproperty"
+      },
+      "title": "This new property is awesome",
+      "datatype": "String",
+      "schemas": [],
+      "id": "d6e65a58-78b3-4aeb-b3c2-df0a6b039bec",
+      "description": "And very well described.",
+      "piiField": false,
+      "analyzer": "STANDARD"
     },
     {
       "datatype": "TimeOfDay",
