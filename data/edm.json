@@ -2728,7 +2728,6 @@
         "2e20c21e-6448-4a2d-bc57-9a5f2c45b589"
       ],
       "dst": [
-        "da8043c0-5377-40b7-bc9e-a5306bfef909",
         "fb30b015-690d-4310-b9ec-30596cbaf85d"
       ],
       "bidirectional": false
@@ -4247,7 +4246,6 @@
         ]
       },
       "src": [
-        "da8043c0-5377-40b7-bc9e-a5306bfef909",
         "fb30b015-690d-4310-b9ec-30596cbaf85d",
         "0446f356-6cba-4180-9b43-472daafb712c"
       ],
@@ -9099,7 +9097,10 @@
       "schemas": [],
       "properties": [
         "5ef69814-cd40-4209-ba7a-04f966c2fd00",
-        "d41be97c-15aa-4c3d-9720-55acb7d11ad6"
+        "d41be97c-15aa-4c3d-9720-55acb7d11ad6",
+        "e9264f06-9f0c-4196-b857-b4f8621f29f4",
+        "517d9dbd-d6cc-49d2-afed-21f6e86ff154",
+        "4ceb2128-8bff-409e-9ae2-39714c81b252"
       ],
       "title": "Digital Signature",
       "type": {
@@ -9331,7 +9332,8 @@
       "schemas": [],
       "properties": [
         "5ef69814-cd40-4209-ba7a-04f966c2fd00",
-        "d41be97c-15aa-4c3d-9720-55acb7d11ad6"
+        "d41be97c-15aa-4c3d-9720-55acb7d11ad6",
+        "ddb5d841-4c82-407c-8fcb-58f04ffc20fe"
       ],
       "title": "Electronic Signature",
       "type": {
@@ -12629,7 +12631,9 @@
         "7ed19ef2-a1ed-48e3-b347-18a885914bee",
         "3e93de4e-8344-4d08-a9ef-f967d1e0094d",
         "860fed9c-f446-4492-926b-d87d9daffd50",
-        "2a45205e-703c-43eb-a060-921bf7245f6a"
+        "2a45205e-703c-43eb-a060-921bf7245f6a",
+        "275e71f9-15b2-4107-8a15-d28fcedfa7cf",
+        "6436b8ba-a113-4fed-8cde-2e00c6a47253"
       ],
       "title": "Sleep / Sleep Habits",
       "type": {
@@ -13029,6 +13033,23 @@
       ]
     },
     {
+      "type": {
+        "namespace": "ol",
+        "name": "test"
+      },
+      "title": "testing",
+      "schemas": [],
+      "key": [
+        "5260cfbd-bfa4-40c1-ade5-cd83cc9f99b2"
+      ],
+      "properties": [
+        "5260cfbd-bfa4-40c1-ade5-cd83cc9f99b2"
+      ],
+      "id": "66f6da92-b5ee-460f-82a3-0101dbd5b309",
+      "description": "dfajsdhf",
+      "category": "EntityType"
+    },
+    {
       "propertyTags": {},
       "schemas": [],
       "properties": [
@@ -13068,6 +13089,24 @@
       "category": "EntityType",
       "key": [
         "39e13db7-a730-421a-a600-ae0674060140"
+      ]
+    },
+    {
+      "propertyTags": {},
+      "schemas": [],
+      "properties": [
+        "5260cfbd-bfa4-40c1-ade5-cd83cc9f99b2"
+      ],
+      "title": "toremove",
+      "type": {
+        "namespace": "ol",
+        "name": "toremove"
+      },
+      "id": "da8043c0-5377-40b7-bc9e-a5306bfef909",
+      "description": "",
+      "category": "EntityType",
+      "key": [
+        "5260cfbd-bfa4-40c1-ade5-cd83cc9f99b2"
       ]
     },
     {
@@ -29501,7 +29540,7 @@
         "name": "signaturedata"
       },
       "id": "d41be97c-15aa-4c3d-9720-55acb7d11ad6",
-      "description": "A \"raw\" signature, represented as binary data. A signature can be \"electronic\" or \"digital."
+      "description": "A \"raw\" signature, represented as binary data. A signature can be \"electronic\" or \"digital\"."
     },
     {
       "datatype": "Boolean",
@@ -30254,19 +30293,6 @@
       },
       "id": "dfce1de6-7968-450b-8523-4214509ccb31",
       "description": "Base rent that tenant is responsible for"
-    },
-    {
-      "type": {
-        "namespace": "ol",
-        "name": "test"
-      },
-      "title": "typ",
-      "datatype": "String",
-      "schemas": [],
-      "id": "7699fdd0-1abe-48ec-b4fe-ca58b83e48b9",
-      "description": "vladiasdf",
-      "piiField": false,
-      "analyzer": "STANDARD"
     },
     {
       "datatype": "String",
@@ -31262,20 +31288,6 @@
       },
       "id": "312ade60-5cc2-4c2c-b185-4e86b7d19153",
       "description": "Release UserName"
-    },
-    {
-      "datatype": "String",
-      "analyzer": "STANDARD",
-      "piiField": false,
-      "multiValued": true,
-      "schemas": [],
-      "title": "Scars Marks Tattoos",
-      "type": {
-        "namespace": "person",
-        "name": "ScarsMarksTattoos"
-      },
-      "id": "f2a29f71-594a-4623-aacf-2b598e5e0c2f",
-      "description": "Scars Marks Tattoos"
     },
     {
       "datatype": "String",
