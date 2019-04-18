@@ -1,4 +1,6 @@
+from collections import OrderedDict
 from github import Github
+import numpy as np
 import openlattice
 import requests
 import base64
@@ -11,10 +13,6 @@ import os
 
 from utils import api, edm, changes, commenter
 # decoder
-
-jwt="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Impva2VAb3BlbmxhdHRpY2UuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInVzZXJfbWV0YWRhdGEiOnt9LCJhcHBfbWV0YWRhdGEiOnsicm9sZXMiOlsiQXV0aGVudGljYXRlZFVzZXIiLCJhZG1pbiJdLCJvcmdhbml6YXRpb25zIjpbIjAwMDAwMDAwLTAwMDAtMDAwMS0wMDAwLTAwMDAwMDAwMDAwMCIsImU2NmM5ZWVmLTIzNzktNGEwYy05Y2JiLWM2ZDhiMmIxM2M1ZiJdfSwibmlja25hbWUiOiJqb2tlIiwicm9sZXMiOlsiQXV0aGVudGljYXRlZFVzZXIiLCJhZG1pbiJdLCJ1c2VyX2lkIjoiZ29vZ2xlLW9hdXRoMnwxMDM3NzE3NTU1NDA4NjUyOTkyNDgiLCJpc3MiOiJodHRwczovL29wZW5sYXR0aWNlLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwMzc3MTc1NTU0MDg2NTI5OTI0OCIsImF1ZCI6IktUemd5eHM2S0JjSkhCODcyZVNNZTJjcFRIemh4Uzk5IiwiaWF0IjoxNTU1NTQ5MTkzLCJleHAiOjE1NTU2MzU1OTN9.YzE7CKeR5V4caiJCh-JjCBvVLvzrd4fGUd45MqS38v4"
-baseurl = 'http://localhost:8080'
-
 
 # jwt = api.get_jwt()['access_token']
 # baseurl = "https://api.openlattice.com"
@@ -68,9 +66,30 @@ pull_key = edm.make_key_edm(pull_edm)
 prod_edm = api.request_edm(baseurl, jwt)
 prod_key = edm.make_key_edm(prod_edm)
 
+file_sha = repo.get_file_contents('data/edm.json')
 prod_change = commenter.comment(pull, master_key, pull_key, prod_key)
 
+
+############
+## COMMIT PROD TO MASTER
+############
+
+newdict = OrderedDict()
+associationTypesOrder = np.argsort([edm.concat_fqn(x['entityType']['type']) for x in prod_edm['associationTypes']])
+newdict['associationTypes'] = [prod_edm['associationTypes'][x] for x in associationTypesOrder]
+entityTypesOrder = np.argsort([edm.concat_fqn(x['type']) for x in prod_edm['entityTypes']])
+newdict['entityTypes'] = [prod_edm['entityTypes'][x] for x in entityTypesOrder]
+newdict['namespacesOrder'] = prod_edm['namespaces'].sort()
+propertyTypesOrder = np.argsort([edm.concat_fqn(x['type']) for x in prod_edm['propertyTypes']])
+newdict['propertyTypes'] = [prod_edm['propertyTypes'][x] for x in propertyTypesOrder]
+schemasOrder = np.argsort([edm.concat_fqn(x['fqn']) for x in prod_edm['schemas']])
+newdict['schemas'] = [prod_edm['schemas'][x] for x in schemasOrder]
+
+new_edm = json.dumps(newdict, indent=4)
+repo.update_file(path = "data/edm.json", message = "updates from prod", content = new_edm, sha = master_sha)
 # diff = EdmApi.get_entity_data_model_diff(master_edm)
+
+
 
 
 #############
@@ -95,82 +114,3 @@ prod_change = commenter.comment(pull, master_key, pull_key, prod_key)
 # repo.update_file('data/edm.json', message = "add prod changes", content = prod_edm_bin, sha = '8aa8219bf55af2eb0c29b16e8c6348822c0d0689', branch = branch)
 # 
 # path='data/edm.json'
-# 
-# 
-# GitBlob.GitBlob(content=prod_edm_str, encoding='utf-8')
-# 
-# 
-# 
-# 
-# 
-# cont = repo.get_contents('data/edm.json',gitsha)
-# 
-# encoded = base64.b64encode("data to be encoded")
-# 
-# 
-# import base64
-# encoded = base64.b64encode(b'data to be encoded')
-# 
-# new._useAttributes(attributes = {"content": prod_edm_str, "encoding": 'utf-8'})
-# 
-# 
-# 
-# 
-# report = report.replace("  "," ").replace("\n\n", "\n")
-# pull.create_issue_comment(report)
-# 
-# 
-# #################
-# ## ACTUALLY APPLY THE DIFFERENCES
-# #################
-# 
-# 
-# version = '00000167-1447-bdbb-0000-000000000000'
-# 
-# 
-# entityAPI = api.get_api_instance(baseurl, jwt)
-# 
-# 
-# prod_edm = api.request_edm(baseurl, jwt)
-# prod = edm.make_key_edm(prod_edm)
-# 
-# report = changes.changeReport(master,prod)
-# 
-# prodedm = entityAPI.get_entity_data_model().__dict__
-# prod_edm_decoded = decoder.decode_edm(prodedm, version)
-# prod = edm.make_key_edm(prod_edm_decoded)
-# 
-# master_edm_decoded = decoder.decode_edm(master_edm, version)
-# master_diff = entityAPI.get_entity_data_model_diff(master_edm_decoded)
-# 
-# edm_diff = entityAPI.get_entity_data_model_diff(prodedm)
-# 
-# 
-# master_edm_bin = repo.get_contents('data/edm.json').content.encode()
-# master_edm_str = base64.decodebytes(master_edm_bin)
-# master_edm = json.dumps(prod_edm_decoded)
-# 
-# 
-# master_edm_decoded.version
-# master_diff.diff.version
-# 
-# 
-# #################
-# ## GET REPORT
-# #################
-# 
-# report = edm.changeReport(master,new).get_report()
-# 
-# 
-# testEDM = openapi_client.EDM()
-# testEDM.version = '1234'
-# 
-# 
-# # is this gitsha a merge?
-# commit = repo.get_commit(gitsha)
-# commitmessage = commit.raw_data['commit']['message']
-# 
-# if commitmessage.startswith("Merge pull request"):
-#     # make sure pull request was approved
-#     PR = commitmessage.split("#")[1].split(" ")[0]
-#     pull = repo.get_pull(int(PR))
