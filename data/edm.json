@@ -32834,6 +32834,18 @@
       "analyzer": "STANDARD"
     },
     {
+      "datatype": "String",
+      "schemas": [],
+      "title": "test",
+      "type": {
+        "namespace": "test",
+        "name": "test"
+      },
+      "description": "test",
+      "piiField": false,
+      "analyzer": "STANDARD"
+    },
+    {
       "datatype": "TimeOfDay",
       "schemas": [],
       "title": "Time Alerted",
