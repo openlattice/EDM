@@ -12194,7 +12194,7 @@
         "name": "suicideriskassessment"
       },
       "id": "4dde8705-d19f-49b8-bd24-9ad55af9df22",
-      "description": "Guidelines on questions for NSPL Centers as to the minimum requirements for the\ncore principles and subcomponents of each Center\u2019s suicide risk assessment instrument. An affirmative answer to suicidality triggers a full risk assessment.",
+      "description": "Guidelines on questions for NSPL Centers as to the minimum requirements for the\ncore principles and subcomponents of each Center’s suicide risk assessment instrument. An affirmative answer to suicidality triggers a full risk assessment.",
       "category": "EntityType"
     },
     {
@@ -12950,7 +12950,76 @@
       "category": "EntityType"
     }
   ],
-  "namespacesOrder": null,
+  "namespaces": [
+    "OPENLATTICE_AUDIT",
+    "arrestedin",
+    "bhr",
+    "biomedical",
+    "cardiovascular",
+    "cfs",
+    "cfsorigin",
+    "contact",
+    "criminaljustice",
+    "date",
+    "datetime",
+    "demographics",
+    "detox",
+    "diagnosis",
+    "dispatch",
+    "dmf",
+    "economy",
+    "emotionalbehavioral",
+    "endocrine",
+    "event",
+    "form",
+    "gastrointestinal",
+    "general",
+    "genitourinary",
+    "geo",
+    "guardian",
+    "health",
+    "household",
+    "housing",
+    "im",
+    "incident",
+    "insurance",
+    "j",
+    "justice",
+    "lawenforcement",
+    "location",
+    "media",
+    "medical",
+    "medication",
+    "mock",
+    "musculoskeletal",
+    "nc",
+    "neurological",
+    "nutritional",
+    "o",
+    "offense",
+    "ol",
+    "patient",
+    "person",
+    "personnel",
+    "place",
+    "provider",
+    "psa",
+    "publicsafety",
+    "reproductive",
+    "respiratory",
+    "scr",
+    "screening",
+    "sharing",
+    "skin",
+    "staff",
+    "substance",
+    "time",
+    "vehicle",
+    "visit",
+    "vitals",
+    "withdrawal",
+    "witness"
+  ],
   "propertyTypes": [
     {
       "datatype": "String",
@@ -20374,7 +20443,7 @@
         "name": "acokscore"
       },
       "id": "469e2316-e850-4636-a4b4-01d7bcd69655",
-      "description": "Total # of AC-OK screening questions:  questions to which a patient answers \u201cyes\u201d  (or more specifically, questions with at least one non-\u201cno\u201d answer, since answers can consist of strings) in an emotional and behavioral assessment.",
+      "description": "Total # of AC-OK screening questions:  questions to which a patient answers “yes”  (or more specifically, questions with at least one non-“no” answer, since answers can consist of strings) in an emotional and behavioral assessment.",
       "piiField": false,
       "analyzer": "STANDARD"
     },
@@ -21917,7 +21986,7 @@
         "name": "contactmethod"
       },
       "id": "2ff089c6-716d-44d9-8470-bfe9689eeacd",
-      "description": "Contact Method - ('phone', \u2018email,\u2019 'walk-in', \u2018shelter')",
+      "description": "Contact Method - ('phone', ‘email,’ 'walk-in', ‘shelter')",
       "piiField": false,
       "analyzer": "METAPHONE"
     },
@@ -27873,6 +27942,19 @@
     {
       "datatype": "String",
       "schemas": [],
+      "title": "something",
+      "type": {
+        "namespace": "ol",
+        "name": "something"
+      },
+      "id": "c7eed0c6-b5c2-4333-9183-79c21ecf1438",
+      "description": "something",
+      "piiField": false,
+      "analyzer": "STANDARD"
+    },
+    {
+      "datatype": "String",
+      "schemas": [],
       "title": "Specific gravity - flag",
       "type": {
         "namespace": "ol",
@@ -28857,13 +28939,13 @@
     {
       "datatype": "Boolean",
       "schemas": [],
-      "title": "Have you tried to stop drinking/using, but couldn\u2019t? (AC-OK)",
+      "title": "Have you tried to stop drinking/using, but couldn’t? (AC-OK)",
       "type": {
         "namespace": "ol",
         "name": "unabletoquit"
       },
       "id": "77f4bb35-30a9-4001-bfaa-cb081be40892",
-      "description": "Have you tried to stop drinking/using, but couldn\u2019t? (AC-OK)",
+      "description": "Have you tried to stop drinking/using, but couldn’t? (AC-OK)",
       "piiField": false,
       "analyzer": "STANDARD"
     },
@@ -39640,7 +39722,7 @@
             "name": "acokscore"
           },
           "id": "469e2316-e850-4636-a4b4-01d7bcd69655",
-          "description": "Total # of AC-OK screening questions:  questions to which a patient answers \u201cyes\u201d  (or more specifically, questions with at least one non-\u201cno\u201d answer, since answers can consist of strings) in an emotional and behavioral assessment.",
+          "description": "Total # of AC-OK screening questions:  questions to which a patient answers “yes”  (or more specifically, questions with at least one non-“no” answer, since answers can consist of strings) in an emotional and behavioral assessment.",
           "piiField": false,
           "analyzer": "STANDARD"
         },
