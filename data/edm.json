@@ -32862,6 +32862,18 @@
     },
     {
       "analyzer": "STANDARD",
+      "datatype": "String",
+      "description": "type",
+      "piiField": false,
+      "schemas": [],
+      "title": "a new",
+      "type": {
+        "name": "type",
+        "namespace": "this"
+      }
+    },
+    {
+      "analyzer": "STANDARD",
       "datatype": "TimeOfDay",
       "description": "Time Alerted",
       "id": "919bfdc2-5da7-4e73-8418-081504e14309",
