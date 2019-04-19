@@ -23,7 +23,7 @@ def get_api_instance(baseurl, jwt):
     configuration.host = baseurl
     configuration.api_key_prefix['Authorization'] = 'Bearer'
     configuration.api_key['Authorization'] = jwt
-    api_instance = openlattice.EdmApi(openlattice.ApiClient(configuration))
+    api_instance = openlattice.ApiClient(configuration)
     return api_instance
 
 def request_edm(baseurl, jwt):
@@ -31,3 +31,4 @@ def request_edm(baseurl, jwt):
     url = os.path.join(baseurl,"datastore/edm/")
     edm = requests.get(url,headers=headers)
     return edm.json()
+
