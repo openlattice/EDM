@@ -13015,6 +13015,7 @@
     "staff",
     "substance",
     "test",
+    "this",
     "time",
     "vehicle",
     "visit",
@@ -32864,12 +32865,25 @@
       "analyzer": "STANDARD",
       "datatype": "String",
       "description": "type",
+      "id": "b9cff8e3-2a2c-446a-bf03-7e27eb635e7e",
       "piiField": false,
       "schemas": [],
       "title": "a new",
       "type": {
         "name": "type",
         "namespace": "this"
+      }
+    },
+    {
+      "analyzer": "STANDARD",
+      "datatype": "String",
+      "description": "somedescription.",
+      "piiField": false,
+      "schemas": [],
+      "title": "property",
+      "type": {
+        "name": "anew",
+        "namespace": "thisis"
       }
     },
     {
@@ -39786,4 +39800,5236 @@
         {
           "analyzer": "STANDARD",
           "datatype": "String",
-          "description": 
+          "description": "Dispatch Priority",
+          "id": "68199414-1903-4d4c-ae39-7609f9c997b4",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Dispatch Priority",
+          "type": {
+            "name": "dispatchpriority",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Additional text descriptions of any constipation.",
+          "id": "7c101eeb-3fd3-448b-b606-16e2da4f6d18",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Constipation (text)",
+          "type": {
+            "name": "constipationtext",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Color of hair.",
+          "id": "82f6ec6a-60ff-42d9-8abf-52086a2f1232",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Color of hair.",
+          "type": {
+            "name": "haircolor",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "DateTimeOffset",
+          "description": "Datetime to indicate reception of goods/call/...",
+          "id": "9f3bc9a7-cb01-4cb5-9d62-628912e7e637",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Datetime Received",
+          "type": {
+            "name": "receiveddatetime",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Unique ID for gastrointestinal assessments",
+          "id": "3149240c-7b95-4bbb-81ae-53b8c741cc2a",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "gastrointestinal ID",
+          "type": {
+            "name": "id",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "DateTimeOffset",
+          "description": "The date-time CFS a was received",
+          "id": "0d240f48-9347-46f7-a79e-b11ffdece2a8",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Received date-time",
+          "type": {
+            "name": "received",
+            "namespace": "datetime"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Normal bowel pattern",
+          "id": "2c82974e-1ea1-443e-af28-b879b0d138c9",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Normal bowel pattern",
+          "type": {
+            "name": "normalbowelpattern",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Constipation (Y/N)",
+          "id": "29d50517-8c66-4e0b-bd45-86d9309defb5",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Constipation (Y/N)",
+          "type": {
+            "name": "constipation",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "DateTimeOffset",
+          "description": "Total time taken for a dispatch call for service. ",
+          "id": "61fd0192-9740-408d-a9b7-aba5d3c0f26b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Total time of dispatch",
+          "type": {
+            "name": "totaldispatch",
+            "namespace": "datetime"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Agency ID",
+          "id": "a773c790-6564-4e5a-8f83-fbb0f45bd7a9",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Agency ID",
+          "type": {
+            "name": "agencyid",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Cigarettes Per Day",
+          "id": "631c1f02-3991-4644-a9d5-28aa16103ab9",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Cigarettes Per Day",
+          "type": {
+            "name": "cigarettesperday",
+            "namespace": "medical"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "History of headaches (Y/N)",
+          "id": "c78650e9-8bbc-4d84-9f8f-a0555a1c928c",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "History of headaches (Y/N)",
+          "type": {
+            "name": "historyofheadaches",
+            "namespace": "neurological"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A dispatch EMD level, such as with ProQA.",
+          "id": "8cf0d1a8-439a-402d-85c3-572a93e07ff8",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Dispatch EMD Level",
+          "type": {
+            "name": "dispatchemdlevel",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A unique resident ID.",
+          "id": "c9937ae9-4602-4c28-b719-3575aad643f4",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Resident ID",
+          "type": {
+            "name": "residentid",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Pancreatitis",
+          "id": "9aed27a9-c179-4dc3-b94a-b949979baa78",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Pancreatitis  (Y/N)",
+          "type": {
+            "name": "pancreatitis",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Additional text descriptions of hypertension.",
+          "id": "4700bd91-44c3-43d8-9c57-a78d62ffa8b0",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Hypertension (description)",
+          "type": {
+            "name": "hypertensiontext",
+            "namespace": "cardiovascular"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Boolean to indicate whether the vehicle was used for a dispatch transfer",
+          "id": "539d322d-41d0-4596-aceb-17551af9b0ae",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Boolean to indicate whether the vehicle was used for a dispatch transfer",
+          "type": {
+            "name": "dispatchtransfer",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Case number",
+          "id": "4d5db4fe-a0c8-45f8-af6d-cd7cd4cab86c",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Case number (v2)",
+          "type": {
+            "name": "casenumber",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Head Pediculi Present (Y/N)",
+          "id": "7a598bde-225f-48fb-b2b1-bfb95b48d546",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Head Pediculi Present (Y/N)",
+          "type": {
+            "name": "headpediculi",
+            "namespace": "skin"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether time spent in a housing program was less than 90 days. ",
+          "id": "2a659e04-9a9b-43d7-9585-7bcf6d1cf25d",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Time < 90 days in housing",
+          "type": {
+            "name": "timelessthan90days",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Details on a dispatch zone for a call for service.",
+          "id": "1e599c37-727e-45b8-a0be-310e095cab62",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Dispatch Zone",
+          "type": {
+            "name": "dispatchzonename",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Flag for LEA in a call for service.",
+          "id": "0e1bdba4-7dc9-4c48-a147-996573fa6fcd",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "CFS LEA",
+          "type": {
+            "name": "dispatchlea",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Unique ID for respiratory assessment ",
+          "id": "59666069-adae-4974-b328-c96340c4af75",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Respiratory ID",
+          "type": {
+            "name": "id",
+            "namespace": "respiratory"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Additional text descriptions of pancreatitis.",
+          "id": "f6ad21f8-f7ad-43c9-a001-83fc7a616e9d",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Pancreatitis (description)",
+          "type": {
+            "name": "pancreatitistext",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Alimony or other spousal support (Y/N)",
+          "id": "9dd6385b-50c9-43c2-bb86-9232cc187d1a",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Spousal Support (Y/N)",
+          "type": {
+            "name": "spousalsupport",
+            "namespace": "economy"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "The unit time (i.e., monthly,  weekly) that accompanies a specified amount of earned income.",
+          "id": "a07b2d64-d1a4-4555-a57d-470490920d32",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Earned income (unit time)",
+          "type": {
+            "name": "earnedincometimeunit",
+            "namespace": "economy"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Additional text descriptions of hepatitis.",
+          "id": "a4952023-21ba-4670-bdcd-514b3d3c82fe",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Hepatitis (description)",
+          "type": {
+            "name": "hepatitistext",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Double",
+          "description": "Latitude",
+          "id": "06083695-aebe-4a56-9b98-da6013e93a5e",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Latitude (-d)",
+          "type": {
+            "name": "latitude",
+            "namespace": "location"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "General Identifier",
+          "id": "39e13db7-a730-421a-a600-ae0674060140",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "General Identifier",
+          "type": {
+            "name": "id",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Bedbug bites or scabies (Y/N)",
+          "id": "10779ba8-e4b2-45dc-a7f2-93e565581dc3",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Bedbug bites or scabies (Y/N)",
+          "type": {
+            "name": "bedbugbitesorscabies",
+            "namespace": "skin"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether one receives general public assistance (Y/N)",
+          "id": "36864a7e-ba1f-487d-adca-4dc55ba82700",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Public assistance (Y/N)",
+          "type": {
+            "name": "publicassistance",
+            "namespace": "economy"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Liver disease (Y/N)",
+          "id": "1e9937aa-be99-4c97-9d8f-286c4e7bae9b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Liver disease (Y/N)",
+          "type": {
+            "name": "liverdisease",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Typical (Y/N)",
+          "id": "e2c325dd-9574-4e2a-a7f4-1ec061100a24",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Typical (Y/N)",
+          "type": {
+            "name": "typical",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "The amount of spousal support received.",
+          "id": "b8d807b2-6c7a-4d1b-add6-aac8e24f251b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Spousal Support Amount",
+          "type": {
+            "name": "spousalsupportamount",
+            "namespace": "economy"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "An authority to which a person is remanded into custody as part of a judgment.",
+          "id": "523de719-c894-4bed-91ec-3b1d2fa51f4c",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Committed to Authority",
+          "type": {
+            "name": "committedtoauthority",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "License plate type-auto, truck, apportioned, etc.",
+          "id": "592062ad-d868-4bcf-8ee0-daa1331fc138",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "License Plate Type",
+          "type": {
+            "name": "licenseplatetype",
+            "namespace": "vehicle"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Number of times one has been on the streets, in an emergency shelter, or supportive housing in the past three years.",
+          "id": "1ec2ea70-eff1-46d1-a0c4-0e06a0c84bd4",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "No. unstable housing periods",
+          "type": {
+            "name": "numberunstableepisodes",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Source or initiation of a CFS; if an organization, org name.",
+          "id": "e455b024-72bc-4dfe-b362-3852aadb8496",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "CFS source of initiation",
+          "type": {
+            "name": "source",
+            "namespace": "cfsorigin"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether one has a mental health issue (Y/N). Flags entity as having mental health information.",
+          "id": "543bfa76-a46d-4ec0-a00e-75678af4552c",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Mental health / psych issue flag",
+          "type": {
+            "name": "mentalissue",
+            "namespace": "health"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Date",
+          "description": "The date and time of an arrest.",
+          "id": "30273603-b5be-4277-8ef3-a5540447ca5f",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Arrest date (-d)",
+          "type": {
+            "name": "arrestdate",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Int32",
+          "description": "The age of a person at booking",
+          "id": "57d24585-7aec-43b7-b0f9-4162321366de",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Age at Event",
+          "type": {
+            "name": "ageatevent",
+            "namespace": "person"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Delirium Tremens from substance use (Y/N)",
+          "id": "ecd6b536-d7c8-40a8-bd21-376485e5c37c",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Delirium Tremens from substance use (Y/N)",
+          "type": {
+            "name": "deliriumtremens",
+            "namespace": "substance"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Last bowel movement",
+          "id": "c5190846-21c0-4819-8bcb-99be5674bcd9",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Last Bowel Movement",
+          "type": {
+            "name": "lastbowelmovement",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Int16",
+          "description": "Height of a person.",
+          "id": "d9c0caf4-afd6-43e7-9761-96aad916cd86",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Height of a person.",
+          "type": {
+            "name": "height",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Some call this \"category\". Criminal Justice: Detective, Communications, Officer, Patrol Deputy etc. ",
+          "id": "a046320f-02a0-4443-b5a4-b6a9928c334b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Personnel Title",
+          "type": {
+            "name": "personneltitle",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Diabetic foot checks (Y/N)",
+          "id": "4b837187-0959-4ff7-803a-a2ed9779e165",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Diabetic foot checks (Y/N)",
+          "type": {
+            "name": "diabeticfootchecks",
+            "namespace": "skin"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Role of person, in an event, organization, or program.",
+          "id": "c5909ed6-5c9d-4016-b5ae-eba0008f4b2e",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Role of person",
+          "type": {
+            "name": "role",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Police reports generated from an incident",
+          "id": "477db70c-ee49-41bf-97d2-c4eb0e1ffcc4",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Report number",
+          "type": {
+            "name": "reportnumber",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "DateTimeOffset",
+          "description": "Commit date",
+          "id": "3cfead4f-09ce-4ef8-bd03-a70dce298ac5",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            },
+            {
+              "name": "deprecated",
+              "namespace": "ol"
+            }
+          ],
+          "title": "Commit date (-d)",
+          "type": {
+            "name": "commit",
+            "namespace": "date"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A dispatch EMD, such as ProQA.",
+          "id": "2904c8ac-61d5-4075-a952-a761ae70242d",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Dispatch EMD",
+          "type": {
+            "name": "dispatchemd",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "The type of release",
+          "id": "92ecb196-23f1-4ab4-a8c3-084ccbcc151a",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Release Type",
+          "type": {
+            "name": "releasetype",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "If incident is part of a case, the status of the case.",
+          "id": "e71e3faa-fc19-45f8-87e7-c3e2449a1dac",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Case status",
+          "type": {
+            "name": "casestatus",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Case ID for a dispatch call for service",
+          "id": "c7cdf0a9-db29-4ffc-96f7-52bcb73750ab",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Case ID (CFS)",
+          "type": {
+            "name": "cfscaseid",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Description of track marks",
+          "id": "f848e0e9-6d29-4d21-a7b5-7d59c34fb56d",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Description of track marks",
+          "type": {
+            "name": "trackmarksdescription",
+            "namespace": "skin"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A person's marital status.",
+          "id": "49adf7e7-1962-44c0-a683-4091366e03fd",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Marital Status",
+          "type": {
+            "name": "maritalstatus",
+            "namespace": "person"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Date",
+          "description": "Permanent housing move-in date.",
+          "id": "7b5a9dac-7111-4825-baeb-13edf11d65b3",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Permanent Housing Move in Date",
+          "type": {
+            "name": "permanentmoveindate",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Swelling of extremities (Y/N)",
+          "id": "8bc5eb16-aa6d-4f97-bf5a-af55e9e938a2",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Swelling of extremities (Y/N)",
+          "type": {
+            "name": "swellingofextremities",
+            "namespace": "cardiovascular"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A person's military or veteran status - status of military service of a person.",
+          "id": "fafbf5d2-d681-4468-b7e3-3472c661b042",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Military / Veteran Status ",
+          "type": {
+            "name": "veteranstatus",
+            "namespace": "person"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "CFS Operator",
+          "id": "496de432-d25e-45b8-b252-682a588bfc32",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "CFS Operator",
+          "type": {
+            "name": "cfsoperator",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Int32",
+          "description": "Dispatch Type Priority",
+          "id": "71fe0840-fb24-4867-a23c-47a96c517141",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Dispatch Type Priority",
+          "type": {
+            "name": "dispatchtypepriority",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Comments on Diabetic Management ",
+          "id": "36bb6759-0cc1-4470-b0e8-c907d304b5c0",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Comments on Diabetic Management ",
+          "type": {
+            "name": "diabeticmgmtcomments",
+            "namespace": "endocrine"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Trip Number",
+          "id": "c938eb9b-15da-4b87-bf0a-006e290db4ec",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Dispatch Trip Number",
+          "type": {
+            "name": "dispatchtripnumber",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Cough Comments",
+          "id": "f580437c-f2c9-4ea1-99ee-3ef099bc0a4b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Cough Comments",
+          "type": {
+            "name": "coughcomment",
+            "namespace": "respiratory"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "GastroIntestinal bleeding (Y/N)",
+          "id": "f046b68a-cc58-4e81-a22a-177c3eb2f78f",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "GastroIntestinal bleeding (Y/N)",
+          "type": {
+            "name": "bleeding",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Dispatch Type ID",
+          "id": "c730490e-8a36-481d-ae11-84aa76e97a38",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Dispatch Type ID",
+          "type": {
+            "name": "dispatchtypeid",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Categories of households (i.e., only adults, adults and children).",
+          "id": "c22b7629-4323-4d69-94fd-dae4d64df69c",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Household type",
+          "type": {
+            "name": "hhtype",
+            "namespace": "demographics"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Employee ID",
+          "id": "aa3f9865-e882-4363-9cef-5145f787b114",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Employee ID",
+          "type": {
+            "name": "employeeid",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Whether cough is productive.",
+          "id": "8e4b71ea-30b3-4123-a63b-59ce3c94e9d7",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Productive Cough (Y/N)",
+          "type": {
+            "name": "productivecough",
+            "namespace": "respiratory"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A vehicle's license plate state",
+          "id": "ae27e6cd-701b-4952-b3ee-4ecbeeeb2eea",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Vehicle License Plate State",
+          "type": {
+            "name": "licensestate",
+            "namespace": "vehicle"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether the time spent in transitional or permanent housing was less than 7 nights.",
+          "id": "02379201-8815-489d-a056-37e36d299aae",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Less than 1 week in housing",
+          "type": {
+            "name": "timeintransitionalorpermanentlessthan7nights",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Location of an event",
+          "id": "90d8c6f6-385d-4064-a582-ad95a0ccc040",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Location String",
+          "type": {
+            "name": "name",
+            "namespace": "location"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Back Problems Description",
+          "id": "71382fda-aa76-4fd0-97e8-d1b27a677df5",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Back Problems Description",
+          "type": {
+            "name": "backproblemsdescription",
+            "namespace": "musculoskeletal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Dispatch Fire Level",
+          "id": "ccb90ce4-4343-4478-bfc5-d7167a45557f",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Dispatch Fire Level",
+          "type": {
+            "name": "dispatchfirelevel",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Date",
+          "description": "Approximate date that homelessness began.",
+          "id": "ff610b7c-54e1-47e1-ba5e-4087b62f5164",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Date homelessness began (-d)",
+          "type": {
+            "name": "datehomelessbegan",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "METAPHONE",
+          "datatype": "String",
+          "description": "Additional notes",
+          "id": "32eba813-7d20-4be1-bc1a-717f99917a5e",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Notes",
+          "type": {
+            "name": "notes",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "For form submission, one's relationship to the subject of a form.",
+          "id": "2bf49a3d-36d9-4e02-a824-1757d4ebc61f",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Relation to individual on a form",
+          "type": {
+            "name": "relationtoprimaryclient",
+            "namespace": "form"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Details on patient history of falls",
+          "id": "da502ae2-e5ad-4d93-8ad0-0ddf18979781",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "History of falls (comments)",
+          "type": {
+            "name": "historyoffallsnotes",
+            "namespace": "neurological"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Int16",
+          "description": "Number of hours of sentence.",
+          "id": "e652629a-70e0-458a-ae9f-02ca600d0360",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Sentence hours",
+          "type": {
+            "name": "sentencehours",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "General property for number that might contain letters (eg. DL number).",
+          "id": "0f10a3f1-a020-4367-a261-750d979abfca",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Number (string data type)",
+          "type": {
+            "name": "stringnumber",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A city",
+          "id": "6a85d1e1-fda5-4c9c-9e2e-2dda4ed8d3d1",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "City",
+          "type": {
+            "name": "city",
+            "namespace": "location"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Bedbug bites or scabies description",
+          "id": "4158971d-47cc-4fed-beeb-410079569078",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Bedbug bites or scabies description",
+          "type": {
+            "name": "bedbugorscabiesdescription",
+            "namespace": "skin"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Int32",
+          "description": "Juvenile individual should be treated as an adult in this specific enforcement encounter.",
+          "id": "cccdf498-4c90-4015-85c3-2a83536b705a",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Treat as adult (Adult Juv Waive)",
+          "type": {
+            "name": "treatasadult",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Intersection",
+          "id": "64fb51c4-a1f1-4a52-aeda-73b7ff071c54",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Intersection",
+          "type": {
+            "name": "intersection",
+            "namespace": "location"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Unique ID for endocrine assessments",
+          "id": "2b3c3c14-9e9f-4f0d-a6a6-72e0cb61e33b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "endocrine ID",
+          "type": {
+            "name": "id",
+            "namespace": "endocrine"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Cause of homelessness",
+          "id": "cb81457e-c49d-4cd2-9d00-d82a4d1a9028",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Cause of homelessness",
+          "type": {
+            "name": "homelesscause",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether one is covered by insurance (Y/N).",
+          "id": "84bbabed-c6a2-4166-b743-92dcc743cae7",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Insurance coverage (Y/N)",
+          "type": {
+            "name": "insurancecoverage",
+            "namespace": "health"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Question on one's sleep patterns, from the NSPL Suicide Risk Assessment standards (Suicidal Capability component) Decreased sleep can be a symptom of extreme agitation or rage.",
+          "id": "cf83fe38-1661-41b1-97e9-6f4f732b034c",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Sleep Patterns",
+          "type": {
+            "name": "sleeppattern",
+            "namespace": "neurological"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Nausea/Vomiting (Y/N)",
+          "id": "858bf5b6-f771-4672-aaf5-8e4992350d1c",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Nausea/Vomiting (Y/N)",
+          "type": {
+            "name": "nauseavomiting",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Specific amount of child support received.",
+          "id": "b996bdd3-1748-48a0-8348-a24feb4ea74f",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Amount of child support",
+          "type": {
+            "name": "childsupportamount",
+            "namespace": "economy"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "CFS Case Number",
+          "id": "a9c96e5a-fb7c-44d3-ad32-44b25cdfdbd3",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "CFS Case Number",
+          "type": {
+            "name": "cfscasenumber",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "License plate year of expiration",
+          "id": "9177cb91-4596-4efc-b9f2-2335528c3376",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "License Plate Year",
+          "type": {
+            "name": "licenseyear",
+            "namespace": "vehicle"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "The amount of general public assistance received.",
+          "id": "1b959654-02fd-487b-adc3-eb6049a878ff",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Public assistance ($)",
+          "type": {
+            "name": "publicassistanceamount",
+            "namespace": "economy"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Model of device or vehicle",
+          "id": "93b8b60b-bcfc-4778-99b8-8c57ce6cb502",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Model",
+          "type": {
+            "name": "model",
+            "namespace": "vehicle"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "id": "b2ba8787-68b4-448a-84a7-04acaf6ad4d5",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Housing Resident Assessment ID",
+          "type": {
+            "name": "assessmentid",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Additional text descriptions of chest pains.",
+          "id": "a9b8fbd1-7da0-43fc-8f87-47135cd9d4c0",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Chest Pain (description)",
+          "type": {
+            "name": "chestpaintext",
+            "namespace": "cardiovascular"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "DateTimeOffset",
+          "description": "Time arrived (i.e., from a dispatch call).",
+          "id": "0b68c2cd-4c03-43e6-b1c8-fe6187b0eae3",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Time arrived",
+          "type": {
+            "name": "arrived",
+            "namespace": "datetime"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "The length of stay at one's previous residence.",
+          "id": "06acbbb5-2c9d-4e6c-a440-a3efa4f4f00e",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Length of stay at previous residence (-d)",
+          "type": {
+            "name": "previousresidencelengthofstay",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Double",
+          "description": "Percentage of good time in a jailstay.",
+          "id": "a866612a-2316-4b18-88c1-e19ce9a01f01",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Good time percentage",
+          "type": {
+            "name": "goodtimePCT",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Unique ID for medical reproductive assessment",
+          "id": "e4460db5-2d4d-435d-a03b-30a5276088a3",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Reproductive assessment ID",
+          "type": {
+            "name": "id",
+            "namespace": "reproductive"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Unique ID for a biomedical assessment.",
+          "id": "dc583559-550f-40a3-8c89-81a6170ab636",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "biomedical ID",
+          "type": {
+            "name": "id",
+            "namespace": "biomedical"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Name of Fire District",
+          "id": "85806174-c305-483d-8e18-1bf8f6d5ca39",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Fire District",
+          "type": {
+            "name": "firedistrictname",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Unique ID for cardiovascular assessment",
+          "id": "5c480eb6-f799-46d0-98ef-c5f43678a616",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Cardiovascular ID",
+          "type": {
+            "name": "id",
+            "namespace": "cardiovascular"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether weapons are found during an arrest or incident.",
+          "id": "80c3ffc7-5a8a-4547-8d60-dfb0b06e92b4",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Weapons present",
+          "type": {
+            "name": "weaponspresent",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Diarrhea (Y/N)",
+          "id": "ad4b2034-16f9-4394-89f7-5614f33e920c",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Diarrhea (Y/N)",
+          "type": {
+            "name": "diarrhea",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "MyocardialInfarction (Y/N)",
+          "id": "5de22760-733b-4239-abf7-fa445e658e90",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Myocardial Infarction (Y/N)",
+          "type": {
+            "name": "myocardialinfarction",
+            "namespace": "cardiovascular"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Juvenile Holding Authority.",
+          "id": "94a8a61c-93cb-4284-82dd-06d36fb3fc81",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Juvenile Holding Authority",
+          "type": {
+            "name": "juvenileholdauth",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Ulcers (Y/N)",
+          "id": "16d201e5-f74a-4102-b1f7-5e536a327a25",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Ulcers (Y/N)",
+          "type": {
+            "name": "ulcers",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Description of how a certain event was reported.",
+          "id": "7ac3c170-7088-4765-bd23-6ec1d02f2d5f",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "How reported",
+          "type": {
+            "name": "howreported",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "DateTimeOffset",
+          "description": "EnRoute DateTime",
+          "id": "1256d3f4-2a83-44d0-8b1d-389803b28314",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "En-route date-time",
+          "type": {
+            "name": "enroute",
+            "namespace": "datetime"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Dispatch person-type description (i.e., driver, witness, reported).",
+          "id": "15092289-b597-403a-b238-325ecdeb1974",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Dispatch Person Type Description",
+          "type": {
+            "name": "dispatchpersontypedescription",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A license number",
+          "id": "43a6df96-1cb8-4daa-9a82-f9361b8777c7",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "License Number",
+          "type": {
+            "name": "licensenumber",
+            "namespace": "vehicle"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Identifying information on apartment, room, or other dwelling unit",
+          "id": "4dfd7e4f-207a-4591-8cf3-2e5c9c7d0e53",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Apartment or dwelling unit information",
+          "type": {
+            "name": "apartment",
+            "namespace": "location"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Date",
+          "description": "Date of release or discharge (i.e., from jail).",
+          "id": "f3b41e19-d1e9-4004-8763-b514a93983d2",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Date-Time Release (-d)",
+          "type": {
+            "name": "datetime_release",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "ID of case.",
+          "id": "7064b696-d3ac-4ca7-9340-8e9db996b36e",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "ID of case.",
+          "type": {
+            "name": "caseid",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "DateTimeOffset",
+          "description": "Datetime for the projected release.",
+          "id": "6e22d468-4977-4bec-8b87-9a9a9b10963e",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Projected Release Datetime",
+          "type": {
+            "name": "projectedreleasedatetime",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether one has spent the previous night on the streets or in a shelter.",
+          "id": "bca1d47b-abbb-4755-a06c-2e1c15bea118",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Previous night on street/in shelter",
+          "type": {
+            "name": "nightbeforeinstreetorshelter",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Suspect alcohol aevel",
+          "id": "062fd4f6-30c0-4a4a-a221-18bb1da2cb88",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Suspect alcohol level",
+          "type": {
+            "name": "suspectalcohol",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "The time period where domestic violence occurred.",
+          "id": "dbf8c083-c8d7-47d3-bc4b-e91baaeef526",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Time of domestic violence",
+          "type": {
+            "name": "domesticviolenceoccurrence",
+            "namespace": "health"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Tested for Tuberculosis (Y/N)",
+          "id": "471a09ff-645d-4d44-841e-ae35c3884cb7",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Tested for Tuberculosis (Y/N)",
+          "type": {
+            "name": "testedfortuberculosis",
+            "namespace": "respiratory"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Check of whether a patient has personal insulin if diabetic. (Y/N)",
+          "id": "f2357864-38c4-4d46-bbda-6f7abd2928b0",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Has personal insulin (Y/N)",
+          "type": {
+            "name": "haspersonalinsulin",
+            "namespace": "endocrine"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Additional text descriptions of heart disease.",
+          "id": "fba8f114-981a-4e92-a483-0d2c25d3d4a4",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Heart Disease (description)",
+          "type": {
+            "name": "heartdiseasetext",
+            "namespace": "cardiovascular"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Assigned Officer",
+          "id": "00e11d1a-5bd7-42bd-89a5-a452d4f6337e",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Assigned Officer",
+          "type": {
+            "name": "assignedofficer",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "An institution from which an individual is to be released.",
+          "id": "2a590340-a360-4456-af81-949f6d490a88",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Released to Facility",
+          "type": {
+            "name": "releasetofacility",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Whether one receives child support (Y/N)",
+          "id": "10aa082b-7173-44ca-a00f-d629b874b598",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Child support (Y/N)",
+          "type": {
+            "name": "childsupport",
+            "namespace": "economy"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A zip",
+          "id": "132820b9-6f20-40c8-945f-9ca2ec45e233",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Zip",
+          "type": {
+            "name": "zip",
+            "namespace": "location"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "The specified sources of any income received.",
+          "id": "a962a8ba-2c4c-4110-92b5-dc37c0d02e22",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Income sources",
+          "type": {
+            "name": "anyincomesources",
+            "namespace": "economy"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "NIBRS offense code, if available.",
+          "id": "d673e32c-6e67-4885-8e30-47e98f6229f2",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "NIBRS offense code",
+          "type": {
+            "name": "nibrs",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "id": "7c0f56bb-e77c-4a2a-8e17-4542849aeeda",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Justice Involved Person ID",
+          "type": {
+            "name": "personid",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "How a dispatch call was reported",
+          "id": "88acd844-6aa1-4256-995c-8b67d2dd8201",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "How Reported (dispatch call)",
+          "type": {
+            "name": "dispatchhowreported",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Assigned Officer ID",
+          "id": "9d30c278-13cd-47c5-9e20-d677facced23",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Assigned Officer ID",
+          "type": {
+            "name": "assignedofficerid",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Unique ID for neurological assessment",
+          "id": "60067ff0-31bb-47d9-97f1-fd3b89e36045",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Neurological ID",
+          "type": {
+            "name": "id",
+            "namespace": "neurological"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A housing project type.",
+          "id": "b63ac291-3a26-4d99-8677-1e1c0f5c44da",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Project type",
+          "type": {
+            "name": "projecttype",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether one has a chronic condition (Y/N). ",
+          "id": "aa6b31ce-f283-426c-b0e9-8bc4e459d4c5",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Chronic condition (Y/N)",
+          "type": {
+            "name": "chroniccondition",
+            "namespace": "health"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Specified income amount received from any source.",
+          "id": "5a7afac3-471b-4b5a-8d58-d7748f0f2525",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Any Income ($) (-d)",
+          "type": {
+            "name": "anyincomeamount",
+            "namespace": "economy"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Lmitations",
+          "id": "f319ce78-ba6a-495b-a681-b743c3d16cbc",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Limitations",
+          "type": {
+            "name": "limitations",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Int16",
+          "description": "Number of good minutes in a jailstay (in addition to days/hours).",
+          "id": "6557a4f5-1193-4a0f-a1d1-54f23c33722a",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Good time minutes",
+          "type": {
+            "name": "goodtimeminutes",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Active or inactive employees (i.e., former employees)",
+          "id": "bf828c73-2ea9-4d4e-be40-ae9702e64b21",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Personnel status",
+          "type": {
+            "name": "personnelstatus",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Diabetic foot checks description",
+          "id": "d4b56cef-e578-4200-a14d-34709cbda5ae",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Diabetic foot checks description",
+          "type": {
+            "name": "diabeticfootchecksdescription",
+            "namespace": "skin"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Location or Address Line 1 - A Street Address ",
+          "id": "3677e8ea-5da9-41f3-8b56-006548564eac",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Street Address",
+          "type": {
+            "name": "street",
+            "namespace": "location"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether one has a chronic disability (Y/N).",
+          "id": "3bdb9a7d-507c-4b7e-b728-cb3d4b96d837",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Chronic disability (Y/N)",
+          "type": {
+            "name": "chronicdisability",
+            "namespace": "health"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Unique ID for musculoskeletal assessments",
+          "id": "aff55df1-9a46-4229-b17c-25e56c5ec3bc",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "musculoskeletal ID",
+          "type": {
+            "name": "id",
+            "namespace": "musculoskeletal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Vehicle Style",
+          "id": "afe0e263-adf3-4803-9053-2566f0220075",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Style",
+          "type": {
+            "name": "style",
+            "namespace": "vehicle"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Additional text descriptions of any swelling of extremities.",
+          "id": "d08410b0-5e37-4fef-a29a-fbc30a7cd9db",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Swelling of Extremities (description)",
+          "type": {
+            "name": "swellingofextremitiestext",
+            "namespace": "cardiovascular"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Int16",
+          "description": "Weight of a person.",
+          "id": "065a9db9-6fcd-400e-ac26-a969521c386a",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Weight of a person.",
+          "type": {
+            "name": "weight",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Int16",
+          "description": "Number of good minutes in a jailstay (in addition to days).",
+          "id": "ffcf42d0-4134-4430-9f8f-d76cca10b9f2",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Good time hours",
+          "type": {
+            "name": "goodtimehours",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A uniquely identifying string for a unit.",
+          "id": "c2e168ac-ded5-4f00-b282-e2896e394ab1",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Unit ID",
+          "type": {
+            "name": "unitid",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Identification number for a law enforcement official.",
+          "id": "9d2d4a0e-26af-46c8-b366-fd872dbc5506",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Officer Badge Identification",
+          "type": {
+            "name": "officerbadgeid",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Description of any sobriety support.",
+          "id": "71ec1401-4765-4048-98c8-97b4b4a1703e",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Sobriety Support",
+          "type": {
+            "name": "sobrietysupport",
+            "namespace": "substance"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Vehicle Color",
+          "id": "5470892c-00f4-4511-ab04-495b3061afa3",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Color",
+          "type": {
+            "name": "color",
+            "namespace": "vehicle"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "The types of non-cash benefits one receives.",
+          "id": "fa6e9c4d-09bd-46bc-a7f8-c1ac7c5d820e",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Types of non-cash benefits",
+          "type": {
+            "name": "noncashbenefittypes",
+            "namespace": "economy"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Transfer Vehicle",
+          "id": "ce71688f-7c1a-4e6f-b5cf-79e7f077a3f1",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Transfer Vehicle",
+          "type": {
+            "name": "dispatchtransfervehicle",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Other Rash/Dermatitis (Y/N)",
+          "id": "f668cb5f-fc16-45df-85d0-385d859bbdce",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Other Rash/Dermatitis (Y/N)",
+          "type": {
+            "name": "otherrashdermatitis",
+            "namespace": "skin"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Comments",
+          "id": "c16ab352-3099-4579-b900-40d54fec44c6",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Comments",
+          "type": {
+            "name": "comments",
+            "namespace": "event"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "State level of charge.",
+          "id": "f957cc01-1969-46b8-bd76-b8006142779b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "State level of charge",
+          "type": {
+            "name": "levelstate",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "The severity level of an allergic reaction, e.g., mild, moderate, severe or moderate-to-severe.",
+          "id": "4f9a1ed5-377b-45d1-9014-2a7aafd76f74",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Allergy severity",
+          "type": {
+            "name": "allergyreactionseverity",
+            "namespace": "medical"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "DateTimeOffset",
+          "description": "Date an individual was booked.",
+          "id": "e7ea04e3-5047-4d9c-9bbe-b0bffe2c9cd1",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Booking Date",
+          "type": {
+            "name": "booking",
+            "namespace": "date"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Hepatitis  (Y/N)",
+          "id": "733061ae-ea7a-4939-b423-03cfc7162c09",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Hepatitis (Y/N)",
+          "type": {
+            "name": "hepatitis",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Amount of earned income for an individual.",
+          "id": "acdef6c8-348d-4c66-9ec2-2a082e838786",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Earned Income ($)",
+          "type": {
+            "name": "earnedincomeamount",
+            "namespace": "economy"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Family history of mental illness (person)",
+          "id": "c0c9af36-5d4a-4e5c-a28f-a699c02f99e4",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Family history of mental illness (person)",
+          "type": {
+            "name": "familymentalillnessperson",
+            "namespace": "substance"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Housing residence type.",
+          "id": "37ff5f8d-3747-4242-8365-f9a09e239ea6",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Residence type (housing)",
+          "type": {
+            "name": "residencetype",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Shortness of breath (Y/N)",
+          "id": "e0fda4d0-b19b-422c-a702-d30d9e89d024",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Shortness of breath (Y/N)",
+          "type": {
+            "name": "shortnessofbreath",
+            "namespace": "respiratory"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Int32",
+          "description": "Age of first use (e.g., cigarettes)",
+          "id": "2d975f4a-a244-4651-909c-3f4eb7ec27cc",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Age of first use",
+          "type": {
+            "name": "agefirstused",
+            "namespace": "medical"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Boolean indicator for sex offender.",
+          "id": "31854afe-a16e-4d64-99cd-6bf21efe468b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Sex offender (Y/N)",
+          "type": {
+            "name": "sexoffender",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Identifier for a jail.",
+          "id": "2216f875-9645-4786-b062-9ec3960e4630",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Jail ID",
+          "type": {
+            "name": "jailid",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "The size of a household (number of people).",
+          "id": "6606dbf5-3823-457e-a0bd-adad141e46e0",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Household size (-d)",
+          "type": {
+            "name": "hhsize",
+            "namespace": "demographics"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Hypertension (Y/N)",
+          "id": "03f4bf0e-53e4-46a5-9a02-e13d4015abd3",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Hypertension (Y/N)",
+          "type": {
+            "name": "hypertension",
+            "namespace": "cardiovascular"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Additional text descriptions of a myocardial infarction.",
+          "id": "8f8416fc-4cbd-42e0-8a8e-11b2f946fe19",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Myocardial Infarction (description)",
+          "type": {
+            "name": "myocardialinfarctiontext",
+            "namespace": "cardiovascular"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "DateTimeOffset",
+          "description": "Date of admission.",
+          "id": "c8a675e0-c45f-4343-a538-86d609223bd0",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Date of admission",
+          "type": {
+            "name": "admission",
+            "namespace": "date"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Make",
+          "id": "8c798836-862f-4a84-af8b-0c982b11dfae",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Make",
+          "type": {
+            "name": "make",
+            "namespace": "vehicle"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "whether someone smokes cigarettes (Y/N)",
+          "id": "502b0172-e6bf-42f1-a03f-ea9045909360",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Smoke cigarettes (Y/N)",
+          "type": {
+            "name": "smokecigarettes",
+            "namespace": "medical"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Dispatch SubZone",
+          "id": "bca0e150-9965-4e9f-9508-1efc4fdcf16e",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Dispatch Subzone",
+          "type": {
+            "name": "dispatchsubzone",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A housing program.",
+          "id": "e5c16bdb-bddb-4daa-9daf-89a99d227202",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Housing program",
+          "type": {
+            "name": "program",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Level",
+          "id": "6e43eb85-276b-4855-b96c-24f701a58389",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Level",
+          "type": {
+            "name": "level",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Double",
+          "description": "Longitude",
+          "id": "e8f9026a-2494-4749-84bb-1499cb7f215c",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Longitude (-d)",
+          "type": {
+            "name": "longitude",
+            "namespace": "location"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Chest pain (Y/N)",
+          "id": "ed577cc3-f627-43d8-b17a-39d34480570d",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Chest pain (Y/N)",
+          "type": {
+            "name": "chestpain",
+            "namespace": "cardiovascular"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A string that uniquely identifies a call for service",
+          "id": "2080c6bb-5c37-4eb2-b629-3fe09b665d42",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Dispatch ID",
+          "type": {
+            "name": "dispatchid",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Unique ID for an employee.",
+          "id": "9f97811b-fef5-434d-b3b2-9e72171a66b8",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": " Employee ID",
+          "type": {
+            "name": "personnelid",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Family history of mental illness (Y/N)",
+          "id": "78aa14bd-2816-4829-bfda-32cf970ab760",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Family history of mental illness (Y/N)",
+          "type": {
+            "name": "familyhistorymentalillness",
+            "namespace": "substance"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Officer ID",
+          "id": "8ae3214e-7e4f-47e8-b22f-adc718e60a5c",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Officer ID",
+          "type": {
+            "name": "officerid",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Int16",
+          "description": "Number of good time/gain time days in a jailstay.",
+          "id": "9bcfd1a5-804c-4bdd-a547-ad4494be4e1f",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Good time days",
+          "type": {
+            "name": "goodtimedays",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Victim alcohol level",
+          "id": "f7c87cb1-7ddd-4dec-b634-bef6f184a557",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Victim alcohol level",
+          "type": {
+            "name": "victimalcohol",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A state",
+          "id": "e96f4905-e323-47b6-be43-2a356fd82e08",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "State",
+          "type": {
+            "name": "state",
+            "namespace": "location"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Int16",
+          "description": "Number of days of sentence.",
+          "id": "0220af01-e45b-4d2c-b96f-bc16f058342d",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Sentence days",
+          "type": {
+            "name": "sentencedays",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Is the person eligable for probation?",
+          "id": "8ae217a6-328c-40b9-8946-28c1d526748c",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Probation eligible",
+          "type": {
+            "name": "probationeligible",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "DateTimeOffset",
+          "description": "Reported date and time of a criminal justice incident",
+          "id": "91106b89-5842-48e4-a21f-ef923557c1b8",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Incident Reported Date-Time (deprecated)",
+          "type": {
+            "name": "reporteddatetime",
+            "namespace": "incident"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Family history of substance abuse (Y/N)",
+          "id": "1f66b596-91d9-4477-929f-60fd5dbe1fdc",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Family history of substance abuse",
+          "type": {
+            "name": "familyhistoryabuse",
+            "namespace": "substance"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether one has a physical disability (Y/N).",
+          "id": "b8a5ac4e-a501-4186-9b64-908844fb8425",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Physical disability (Y/N)",
+          "type": {
+            "name": "physicaldisability",
+            "namespace": "health"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Day of the week.",
+          "id": "b9170d9b-8265-452c-b9e8-ebeab5f7556f",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Day Of Week",
+          "type": {
+            "name": "dayofweek",
+            "namespace": "date"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Secondary disposition. IA includes CIT designation.",
+          "id": "b8fcea6c-fb18-4050-bb54-2fa86ea4dae1",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Secondary Disposition",
+          "type": {
+            "name": "disposition2",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Types of allergic reactions such as rhinitis (hay fever), eczema, hives, asthma or anaphylaxis.",
+          "id": "148f7999-db89-49c0-b847-12d4ac92803b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Allergic reaction",
+          "type": {
+            "name": "allergyreactiontype",
+            "namespace": "medical"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A string that uniquely identifies an instance of an entity or association.",
+          "id": "ee3a7573-aa70-4afb-814d-3fad27cda988",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            },
+            {
+              "name": "deprecated",
+              "namespace": "ol"
+            }
+          ],
+          "title": "Id (-d)",
+          "type": {
+            "name": "stringid",
+            "namespace": "general"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Details of a physical disability.",
+          "id": "04e9becf-0add-440b-b0da-f3cdf559c1d6",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Physical disability description",
+          "type": {
+            "name": "physicaldisabilitydescription",
+            "namespace": "health"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Committing authority.",
+          "id": "a67bcbdd-f9e1-4830-9730-d88a419a693d",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Committing Authority",
+          "type": {
+            "name": "committingauthority",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Sexual orientation.",
+          "id": "8d52f9b7-fe9d-4d09-aec4-bbbfee74f714",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Sexual Orientation",
+          "type": {
+            "name": "sexualorientation",
+            "namespace": "person"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Unique ID for a jail record or stay.",
+          "id": "6900fcb7-f44d-4b65-b392-40617dea5fed",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Jail record ID",
+          "type": {
+            "name": "jailrecordid",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Additional text descriptions of any liver disease.",
+          "id": "c1eb6087-a4ec-441d-8c57-b1ac4fb2aebb",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Liver Disease (description)",
+          "type": {
+            "name": "liverdiseasetext",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Unique ID via concatenation of street address, city, state, zip.",
+          "id": "34888d10-4c3b-4400-9426-23dfc3d0f8e5",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            },
+            {
+              "name": "deprecated",
+              "namespace": "ol"
+            }
+          ],
+          "title": "FullAddress (-d)",
+          "type": {
+            "name": "Address",
+            "namespace": "location"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "An arrest category or type",
+          "id": "1fe28610-d4f6-4608-99d4-0c2b6e805703",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Arrest Category/Type",
+          "type": {
+            "name": "arrestcategory",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Description of any sobriety aftercare plan",
+          "id": "3a109ac6-daa2-4a37-adbc-abb6a6c021f9",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Sobriety Aftercare Plan",
+          "type": {
+            "name": "sobrietyaftercareplan",
+            "namespace": "substance"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Fracture/Injury (Y/N)",
+          "id": "8f992ecf-cf98-4768-8156-0a6c361de3f5",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Fracture/Injury (Y/N)",
+          "type": {
+            "name": "fractureinjury",
+            "namespace": "musculoskeletal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Int16",
+          "description": "Number of adults admitted to a housing program.",
+          "id": "047e196d-695b-4568-8932-ca6932156b1b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Admitted adults (#)",
+          "type": {
+            "name": "admittedadults",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Int32",
+          "description": "Time served: days",
+          "id": "d146903f-9196-40b8-90ce-3a0e8e4557a5",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Time Served: Days",
+          "type": {
+            "name": "timeserveddays",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether chronically homeless (Y/N)",
+          "id": "22d68e05-8579-42b1-a188-c05bfe0773b7",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Chronically homeless (Y/N)",
+          "type": {
+            "name": "chronicallyhomeless",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Incident Narrative",
+          "id": "19466bb0-eeba-4c69-9ab1-8999b3cb43bf",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Incident Narrative",
+          "type": {
+            "name": "narrative",
+            "namespace": "incident"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Phone number of master business.",
+          "id": "e5721ba0-f64e-4c19-8e7f-fbb016555a65",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Phone number of master business.",
+          "type": {
+            "name": "masterbusinessnumber",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Dispatch type class",
+          "id": "323de7c8-a374-4e45-ab0d-ff8b7fabe094",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            },
+            {
+              "name": "deprecated",
+              "namespace": "ol"
+            }
+          ],
+          "title": "Dispatch type class (-d)",
+          "type": {
+            "name": "dispatchtypeclass",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Commit number",
+          "id": "18f2e4c6-86ce-4f5d-ad8f-0eb018947371",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Commit number",
+          "type": {
+            "name": "commitnumber",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A unique identifier for an vehicle",
+          "id": "b20557c8-6959-47b7-8377-7c4e351cbe79",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Vehicle ID",
+          "type": {
+            "name": "id",
+            "namespace": "vehicle"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A dispatch zone's unique ID",
+          "id": "bce1d15e-25c6-414f-ba0f-74bf22d13028",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Dispatch zone ID",
+          "type": {
+            "name": "dispatchzoneid",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "id": "9b2bd81e-51cc-44ce-9051-18d833762848",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Offense ID (v2)",
+          "type": {
+            "name": "offenseid",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Diabetic (Y/N)",
+          "id": "bf640c1d-bb84-4299-802d-338ee475fc32",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Diabetic (Y/N)",
+          "type": {
+            "name": "diabetic",
+            "namespace": "endocrine"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Int16",
+          "description": "Number of children admitted to a housing program.",
+          "id": "92fcd6e9-6839-42b4-83fa-47716b647ef6",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Admitted children (#)",
+          "type": {
+            "name": "admittedchildren",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Class of type.",
+          "id": "e404a3f0-3e98-412f-b146-52aa80ec98c2",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Class of type.",
+          "type": {
+            "name": "typeclass",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Int32",
+          "description": "Length of a housing stay.",
+          "id": "1ceaf4eb-dace-4b3a-961e-e3fe4beb7c7c",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Length of Stay (-d)",
+          "type": {
+            "name": "lengthofstay",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "A boolean indicating whether the person is doing consecutive sentences.",
+          "id": "55199d7d-b13e-4d7e-8e14-a50c7091942e",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Consecutive jailstay (Y/N)",
+          "type": {
+            "name": "consecutive",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Dispatch Person Type",
+          "id": "39dc4d54-8fac-46ad-ae3d-e538123a9b30",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Dispatch Person Type",
+          "type": {
+            "name": "dispatchpersontype",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A housing program category.",
+          "id": "07dcc100-037d-4b6f-9062-35126b2f1318",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Program type (housing)",
+          "type": {
+            "name": "programtype",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Flag for whether someone is a juvenile.",
+          "id": "915df70e-ebe3-4b59-9d4e-59c0609a5577",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Juvenile (Y/N)",
+          "type": {
+            "name": "juvenile",
+            "namespace": "person"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Additional text descriptions of gastrointestinal bleeding.",
+          "id": "fed877c8-eb2a-4714-92c8-3b586bd2c4e7",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Gastrointestinal bleeding (description)",
+          "type": {
+            "name": "bleedingtext",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether one receives income of any kind. ",
+          "id": "1db0650e-8a68-4c6c-8b3a-fd7b89aabedd",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Any income (Y/N)",
+          "type": {
+            "name": "anyincome",
+            "namespace": "economy"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether one receives non-cash benefits (Y/N). ",
+          "id": "126c3754-281f-4c88-83ef-3c8c78198d5b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Non-cash benefits (Y/N)",
+          "type": {
+            "name": "noncashbenefits",
+            "namespace": "economy"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Categories of individuals and families (i.e., adult couple without children, individual female, male household member).",
+          "id": "a6487f5b-5212-4726-a5cd-4ddbf8f8355b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Individual/family type",
+          "type": {
+            "name": "indivorfamilytype",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Offense NCIC Code",
+          "id": "c97555a0-ed79-4944-a000-ab961da3ab48",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Offense NCIC Code",
+          "type": {
+            "name": "ncic",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Arresting Agency",
+          "id": "5d37978a-b658-462a-8903-4a9a2d2d69e3",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Arrest Agency",
+          "type": {
+            "name": "arrestagency",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Vehicle Year",
+          "id": "f9398bdd-3f01-4628-9e3d-1c0bf7ed098e",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Year",
+          "type": {
+            "name": "year",
+            "namespace": "vehicle"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Police beat",
+          "id": "c2b18c7a-6625-4a31-8196-a8d3cb0e3309",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Police beat",
+          "type": {
+            "name": "beatsector",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Next steps for client",
+          "id": "fb03ce47-10b5-4d39-8ccf-96e868a7f1e9",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Next steps for client (housing)",
+          "type": {
+            "name": "nextsteps",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A description of cautions about a person's potential for dangerous behavior when contacted.",
+          "id": "656ded15-4503-4623-977f-b1188a64cafa",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Caution",
+          "type": {
+            "name": "cautioninformation",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Unique identifier for a nutritional assessment",
+          "id": "60bcb7e1-297a-4631-bb69-11d54362fa6a",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Nutritional ID",
+          "type": {
+            "name": "id",
+            "namespace": "nutritional"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A police CAD call number",
+          "id": "999dbc43-519f-43b2-8119-73a2ef196bf5",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Cad number (v2)",
+          "type": {
+            "name": "cadnumber",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Int16",
+          "description": "Number of concurrent sentences.",
+          "id": "6519f480-7aaf-496c-825b-3b325d12bb85",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Concurrent jailstay/sentence (#)",
+          "type": {
+            "name": "concurrent",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Unit name, if provided - i.e., \"Fire Engine 1\".",
+          "id": "56b657d7-22c1-4a69-911c-9d7bb915f11f",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Unit name",
+          "type": {
+            "name": "unitname",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Offense Local Statute",
+          "id": "c228a9c8-e0f3-4bb0-8b09-78b2c6162caa",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Offense Local Statute",
+          "type": {
+            "name": "localstatute",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Eye Color",
+          "id": "f6f98745-c2b0-468f-89a6-7b57a69f104b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Eye Color",
+          "type": {
+            "name": "eyecolor",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "History of Positive TB (Y/N)",
+          "id": "1c8ab6f0-e77b-42da-8140-becc02e6fd19",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "History of Positive TB (Y/N)",
+          "type": {
+            "name": "historyoftuberculosis",
+            "namespace": "respiratory"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Call for service (CFS) EMS flag",
+          "id": "01c9ad01-1403-4d35-8764-e15c048a38e5",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "CFS EMS",
+          "type": {
+            "name": "dispatchemsflag",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether one has earned income (Y/N).",
+          "id": "f8c070a6-6315-494d-b8b8-f413e2ace393",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Earned income (Y/N)",
+          "type": {
+            "name": "earnedincome",
+            "namespace": "economy"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Dispatch number",
+          "id": "6335ec93-dd81-4106-b44b-faafce66b209",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Dispatch number",
+          "type": {
+            "name": "dispatchnumber",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "EMD Type",
+          "id": "7008752d-b95f-4557-ac7a-17deb450bf74",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "EMD Type",
+          "type": {
+            "name": "dispatchemdtype",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Total number of months homeless or in a shelter in the past 3 years.",
+          "id": "c5397609-0124-4c54-8ec9-79f82341d19d",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Months homeless/in shelter in past 3 years (-d)",
+          "type": {
+            "name": "monthshomelessorinshelterinpast3yrs",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether one is fleeing domestic violence. ",
+          "id": "293be234-531d-4253-82bc-57498395138c",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Fleeing domestic violence (Y/N)",
+          "type": {
+            "name": "fleeingdomesticviolence",
+            "namespace": "health"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Problematic (Y/N)",
+          "id": "860fed9c-f446-4492-926b-d87d9daffd50",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Problematic (Y/N)",
+          "type": {
+            "name": "problematic",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Reason person is held.",
+          "id": "8d7889be-f23c-42a9-811b-f72a3671d1a1",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Reason held",
+          "type": {
+            "name": "reasonheld",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Additional text descriptions of any chest palpitations.",
+          "id": "5387dee7-1d50-4ffb-9a9e-b86ef1bc3b34",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Palpitations (description)",
+          "type": {
+            "name": "palpitationstext",
+            "namespace": "cardiovascular"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "The reason a person was dicharged",
+          "id": "e6cdba08-218f-427b-9aa8-ebfcbd5c148a",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Discharge Reason",
+          "type": {
+            "name": "dischargereason",
+            "namespace": "housing"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Head Pediculi description",
+          "id": "69e35893-76ac-4bf2-9c04-6c7d5f683c8b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Head Pediculi description",
+          "type": {
+            "name": "headpediculidescription",
+            "namespace": "skin"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "DateTimeOffset",
+          "description": "The  date and time a  criminal justice incident was reported to start. If no separate end date is reported, this is simply the date the incident occurred.",
+          "id": "eabab409-8ce7-499f-a4fb-d71356ada13b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Start date-time",
+          "type": {
+            "name": "startdatetime",
+            "namespace": "incident"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Unique ID for arrested in association.",
+          "id": "c9309ba8-a674-48c5-bfee-8bb797f9fe31",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Arrested In ID",
+          "type": {
+            "name": "id",
+            "namespace": "arrestedin"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "The unit time (i.e., monthly,  weekly) that accompanies a specified amount of income from any source.",
+          "id": "27246bfa-7496-4b8b-a5d5-aaf2398108dc",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Any income (unit time)",
+          "type": {
+            "name": "anyincometimeunit",
+            "namespace": "economy"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Needle track marks (Y/N)",
+          "id": "f3915242-b151-4fd0-822c-6465c330e791",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Needle track marks (Y/N)",
+          "type": {
+            "name": "trackmarks",
+            "namespace": "skin"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Vehicle VIN",
+          "id": "686bb9d4-766d-4ff5-bf63-a0d43bd6e9fc",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "VIN",
+          "type": {
+            "name": "vin",
+            "namespace": "vehicle"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "History of dizziness (Y/N)",
+          "id": "a5fe6140-c95a-4867-8377-5edc90f74364",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "History of dizziness (Y/N)",
+          "type": {
+            "name": "historyofdizziness",
+            "namespace": "neurological"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Additional text descriptions of any nausea and/or vomiting.",
+          "id": "66ff6445-bf61-44e9-a661-32810e4a8025",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Nausea/Vomiting (description)",
+          "type": {
+            "name": "nauseavomitingtext",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "Numbness/Tingling in Extremities (Y/N)",
+          "id": "d36bce87-c279-422d-826d-ea9ca95397a5",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Numbness/Tingling in Extremities (Y/N)",
+          "type": {
+            "name": "extremitiesnumbnesstingling",
+            "namespace": "neurological"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Unique ID for a criminal justice incident",
+          "id": "3ca03e79-6b50-4fc4-94a0-17b25eabae34",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Incident ID (v2)",
+          "type": {
+            "name": "incidentid",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Substance type (i.e., alcohol, opioids)",
+          "id": "18a2c775-3929-4937-b85b-758e66522d8d",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Substance Type",
+          "type": {
+            "name": "type",
+            "namespace": "substance"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "One's employment status.",
+          "id": "78916b55-22fe-4ed8-bde6-b819f4114dc9",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Employment Status",
+          "type": {
+            "name": "employmentstatus",
+            "namespace": "economy"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "DateTimeOffset",
+          "description": "Date-time and offense is reported.",
+          "id": "cd901bfa-d785-4d96-8969-6df2fb69f04e",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Offense reported date",
+          "type": {
+            "name": "reporteddate",
+            "namespace": "offense"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Dispatch Type",
+          "id": "10839c42-2252-4630-ab22-a9752333a601",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Dispatch Type",
+          "type": {
+            "name": "dispatchtype",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Other Rash/Dermatitis Description",
+          "id": "07af6083-b1ff-43c5-b11b-22a14b735417",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Other Rash/Dermatitis Description",
+          "type": {
+            "name": "otherrashdermatitisdescription",
+            "namespace": "skin"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Master Business Number found in CAD systems",
+          "id": "e785d73d-5ae9-4880-988b-6ce6b364b814",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Master Business Number",
+          "type": {
+            "name": "cad_masterbusinessnumber",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A person who posted bond for another person.",
+          "id": "62c82f33-295a-4437-8a3c-2d409c1e2224",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Person Posting Bail",
+          "type": {
+            "name": "bailingperson",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "DateTimeOffset",
+          "description": "Completed date & time of an occurrence, or datetime at which an entity (usually an association) was submitted.",
+          "id": "6675a7e8-2159-41b1-9431-4053690fa3c9",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Completed / submitted datetime",
+          "type": {
+            "name": "completeddatetime",
+            "namespace": "date"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Phone number",
+          "id": "cebc61bf-9052-4e11-99af-3aa3113688a8",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Phone Number",
+          "type": {
+            "name": "phonenumber",
+            "namespace": "contact"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Generic field to accommodate PD-specific flags.",
+          "id": "13ad1d8a-24da-4c5d-9168-018d33979007",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Incident flag",
+          "type": {
+            "name": "incidentflag",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "id": "8ab6e5e1-9ef7-4e83-94f1-2ad685c75915",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Booking number",
+          "type": {
+            "name": "bookingnumber",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Boolean",
+          "description": "History of seizures (Y/N)",
+          "id": "49b25d0a-e874-4308-9013-db5d178638da",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "History of seizures (Y/N)",
+          "type": {
+            "name": "historyofseizures",
+            "namespace": "neurological"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A medical zone, sometimes referred to in dispatch calls also.",
+          "id": "16eae16e-b1f1-404c-94af-a644f5ca4cc2",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Medical Zone",
+          "type": {
+            "name": "medicalzone",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Inmate ID",
+          "id": "81b3073b-e01f-4b69-9b64-03fcea0ccab7",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Inmate ID",
+          "type": {
+            "name": "inmateid",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Gender - this is not a binary variable. As opposed to biological sex (e.g., sex at birth, M/F), 'gender' is typically used with reference to social and cultural differences rather than biological ones. This field may contain values such as male, female, nonbinary (NB), transexual, etc.    AKA gender presentation, gender orientation.",
+          "id": "d8d5cd4c-0262-4dbe-b446-97dc913a4b3b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Gender",
+          "type": {
+            "name": "gender",
+            "namespace": "person"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether one is HIV positive (Y/N).",
+          "id": "8cf711e4-5a75-4d02-84be-efc2611191eb",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "HIV positive",
+          "type": {
+            "name": "hivpositive",
+            "namespace": "health"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Fracture/Injury Description",
+          "id": "f1f72490-acfe-4261-bdb7-5109d1cb1f6e",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Fracture/Injury Description",
+          "type": {
+            "name": "fractureinjurydescription",
+            "namespace": "musculoskeletal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Discharge/release reason, comments, or notes.",
+          "id": "d5cd8ae6-f0de-48fe-9139-89108adedc19",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Release Notes",
+          "type": {
+            "name": "releasenotes",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Secondary color of a vehicle.",
+          "id": "58892bfc-3700-49d3-b35e-dbe15fe8cb17",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Secondary color (vehicle)",
+          "type": {
+            "name": "secondarycolor",
+            "namespace": "vehicle"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Disposition, or means of clearing",
+          "id": "b4537358-a051-417a-832a-045d59c13b7f",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Disposition",
+          "type": {
+            "name": "disposition",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Field for notes and other data",
+          "id": "e481c9b7-d3b5-4c7a-bdfc-54ec801a541a",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Notes",
+          "type": {
+            "name": "notes",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "The dollar amount of a bond.",
+          "id": "7c2953f9-babd-4ecf-9adf-fc20ff1f9fa9",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Bond Amount",
+          "type": {
+            "name": "bailbondamount",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Additional text about any ulcers.",
+          "id": "1df87330-510d-421d-9731-b8412e68632c",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Ulcers (description)",
+          "type": {
+            "name": "ulcerstext",
+            "namespace": "gastrointestinal"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "DateTimeOffset",
+          "description": "The  date and time an incident, jail stay, or other event was reported to end.",
+          "id": "5f122ec5-f8cd-4618-8bfa-3f387141616c",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "End date-time",
+          "type": {
+            "name": "enddatetime",
+            "namespace": "incident"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "Date",
+          "description": "Date a person is anticipated to complete service of final sentence, automatically or manually calculated, based on current sentence information.",
+          "id": "e3b223ce-4f91-4125-be4d-ec7371382823",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Projected Release Date",
+          "type": {
+            "name": "date_projectedrelease",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Authority, jail or institution a person is held at.",
+          "id": "e32ceae7-c00b-4e9f-bf98-0f03e94fb566",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Held At",
+          "type": {
+            "name": "heldat",
+            "namespace": "criminaljustice"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Flag field for a fire in a call for service. ",
+          "id": "3f52e7f5-57fa-4a29-93bb-6fe5e7e3f327",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "CFS Fire",
+          "type": {
+            "name": "dispatchfireflag",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Location of an event",
+          "id": "25431c60-6c26-4210-a422-569c5226ba7e",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Unparsed location address",
+          "type": {
+            "name": "address",
+            "namespace": "location"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Family history of substance abuse (person)",
+          "id": "afda612c-a914-4efc-bdb8-7511fdc18b8e",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Family history of substance abuse (person)",
+          "type": {
+            "name": "familyabuseperson",
+            "namespace": "substance"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Description of any periods of sobriety.",
+          "id": "6dd08404-92fc-485f-af92-806c83bffece",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Periods Of Sobriety",
+          "type": {
+            "name": "periodsofsobriety",
+            "namespace": "substance"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Whether one has a developmental disability (Y/N).",
+          "id": "a07f05f9-b19d-4e96-9851-c098bfed5050",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Developmental disability (Y/N)",
+          "type": {
+            "name": "developmentaldisability",
+            "namespace": "health"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "Status  (e.g., status of condition - active/present, inactive, resolved, in remission)",
+          "id": "2a45205e-703c-43eb-a060-921bf7245f6a",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "General Status",
+          "type": {
+            "name": "status",
+            "namespace": "ol"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "DateTimeOffset",
+          "description": "A CFS Alerted DateTime",
+          "id": "736818e8-0ad9-4c83-8b53-3e00005fed2b",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Alerted date-time",
+          "type": {
+            "name": "alerted",
+            "namespace": "datetime"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "911 Call Number",
+          "id": "13c7f654-085d-4cd0-9db2-674df9c69dda",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "911 Call Number",
+          "type": {
+            "name": "dispatch911callnumber",
+            "namespace": "publicsafety"
+          }
+        },
+        {
+          "analyzer": "STANDARD",
+          "datatype": "String",
+          "description": "A fire district code in dispatch data.",
+          "id": "a81d9aa4-a664-4efc-ab19-87612a3cd198",
+          "piiField": false,
+          "schemas": [
+            {
+              "name": "v2",
+              "namespace": "v2"
+            }
+          ],
+          "title": "Fire District code",
+          "type": {
+            "name": "firedistrictcode",
+            "namespace": "publicsafety"
+          }
+        }
+      ]
+    }
+  ]
+}
