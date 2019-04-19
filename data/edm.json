@@ -32884,6 +32884,17 @@
     },
     {
       "analyzer": "STANDARD",
+      "datatype": "String",
+      "piiField": false,
+      "schemas": [],
+      "title": "456",
+      "type": {
+        "name": "123",
+        "namespace": "test"
+      }
+    },
+    {
+      "analyzer": "STANDARD",
       "datatype": "TimeOfDay",
       "description": "Time Alerted",
       "id": "919bfdc2-5da7-4e73-8418-081504e14309",
