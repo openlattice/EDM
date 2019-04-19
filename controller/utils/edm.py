@@ -1,3 +1,5 @@
+import uuid
+
 def make_key_edm(edm):
     '''
     Function to turn the edm from a list of objects into a dictionary
@@ -14,10 +16,11 @@ def get_id(x, key):
     Helper function to get the id from an object.  Mainly because in
     associationtypes, the id is in the entitytype.
     '''
-    if key == 'associationTypes':
-        return x['entityType']['id']
+    epatype = x['entityType'] if key == 'associationTypes' else x
+    if 'id' in epatype.keys():
+        return epatype['id']
     else:
-        return x['id']
+        return "new_"+str(uuid.uuid4())
 
 def concat_fqn(fqn):
     '''
