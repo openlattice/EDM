@@ -1,4 +1,4 @@
-FROM openlattice/base:v0.1-rc2
+FROM openlattice/base:v0.2
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 ENV PATH /opt/conda/bin:$PATH
@@ -10,4 +10,4 @@ RUN pip install -r requirements.txt
 RUN mkdir /controller
 ADD controller /controller
 
-ENTRYPOINT ["python", "-u", "/controller/test_api.py"]
+ENTRYPOINT ["python", "-u", "/controller/run.py"]
