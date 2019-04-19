@@ -32427,6 +32427,18 @@
     {
       "analyzer": "STANDARD",
       "datatype": "String",
+      "description": "propertytype",
+      "piiField": false,
+      "schemas": [],
+      "title": "type",
+      "type": {
+        "name": "property",
+        "namespace": "some"
+      }
+    },
+    {
+      "analyzer": "STANDARD",
+      "datatype": "String",
       "description": "The email of a staff member",
       "id": "c2147279-64c8-412d-b8c5-056744785122",
       "piiField": true,
