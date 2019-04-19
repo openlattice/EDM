@@ -131,13 +131,13 @@ class propertyType(object):
 
     def __init__(self, propertyType):
         self.title = propertyType['title']
-        self.description = propertyType['description']
+        self.description = propertyType['description'] if 'description' in propertyType.keys() else ""
         self.datatype = propertyType['datatype']
         self.analyzer = propertyType['analyzer']
         self.piiField = propertyType['piiField']
         self.schemas = propertyType['schemas']
         self.fqn = _concat_fqn(propertyType['type'])
-        self.multiValued = propertyType['multiValued'] if 'multiValued' in propertyType.keys() else None
+        self.multiValued = propertyType['multiValued'] if 'multiValued' in propertyType.keys() else True
             
 
     def print(self):
@@ -162,10 +162,11 @@ class propertyType(object):
     def compare(self, other):
         propchange = ""
         warnings = []
-        propchange += _get_table_header(self.fqn)
-        for key in ['title', 'description', 'datatype', 'analyzer', 'piiField', 'multiValued', 'schemas', 'fqn']:
+        for key in ['title', 'description', 'datatype', 'analyzer', 'piiField', 'schemas', 'fqn']:
+        # for key in ['title', 'description', 'datatype', 'analyzer', 'piiField', 'multiValued', 'schemas', 'fqn']:
             diff = _compare_functions(key, other, self)
             if len(diff)> 0:
+                propchange += _get_table_header(self.fqn)
                 propchange += _get_table_row(diff)
         return propchange
 
@@ -200,10 +201,13 @@ class entityType(object):
 
     def compare(self, other):
         entchange = ""
-        entchange += _get_table_header(self.fqn)
-        for key in ['title', 'description', 'properties', 'propertyTags', 'key', 'schemas', 'fqn']:
+        for key in ['title', 'description', 'properties', 'key', 'schemas', 'fqn']:
+        # for key in ['title', 'description', 'properties', 'propertyTags', 'key', 'schemas', 'fqn']:
             diff = _compare_functions(key, other, self)
+            if(type(diff)== 'str'):
+                diff = diff.replace(" ", "")
             if len(diff)> 0:
+                entchange += _get_table_header(self.fqn)
                 entchange += _get_table_row(diff)
         return entchange
 
@@ -244,14 +248,16 @@ class associationType(object):
 
     def compare(self, other):
         asschange = ""
-        asschange += _get_table_header(self.fqn)
-        for key in ['title', 'description', 'properties', 'propertyTags', 'key', 'schemas', 'fqn']:
+        # for key in ['title', 'description', 'properties', 'propertyTags', 'key', 'schemas', 'fqn']:
+        for key in ['title', 'description', 'properties', 'key', 'schemas', 'fqn']:
             diff = _compare_functions(key, other.entityType, self.entityType)
             if len(diff)> 0:
+                asschange += _get_table_header(self.fqn)
                 asschange += _get_table_row(diff)
         for key in ['src','dst','bidirectional']:
             diff = _compare_functions(key, other, self)
             if len(diff)> 0:
+                asschange += _get_table_header(self.fqn)
                 asschange += _get_table_row(diff)
         return asschange
 
