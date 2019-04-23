@@ -21063,6 +21063,17 @@
     {
       "analyzer": "STANDARD",
       "datatype": "String",
+      "pii": false,
+      "schemas": [],
+      "title": "type",
+      "type": {
+        "name": "property",
+        "namespace": "new"
+      }
+    },
+    {
+      "analyzer": "STANDARD",
+      "datatype": "String",
       "description": "Unique identifier for a nutritional assessment",
       "id": "60bcb7e1-297a-4631-bb69-11d54362fa6a",
       "multiValued": true,
